@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 2.4.6 (2012.04.21)
+ * confirmed compatible with cauly SDK 2.4.6
  */
 
 #import "SubAdlibAdViewCauly.h"

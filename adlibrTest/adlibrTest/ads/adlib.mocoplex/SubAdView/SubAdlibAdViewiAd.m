@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with iAD (2012.04.21)
+ * confirmed compatible with iAD
  */
 
 #import "SubAdlibAdViewiAd.h"

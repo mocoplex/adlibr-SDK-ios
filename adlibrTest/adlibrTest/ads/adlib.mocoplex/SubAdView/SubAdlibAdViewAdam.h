@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with ad@m SDK 2.0 (2012.04.21)
+ * confirmed compatible with ad@m SDK 2.0
  */
 
 #import <UIKit/UIKit.h>

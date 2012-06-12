@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.0.1 (2012.04.233)
+ * confirmed compatible with admob SDK 6.0.1
  */
 
 #import "SubAdlibAdViewAdmob.h"

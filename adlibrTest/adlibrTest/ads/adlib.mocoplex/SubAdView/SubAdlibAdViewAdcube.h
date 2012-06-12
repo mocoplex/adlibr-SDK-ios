@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with adcube SDK 1.9 (2012.04.21)
+ * confirmed compatible with adcube SDK 1.9
  */
 
 #import <UIKit/UIKit.h>
