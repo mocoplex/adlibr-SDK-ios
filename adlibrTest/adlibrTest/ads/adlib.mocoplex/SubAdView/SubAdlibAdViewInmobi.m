@@ -16,47 +16,34 @@
 
 @implementation SubAdlibAdViewInmobi
 
-// 객체를 전역적으로 하나만 생성합니다.
-+ (BOOL)isStaticObject
-{
-    return YES;
-}
-
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];    
     
-    static BOOL bIninintedObject = NO;
-    
-    if(!bIninintedObject)
-    {
-        IMAdRequest *request = [IMAdRequest request];
+    IMAdRequest *request = [IMAdRequest request];
         
-        // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
-        // do not modify this area -- implemented to get reward point
-        request.paramsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"c_adlib", @"tp", nil];
-        // do not modify this area -- implemented to get reward point
-        // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
+    // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
+    // do not modify this area -- implemented to get reward point
+    request.paramsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"c_adlib", @"tp", nil];
+    // do not modify this area -- implemented to get reward point
+    // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
         
-        ad = [[IMAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50) imAppId:INMOBI_ID imAdUnit:IM_UNIT_320x50 rootViewController:parent];    
-        ad.delegate = self;
-        ad.refreshInterval = 20;
-        ad.rootViewController = parent;
+    ad = [[IMAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50) imAppId:INMOBI_ID imAdUnit:IM_UNIT_320x50 rootViewController:parent];    
+    ad.delegate = self;
+    ad.refreshInterval = 20;
+    ad.rootViewController = parent;
         
-        request.testMode = NO;
-        ad.imAdRequest = request;    
-        
-        [self.view addSubview:ad];
-        
-        bIninintedObject = YES;
-    }
-    
-    [ad loadIMAdRequest];
+    request.testMode = NO;
+    ad.imAdRequest = request;
+
+    [self.view addSubview:ad];
 }
 
 - (void)clearAdView
 {
-    ad.rootViewController = nil;
+    ad.delegate = nil;
+    [ad release];
+    ad = nil;
     
     [super clearAdView];
 }
@@ -76,7 +63,9 @@
 - (void)adView:(IMAdView *)view didFailRequestWithError:(IMAdError *)error {
     //NSLog(@"<<<< ad request failed.>>>, error=%@",[error localizedDescription]);
     //NSLog(@"error code=%d",[error code]);
-    [self failed];
+        
+    if([error code] == kIMADNoFillError || [error code] == kIMADInvalidRequestError || [error code] == kIMADInternalError)
+        [self failed];
 }
 
 - (void)adViewDidDismissScreen:(IMAdView *)adView {
