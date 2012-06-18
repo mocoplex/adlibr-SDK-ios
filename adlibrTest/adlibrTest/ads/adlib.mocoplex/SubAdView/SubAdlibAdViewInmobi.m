@@ -11,7 +11,9 @@
 
 #import "SubAdlibAdViewInmobi.h"
 
-// INMOBI의 APP 아이디를 설정합니다.
+// 여기에 인모비에서 발급받은 key 를 입력하세요.
+// 마찬가지로 애드립의 스케줄 설정창에도 발급받은 키를 입력해주세요.
+// 같은 키를 소스파일, 애드립 페이지 두 곳에 입력해야 리워드 포인트를 적립받을 수 있습니다.
 #define INMOBI_ID @"INMOBI - APP - ID"
 
 @implementation SubAdlibAdViewInmobi
