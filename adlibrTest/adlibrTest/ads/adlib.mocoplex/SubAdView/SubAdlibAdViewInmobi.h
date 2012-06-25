@@ -18,6 +18,7 @@
 
 @interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMAdDelegate>
 {
+    BOOL    bShowed;
     IMAdView *ad;
 }
 
