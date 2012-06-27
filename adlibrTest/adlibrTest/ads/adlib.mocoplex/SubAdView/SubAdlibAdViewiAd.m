@@ -17,7 +17,8 @@
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
-
+    
+    self.view.autoresizesSubviews = NO;
     ad = [[ADBannerView alloc] initWithFrame:CGRectZero];
     
     // 현재 단말기 상태에 맞게 화면에 표시한다.
@@ -25,13 +26,13 @@
     {
         ad.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierPortrait];
         ad.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;  
-        ad.frame = CGRectMake(0, 0, 320, 50);
+        ad.frame = CGRectMake(0, 0, self.view.bounds.size.width, 50);
     }
     else
     {
         ad.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierLandscape];
         ad.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;        
-        ad.frame = CGRectMake(0, 0, 480, 32);
+        ad.frame = CGRectMake(0, 0, self.view.bounds.size.width, 32);
     }
     ad.delegate = self;
         
@@ -54,13 +55,27 @@
 
 - (void)orientationChanged
 {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+
+    int w;
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+    
     if([self isPortrait])
     {
         // 세로모드로 변경되었다.
         ad.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierPortrait];
         ad.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
         
-        ad.frame = CGRectMake(0, 0, 320, 50);        
+        ad.frame = CGRectMake(0, 0, w, 50);        
     }
     else
     {
@@ -68,7 +83,7 @@
         ad.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierLandscape];
         ad.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;    
         
-        ad.frame = CGRectMake(0, 0, 480, 32);        
+        ad.frame = CGRectMake(0, 0, w, 32);        
     }
     
     [super orientationChanged];
@@ -82,10 +97,22 @@
 
 - (CGSize)size
 {
+    int w;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
     if([self isPortrait])
-        return CGSizeMake(self.view.bounds.size.width, 50);
+    {
+        w = screenWidth;
+        return CGSizeMake(w, 50);
+    }
     else
-        return CGSizeMake(self.view.bounds.size.width, 32);   
+    {
+        w = screenHeight;
+        return CGSizeMake(w, 32);
+    }
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner

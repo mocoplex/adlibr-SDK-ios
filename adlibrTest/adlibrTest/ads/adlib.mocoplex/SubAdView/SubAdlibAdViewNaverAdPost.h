@@ -6,15 +6,16 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 2.4.5.5
+ * confirmed compatible with NaverAdPost SDK 1.0
  */
 
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdViewCore.h"
-#import "TadViewController.h"
+#import "MobileAdView.h"
 
-@interface SubAdlibAdViewTAD : SubAdlibAdViewCore<TadDelegate>
+@interface SubAdlibAdViewNaverAdPost : SubAdlibAdViewCore<MobileAdViewDelegate>
 {
+    MobileAdView *ad;
 }
 
 @end

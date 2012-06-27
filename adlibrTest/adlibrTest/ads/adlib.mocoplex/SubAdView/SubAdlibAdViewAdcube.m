@@ -35,9 +35,7 @@
     [ad showAdsWithAppid:ADCUBE_ID withViewController:parent withView:self.view x:0 y:hPadding];
     
     // 상황에 따라 원하는 넓이로 차등 적용
-    int w = 320;    
-    if(![self isPortrait])
-        w = 480;
+    int w = self.view.bounds.size.width;    
     
     NSArray* arr = self.view.subviews;
     
@@ -56,15 +54,6 @@
     
     CGSize sz = [self size];    
     [ad setWidth:sz.width];
-}
-
-- (CGSize)size
-{
-    int w = 320;
-    if(![self isPortrait])
-        w = 480;
-    
-    return CGSizeMake(w, 48);    
 }
 
 - (void)dealloc
@@ -94,6 +83,55 @@
 {
     // 광고 수신에 실패하였습니다.
     [self failed];
+}
+
+- (CGSize)size
+{
+    int w;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+    
+    return CGSizeMake(w, 48);    
+}
+
+- (void)orientationChanged
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    int w;
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+
+    NSArray* arr = self.view.subviews;
+    
+    CGRect rt = CGRectMake(0, 0, w, 48);
+    
+    int cnt = [arr count];
+    for (int i=0; i<cnt; i++) {
+        UIView* v = [arr objectAtIndex:i];
+        v.frame = rt;
+    }
+
+    [super orientationChanged];
 }
 
 @end

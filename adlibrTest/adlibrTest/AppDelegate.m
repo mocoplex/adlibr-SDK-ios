@@ -19,6 +19,7 @@
 #import "SubAdlibAdViewCauly.h"
 #import "SubAdlibAdViewTAD.h"
 #import "SubAdlibAdViewiAd.h"
+#import "SubAdlibAdViewNaverAdPost.h"
 
 @implementation AppDelegate
 
@@ -49,6 +50,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"CAULY" withClass:[SubAdlibAdViewCauly class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"TAD" withClass:[SubAdlibAdViewTAD class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];    
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
     // 광고 타겟팅을 위한 추가 옵션을 입력합니다. (옵션)

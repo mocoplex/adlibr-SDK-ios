@@ -26,6 +26,7 @@
 {
     [super query:parent];    
 
+    self.view.autoresizesSubviews = NO;
     static BOOL bIninintedObject = NO;
     
     if(!bIninintedObject)
@@ -34,14 +35,7 @@
         ad = [AdamAdView sharedAdView];
         
         CGRect rt;        
-        if([self isPortrait])
-        {
-            rt = CGRectMake(0, 0, 320, 48);
-        }
-        else
-        {
-            rt = CGRectMake(0, 0, 480, 48);
-        }
+        rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);        
         
         ad.frame = rt;
         
@@ -120,25 +114,44 @@
 {
 }
 
-- (void)orientationChanged
+- (CGSize)size
 {
+    int w;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
     if([self isPortrait])
     {
-        // 세로모드로 변경되었다.
-        ad.frame = CGRectMake(0, 0, 320, 48);
+        w = screenWidth;
     }
     else
     {
-        // 가로모드로 변경되었다.    
-        ad.frame = CGRectMake(0, 0, 480, 48);
+        w = screenHeight;
     }
     
-    [super orientationChanged];
+    return CGSizeMake(w, 48);    
 }
 
-- (CGSize)size
+- (void)orientationChanged
 {
-    return CGSizeMake(self.view.bounds.size.width, 48);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    int w;
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+    
+    ad.frame = CGRectMake(0, 0, w, 48);    
+    [super orientationChanged];
 }
 
 @end

@@ -12,7 +12,7 @@
 #import "SubAdlibAdViewTAD.h"
 
 // TAD의 APP 아이디를 설정합니다.
-#define TAD_ID @""
+#define TAD_ID @"T-AD ID"
 
 @implementation SubAdlibAdViewTAD
 

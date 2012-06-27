@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */; };
 		FC6FADE1158718B90076B3BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE0158718B90076B3BC /* UIKit.framework */; };
 		FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE2158718B90076B3BC /* Foundation.framework */; };
 		FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE4158718B90076B3BC /* CoreGraphics.framework */; };
@@ -20,7 +21,6 @@
 		FC6FAE13158718F90076B3BC /* SubAdlibAdViewiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE06158718F90076B3BC /* SubAdlibAdViewiAd.m */; };
 		FC6FAE14158718F90076B3BC /* SubAdlibAdViewTAD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE08158718F90076B3BC /* SubAdlibAdViewTAD.m */; };
 		FC6FAE15158718F90076B3BC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE0D158718F90076B3BC /* JSONKit.m */; };
-		FC6FAE16158718F90076B3BC /* libAdlibr.2.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE0E158718F90076B3BC /* libAdlibr.2.0.0.a */; };
 		FC6FAE4D1587194C0076B3BC /* AdamAdWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE201587194C0076B3BC /* AdamAdWrapperView.m */; };
 		FC6FAE4E1587194C0076B3BC /* libAdamPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE221587194C0076B3BC /* libAdamPublisher.a */; };
 		FC6FAE4F1587194C0076B3BC /* libzcLibrary1.90.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE241587194C0076B3BC /* libzcLibrary1.90.a */; };
@@ -56,6 +56,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC040022159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewNaverAdPost.h; sourceTree = "<group>"; };
+		FC040023159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewNaverAdPost.m; sourceTree = "<group>"; };
+		FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.1.0.a; sourceTree = "<group>"; };
 		FC6FADDC158718B90076B3BC /* adlibrTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6FADE0158718B90076B3BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC6FADE2158718B90076B3BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,7 +86,6 @@
 		FC6FAE08158718F90076B3BC /* SubAdlibAdViewTAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewTAD.m; sourceTree = "<group>"; };
 		FC6FAE0C158718F90076B3BC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		FC6FAE0D158718F90076B3BC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		FC6FAE0E158718F90076B3BC /* libAdlibr.2.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.0.0.a; sourceTree = "<group>"; };
 		FC6FAE17158719000076B3BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FC6FAE18158719000076B3BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FC6FAE19158719000076B3BC /* XibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XibViewController.h; sourceTree = "<group>"; };
@@ -165,7 +167,6 @@
 				FC6FADE1158718B90076B3BC /* UIKit.framework in Frameworks */,
 				FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */,
 				FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */,
-				FC6FAE16158718F90076B3BC /* libAdlibr.2.0.0.a in Frameworks */,
 				FC6FAE4E1587194C0076B3BC /* libAdamPublisher.a in Frameworks */,
 				FC6FAE4F1587194C0076B3BC /* libzcLibrary1.90.a in Frameworks */,
 				FC6FAE501587194C0076B3BC /* libzcLibrary1.90_sim.a in Frameworks */,
@@ -174,6 +175,7 @@
 				FC6FAE561587194C0076B3BC /* libGoogleAdMobAds.a in Frameworks */,
 				FC6FAE581587194C0076B3BC /* libTadCore.a in Frameworks */,
 				FC6FAE8E15871C800076B3BC /* libInMobi_iOS.a in Frameworks */,
+				FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +275,8 @@
 		FC6FADFC158718F90076B3BC /* SubAdView */ = {
 			isa = PBXGroup;
 			children = (
+				FC040022159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.h */,
+				FC040023159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.m */,
 				FC6FAE9015871CCF0076B3BC /* SubAdlibAdViewInmobi.h */,
 				FC6FAE9115871CCF0076B3BC /* SubAdlibAdViewInmobi.m */,
 				FC6FADFD158718F90076B3BC /* SubAdlibAdViewAdam.h */,
@@ -294,8 +298,8 @@
 		FC6FAE0A158718F90076B3BC /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */,
 				FC6FAE0B158718F90076B3BC /* JSONKit */,
-				FC6FAE0E158718F90076B3BC /* libAdlibr.2.0.0.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
