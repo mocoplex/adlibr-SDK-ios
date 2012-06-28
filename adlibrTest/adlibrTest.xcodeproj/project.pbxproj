@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */; };
+		FC2D0172159C4ABF00E8756E /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FC040023159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.m */; };
 		FC6FADE1158718B90076B3BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE0158718B90076B3BC /* UIKit.framework */; };
 		FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE2158718B90076B3BC /* Foundation.framework */; };
 		FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE4158718B90076B3BC /* CoreGraphics.framework */; };
@@ -21,19 +22,6 @@
 		FC6FAE13158718F90076B3BC /* SubAdlibAdViewiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE06158718F90076B3BC /* SubAdlibAdViewiAd.m */; };
 		FC6FAE14158718F90076B3BC /* SubAdlibAdViewTAD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE08158718F90076B3BC /* SubAdlibAdViewTAD.m */; };
 		FC6FAE15158718F90076B3BC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE0D158718F90076B3BC /* JSONKit.m */; };
-		FC6FAE4D1587194C0076B3BC /* AdamAdWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6FAE201587194C0076B3BC /* AdamAdWrapperView.m */; };
-		FC6FAE4E1587194C0076B3BC /* libAdamPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE221587194C0076B3BC /* libAdamPublisher.a */; };
-		FC6FAE4F1587194C0076B3BC /* libzcLibrary1.90.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE241587194C0076B3BC /* libzcLibrary1.90.a */; };
-		FC6FAE501587194C0076B3BC /* libzcLibrary1.90_sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE251587194C0076B3BC /* libzcLibrary1.90_sim.a */; };
-		FC6FAE511587194C0076B3BC /* libCaulyDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE2B1587194C0076B3BC /* libCaulyDevice.a */; };
-		FC6FAE521587194C0076B3BC /* libCaulySimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE2C1587194C0076B3BC /* libCaulySimulator.a */; };
-		FC6FAE531587194C0076B3BC /* cauly_default_banner_ipad_large.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6FAE2E1587194C0076B3BC /* cauly_default_banner_ipad_large.png */; };
-		FC6FAE541587194C0076B3BC /* cauly_default_banner_ipad_small.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6FAE2F1587194C0076B3BC /* cauly_default_banner_ipad_small.png */; };
-		FC6FAE551587194C0076B3BC /* cauly_default_banner_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6FAE301587194C0076B3BC /* cauly_default_banner_iphone.png */; };
-		FC6FAE561587194C0076B3BC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE381587194C0076B3BC /* libGoogleAdMobAds.a */; };
-		FC6FAE571587194C0076B3BC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC6FAE391587194C0076B3BC /* README.txt */; };
-		FC6FAE581587194C0076B3BC /* libTadCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE3E1587194C0076B3BC /* libTadCore.a */; };
-		FC6FAE591587194D0076B3BC /* TadPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC6FAE3F1587194C0076B3BC /* TadPlayer.bundle */; };
 		FC6FAE70158719FC0076B3BC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE64158719FC0076B3BC /* AudioToolbox.framework */; };
 		FC6FAE71158719FC0076B3BC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE65158719FC0076B3BC /* CFNetwork.framework */; };
 		FC6FAE72158719FC0076B3BC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FAE66158719FC0076B3BC /* CoreLocation.framework */; };
@@ -91,32 +79,6 @@
 		FC6FAE19158719000076B3BC /* XibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XibViewController.h; sourceTree = "<group>"; };
 		FC6FAE1A158719000076B3BC /* XibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XibViewController.m; sourceTree = "<group>"; };
 		FC6FAE1B158719000076B3BC /* XibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibViewController.xib; sourceTree = "<group>"; };
-		FC6FAE1E1587194C0076B3BC /* AdamAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdamAdView.h; sourceTree = "<group>"; };
-		FC6FAE1F1587194C0076B3BC /* AdamAdWrapperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdamAdWrapperView.h; sourceTree = "<group>"; };
-		FC6FAE201587194C0076B3BC /* AdamAdWrapperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdamAdWrapperView.m; sourceTree = "<group>"; };
-		FC6FAE211587194C0076B3BC /* AdamInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdamInterstitial.h; sourceTree = "<group>"; };
-		FC6FAE221587194C0076B3BC /* libAdamPublisher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdamPublisher.a; sourceTree = "<group>"; };
-		FC6FAE241587194C0076B3BC /* libzcLibrary1.90.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzcLibrary1.90.a; sourceTree = "<group>"; };
-		FC6FAE251587194C0076B3BC /* libzcLibrary1.90_sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzcLibrary1.90_sim.a; sourceTree = "<group>"; };
-		FC6FAE261587194C0076B3BC /* zcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zcView.h; sourceTree = "<group>"; };
-		FC6FAE291587194C0076B3BC /* CaulyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyProtocol.h; sourceTree = "<group>"; };
-		FC6FAE2A1587194C0076B3BC /* CaulyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyViewController.h; sourceTree = "<group>"; };
-		FC6FAE2B1587194C0076B3BC /* libCaulyDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaulyDevice.a; sourceTree = "<group>"; };
-		FC6FAE2C1587194C0076B3BC /* libCaulySimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaulySimulator.a; sourceTree = "<group>"; };
-		FC6FAE2E1587194C0076B3BC /* cauly_default_banner_ipad_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_large.png; sourceTree = "<group>"; };
-		FC6FAE2F1587194C0076B3BC /* cauly_default_banner_ipad_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_small.png; sourceTree = "<group>"; };
-		FC6FAE301587194C0076B3BC /* cauly_default_banner_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_iphone.png; sourceTree = "<group>"; };
-		FC6FAE321587194C0076B3BC /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		FC6FAE331587194C0076B3BC /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		FC6FAE341587194C0076B3BC /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		FC6FAE351587194C0076B3BC /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		FC6FAE361587194C0076B3BC /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		FC6FAE371587194C0076B3BC /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		FC6FAE381587194C0076B3BC /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		FC6FAE391587194C0076B3BC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		FC6FAE3C1587194C0076B3BC /* TadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TadViewController.h; sourceTree = "<group>"; };
-		FC6FAE3E1587194C0076B3BC /* libTadCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTadCore.a; sourceTree = "<group>"; };
-		FC6FAE3F1587194C0076B3BC /* TadPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TadPlayer.bundle; sourceTree = "<group>"; };
 		FC6FAE64158719FC0076B3BC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FC6FAE65158719FC0076B3BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FC6FAE66158719FC0076B3BC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -167,13 +129,6 @@
 				FC6FADE1158718B90076B3BC /* UIKit.framework in Frameworks */,
 				FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */,
 				FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */,
-				FC6FAE4E1587194C0076B3BC /* libAdamPublisher.a in Frameworks */,
-				FC6FAE4F1587194C0076B3BC /* libzcLibrary1.90.a in Frameworks */,
-				FC6FAE501587194C0076B3BC /* libzcLibrary1.90_sim.a in Frameworks */,
-				FC6FAE511587194C0076B3BC /* libCaulyDevice.a in Frameworks */,
-				FC6FAE521587194C0076B3BC /* libCaulySimulator.a in Frameworks */,
-				FC6FAE561587194C0076B3BC /* libGoogleAdMobAds.a in Frameworks */,
-				FC6FAE581587194C0076B3BC /* libTadCore.a in Frameworks */,
 				FC6FAE8E15871C800076B3BC /* libInMobi_iOS.a in Frameworks */,
 				FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */,
 			);
@@ -317,106 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				FC6FAE8415871C800076B3BC /* reward_platforms */,
-				FC6FAE1D1587194C0076B3BC /* adam.2.0 */,
-				FC6FAE231587194C0076B3BC /* adcube */,
-				FC6FAE271587194C0076B3BC /* Cauly_SDK_2.4.6 */,
-				FC6FAE311587194C0076B3BC /* GoogleAdMobAdsSDKiOS-5.0.5 */,
-				FC6FAE3A1587194C0076B3BC /* T-AD */,
 			);
 			path = ads_platform;
-			sourceTree = "<group>";
-		};
-		FC6FAE1D1587194C0076B3BC /* adam.2.0 */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE1E1587194C0076B3BC /* AdamAdView.h */,
-				FC6FAE1F1587194C0076B3BC /* AdamAdWrapperView.h */,
-				FC6FAE201587194C0076B3BC /* AdamAdWrapperView.m */,
-				FC6FAE211587194C0076B3BC /* AdamInterstitial.h */,
-				FC6FAE221587194C0076B3BC /* libAdamPublisher.a */,
-			);
-			path = adam.2.0;
-			sourceTree = "<group>";
-		};
-		FC6FAE231587194C0076B3BC /* adcube */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE241587194C0076B3BC /* libzcLibrary1.90.a */,
-				FC6FAE251587194C0076B3BC /* libzcLibrary1.90_sim.a */,
-				FC6FAE261587194C0076B3BC /* zcView.h */,
-			);
-			path = adcube;
-			sourceTree = "<group>";
-		};
-		FC6FAE271587194C0076B3BC /* Cauly_SDK_2.4.6 */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE281587194C0076B3BC /* Include */,
-			);
-			path = Cauly_SDK_2.4.6;
-			sourceTree = "<group>";
-		};
-		FC6FAE281587194C0076B3BC /* Include */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE291587194C0076B3BC /* CaulyProtocol.h */,
-				FC6FAE2A1587194C0076B3BC /* CaulyViewController.h */,
-				FC6FAE2B1587194C0076B3BC /* libCaulyDevice.a */,
-				FC6FAE2C1587194C0076B3BC /* libCaulySimulator.a */,
-				FC6FAE2D1587194C0076B3BC /* Resources */,
-			);
-			path = Include;
-			sourceTree = "<group>";
-		};
-		FC6FAE2D1587194C0076B3BC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE2E1587194C0076B3BC /* cauly_default_banner_ipad_large.png */,
-				FC6FAE2F1587194C0076B3BC /* cauly_default_banner_ipad_small.png */,
-				FC6FAE301587194C0076B3BC /* cauly_default_banner_iphone.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		FC6FAE311587194C0076B3BC /* GoogleAdMobAdsSDKiOS-5.0.5 */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE321587194C0076B3BC /* GADBannerView.h */,
-				FC6FAE331587194C0076B3BC /* GADBannerViewDelegate.h */,
-				FC6FAE341587194C0076B3BC /* GADInterstitial.h */,
-				FC6FAE351587194C0076B3BC /* GADInterstitialDelegate.h */,
-				FC6FAE361587194C0076B3BC /* GADRequest.h */,
-				FC6FAE371587194C0076B3BC /* GADRequestError.h */,
-				FC6FAE381587194C0076B3BC /* libGoogleAdMobAds.a */,
-				FC6FAE391587194C0076B3BC /* README.txt */,
-			);
-			path = "GoogleAdMobAdsSDKiOS-5.0.5";
-			sourceTree = "<group>";
-		};
-		FC6FAE3A1587194C0076B3BC /* T-AD */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE3B1587194C0076B3BC /* include */,
-				FC6FAE3D1587194C0076B3BC /* lib */,
-			);
-			path = "T-AD";
-			sourceTree = "<group>";
-		};
-		FC6FAE3B1587194C0076B3BC /* include */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE3C1587194C0076B3BC /* TadViewController.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		FC6FAE3D1587194C0076B3BC /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				FC6FAE3E1587194C0076B3BC /* libTadCore.a */,
-				FC6FAE3F1587194C0076B3BC /* TadPlayer.bundle */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		FC6FAE8415871C800076B3BC /* reward_platforms */ = {
@@ -493,11 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6FADEB158718B90076B3BC /* InfoPlist.strings in Resources */,
-				FC6FAE531587194C0076B3BC /* cauly_default_banner_ipad_large.png in Resources */,
-				FC6FAE541587194C0076B3BC /* cauly_default_banner_ipad_small.png in Resources */,
-				FC6FAE551587194C0076B3BC /* cauly_default_banner_iphone.png in Resources */,
-				FC6FAE571587194C0076B3BC /* README.txt in Resources */,
-				FC6FAE591587194D0076B3BC /* TadPlayer.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2D0172159C4ABF00E8756E /* SubAdlibAdViewNaverAdPost.m in Sources */,
 				FC6FAE9215871E600076B3BC /* SubAdlibAdViewInmobi.m in Sources */,
 				FC6FAE7E15871B3E0076B3BC /* ViewController.m in Sources */,
 				FC6FAE7F15871B3E0076B3BC /* XibViewController.m in Sources */,
@@ -520,7 +373,6 @@
 				FC6FAE13158718F90076B3BC /* SubAdlibAdViewiAd.m in Sources */,
 				FC6FAE14158718F90076B3BC /* SubAdlibAdViewTAD.m in Sources */,
 				FC6FAE15158718F90076B3BC /* JSONKit.m in Sources */,
-				FC6FAE4D1587194C0076B3BC /* AdamAdWrapperView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

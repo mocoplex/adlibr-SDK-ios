@@ -30,12 +30,15 @@
 
     [ad setSuperViewController:parent];
     [ad setChannelId:NAVER_ID];
-//    [ad setIsTest:YES];
+    [ad setIsTest:YES];
     [ad setDelegate:self];
     
     [self.view addSubview:ad];
     
     [ad start];
+    
+    // 검수를 위해 무조건 화면에 보이게합니다.
+    [self gotAd];
 }
 
 - (void)clearAdView
