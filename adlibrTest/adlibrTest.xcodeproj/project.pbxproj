@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */; };
 		FC2D0172159C4ABF00E8756E /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FC040023159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.m */; };
+		FC64BC3E15A4660500A1EB81 /* libAdlibr.2.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC64BC3D15A4660500A1EB81 /* libAdlibr.2.1.1.a */; };
 		FC6FADE1158718B90076B3BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE0158718B90076B3BC /* UIKit.framework */; };
 		FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE2158718B90076B3BC /* Foundation.framework */; };
 		FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FADE4158718B90076B3BC /* CoreGraphics.framework */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		FC040022159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewNaverAdPost.h; sourceTree = "<group>"; };
 		FC040023159B1274001E8BEB /* SubAdlibAdViewNaverAdPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewNaverAdPost.m; sourceTree = "<group>"; };
-		FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.1.0.a; sourceTree = "<group>"; };
+		FC64BC3D15A4660500A1EB81 /* libAdlibr.2.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.1.1.a; sourceTree = "<group>"; };
 		FC6FADDC158718B90076B3BC /* adlibrTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6FADE0158718B90076B3BC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC6FADE2158718B90076B3BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,7 +130,7 @@
 				FC6FADE3158718B90076B3BC /* Foundation.framework in Frameworks */,
 				FC6FADE5158718B90076B3BC /* CoreGraphics.framework in Frameworks */,
 				FC6FAE8E15871C800076B3BC /* libInMobi_iOS.a in Frameworks */,
-				FC040026159B12C2001E8BEB /* libAdlibr.2.1.0.a in Frameworks */,
+				FC64BC3E15A4660500A1EB81 /* libAdlibr.2.1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 		FC6FAE0A158718F90076B3BC /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				FC040025159B12C2001E8BEB /* libAdlibr.2.1.0.a */,
+				FC64BC3D15A4660500A1EB81 /* libAdlibr.2.1.1.a */,
 				FC6FAE0B158718F90076B3BC /* JSONKit */,
 			);
 			path = lib;
