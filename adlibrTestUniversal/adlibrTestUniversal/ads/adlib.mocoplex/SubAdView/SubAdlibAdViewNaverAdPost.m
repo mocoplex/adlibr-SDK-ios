@@ -30,7 +30,7 @@
 
     [ad setSuperViewController:parent];
     [ad setChannelId:NAVER_ID];
-    [ad setIsTest:YES];
+//    [ad setIsTest:YES];
     [ad setDelegate:self];
     
     [self.view addSubview:ad];
@@ -99,7 +99,7 @@
 - (void)adDidReceived:(MobileAdErrorType)err
 {
     // 광고를 받아온 경우나, 승인을 기다리는 경우만 화면에 보이게합니다.
-    if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL)
+    if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL || err == ERROR_INTERNAL)
         [self gotAd];
     else {
         [self failed];

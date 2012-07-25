@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 2.4.5.5
+ * confirmed compatible with t-ad SDK 2.4.6.6
  */
 
 #import "SubAdlibAdViewTAD.h"
