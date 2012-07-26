@@ -466,6 +466,7 @@
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -486,6 +487,7 @@
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

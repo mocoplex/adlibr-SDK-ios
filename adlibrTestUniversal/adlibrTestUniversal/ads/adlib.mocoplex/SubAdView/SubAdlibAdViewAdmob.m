@@ -6,8 +6,20 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.0.1
+ * confirmed compatible with admob SDK 6.1.2
  */
+
+// 실제 프로젝트 적용시 위 주소를 참고하여
+// https://developers.google.com/mobile-ads-sdk/docs/ios/fundamentals
+/*
+ You now need to add -all_load to the Other Linker Flags of your application target's build setting:
+ In XCode's project navigator, press the blue top-level project icon.
+ Click on your target, then the Build Settings tab.
+ Under Other Linker Flags, add -all_load to both Debug and Release. 
+*/
+// flag 를 추가해야합니다.
+// https://developers.google.com/mobile-ads-sdk/images/linker-ios.png
+
 
 #import "SubAdlibAdViewAdmob.h"
 
