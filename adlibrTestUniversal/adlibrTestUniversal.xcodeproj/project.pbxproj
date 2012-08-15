@@ -41,7 +41,7 @@
 		495E6E7315AD3AA500B7BA4C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E7215AD3AA500B7BA4C /* libz.1.2.5.dylib */; };
 		495E6E7815AD3E6F00B7BA4C /* SubAdlibAdViewAdcube.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E6E7515AD3E6F00B7BA4C /* SubAdlibAdViewAdcube.m */; };
 		495E6E7915AD3E6F00B7BA4C /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E6E7715AD3E6F00B7BA4C /* SubAdlibAdViewNaverAdPost.m */; };
-		49ABF2EB15C0402200473CE7 /* libAdlibr.2.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49ABF2EA15C0402200473CE7 /* libAdlibr.2.1.6.a */; };
+		FCE2B2CC15DBB3560027690C /* libAdlibr.2.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE2B2CB15DBB3560027690C /* libAdlibr.2.3.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +103,9 @@
 		495E6E7515AD3E6F00B7BA4C /* SubAdlibAdViewAdcube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdcube.m; sourceTree = "<group>"; };
 		495E6E7615AD3E6F00B7BA4C /* SubAdlibAdViewNaverAdPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewNaverAdPost.h; sourceTree = "<group>"; };
 		495E6E7715AD3E6F00B7BA4C /* SubAdlibAdViewNaverAdPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewNaverAdPost.m; sourceTree = "<group>"; };
-		49ABF2EA15C0402200473CE7 /* libAdlibr.2.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.1.6.a; sourceTree = "<group>"; };
+		FCE2B2CB15DBB3560027690C /* libAdlibr.2.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.3.0.a; sourceTree = "<group>"; };
+		FCE2B2CD15DBB3670027690C /* SubAdlibAdViewShallWeAd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewShallWeAd.h; sourceTree = "<group>"; };
+		FCE2B2CE15DBB3670027690C /* SubAdlibAdViewShallWeAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewShallWeAd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,7 @@
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
 				495E6E4A15AD39FA00B7BA4C /* libInMobi_iOS.a in Frameworks */,
-				49ABF2EB15C0402200473CE7 /* libAdlibr.2.1.6.a in Frameworks */,
+				FCE2B2CC15DBB3560027690C /* libAdlibr.2.3.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +247,8 @@
 				495E6E0515AD39FA00B7BA4C /* SubAdlibAdViewInmobi.m */,
 				495E6E0815AD39FA00B7BA4C /* SubAdlibAdViewTAD.h */,
 				495E6E0915AD39FA00B7BA4C /* SubAdlibAdViewTAD.m */,
+				FCE2B2CD15DBB3670027690C /* SubAdlibAdViewShallWeAd.h */,
+				FCE2B2CE15DBB3670027690C /* SubAdlibAdViewShallWeAd.m */,
 			);
 			path = SubAdView;
 			sourceTree = "<group>";
@@ -283,7 +287,7 @@
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				49ABF2EA15C0402200473CE7 /* libAdlibr.2.1.6.a */,
+				FCE2B2CB15DBB3560027690C /* libAdlibr.2.3.0.a */,
 				495E6E3215AD39FA00B7BA4C /* JSONKit */,
 			);
 			path = lib;
