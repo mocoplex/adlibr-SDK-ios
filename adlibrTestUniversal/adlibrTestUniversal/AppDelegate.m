@@ -19,6 +19,7 @@
 #import "SubAdlibAdViewiAd.h"
 #import "SubAdlibAdViewAdcube.h"
 #import "SubAdlibAdViewNaverAdPost.h"
+#import "SubAdlibAdViewShallWeAd.h"
 
 
 @implementation AppDelegate
@@ -46,7 +47,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADCUBE" withClass:[SubAdlibAdViewAdcube class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
-    
+    [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
     
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
