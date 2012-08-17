@@ -15,6 +15,7 @@
 
 @interface SubAdlibAdViewNaverAdPost : SubAdlibAdViewCore<MobileAdViewDelegate>
 {
+    BOOL bGotAd;
     MobileAdView *ad;
 }
 

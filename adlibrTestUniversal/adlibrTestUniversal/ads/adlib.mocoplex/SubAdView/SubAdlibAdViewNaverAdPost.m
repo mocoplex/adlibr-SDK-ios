@@ -36,6 +36,9 @@
     [self.view addSubview:ad];
     
     [ad start];
+    
+    if(bGotAd)
+        [self gotAd];
 }
 
 - (void)clearAdView
@@ -100,7 +103,10 @@
 {
     // 광고를 받아온 경우나, 승인을 기다리는 경우만 화면에 보이게합니다.
     if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL || err == ERROR_INTERNAL)
+    {
+        bGotAd = YES;
         [self gotAd];
+    }
     else {
         [self failed];
     }
