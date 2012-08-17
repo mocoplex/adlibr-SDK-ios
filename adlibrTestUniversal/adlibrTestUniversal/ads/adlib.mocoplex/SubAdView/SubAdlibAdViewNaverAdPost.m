@@ -16,24 +16,33 @@
 
 @implementation SubAdlibAdViewNaverAdPost
 
++ (BOOL)isStaticObject
+{
+    return YES;
+}
+
 - (void)query:(UIViewController*)parent
 {
-    [super query:parent];    
+    [super query:parent];
     
     self.view.autoresizesSubviews = NO;
-
-    // 광고뷰를 생성합니다.
-    ad = [MobileAdView sharedMobileAdView];
     
-    CGRect rt = CGRectMake(0, 0, self.view.bounds.size.width, 50);
-    ad.frame = rt;
-
-    [ad setSuperViewController:parent];
-    [ad setChannelId:NAVER_ID];
-//    [ad setIsTest:YES];
-    [ad setDelegate:self];
-    
-    [self.view addSubview:ad];
+    static BOOL bIninintedObject = NO;
+    if(!bIninintedObject)
+    {
+        // 광고뷰를 생성합니다.
+        ad = [MobileAdView sharedMobileAdView];
+        
+        CGRect rt = CGRectMake(0, 0, self.view.bounds.size.width, 50);
+        ad.frame = rt;
+        
+        [ad setSuperViewController:parent];
+        [ad setChannelId:NAVER_ID];
+        //    [ad setIsTest:YES];
+        [ad setDelegate:self];
+        
+        [self.view addSubview:ad];
+    }
     
     [ad start];
     
@@ -45,12 +54,8 @@
 {
     if(ad != nil)
     {
-        [ad setSuperViewController:nil];
-        [ad setDelegate:nil];
         [ad stop];
-        [ad removeFromSuperview];
-        
-        ad = nil;        
+        [ad setSuperViewController:nil];
     }
     
     [super clearAdView];
@@ -73,7 +78,7 @@
         w = screenHeight;
     }
     
-    return CGSizeMake(w, 50);    
+    return CGSizeMake(w, 50);
 }
 
 - (void)orientationChanged
@@ -94,7 +99,7 @@
         w = screenHeight;
     }
     
-    ad.frame = CGRectMake(0, 0, w, 50);    
+    ad.frame = CGRectMake(0, 0, w, 50);
 }
 
 #pragma MobileAdViewDelegate
