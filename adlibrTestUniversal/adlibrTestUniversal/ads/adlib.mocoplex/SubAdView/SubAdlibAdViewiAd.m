@@ -18,12 +18,10 @@
 {
     [super query:parent];
     
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         iPad = NO;
     else
-        iPad = YES;    
+        iPad = YES;
     
     self.view.autoresizesSubviews = NO;
     ad = [[ADBannerView alloc] initWithFrame:CGRectZero];

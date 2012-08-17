@@ -48,14 +48,13 @@
 {
     [super query:parent];
     
-    self.view.autoresizesSubviews = NO;        
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    self.view.autoresizesSubviews = NO;
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         iPad = NO;
     else
-        iPad = YES;    
-    iPad = NO;
+        iPad = YES;
+    //iPad = NO;
 
     bShowed = false;
     

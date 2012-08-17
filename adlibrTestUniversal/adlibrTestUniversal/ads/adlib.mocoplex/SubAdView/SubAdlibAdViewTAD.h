@@ -15,6 +15,7 @@
 
 @interface SubAdlibAdViewTAD : SubAdlibAdViewCore<TadDelegate>
 {
+    BOOL    iPad;    
 }
 
 @end

@@ -16,7 +16,8 @@
 
 @interface SubAdlibAdViewShallWeAd : SubAdlibAdViewCore<ShallWeAdDelegate>
 {
-    BOOL bGotAd;
+    BOOL    iPad;
+    BOOL    bGotAd;
 }
 
 @end

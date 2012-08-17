@@ -31,9 +31,7 @@
         w = screenHeight;
     }
 
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    if(!iPad)
     {
         w2 = 320;
     }
@@ -54,6 +52,11 @@
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        iPad = NO;
+    else
+        iPad = YES;
     
     self.view.autoresizesSubviews = NO;
     static BOOL bIninintedObject = NO;
@@ -128,9 +131,7 @@
         w = screenHeight;
     }
     
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    if(!iPad)
         return CGSizeMake(w, 48);
     else
         return CGSizeMake(w, 66);

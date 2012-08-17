@@ -24,7 +24,7 @@
 #import "SubAdlibAdViewAdmob.h"
 
 // ADMOB의 APP 아이디를 설정합니다.
-#define ADMOB_ID @"ADMOB"
+#define ADMOB_ID @"ADMOB ID"
 
 @implementation SubAdlibAdViewAdmob
 
@@ -66,12 +66,10 @@
 {
     [super query:parent];
  
-    NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         iPad = NO;
     else
-        iPad = YES;    
+        iPad = YES;
     
     // Create a view of the standard size at the bottom of the screen.
     if(iPad)

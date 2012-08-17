@@ -27,6 +27,11 @@
 {
     [super query:parent];
 
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        iPad = NO;
+    else
+        iPad = YES;
+    
     static BOOL bIninintedObject = NO;
     
     if(!bIninintedObject)    
@@ -79,8 +84,7 @@
     }
     
     NSString *deviceType = [UIDevice currentDevice].model;
-    NSRange range = [deviceType rangeOfString:@"iPad"];
-    if(range.location == NSNotFound)
+    if(!iPad)
         return CGSizeMake(w, 48);
     else
         return CGSizeMake(w, 115);
