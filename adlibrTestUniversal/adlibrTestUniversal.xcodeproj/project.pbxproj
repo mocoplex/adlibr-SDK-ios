@@ -33,7 +33,7 @@
 		495E6E6F15AD3A6D00B7BA4C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E6E15AD3A6D00B7BA4C /* MessageUI.framework */; };
 		495E6E7115AD3A8E00B7BA4C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E7015AD3A8D00B7BA4C /* AVFoundation.framework */; };
 		495E6E7315AD3AA500B7BA4C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E7215AD3AA500B7BA4C /* libz.1.2.5.dylib */; };
-		FCD2711215E5142D00A322CE /* libAdlibr.2.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2711115E5142D00A322CE /* libAdlibr.2.3.5.a */; };
+		499A617615F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A617515F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +79,7 @@
 		495E6E6E15AD3A6D00B7BA4C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		495E6E7015AD3A8D00B7BA4C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		495E6E7215AD3AA500B7BA4C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		499A617515F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.3.5.patch.a; sourceTree = "<group>"; };
 		49A84BFF15E53DBE00ED4797 /* SubAdlibAdViewAdam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdam.h; sourceTree = "<group>"; };
 		49A84C0015E53DBE00ED4797 /* SubAdlibAdViewAdam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdam.m; sourceTree = "<group>"; };
 		49A84C0115E53DBE00ED4797 /* SubAdlibAdViewAdcube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdcube.h; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		49A84C0E15E53DBE00ED4797 /* SubAdlibAdViewShallWeAd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewShallWeAd.m; sourceTree = "<group>"; };
 		49A84C0F15E53DBE00ED4797 /* SubAdlibAdViewTAD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewTAD.h; sourceTree = "<group>"; };
 		49A84C1015E53DBE00ED4797 /* SubAdlibAdViewTAD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewTAD.m; sourceTree = "<group>"; };
-		FCD2711115E5142D00A322CE /* libAdlibr.2.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.2.3.5.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
 				495E6E4A15AD39FA00B7BA4C /* libInMobi_iOS.a in Frameworks */,
-				FCD2711215E5142D00A322CE /* libAdlibr.2.3.5.a in Frameworks */,
+				499A617615F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +279,7 @@
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				FCD2711115E5142D00A322CE /* libAdlibr.2.3.5.a */,
+				499A617515F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a */,
 				495E6E3215AD39FA00B7BA4C /* JSONKit */,
 			);
 			path = lib;
