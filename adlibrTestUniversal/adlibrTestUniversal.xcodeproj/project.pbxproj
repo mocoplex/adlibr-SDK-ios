@@ -34,6 +34,15 @@
 		495E6E7115AD3A8E00B7BA4C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E7015AD3A8D00B7BA4C /* AVFoundation.framework */; };
 		495E6E7315AD3AA500B7BA4C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E7215AD3AA500B7BA4C /* libz.1.2.5.dylib */; };
 		499A617615F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499A617515F64FAC00F0D70A /* libAdlibr.2.3.5.patch.a */; };
+		FC43BDC715F9ABAC00F3CD86 /* SubAdlibAdViewAdam.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0015E53DBE00ED4797 /* SubAdlibAdViewAdam.m */; };
+		FC43BDC815F9ABAC00F3CD86 /* SubAdlibAdViewAdcube.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0215E53DBE00ED4797 /* SubAdlibAdViewAdcube.m */; };
+		FC43BDC915F9ABAC00F3CD86 /* SubAdlibAdViewAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0415E53DBE00ED4797 /* SubAdlibAdViewAdmob.m */; };
+		FC43BDCA15F9ABAC00F3CD86 /* SubAdlibAdViewCauly.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0615E53DBE00ED4797 /* SubAdlibAdViewCauly.m */; };
+		FC43BDCB15F9ABAC00F3CD86 /* SubAdlibAdViewiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0815E53DBE00ED4797 /* SubAdlibAdViewiAd.m */; };
+		FC43BDCC15F9ABAC00F3CD86 /* SubAdlibAdViewInmobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0A15E53DBE00ED4797 /* SubAdlibAdViewInmobi.m */; };
+		FC43BDCD15F9ABAC00F3CD86 /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0C15E53DBE00ED4797 /* SubAdlibAdViewNaverAdPost.m */; };
+		FC43BDCE15F9ABAC00F3CD86 /* SubAdlibAdViewShallWeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C0E15E53DBE00ED4797 /* SubAdlibAdViewShallWeAd.m */; };
+		FC43BDCF15F9ABAC00F3CD86 /* SubAdlibAdViewTAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A84C1015E53DBE00ED4797 /* SubAdlibAdViewTAD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -357,6 +366,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC43BDC715F9ABAC00F3CD86 /* SubAdlibAdViewAdam.m in Sources */,
+				FC43BDC815F9ABAC00F3CD86 /* SubAdlibAdViewAdcube.m in Sources */,
+				FC43BDC915F9ABAC00F3CD86 /* SubAdlibAdViewAdmob.m in Sources */,
+				FC43BDCA15F9ABAC00F3CD86 /* SubAdlibAdViewCauly.m in Sources */,
+				FC43BDCB15F9ABAC00F3CD86 /* SubAdlibAdViewiAd.m in Sources */,
+				FC43BDCC15F9ABAC00F3CD86 /* SubAdlibAdViewInmobi.m in Sources */,
+				FC43BDCD15F9ABAC00F3CD86 /* SubAdlibAdViewNaverAdPost.m in Sources */,
+				FC43BDCE15F9ABAC00F3CD86 /* SubAdlibAdViewShallWeAd.m in Sources */,
+				FC43BDCF15F9ABAC00F3CD86 /* SubAdlibAdViewTAD.m in Sources */,
 				495E6DDB15AD396400B7BA4C /* main.m in Sources */,
 				495E6DDF15AD396400B7BA4C /* AppDelegate.m in Sources */,
 				495E6DE215AD396400B7BA4C /* ViewController.m in Sources */,
