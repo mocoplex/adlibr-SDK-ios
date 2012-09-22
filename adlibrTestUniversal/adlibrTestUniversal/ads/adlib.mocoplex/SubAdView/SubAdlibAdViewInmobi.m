@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 350
+ * confirmed compatible with Inmobi SDK 360
  */
 
 #import "SubAdlibAdViewInmobi.h"
@@ -22,7 +22,7 @@
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;    
+    CGFloat screenHeight = screenRect.size.height;
     int w,w2=0;
     if([self isPortrait])
     {
@@ -34,19 +34,32 @@
     }
     
     if (iPad) {
-        w2 = 728;            
+        w2 = 728;
     }
     else
     {
-        w2 = 320;            
+        w2 = 320;
     }
     
     return (w-w2)/2;
 }
 
+- (void)releaseAdView
+{
+    if(ad != nil)
+    {
+        [ad removeFromSuperview];
+        ad.delegate = nil;
+        [ad release];
+        ad = nil;
+    }
+}
+
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
+    
+    nSyncQueryFlag = 0;
     
     self.view.autoresizesSubviews = NO;
     
@@ -54,21 +67,24 @@
         iPad = NO;
     else
         iPad = YES;
-    //iPad = NO;
-
+    
+    // only iPhone size
+    iPad = NO;
     bShowed = false;
     
     if(iPad)
-        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) imAppId:INMOBI_ID imAdUnit:IM_UNIT_728x90 rootViewController:parent];    
+        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) imAppId:INMOBI_ID imAdSize:IM_UNIT_728x90 rootViewController:parent];
     else
-        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) imAppId:INMOBI_ID imAdUnit:IM_UNIT_320x50 rootViewController:parent];            
-
+        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) imAppId:INMOBI_ID imAdSize:IM_UNIT_320x50 rootViewController:parent];
+    
     ad.delegate = self;
     ad.refreshInterval = 20;
     ad.rootViewController = parent;
-
+    
     IMAdRequest *request = [IMAdRequest request];
-    //request.testMode = YES;
+    
+    //
+    request.testMode = YES;
     
     // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
     // do not modify this area -- implemented to get reward point
@@ -77,7 +93,7 @@
     // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
     
     ad.imAdRequest = request;
-
+    
     [self.view addSubview:ad];
     
     [ad loadIMAdRequest:request];
@@ -85,12 +101,7 @@
 
 - (void)clearAdView
 {
-    if(ad != nil)
-    {
-        ad.delegate = nil;
-        [ad release];
-        ad = nil;        
-    }
+    [self releaseAdView];
     
     [super clearAdView];
 }
@@ -111,7 +122,7 @@
         w = screenHeight;
     }
     
-    if(iPad)    
+    if(iPad)
         return CGSizeMake(w, 90);
     else
         return CGSizeMake(w, 50);
@@ -136,62 +147,49 @@
     }
     
     int w2;
-    if (iPad) {
-        w2 = 728;            
-    }
+    if (iPad)
+        w2 = 728;
     else
-    {
-        w2 = 320;            
-    }
+        w2 = 320;
     
     int h2 = 90;
     if(!iPad)
         h2 = 50;
     
     if([self isPortrait])
-    {
         ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
     else
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);        
-    }    
+        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
 }
 
 #pragma mark InMobiAdDelegate methods
 
 - (void)adViewDidFinishRequest:(IMAdView *)view {
-    //NSLog(@"<<<<<ad request completed>>>>>");
-    [self gotAd];
+    if(++nSyncQueryFlag == 1)
+        [self gotAd];
     bShowed = true;
 }
 
 - (void)adView:(IMAdView *)view didFailRequestWithError:(IMAdError *)error {
-    //NSLog(@"<<<< ad request failed.>>>, error=%@",[error localizedDescription]);
-    //NSLog(@"error code=%d",[error code]);
-    
     if(bShowed)
         return;
-        
+    
     if([error code] == kIMADNoFillError || [error code] == kIMADInvalidRequestError || [error code] == kIMADInternalError)
+    {
         [self failed];
+    }
 }
 
 - (void)adViewDidDismissScreen:(IMAdView *)adView {
-    //NSLog(@"adViewDidDismissScreen");
 }
 
 - (void)adViewWillDismissScreen:(IMAdView *)adView {
-    //NSLog(@"adViewWillDismissScreen");
 }
 
 - (void)adViewWillPresentScreen:(IMAdView *)adView {
-    //NSLog(@"adViewWillPresentScreen");
 }
 
 - (void)adViewWillLeaveApplication:(IMAdView *)adView {
-    //NSLog(@"adViewWillLeaveApplication");
 }
-
 
 @end

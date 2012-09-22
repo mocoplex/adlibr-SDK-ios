@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 350
+ * confirmed compatible with Inmobi SDK 360
  */
 
 #import <UIKit/UIKit.h>
@@ -21,6 +21,7 @@
     BOOL    iPad;
     BOOL    bShowed;
     IMAdView *ad;
+    int nSyncQueryFlag;
 }
 
 @end
