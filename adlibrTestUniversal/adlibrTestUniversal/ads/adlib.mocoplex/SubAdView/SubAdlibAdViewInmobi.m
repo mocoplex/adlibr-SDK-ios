@@ -84,7 +84,7 @@
     IMAdRequest *request = [IMAdRequest request];
     
     //
-    request.testMode = YES;
+    //request.testMode = YES;
     
     // 애드립 리워드 포인트 적립을 위해 필요한 코드입니다. -- 삭제하지 마세요.
     // do not modify this area -- implemented to get reward point
