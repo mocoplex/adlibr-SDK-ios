@@ -6,14 +6,14 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 2.4.6
+ * confirmed compatible with cauly SDK 2.5.0
  */
 
 #import "SubAdlibAdViewCauly.h"
 #import "AdlibManager.h"
 
 // CAULY의 APP 아이디를 설정합니다.
-#define CAULY_ID @"CAULY";
+#define CAULY_ID @"CAULY ID";
 
 @implementation SubAdlibAdViewCauly
 
@@ -78,11 +78,13 @@
     [CaulyViewController bringCaulyBannerADToFront];
     [CaulyViewController startLoading];
     
-    [self gotAd];
+    if(bGotAd)
+        [self gotAd];
 }
 
 -(void)gotAd
 {
+    bGotAd = YES;
     [super gotAd];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
