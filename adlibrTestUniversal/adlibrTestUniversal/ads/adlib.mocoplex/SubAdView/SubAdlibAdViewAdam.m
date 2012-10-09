@@ -12,7 +12,7 @@
 #import "SubAdlibAdViewAdam.h"
 
 // ADAM의 APP 아이디를 설정합니다.
-#define ADAM_ID @"TestClientId";
+#define ADAM_ID @"ADAM ID";
 
 @implementation SubAdlibAdViewAdam
 
@@ -50,13 +50,10 @@
         bIninintedObject = YES;
     }
     
-    if(!ad.usingAutoRequest)
-    {
-        [ad startAutoRequestAd:30];
-    }
+    [ad startAutoRequestAd:30];
     
-    // 광고 수신 확인을 위해 먼저 화면에 보인다.
-    [self gotAd];
+    if(bGotAd)
+        [self gotAd];
 }
 
 - (void)clearAdView
@@ -73,7 +70,8 @@
  */
 - (void)didReceiveAd:(AdamAdView *)adView
 {
-    [self gotAd];    
+    bGotAd = YES;
+    [self gotAd];
 }
 
 /**
