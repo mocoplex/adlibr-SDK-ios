@@ -42,8 +42,8 @@
         [TadViewController enableAutoRotation:YES];        
     }    
     
-    // 응답을 받기위해 화면에 보인다.
-    [self gotAd];    
+    if(bGotAd)
+        [self gotAd];    
 }
 
 - (void)clearAdView
@@ -65,6 +65,7 @@
 {
     // 광고 수신
     [self gotAd];
+    bGotAd = YES;
 }
 
 - (CGSize)size
