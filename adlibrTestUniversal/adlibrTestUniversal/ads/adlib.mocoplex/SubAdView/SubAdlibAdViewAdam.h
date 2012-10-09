@@ -16,6 +16,7 @@
 #define AD_REFRESH_PERIOD 60
 @interface SubAdlibAdViewAdam : SubAdlibAdViewCore<AdamAdViewDelegate>
 {
+    BOOL bGotAd;
     AdamAdView *ad;
 }
 
