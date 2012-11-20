@@ -6,15 +6,15 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 2.5.0
+ * confirmed compatible with cauly SDK 3.0
  */
 
 #import "SubAdlibAdViewCore.h"
-#import "CaulyViewController.h"
+#import "CaulyAdView.h"
 
-@interface SubAdlibAdViewCauly : SubAdlibAdViewCore<CaulyProtocol>
+@interface SubAdlibAdViewCauly : SubAdlibAdViewCore
 {
-    BOOL bGotAd;
+    CaulyAdView *ad;
     BOOL iPad;
 }
 

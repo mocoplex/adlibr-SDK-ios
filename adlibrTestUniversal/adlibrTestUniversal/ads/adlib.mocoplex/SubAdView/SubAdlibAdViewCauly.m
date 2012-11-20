@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 2.5.0
+ * confirmed compatible with cauly SDK 3.0
  */
 
 #import "SubAdlibAdViewCauly.h"
@@ -21,7 +21,7 @@
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;    
+    CGFloat screenHeight = screenRect.size.height;
     int w,w2=0;
     if([self isPortrait])
     {
@@ -32,20 +32,9 @@
         w = screenHeight;
     }
     
-    if (iPad) {
-        w2 = 768;            
-    }
-    else
-    {
-        w2 = 320;            
-    }
+    w2 = 320;
     
     return (w-w2)/2;
-}
-
-+ (BOOL)isStaticObject
-{
-    return YES;
 }
 
 - (void)query:(UIViewController*)parent
@@ -57,40 +46,41 @@
     else
         iPad = YES;
     
-    static BOOL bIninintedObject = NO;
+    CaulyAdSetting* ads = [CaulyAdSetting globalSetting];
+    [CaulyAdSetting setLogLevel:CaulyLogLevelRelease];
     
-    if(!bIninintedObject)
-    {
-        [CaulyViewController initCauly:self];
-        bIninintedObject = YES;
-        if (iPad) {
-            [CaulyViewController requestBannerADWithViewController:parent xPos:[self getCenterPos] yPos:0 adType:BT_IPAD_LARGE];                    
-        }
-        else
-        {
-            [CaulyViewController requestBannerADWithViewController:parent xPos:[self getCenterPos] yPos:0 adType:BT_IPHONE];
-        }
-    }
-
-    [CaulyViewController hideBannerAD:NO];
+    ads.appCode = CAULY_ID;
+    ads.animType = CaulyAnimNone;
     
-    [CaulyViewController moveBannerAD:parent caulyParentview:nil xPos:[self getCenterPos] yPos:self.view.frame.origin.y];
-    [CaulyViewController bringCaulyBannerADToFront];
-    [CaulyViewController startLoading];
+    ad = [[CaulyAdView alloc] initWithParentViewController:parent];
+    [self.view addSubview:ad];
+    ad.delegate = self;
+    ad.localSetting = ads;
     
-    if(bGotAd)
-        [self gotAd];
+    [ad startBannerAdRequest];
+    
+    [self gotAd];
 }
 
--(void)gotAd
+- (void)clearAdView
 {
-    bGotAd = YES;
-    [super gotAd];
+    ad.delegate = nil;
+    ad.parentController = nil;
+    [ad release];
+    ad = nil;
+    
+    [super clearAdView];
+}
+
+- (void)orientationChanged
+{
+    [super orientationChanged];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;    
-    int w,w2=0;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    int w;
     if([self isPortrait])
     {
         w = screenWidth;
@@ -100,85 +90,53 @@
         w = screenHeight;
     }
     
-    if (iPad) {
-        w2 = 768;            
+    int w2 = 320;
+    int h2 = 48;
+    
+    if([self isPortrait])
+    {
+        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
     }
     else
     {
-        w2 = 320;            
+        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
     }
-    
-    [CaulyViewController moveBannerAD:self.parentController caulyParentview:nil xPos:[self getCenterPos] yPos:self.view.frame.origin.y];
-    [CaulyViewController bringCaulyBannerADToFront];
 }
 
-- (void)clearAdView
-{
-    [CaulyViewController stopLoading];
-    [CaulyViewController hideBannerAD:YES];
-    
-    [super clearAdView];    
-}
+// Banner AD API
+#pragma mark - CaulyAdViewDelegate
 
-- (void)orientationChanged
-{
-    [super orientationChanged];    
+// 광고 정보 수신 성공
+- (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd {
     
-    
-    // 320 768
-    [CaulyViewController moveBannerAD:self.parentController caulyParentview:nil xPos:[self getCenterPos] yPos:self.view.frame.origin.y];
-}
-
-
-- (NSString*)devKey
-{
-    return CAULY_ID;
-}
-- (NSString*)age
-{
-    return [[AdlibManager sharedSingletonClass] getAgeCauly];
-}
-- (NSString*)gender
-{
-    return [[AdlibManager sharedSingletonClass] getGenderCauly];
-}
-- (BOOL)getGPSInfo
-{
-    return NO;
-}
--(REFRESH_PERIOD)rollingPeriod
-{
-    return SEC_30;
-}
--(ANIMATION_TYPE)animationType
-{
-    return FADEOUT;
-}
--(void)AdReceiveFailed
-{
-    [self failed];
-    return;    
-}
--(void)AdReceiveCompleted
-{
-    if(![CaulyViewController IsChargeableAd])
+    if(isChargeableAd)
     {
-        // 광고 수신에 실패하였습니다. 바로 다음 스케줄 광고를 로드합니다.
-        [self failed];
-        return;
+        [self gotAd];
     }
-    
-    // 광고를 수신하였습니다.    
-    [self gotAd];    
+}
+
+// 광고 정보 수신 실패
+- (void)didFailToReceiveAd:(CaulyAdView *)adView errorCode:(int)errorCode errorMsg:(NSString*)errorMsg {
+    [self failed];
 }
 
 - (CGSize)size
 {
-    if(iPad)
-        return CGSizeMake(self.view.bounds.size.width, 90);
-    else
-        return CGSizeMake(self.view.bounds.size.width, 48);
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
     
+    int w;
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+    
+    return CGSizeMake(w, 48);
 }
 
 @end
