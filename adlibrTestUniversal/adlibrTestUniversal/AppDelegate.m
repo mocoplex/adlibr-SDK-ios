@@ -73,8 +73,8 @@
     
     // 광고 타겟팅을 위한 추가 옵션을 입력합니다. (옵션)
     
-    // age - 0/전체 , F/여자 , M/남자
-    // gender - 0/전체 , 10/10대 , 20/20대 , 30/30대 , 40/40대 이상    
+    // age - 0/전체 , 10/10대 , 20/20대 , 30/30대 , 40/40대 이상
+    // gender - 0/전체 , F/여자 , M/남자
     [[AdlibManager sharedSingletonClass] setConfigWithAge:@"0" withGender:@"F"];    
     
     // 위도, 경도
