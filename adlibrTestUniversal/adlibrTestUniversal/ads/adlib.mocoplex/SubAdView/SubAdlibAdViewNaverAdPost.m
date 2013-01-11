@@ -107,7 +107,7 @@
 - (void)adDidReceived:(MobileAdErrorType)err
 {
     // 광고를 받아온 경우나, 승인을 기다리는 경우만 화면에 보이게합니다.
-    if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL || err == ERROR_INTERNAL)
+    if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL || err == ERROR_INTERNAL || err == ERROR_INVALID_REQUEST || err == ERROR_INVALID_CHANNEL)
     {
         bGotAd = YES;
         [self gotAd];
