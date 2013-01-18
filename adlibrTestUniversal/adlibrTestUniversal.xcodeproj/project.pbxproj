@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33D20EEB166E274300DC5ECA /* libAdlibr.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D20EEA166E274300DC5ECA /* libAdlibr.3.0.a */; };
+		3329207416A8EC7F00DC222F /* libAdlibr.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3329207316A8EC7F00DC222F /* libAdlibr.3.1.a */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
 		495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD215AD396400B7BA4C /* CoreGraphics.framework */; };
@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33D20EEA166E274300DC5ECA /* libAdlibr.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.0.a; sourceTree = "<group>"; };
+		3329207316A8EC7F00DC222F /* libAdlibr.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.1.a; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E6DCE15AD396400B7BA4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		495E6DD015AD396400B7BA4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,7 +131,7 @@
 				495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */,
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
-				33D20EEB166E274300DC5ECA /* libAdlibr.3.0.a in Frameworks */,
+				3329207416A8EC7F00DC222F /* libAdlibr.3.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +273,7 @@
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				33D20EEA166E274300DC5ECA /* libAdlibr.3.0.a */,
+				3329207316A8EC7F00DC222F /* libAdlibr.3.1.a */,
 				495E6E3215AD39FA00B7BA4C /* JSONKit */,
 			);
 			path = lib;
