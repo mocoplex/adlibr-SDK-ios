@@ -6,13 +6,13 @@
  */
 
 /*
- * confirmed compatible with NaverAdPost SDK 1.0
+ * confirmed compatible with NaverAdPost SDK 1.2
  */
 
 #import "SubAdlibAdViewNaverAdPost.h"
 
 // NAVER의 APP 아이디를 설정합니다.
-#define NAVER_ID @"test1234"
+#define NAVER_ID @"NAVER ID"
 
 @implementation SubAdlibAdViewNaverAdPost
 
@@ -44,10 +44,11 @@
         [self.view addSubview:ad];
     }
     
+    // NaverADPost SDK 1.2 이후로 background request 를 지원하지 않습니다. 
     [ad start];
     
-    if(bGotAd)
-        [self gotAd];
+    // 먼저 광고뷰를 화면에 보이고 수신여부를 확인합니다.
+    [self gotAd];
 }
 
 - (void)clearAdView
@@ -110,10 +111,10 @@
     if(err == ERROR_SUCCESS || err == ERROR_WAIT_FOR_APPROVAL || err == ERROR_INTERNAL || err == ERROR_INVALID_REQUEST || err == ERROR_INVALID_CHANNEL)
     {
         bGotAd = YES;
-        [self gotAd];
     }
     else {
-        [self failed];
+        if(!bGotAd)
+            [self failed];
     }
 }
 
