@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with ShallWeAd SDK 2.4.2
+ * confirmed compatible with ShallWeAd SDK 2.4.6
  */
 
 #import "SubAdlibAdViewShallWeAd.h"
@@ -79,8 +79,9 @@
     
     [G_SHALLWEAD startBanner];
     
-    if(bGotAd)
-        [self gotAd];
+    //background request 를 지원하지 않는 플랫폼입니다.
+    // 먼저 광고뷰를 화면에 보이고 수신여부를 확인합니다.
+    [self gotAd];
 }
 
 
@@ -89,7 +90,8 @@
  */
 -(void) loadingError
 {
-    [self failed];    
+    if(!bGotAd)
+        [self failed];    
 }
 
 /**
@@ -98,7 +100,6 @@
 -(void) loadingSuccess
 {
     bGotAd = YES;
-    [self gotAd];
 }
 
 - (void)clearAdView
