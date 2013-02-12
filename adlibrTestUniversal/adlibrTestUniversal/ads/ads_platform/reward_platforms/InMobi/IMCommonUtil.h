@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 InMobi Technology Services Ltd. All rights reserved.
 //
 
-#define ___INMOBI_COMMONS_VERSION_3_6_0___
+#define ___INMOBI_COMMONS_VERSION_3_6_5___
 #import <Foundation/Foundation.h>
 
 /**
@@ -54,6 +54,11 @@ typedef enum {
      * Exclude identifierForVendor from Device Id Collection. (iOS 6+)
      */
     IMDevice_ExcludeVendorId        = 1<<2,
+    /**
+     * IMDevice_ExcludeUDID
+     * Exclude UDID Identifier from Device Id Collection.
+     */
+    IMDevice_ExcludeUDID            = 1<<3,
 
 } IMDeviceIdMask;
 

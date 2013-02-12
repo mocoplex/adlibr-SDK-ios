@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33397E4C16CA5AC700BDABA4 /* libInMobiAdNetwork-3.6.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33397E4A16CA5AC700BDABA4 /* libInMobiAdNetwork-3.6.5.a */; };
+		33397E4D16CA5AC800BDABA4 /* libInMobiCommons-3.6.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33397E4B16CA5AC700BDABA4 /* libInMobiCommons-3.6.5.a */; };
 		33FC6EAE16C937AA007290DC /* libAdlibr.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FC6EAD16C937AA007290DC /* libAdlibr.3.2.a */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -48,6 +50,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33397E4316CA5AC700BDABA4 /* IMAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdDelegate.h; path = InMobi/IMAdDelegate.h; sourceTree = "<group>"; };
+		33397E4416CA5AC700BDABA4 /* IMAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdError.h; path = InMobi/IMAdError.h; sourceTree = "<group>"; };
+		33397E4516CA5AC700BDABA4 /* IMAdInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdInterstitial.h; path = InMobi/IMAdInterstitial.h; sourceTree = "<group>"; };
+		33397E4616CA5AC700BDABA4 /* IMAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdInterstitialDelegate.h; path = InMobi/IMAdInterstitialDelegate.h; sourceTree = "<group>"; };
+		33397E4716CA5AC700BDABA4 /* IMAdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdRequest.h; path = InMobi/IMAdRequest.h; sourceTree = "<group>"; };
+		33397E4816CA5AC700BDABA4 /* IMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdView.h; path = InMobi/IMAdView.h; sourceTree = "<group>"; };
+		33397E4916CA5AC700BDABA4 /* IMCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMCommonUtil.h; path = InMobi/IMCommonUtil.h; sourceTree = "<group>"; };
+		33397E4A16CA5AC700BDABA4 /* libInMobiAdNetwork-3.6.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libInMobiAdNetwork-3.6.5.a"; path = "InMobi/libInMobiAdNetwork-3.6.5.a"; sourceTree = "<group>"; };
+		33397E4B16CA5AC700BDABA4 /* libInMobiCommons-3.6.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libInMobiCommons-3.6.5.a"; path = "InMobi/libInMobiCommons-3.6.5.a"; sourceTree = "<group>"; };
 		33FC6EAD16C937AA007290DC /* libAdlibr.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.2.a; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E6DCE15AD396400B7BA4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -132,6 +143,8 @@
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
 				33FC6EAE16C937AA007290DC /* libAdlibr.3.2.a in Frameworks */,
+				33397E4C16CA5AC700BDABA4 /* libInMobiAdNetwork-3.6.5.a in Frameworks */,
+				33397E4D16CA5AC800BDABA4 /* libInMobiCommons-3.6.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +279,15 @@
 		495E6E1E15AD39FA00B7BA4C /* reward_platforms */ = {
 			isa = PBXGroup;
 			children = (
+				33397E4316CA5AC700BDABA4 /* IMAdDelegate.h */,
+				33397E4416CA5AC700BDABA4 /* IMAdError.h */,
+				33397E4516CA5AC700BDABA4 /* IMAdInterstitial.h */,
+				33397E4616CA5AC700BDABA4 /* IMAdInterstitialDelegate.h */,
+				33397E4716CA5AC700BDABA4 /* IMAdRequest.h */,
+				33397E4816CA5AC700BDABA4 /* IMAdView.h */,
+				33397E4916CA5AC700BDABA4 /* IMCommonUtil.h */,
+				33397E4A16CA5AC700BDABA4 /* libInMobiAdNetwork-3.6.5.a */,
+				33397E4B16CA5AC700BDABA4 /* libInMobiCommons-3.6.5.a */,
 			);
 			path = reward_platforms;
 			sourceTree = "<group>";
@@ -457,6 +479,7 @@
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
+					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,6 +501,7 @@
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
 					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
+					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";

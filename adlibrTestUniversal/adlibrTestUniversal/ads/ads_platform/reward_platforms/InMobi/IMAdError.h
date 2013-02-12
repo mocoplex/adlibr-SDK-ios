@@ -8,10 +8,6 @@
 #import "IMCommonUtil.h"
 #import <Foundation/Foundation.h>
 
-#ifndef ___INMOBI_COMMONS_VERSION_3_6_0___
-#error @"libIMCommons version mismatch, Please upgrade to the latest."
-#endif
-
 /**
  * IMAdErrorCode enum defines the NSError codes for InMobi ad fetch/click
  * request.
