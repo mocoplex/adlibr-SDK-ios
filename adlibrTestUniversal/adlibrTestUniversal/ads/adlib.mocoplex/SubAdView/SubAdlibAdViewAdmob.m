@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.1.2
+ * confirmed compatible with admob SDK 6.3.0
  */
 
 // 실제 프로젝트 적용시 위 주소를 참고하여

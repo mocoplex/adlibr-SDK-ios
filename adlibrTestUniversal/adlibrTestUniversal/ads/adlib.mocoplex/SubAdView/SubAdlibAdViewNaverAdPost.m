@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with NaverAdPost SDK 1.2
+ * confirmed compatible with NaverAdPost SDK 1.2.0
  */
 
 #import "SubAdlibAdViewNaverAdPost.h"
