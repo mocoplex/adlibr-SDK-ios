@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with ShallWeAd SDK 2.4.2
+ * confirmed compatible with ShallWeAd SDK 2.4.6
  */
 
 #import <UIKit/UIKit.h>

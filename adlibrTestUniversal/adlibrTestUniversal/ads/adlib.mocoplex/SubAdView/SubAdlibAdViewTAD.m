@@ -6,41 +6,33 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 2.4.7.6
+ * confirmed compatible with t-ad SDK 3.0.0.6
  */
 
 #import "SubAdlibAdViewTAD.h"
 
-// 인모비와 중첩사용의 경우 문제발생이 보고되고 있습니다.
+// Tad를 사용할 경우 Tad의 library에 JSONKit이 포함되어 있으므로 애드립 lib 폴더의 JSONKit을 삭제하세요.
 
 // TAD의 APP 아이디를 설정합니다.
 #define TAD_ID @"T-AD"
 
 @implementation SubAdlibAdViewTAD
 
-+ (BOOL)isStaticObject
-{
-    return YES;
-}
-
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
 
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-        iPad = NO;
-    else
-        iPad = YES;
+    tadCore = [[TadCore alloc] initWithSeedView:self.view delegate:self];
+    //필수 사항
+    [tadCore setClientID:TAD_ID];       // 클라이언트 아이디
+    [tadCore setSlotNo:TadSlotInline];  // 슬롯 설정
     
-    static BOOL bIninintedObject = NO;
-    
-    if(!bIninintedObject)    
-    {
-        [TadViewController initialize:TAD_ID bannerPosition:BANNER_POSITION_TOP_CENTER applicationTitle:@"APP TITLE" view:self.view];
-        
-        [TadViewController setAdDelegate:self];
-        [TadViewController enableAutoRotation:YES];        
-    }    
+    // 선택 셋팅 사항
+    [tadCore setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
+    [tadCore setOffset:CGPointMake(0.0f, 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
+    [tadCore setRefershInterval:30.0f];                   // 리프레쉬 인터벌을 결정한다. 15~60초 사이만 가능 (Default : 60)
+    [tadCore setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
+    [tadCore getAdvertisement];
     
     if(bGotAd)
         [self gotAd];    
@@ -49,23 +41,58 @@
 - (void)clearAdView
 {
     [super clearAdView];
-    [TadViewController deinitialize];
+    [tadCore release];
+    tadCore = nil;
 }
 
-- (void)TadNoMoreAdItem
-{
-    // 광고가 없다.
-    [TadViewController deinitialize];
+#pragma mark - TadDelegate
 
-    // 실패했다. 바로 다음 스케줄 광고를 보인다.
-    [self failed];
+- (void)tadOnAdWillReceive {
+    //NSLog(@"<Tad> 광고 전문 요청 시작");
 }
 
-- (void)TadRecvAd
-{
-    // 광고 수신
+- (void)tadOnAdReceived {
+    //NSLog(@"<Tad> 광고 전문 수신 완료");
+}
+
+- (void)tadOnAdWillLoad {
+    //NSLog(@"<Tad> 광고 로드 시작");
+}
+
+- (void)tadOnAdLoaded {
+    //광고 로드 완료
     [self gotAd];
     bGotAd = YES;
+}
+
+- (void)tadOnAdClicked {
+    //NSLog(@"<Tad> 광고 클릭");
+}
+
+- (void)tadOnAdColsed {
+    //NSLog(@"<Tad> 전면 형 광고 닫힘");
+}
+
+- (void)tadOnAdExpanded {
+    //NSLog(@"<Tad> 광고 확장");
+}
+
+- (void)tadOnAdExpandClose {
+    //NSLog(@"<Tad> 광고 확장 닫기");
+}
+
+- (void)tadOnAdResized {
+    //NSLog(@"<Tad> 광고 리사이징");
+}
+
+- (void)tadOnAdResizeClosed {
+    //NSLog(@"<Tad> 광고 리사이징 닫기");
+}
+
+- (void)tadFailed:(TadErrorCode)errorCode {
+    
+    // 실패했다. 바로 다음 스케줄 광고를 보인다.
+    [self failed];
 }
 
 - (CGSize)size
@@ -84,11 +111,7 @@
         w = screenHeight;
     }
     
-    NSString *deviceType = [UIDevice currentDevice].model;
-    if(!iPad)
-        return CGSizeMake(w, 48);
-    else
-        return CGSizeMake(w, 115);
+    return CGSizeMake(w, 50);
 }
 
 @end

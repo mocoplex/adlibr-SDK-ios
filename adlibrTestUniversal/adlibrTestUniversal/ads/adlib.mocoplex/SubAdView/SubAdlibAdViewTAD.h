@@ -6,17 +6,17 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 2.4.6.6
+ * confirmed compatible with t-ad SDK 3.0.0.6
  */
 
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdViewCore.h"
-#import "TadViewController.h"
+#import "TadCore.h"
 
 @interface SubAdlibAdViewTAD : SubAdlibAdViewCore<TadDelegate>
 {
     BOOL    bGotAd;
-    BOOL    iPad;    
+    TadCore *tadCore;
 }
 
 @end
