@@ -58,7 +58,7 @@
     // 애드립 기본 프로젝트에 제휴 플랫폼 연동을 위한 모든 부분이 구현되어 있으며,
     // 제휴 플랫폼을 통해 발급받은 APP-ID 를 구현부에 연결하기만 하면,
     // 애드립에서 제휴 플랫폼에서 발생한 수익의 일부를 reward point로 더 적립해드립니다.
-    // 자세한 사항은 http://adlibr.com/rpoint.jsp 를 참조해주세요.
+    // 자세한 사항은 http://adlibr.com/features/rpoint 를 참조해주세요.
     
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
