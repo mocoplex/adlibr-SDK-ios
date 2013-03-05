@@ -210,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				495E6DF515AD39FA00B7BA4C /* adlib.mocoplex */,
-				495E6E1D15AD39FA00B7BA4C /* ads_platform */,
 				495E6E3115AD39FA00B7BA4C /* lib */,
 			);
 			path = ads;
@@ -248,13 +247,6 @@
 				49A84C1015E53DBE00ED4797 /* SubAdlibAdViewTAD.m */,
 			);
 			path = SubAdView;
-			sourceTree = "<group>";
-		};
-		495E6E1D15AD39FA00B7BA4C /* ads_platform */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ads_platform;
 			sourceTree = "<group>";
 		};
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
