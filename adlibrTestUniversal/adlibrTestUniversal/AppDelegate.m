@@ -10,17 +10,14 @@
 
 #import "AdlibManager.h"
 
-#import "SubAdlibAdViewInmobi.h"
-
-
 #import "SubAdlibAdViewAdam.h"
 #import "SubAdlibAdViewAdmob.h"
 #import "SubAdlibAdViewCauly.h"
 #import "SubAdlibAdViewTAD.h"
 #import "SubAdlibAdViewiAd.h"
-#import "SubAdlibAdViewAdcube.h"
 #import "SubAdlibAdViewNaverAdPost.h"
 #import "SubAdlibAdViewShallWeAd.h"
+#import "SubAdlibAdViewInmobi.h"
 
 
 @implementation AppDelegate
