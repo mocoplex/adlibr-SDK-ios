@@ -53,22 +53,15 @@
     
     [[AdlibManager sharedSingletonClass] initAdlib:adlibKey];
     
-    // 제휴 플랫폼을 연결합니다.
-    [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
-    // 애드립 기본 프로젝트에 제휴 플랫폼 연동을 위한 모든 부분이 구현되어 있으며,
-    // 제휴 플랫폼을 통해 발급받은 APP-ID 를 구현부에 연결하기만 하면,
-    // 애드립에서 제휴 플랫폼에서 발생한 수익의 일부를 reward point로 더 적립해드립니다.
-    // 자세한 사항은 http://adlibr.com/features/rpoint 를 참조해주세요.
-    
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADMOB" withClass:[SubAdlibAdViewAdmob class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"CAULY" withClass:[SubAdlibAdViewCauly class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"TAD" withClass:[SubAdlibAdViewTAD class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"ADCUBE" withClass:[SubAdlibAdViewAdcube class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
     // 광고 타겟팅을 위한 추가 옵션을 입력합니다. (옵션)
