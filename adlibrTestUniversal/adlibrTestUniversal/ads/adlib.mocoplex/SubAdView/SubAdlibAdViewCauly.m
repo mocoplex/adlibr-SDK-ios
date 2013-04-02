@@ -13,7 +13,7 @@
 #import "AdlibManager.h"
 
 // CAULY의 APP 아이디를 설정합니다.
-#define CAULY_ID @"CAULY ID";
+#define CAULY_ID @"CAULY_ID";
 
 @implementation SubAdlibAdViewCauly
 

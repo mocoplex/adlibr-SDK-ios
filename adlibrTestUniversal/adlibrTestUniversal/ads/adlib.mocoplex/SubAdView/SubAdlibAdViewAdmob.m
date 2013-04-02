@@ -24,7 +24,7 @@
 #import "SubAdlibAdViewAdmob.h"
 
 // ADMOB의 APP 아이디를 설정합니다.
-#define ADMOB_ID @"ADMOB ID"
+#define ADMOB_ID @"ADMOB_ID"
 
 @implementation SubAdlibAdViewAdmob
 

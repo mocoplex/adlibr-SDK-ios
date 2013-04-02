@@ -12,7 +12,7 @@
 #import "SubAdlibAdViewNaverAdPost.h"
 
 // NAVER의 APP 아이디를 설정합니다.
-#define NAVER_ID @"NAVER ID"
+#define NAVER_ID @"NAVER_ID"
 
 @implementation SubAdlibAdViewNaverAdPost
 

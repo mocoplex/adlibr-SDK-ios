@@ -14,7 +14,7 @@
 // Tad를 사용할 경우 Tad의 library에 JSONKit이 포함되어 있으므로 애드립 lib 폴더의 JSONKit을 삭제하세요.
 
 // TAD의 APP 아이디를 설정합니다.
-#define TAD_ID @"T-AD"
+#define TAD_ID @"T_AD"
 
 @implementation SubAdlibAdViewTAD
 
