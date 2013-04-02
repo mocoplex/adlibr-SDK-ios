@@ -96,34 +96,34 @@
 
 
 /*
- // delegate 로 연결한 경우
- - (void)gotAd
- {
- CGPoint adPoint = CGPointMake(0, 0);
- CGRect rt = tv.frame;
- 
- // 광고 view의 크기
- CGSize sz = [[AdlibManager sharedSingletonClass] size];
- 
- NSLog(@"layout : %@",NSStringFromCGSize(sz));
- 
- if(!bBannerBottom)
- {
- // 상단에 광고 위치
- rt = CGRectMake(0, sz.height, rt.size.width, self.view.bounds.size.height-sz.height);
- tv.frame = rt;
- }
- else
- {
- // 하단에 광고 위치        
- rt = CGRectMake(0, 0, rt.size.width, self.view.bounds.size.height-sz.height);
- tv.frame = rt;
- adPoint = CGPointMake(0, self.view.bounds.size.height-sz.height);
- }
- 
- [[AdlibManager sharedSingletonClass] moveAdContainer:adPoint];
- }
- */
+// delegate 로 연결한 경우
+- (void)gotAd
+{
+    CGPoint adPoint = CGPointMake(0, 0);
+    CGRect rt = self.view.frame;
+    
+    // 광고 view의 크기
+    CGSize sz = [[AdlibManager sharedSingletonClass] size];
+    
+    NSLog(@"layout : %@",NSStringFromCGSize(sz));
+    
+    BOOL bBannerBottom = YES;
+    
+    if(!bBannerBottom)
+    {
+        // 상단에 광고 위치
+        rt = CGRectMake(0, sz.height, rt.size.width, self.view.bounds.size.height-sz.height);
+    }
+    else
+    {
+        // 하단에 광고 위치
+        rt = CGRectMake(0, 0, rt.size.width, self.view.bounds.size.height-sz.height);
+        adPoint = CGPointMake(0, self.view.bounds.size.height-sz.height);
+    }
+    
+    [[AdlibManager sharedSingletonClass] moveAdContainer:adPoint];
+}
+*/
 
 -(void)viewWillDisappear:(BOOL)animated
 {
