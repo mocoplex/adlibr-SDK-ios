@@ -61,14 +61,6 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
-    // 광고 타겟팅을 위한 추가 옵션을 입력합니다. (옵션)
-    
-    // age - 0/전체 , 10/10대 , 20/20대 , 30/30대 , 40/40대 이상
-    // gender - 0/전체 , F/여자 , M/남자
-    [[AdlibManager sharedSingletonClass] setConfigWithAge:@"0" withGender:@"F"];    
-    
-    // 위도, 경도
-    [[AdlibManager sharedSingletonClass] setConfigWithLat:@"37.529451" withLon:@"126.871035"];
 }
 
 
