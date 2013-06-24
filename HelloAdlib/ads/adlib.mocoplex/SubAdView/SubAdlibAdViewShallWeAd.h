@@ -6,12 +6,12 @@
  */
 
 /*
- * confirmed compatible with ShallWeAd SDK 2.4.6
+ * confirmed compatible with ShallWeAd SDK 2.4.7
  */
 
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdViewCore.h"
-#import "ShallWeAD_IOSSDK/ShallWeAD.h"
+#import "ShallWeAD.h"
 
 
 @interface SubAdlibAdViewShallWeAd : SubAdlibAdViewCore<ShallWeAdDelegate>

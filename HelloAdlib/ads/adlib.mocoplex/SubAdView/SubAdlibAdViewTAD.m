@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 3.0.0.6
+ * confirmed compatible with t-ad SDK 3.1.0.6
  */
 
 #import "SubAdlibAdViewTAD.h"
@@ -47,52 +47,53 @@
 
 #pragma mark - TadDelegate
 
-- (void)tadOnAdWillReceive {
+- (void)tadOnAdWillReceive:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 전문 요청 시작");
 }
 
-- (void)tadOnAdReceived {
+- (void)tadOnAdReceived:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 전문 수신 완료");
 }
 
-- (void)tadOnAdWillLoad {
+- (void)tadOnAdWillLoad:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 로드 시작");
 }
 
-- (void)tadOnAdLoaded {
+- (void)tadOnAdLoaded:(TadCore *)tadCore {
     //광고 로드 완료
     [self gotAd];
     bGotAd = YES;
 }
 
-- (void)tadOnAdClicked {
+- (void)tadOnAdClicked:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 클릭");
 }
 
-- (void)tadOnAdColsed {
+- (void)tadOnAdColsed:(TadCore *)tadCore {
     //NSLog(@"<Tad> 전면 형 광고 닫힘");
 }
 
-- (void)tadOnAdExpanded {
+- (void)tadOnAdExpanded:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 확장");
 }
 
-- (void)tadOnAdExpandClose {
+- (void)tadOnAdExpandClose:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 확장 닫기");
 }
 
-- (void)tadOnAdResized {
+- (void)tadOnAdResized:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 리사이징");
 }
 
-- (void)tadOnAdResizeClosed {
+- (void)tadOnAdResizeClosed:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 리사이징 닫기");
 }
 
-- (void)tadFailed:(TadErrorCode)errorCode {
+- (void)tadCore:(TadCore *)tadCore tadFailed:(TadErrorCode)errorCode {
     
     // 실패했다. 바로 다음 스케줄 광고를 보인다.
     [self failed];
+    bGotAd = NO;
 }
 
 - (CGSize)size

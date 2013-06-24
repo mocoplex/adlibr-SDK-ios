@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with ShallWeAd SDK 2.4.6
+ * confirmed compatible with ShallWeAd SDK 2.4.7
  */
 
 #import "SubAdlibAdViewShallWeAd.h"

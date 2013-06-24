@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 3.6.5
+ * confirmed compatible with Inmobi SDK 3.7.0
  */
 
 #import "SubAdlibAdViewInmobi.h"
