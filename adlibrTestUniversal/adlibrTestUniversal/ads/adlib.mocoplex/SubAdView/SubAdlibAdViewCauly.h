@@ -12,7 +12,7 @@
 #import "SubAdlibAdViewCore.h"
 #import "CaulyAdView.h"
 
-@interface SubAdlibAdViewCauly : SubAdlibAdViewCore
+@interface SubAdlibAdViewCauly : SubAdlibAdViewCore<CaulyAdViewDelegate>
 {
     CaulyAdView *ad;
     BOOL iPad;

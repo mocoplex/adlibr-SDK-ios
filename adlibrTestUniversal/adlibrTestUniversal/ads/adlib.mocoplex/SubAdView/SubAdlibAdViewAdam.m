@@ -65,6 +65,7 @@
 
 - (void)clearAdView
 {
+    [ad stopAutoRequestAd];
     [super clearAdView];
 }
 
