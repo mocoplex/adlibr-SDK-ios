@@ -16,7 +16,7 @@
 #import "SubAdlibAdViewAdam.h"
 
 // ADAM의 APP 아이디를 설정합니다.
-#define ADAM_ID @"ADAM_ID";
+#define ADAM_ID @"ADAM_ID"
 
 @implementation SubAdlibAdViewAdam
 
