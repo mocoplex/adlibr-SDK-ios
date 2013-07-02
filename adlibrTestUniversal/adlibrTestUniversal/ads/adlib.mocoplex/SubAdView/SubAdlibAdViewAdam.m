@@ -38,20 +38,23 @@
         // 다음 광고뷰를 생성합니다.
         ad = [AdamAdView sharedAdView];
         
-        CGRect rt;        
-        rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);        
+        if(![ad.superview isEqual:self.view])
+        {
+            CGRect rt;
+            rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);
         
-        ad.frame = rt;
+            ad.frame = rt;
         
-        self.view.frame = rt;
+            self.view.frame = rt;
         
-        ad.clientId = ADAM_ID;
-        ad.delegate = self;
-        ad.superViewController = parent;
+            ad.clientId = ADAM_ID;
+            ad.delegate = self;
+            ad.superViewController = parent;
 
-        [self.view addSubview:ad];
+            [self.view addSubview:ad];
         
-        bIninintedObject = YES;
+            bIninintedObject = YES;
+        }
     }
 
     // iOS / ad@m 플랫폼은 백그라운드 리퀘스트 기능을 지원하지 않습니다. ( SDK 2.1.0.1 )
