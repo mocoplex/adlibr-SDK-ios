@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		332F5A8017956F2D00C253E0 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 332F5A7E17956F2D00C253E0 /* Adlib.bundle */; };
+		334692311795A0A400AB0E1B /* Adlibr.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 334692301795A0A400AB0E1B /* Adlibr.bundle */; };
 		339807A917959BF700208B66 /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 339807A817959BF600208B66 /* libAdlibr.3.5.a */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		332F5A7D17956F0600C253E0 /* AdlibRewardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibRewardLink.h; sourceTree = "<group>"; };
-		332F5A7E17956F2D00C253E0 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		334692301795A0A400AB0E1B /* Adlibr.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlibr.bundle; sourceTree = "<group>"; };
 		339807A817959BF600208B66 /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E6DCE15AD396400B7BA4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -261,7 +261,7 @@
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				332F5A7E17956F2D00C253E0 /* Adlib.bundle */,
+				334692301795A0A400AB0E1B /* Adlibr.bundle */,
 				339807A817959BF600208B66 /* libAdlibr.3.5.a */,
 			);
 			path = lib;
@@ -321,7 +321,7 @@
 				495E6DE515AD396400B7BA4C /* ViewController_iPhone.xib in Resources */,
 				495E6DE815AD396400B7BA4C /* ViewController_iPad.xib in Resources */,
 				FC830942160DD62A00E0DF21 /* Default-568h@2x.png in Resources */,
-				332F5A8017956F2D00C253E0 /* Adlib.bundle in Resources */,
+				334692311795A0A400AB0E1B /* Adlibr.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
