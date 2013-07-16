@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33ADE036170AB23100688677 /* libAdlibr.3.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ADE035170AB23100688677 /* libAdlibr.3.2.1.a */; };
+		332F5A8017956F2D00C253E0 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 332F5A7E17956F2D00C253E0 /* Adlib.bundle */; };
+		332F5A8117956F2D00C253E0 /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 332F5A7F17956F2D00C253E0 /* libAdlibr.3.5.a */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
 		495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD215AD396400B7BA4C /* CoreGraphics.framework */; };
@@ -17,7 +18,6 @@
 		495E6DE215AD396400B7BA4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E6DE115AD396400B7BA4C /* ViewController.m */; };
 		495E6DE515AD396400B7BA4C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495E6DE315AD396400B7BA4C /* ViewController_iPhone.xib */; };
 		495E6DE815AD396400B7BA4C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495E6DE615AD396400B7BA4C /* ViewController_iPad.xib */; };
-		495E6E5015AD39FA00B7BA4C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 495E6E3415AD39FA00B7BA4C /* JSONKit.m */; };
 		495E6E6215AD3A6200B7BA4C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E5615AD3A6200B7BA4C /* AudioToolbox.framework */; };
 		495E6E6315AD3A6200B7BA4C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E5715AD3A6200B7BA4C /* CFNetwork.framework */; };
 		495E6E6415AD3A6200B7BA4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6E5815AD3A6200B7BA4C /* CoreLocation.framework */; };
@@ -47,7 +47,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33ADE035170AB23100688677 /* libAdlibr.3.2.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.2.1.a; sourceTree = "<group>"; };
+		332F5A7D17956F0600C253E0 /* AdlibRewardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibRewardLink.h; sourceTree = "<group>"; };
+		332F5A7E17956F2D00C253E0 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		332F5A7F17956F2D00C253E0 /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E6DCE15AD396400B7BA4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		495E6DD015AD396400B7BA4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,8 +67,6 @@
 		495E6DF615AD39FA00B7BA4C /* AdlibManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibManager.h; sourceTree = "<group>"; };
 		495E6DF715AD39FA00B7BA4C /* SubAdlibAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdsView.h; sourceTree = "<group>"; };
 		495E6DF815AD39FA00B7BA4C /* SubAdlibAdViewCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewCore.h; sourceTree = "<group>"; };
-		495E6E3315AD39FA00B7BA4C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		495E6E3415AD39FA00B7BA4C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		495E6E5615AD3A6200B7BA4C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		495E6E5715AD3A6200B7BA4C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		495E6E5815AD3A6200B7BA4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -128,7 +128,7 @@
 				495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */,
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
-				33ADE036170AB23100688677 /* libAdlibr.3.2.1.a in Frameworks */,
+				332F5A8117956F2D00C253E0 /* libAdlibr.3.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				495E6DF615AD39FA00B7BA4C /* AdlibManager.h */,
+				332F5A7D17956F0600C253E0 /* AdlibRewardLink.h */,
 				495E6DF715AD39FA00B7BA4C /* SubAdlibAdsView.h */,
 				495E6DF815AD39FA00B7BA4C /* SubAdlibAdViewCore.h */,
 				495E6DF915AD39FA00B7BA4C /* SubAdView */,
@@ -260,19 +261,10 @@
 		495E6E3115AD39FA00B7BA4C /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				33ADE035170AB23100688677 /* libAdlibr.3.2.1.a */,
-				495E6E3215AD39FA00B7BA4C /* JSONKit */,
+				332F5A7E17956F2D00C253E0 /* Adlib.bundle */,
+				332F5A7F17956F2D00C253E0 /* libAdlibr.3.5.a */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		495E6E3215AD39FA00B7BA4C /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				495E6E3315AD39FA00B7BA4C /* JSONKit.h */,
-				495E6E3415AD39FA00B7BA4C /* JSONKit.m */,
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +321,7 @@
 				495E6DE515AD396400B7BA4C /* ViewController_iPhone.xib in Resources */,
 				495E6DE815AD396400B7BA4C /* ViewController_iPad.xib in Resources */,
 				FC830942160DD62A00E0DF21 /* Default-568h@2x.png in Resources */,
+				332F5A8017956F2D00C253E0 /* Adlib.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +343,6 @@
 				495E6DDB15AD396400B7BA4C /* main.m in Sources */,
 				495E6DDF15AD396400B7BA4C /* AppDelegate.m in Sources */,
 				495E6DE215AD396400B7BA4C /* ViewController.m in Sources */,
-				495E6E5015AD39FA00B7BA4C /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
