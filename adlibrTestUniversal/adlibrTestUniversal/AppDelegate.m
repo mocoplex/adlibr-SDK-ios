@@ -18,6 +18,7 @@
 #import "SubAdlibAdViewNaverAdPost.h"
 #import "SubAdlibAdViewShallWeAd.h"
 #import "SubAdlibAdViewInmobi.h"
+#import "SubAdlibAdViewMMedia.h"
 
 
 @implementation AppDelegate
@@ -59,6 +60,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
 }

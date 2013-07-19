@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		334692311795A0A400AB0E1B /* Adlibr.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 334692301795A0A400AB0E1B /* Adlibr.bundle */; };
+		3389824617994B9600EB4E7C /* SubAdlibAdViewMMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */; };
 		33B7A5341795A3A900D15D53 /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B7A5331795A3A900D15D53 /* libAdlibr.3.5.a */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		332F5A7D17956F0600C253E0 /* AdlibRewardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibRewardLink.h; sourceTree = "<group>"; };
 		334692301795A0A400AB0E1B /* Adlibr.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlibr.bundle; sourceTree = "<group>"; };
+		3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMMedia.h; sourceTree = "<group>"; };
+		3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMMedia.m; sourceTree = "<group>"; };
 		33B7A5331795A3A900D15D53 /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495E6DCE15AD396400B7BA4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -248,6 +251,8 @@
 				49A84C0815E53DBE00ED4797 /* SubAdlibAdViewiAd.m */,
 				49A84C0915E53DBE00ED4797 /* SubAdlibAdViewInmobi.h */,
 				49A84C0A15E53DBE00ED4797 /* SubAdlibAdViewInmobi.m */,
+				3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */,
+				3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */,
 				49A84C0B15E53DBE00ED4797 /* SubAdlibAdViewNaverAdPost.h */,
 				49A84C0C15E53DBE00ED4797 /* SubAdlibAdViewNaverAdPost.m */,
 				49A84C0D15E53DBE00ED4797 /* SubAdlibAdViewShallWeAd.h */,
@@ -343,6 +348,7 @@
 				495E6DDB15AD396400B7BA4C /* main.m in Sources */,
 				495E6DDF15AD396400B7BA4C /* AppDelegate.m in Sources */,
 				495E6DE215AD396400B7BA4C /* ViewController.m in Sources */,
+				3389824617994B9600EB4E7C /* SubAdlibAdViewMMedia.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
