@@ -11,6 +11,10 @@
 
 //광고 수신 성공시 호출되는 메소드.
 - (void)gotAd;
+//전면광고 수신 성공시 호출되는 메소드.
+- (void)didReceiveAdlibInterstitialAd;
+//전면광고 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAdlibInterstitialAd;
 
 @end
 
@@ -31,6 +35,7 @@
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del  withPageName:(NSString*)name;
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
 
+-(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
 
 -(void)detach:(UIViewController*)parent;
 -(void)moveAdContainer:(CGPoint)pt;

@@ -16,7 +16,7 @@
 @interface SubAdlibAdViewTAD : SubAdlibAdViewCore<TadDelegate>
 {
     BOOL    bGotAd;
-    TadCore *tadCore;
+    TadCore *ad;
 }
 
 @end

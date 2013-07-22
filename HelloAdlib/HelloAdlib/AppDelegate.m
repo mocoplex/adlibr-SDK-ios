@@ -22,6 +22,7 @@
 #import "SubAdlibAdViewNaverAdPost.h"
 #import "SubAdlibAdViewShallWeAd.h"
 #import "SubAdlibAdViewInmobi.h"
+#import "SubAdlibAdViewMMedia.h"
 
 
 @implementation AppDelegate
@@ -85,6 +86,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
 }
 
 
@@ -154,6 +156,7 @@
     
 	// make the View Controller a child of the main window
 	[window addSubview: viewController.view];
+    window.rootViewController = viewController;
 	
 	[window makeKeyAndVisible];
 	

@@ -9,14 +9,14 @@
  * confirmed compatible with ad@m SDK 2.2.0
  */
 
-// iOS / ad@m 플랫폼은 백그라운드 리퀘스트 기능을 지원하지 않습니다. ( SDK 2.1.0.1 )
+// iOS / ad@m 플랫폼은 백그라운드 리퀘스트 기능을 지원하지 않습니다.
 // 화면에 광고뷰가 노출된 상태에서만 응답을 받을 수 있으며
 // 응답을 받기까지 빈화면으로 표시될 수 있습니다.
 
 #import "SubAdlibAdViewAdam.h"
 
 // ADAM의 APP 아이디를 설정합니다.
-#define ADAM_ID @"ADAM_ID";
+#define ADAM_ID @"ADAM_ID"
 
 @implementation SubAdlibAdViewAdam
 
@@ -40,8 +40,8 @@
         
         if(![ad.superview isEqual:self.view])
         {
-            CGRect rt;        
-            rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);        
+            CGRect rt;
+            rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);
         
             ad.frame = rt;
         
@@ -69,7 +69,6 @@
 - (void)clearAdView
 {
     [ad stopAutoRequestAd];
-    
     [super clearAdView];
 }
 

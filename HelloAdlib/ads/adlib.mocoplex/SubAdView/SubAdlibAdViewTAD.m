@@ -22,27 +22,28 @@
 {
     [super query:parent];
 
-    tadCore = [[TadCore alloc] initWithSeedView:self.view delegate:self];
+    ad = [[TadCore alloc] initWithSeedView:self.view delegate:self];
     //필수 사항
-    [tadCore setClientID:TAD_ID];       // 클라이언트 아이디
-    [tadCore setSlotNo:TadSlotInline];  // 슬롯 설정
+    [ad setClientID:TAD_ID];       // 클라이언트 아이디
+    [ad setSlotNo:TadSlotInline];  // 슬롯 설정
     
     // 선택 셋팅 사항
-    [tadCore setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
-    [tadCore setOffset:CGPointMake(0.0f, 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
-    [tadCore setRefershInterval:30.0f];                   // 리프레쉬 인터벌을 결정한다. 15~60초 사이만 가능 (Default : 60)
-    [tadCore setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
-    [tadCore getAdvertisement];
+    [ad setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
+    [ad setOffset:CGPointMake(0.0f, 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
+    [ad setRefershInterval:30.0f];                   // 리프레쉬 인터벌을 결정한다. 15~60초 사이만 가능 (Default : 60)
+    [ad setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
+    [ad getAdvertisement];
     
     if(bGotAd)
-        [self gotAd];    
+        [self gotAd];
 }
 
 - (void)clearAdView
 {
     [super clearAdView];
-    [tadCore release];
-    tadCore = nil;
+    [ad removeAd];
+    [ad release];
+    ad = nil;
 }
 
 #pragma mark - TadDelegate
