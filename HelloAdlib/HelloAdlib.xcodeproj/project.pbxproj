@@ -21,7 +21,7 @@
 		3307806A179CF46600BEFF26 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33078069179CF46600BEFF26 /* Security.framework */; };
 		3307806D179CF48200BEFF26 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3307806B179CF48200BEFF26 /* AdSupport.framework */; };
 		3307806E179CF48200BEFF26 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3307806C179CF48200BEFF26 /* PassKit.framework */; };
-		33309AB0179FCF5E0072BDBB /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33309AAF179FCF5E0072BDBB /* libAdlibr.3.5.a */; };
+		334446EA179FD723004B8B78 /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334446E9179FD723004B8B78 /* libAdlibr.3.5.a */; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
 		33E2A5B81761DAFF00B764CE /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E2A5B71761DAFF00B764CE /* GameKit.framework */; };
 		49E88902155962990018C877 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88901155962990018C877 /* QuartzCore.framework */; };
@@ -178,7 +178,7 @@
 		33078069179CF46600BEFF26 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3307806B179CF48200BEFF26 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3307806C179CF48200BEFF26 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
-		33309AAF179FCF5E0072BDBB /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
+		334446E9179FD723004B8B78 /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
 		3362695F1761E52C00F595A8 /* GameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenter.h; sourceTree = "<group>"; };
 		336269601761E52C00F595A8 /* GameCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCenter.mm; sourceTree = "<group>"; };
 		33E2A5B71761DAFF00B764CE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -454,7 +454,7 @@
 				49E8890C155962990018C877 /* UIKit.framework in Frameworks */,
 				49E8890E155962990018C877 /* Foundation.framework in Frameworks */,
 				49E88910155962990018C877 /* CoreGraphics.framework in Frameworks */,
-				33309AB0179FCF5E0072BDBB /* libAdlibr.3.5.a in Frameworks */,
+				334446EA179FD723004B8B78 /* libAdlibr.3.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,7 +911,7 @@
 			isa = PBXGroup;
 			children = (
 				33078044179CF2FE00BEFF26 /* Adlibr.bundle */,
-				33309AAF179FCF5E0072BDBB /* libAdlibr.3.5.a */,
+				334446E9179FD723004B8B78 /* libAdlibr.3.5.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
