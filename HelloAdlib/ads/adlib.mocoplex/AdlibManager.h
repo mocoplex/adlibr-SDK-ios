@@ -35,6 +35,12 @@
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del  withPageName:(NSString*)name;
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
 
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel defaultSize:(CGSize)size defaultAlign:(int)align;
+
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align;
+
 -(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
 
 -(void)detach:(UIViewController*)parent;
