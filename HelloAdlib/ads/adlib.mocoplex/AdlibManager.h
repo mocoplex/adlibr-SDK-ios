@@ -7,9 +7,9 @@
 
 #import "SubAdlibAdViewCore.h"
 
-#define ADLIB_ALIGN_LEFT	-1
-#define ADLIB_ALIGN_CENTER	 0
-#define ADLIB_ALIGN_RIGHT	 1
+#define ADLIB_ALIGN_LEFT	1
+#define ADLIB_ALIGN_CENTER	2
+#define ADLIB_ALIGN_RIGHT	3
 
 @protocol AdlibManagerDelegate <NSObject>
 
