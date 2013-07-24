@@ -7,6 +7,10 @@
 
 #import "SubAdlibAdViewCore.h"
 
+#define ADLIB_ALIGN_LEFT	-1
+#define ADLIB_ALIGN_CENTER	 0
+#define ADLIB_ALIGN_RIGHT	 1
+
 @protocol AdlibManagerDelegate <NSObject>
 
 //광고 수신 성공시 호출되는 메소드.
