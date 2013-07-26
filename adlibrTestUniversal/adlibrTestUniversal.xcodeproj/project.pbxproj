@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		334692311795A0A400AB0E1B /* Adlibr.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 334692301795A0A400AB0E1B /* Adlibr.bundle */; };
-		334D95FF179FEDB400455B2E /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 334D95FE179FEDB400455B2E /* libAdlibr.3.5.a */; };
+		335CEBA617A267ED00D91057 /* libAdlibr.3.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 335CEBA517A267ED00D91057 /* libAdlibr.3.5.a */; };
 		3389824617994B9600EB4E7C /* SubAdlibAdViewMMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -50,7 +50,7 @@
 /* Begin PBXFileReference section */
 		332F5A7D17956F0600C253E0 /* AdlibRewardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibRewardLink.h; sourceTree = "<group>"; };
 		334692301795A0A400AB0E1B /* Adlibr.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlibr.bundle; sourceTree = "<group>"; };
-		334D95FE179FEDB400455B2E /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
+		335CEBA517A267ED00D91057 /* libAdlibr.3.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.a; sourceTree = "<group>"; };
 		3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMMedia.h; sourceTree = "<group>"; };
 		3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMMedia.m; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +131,7 @@
 				495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */,
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
-				334D95FF179FEDB400455B2E /* libAdlibr.3.5.a in Frameworks */,
+				335CEBA617A267ED00D91057 /* libAdlibr.3.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				334692301795A0A400AB0E1B /* Adlibr.bundle */,
-				334D95FE179FEDB400455B2E /* libAdlibr.3.5.a */,
+				335CEBA517A267ED00D91057 /* libAdlibr.3.5.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
