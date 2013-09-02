@@ -19,6 +19,7 @@
 #import "SubAdlibAdViewShallWeAd.h"
 #import "SubAdlibAdViewInmobi.h"
 #import "SubAdlibAdViewMMedia.h"
+#import "SubAdlibAdViewDomob.h"
 
 
 @implementation AppDelegate
@@ -61,6 +62,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
     // 쓰지 않을 광고 플랫폼은 삭제해주세요.
     
 }
