@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		334692311795A0A400AB0E1B /* Adlibr.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 334692301795A0A400AB0E1B /* Adlibr.bundle */; };
 		3389824617994B9600EB4E7C /* SubAdlibAdViewMMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */; };
-		33EAC38217D480BB008CCD75 /* libAdlibr.3.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EAC38117D480BB008CCD75 /* libAdlibr.3.5.2.a */; };
+		33C93BB817F81011009C16B8 /* libAdlibr.3.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C93BB717F81011009C16B8 /* libAdlibr.3.5.2.a */; };
 		33EAC38517D480D5008CCD75 /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EAC38417D480D5008CCD75 /* SubAdlibAdViewDomob.m */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -53,7 +53,7 @@
 		334692301795A0A400AB0E1B /* Adlibr.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlibr.bundle; sourceTree = "<group>"; };
 		3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMMedia.h; sourceTree = "<group>"; };
 		3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMMedia.m; sourceTree = "<group>"; };
-		33EAC38117D480BB008CCD75 /* libAdlibr.3.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.2.a; sourceTree = "<group>"; };
+		33C93BB717F81011009C16B8 /* libAdlibr.3.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdlibr.3.5.2.a; sourceTree = "<group>"; };
 		33EAC38317D480D5008CCD75 /* SubAdlibAdViewDomob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewDomob.h; sourceTree = "<group>"; };
 		33EAC38417D480D5008CCD75 /* SubAdlibAdViewDomob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewDomob.m; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +120,7 @@
 				495E6E7115AD3A8E00B7BA4C /* AVFoundation.framework in Frameworks */,
 				495E6E6F15AD3A6D00B7BA4C /* MessageUI.framework in Frameworks */,
 				495E6E6215AD3A6200B7BA4C /* AudioToolbox.framework in Frameworks */,
+				33C93BB817F81011009C16B8 /* libAdlibr.3.5.2.a in Frameworks */,
 				495E6E6315AD3A6200B7BA4C /* CFNetwork.framework in Frameworks */,
 				495E6E6415AD3A6200B7BA4C /* CoreLocation.framework in Frameworks */,
 				495E6E6515AD3A6200B7BA4C /* CoreMotion.framework in Frameworks */,
@@ -134,7 +135,6 @@
 				495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */,
 				495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */,
 				495E6DD315AD396400B7BA4C /* CoreGraphics.framework in Frameworks */,
-				33EAC38217D480BB008CCD75 /* libAdlibr.3.5.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				334692301795A0A400AB0E1B /* Adlibr.bundle */,
-				33EAC38117D480BB008CCD75 /* libAdlibr.3.5.2.a */,
+				33C93BB717F81011009C16B8 /* libAdlibr.3.5.2.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -441,13 +441,14 @@
 				INFOPLIST_FILE = "adlibrTestUniversal/adlibrTestUniversal-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/adam\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/admob\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi iOS SDK Bundle\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/adam\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/admob\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\\ iOS\\ SDK\\ Bundle\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/lib\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\\\"",
+					"/Users/hana/adlibr-SDK-ios/adlibrTestUniversal/adlibrTestUniversal/ads/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,13 +464,14 @@
 				INFOPLIST_FILE = "adlibrTestUniversal/adlibrTestUniversal-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/adam\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/admob\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi iOS SDK Bundle\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/lib\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\"",
-					"\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/adam\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/admob\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\\ iOS\\ SDK\\ Bundle\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/cauly\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/lib\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/t-ad/lib\\\"",
+					"\\\"$(SRCROOT)/adlibrTestUniversal/ads/ads_platform/reward_platforms/InMobi\\\"",
+					"/Users/hana/adlibr-SDK-ios/adlibrTestUniversal/adlibrTestUniversal/ads/lib",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
