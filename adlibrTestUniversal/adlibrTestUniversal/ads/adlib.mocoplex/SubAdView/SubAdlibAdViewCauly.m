@@ -139,4 +139,41 @@
     return CGSizeMake(w, 48);
 }
 
+
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    CaulyAdSetting* ads = [CaulyAdSetting globalSetting];
+    [CaulyAdSetting setLogLevel:CaulyLogLevelRelease];
+    
+    ads.appCode = CAULY_ID;
+    ads.animType = CaulyAnimNone;
+    
+    CaulyInterstitialAd* _interstitialAd = [[[CaulyInterstitialAd alloc] initWithParentViewController:viewController] autorelease];
+    _interstitialAd.delegate = self;
+    [_interstitialAd startInterstitialAdRequest];
+}
+
++ (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd
+{
+    [interstitialAd show]; // [_interstitialAd show];를 호출하지 않으면 Interstitial AD가 보여지지 않음
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"cauly"];
+    interstitialAd = nil;
+}
+
++ (void)didFailToReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd errorCode:(int)errorCode errorMsg:(NSString *)errorMsg
+{
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"cauly"];
+    interstitialAd = nil;
+}
+
++ (void)didCloseInterstitialAd:(CaulyInterstitialAd *)interstitialAd
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"cauly"];
+    interstitialAd = nil;
+}
+
+
 @end

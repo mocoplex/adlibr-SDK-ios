@@ -16,9 +16,11 @@
 //광고 수신 성공시 호출되는 메소드.
 - (void)gotAd;
 //전면광고 수신 성공시 호출되는 메소드.
-- (void)didReceiveAdlibInterstitialAd;
+- (void)didReceiveAdlibInterstitialAd:(NSString*)from;
 //전면광고 수신 실패시 호출되는 메소드.
-- (void)didFailToReceiveAdlibInterstitialAd;
+- (void)didFailToReceiveAdlibInterstitialAd:(NSString*)from;
+//전면광고 닫힌 직후 호출되는 메소드.
+- (void)didCloseAdlibInterstitialAd:(NSString*)from;
 
 @end
 

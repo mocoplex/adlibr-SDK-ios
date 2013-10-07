@@ -27,6 +27,11 @@
 
 + (BOOL)isStaticObject;
 
++ (void)loadInterstitail:(UIViewController*)viewController;
++ (void)interstitialReceived:(NSString*)from;
++ (void)interstitialFailed:(NSString*)from;
++ (void)interstitialClosed:(NSString*)from;
+
 @property (nonatomic,retain) SubAdlibAdsView* view;
 @property (nonatomic,assign) UIViewController* parentController;
 
