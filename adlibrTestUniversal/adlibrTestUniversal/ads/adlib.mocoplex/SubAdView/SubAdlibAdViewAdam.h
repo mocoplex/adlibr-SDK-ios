@@ -16,6 +16,7 @@
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdViewCore.h"
 #import "AdamAdView.h"
+#import "AdamInterstitial.h"
 
 #define AD_REFRESH_PERIOD 30
 @interface SubAdlibAdViewAdam : SubAdlibAdViewCore<AdamAdViewDelegate>
