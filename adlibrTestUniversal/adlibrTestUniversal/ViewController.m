@@ -22,6 +22,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchDown];
+    button.frame = CGRectMake(80, 210, 160, 40);
+    [button setTitle: @"Load InterstitialAd" forState: UIControlStateNormal];
+    
+    [self.view addSubview:button];
     
     // 서버에서 설정한 버전정보를 가져옵니다.
     // 기존 클라이언트 버전을 확인하여 적절한 작업을 수행하세요.
@@ -41,6 +47,28 @@
             [alert release];            
         }
     }    
+}
+
+- (void)btnClicked:(id)sender
+{
+    // 전면광고 호출
+    [[AdlibManager sharedSingletonClass] loadInterstitialAd:self withDelegate:self];
+}
+
+//전면광고 관련 delegate
+-(void)didReceiveAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"%@ Interstitial Ad 수신 성공!!",from);
+}
+
+-(void)didFailToReceiveAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"%@ Interstitial Ad 수신 실패..", from);
+}
+
+-(void)didCloseAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"%@ Interstitial Ad 닫힘..", from);
 }
 
 // 광고를 수신했다. 광고view 의 크기와 위치를 재설정한다.
