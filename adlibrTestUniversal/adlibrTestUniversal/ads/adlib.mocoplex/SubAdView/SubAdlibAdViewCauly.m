@@ -10,12 +10,17 @@
  */
 
 #import "SubAdlibAdViewCauly.h"
-#import "AdlibManager.h"
 
 // CAULY의 APP 아이디를 설정합니다.
 #define CAULY_ID @"CAULY_ID"
 
 @implementation SubAdlibAdViewCauly
+
+// 객체를 전역적으로 하나만 생성합니다.
++ (BOOL)isStaticObject
+{
+    return YES;
+}
 
 - (int)getCenterPos
 {
@@ -41,6 +46,8 @@
 {
     [super query:parent];
     
+    static BOOL bIninintedObject = NO;
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         iPad = NO;
     else
@@ -52,10 +59,15 @@
     ads.appCode = CAULY_ID;
     ads.animType = CaulyAnimNone;
     
-    ad = [[CaulyAdView alloc] initWithParentViewController:parent];
-    [self.view addSubview:ad];
-    ad.delegate = self;
-    ad.localSetting = ads;
+    if(!bIninintedObject)
+    {
+        ad = [CaulyAdView caulyAdViewWithController:parent];
+        [self.view addSubview:ad];
+        ad.delegate = self;
+        ad.localSetting = ads;
+        
+        bIninintedObject = YES;
+    }
     
     [ad startBannerAdRequest];
     
@@ -64,10 +76,7 @@
 
 - (void)clearAdView
 {
-    ad.delegate = nil;
-    ad.parentController = nil;
-    [ad release];
-    ad = nil;
+    [ad stopAdRequest];
     
     [super clearAdView];
 }
