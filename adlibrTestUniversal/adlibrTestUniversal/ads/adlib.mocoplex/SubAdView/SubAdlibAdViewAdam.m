@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with ad@m SDK 2.2.0
+ * confirmed compatible with ad@m SDK 2.2.2
  */
 
 // iOS / ad@m 플랫폼은 백그라운드 리퀘스트 기능을 지원하지 않습니다.
