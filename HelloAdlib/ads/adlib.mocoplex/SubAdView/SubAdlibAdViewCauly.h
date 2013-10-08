@@ -11,6 +11,7 @@
 
 #import "SubAdlibAdViewCore.h"
 #import "CaulyAdView.h"
+#import "CaulyInterstitialAd.h"
 
 @interface SubAdlibAdViewCauly : SubAdlibAdViewCore<CaulyAdViewDelegate>
 {

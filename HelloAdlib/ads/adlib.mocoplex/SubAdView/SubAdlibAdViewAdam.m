@@ -17,6 +17,7 @@
 
 // ADAM의 APP 아이디를 설정합니다.
 #define ADAM_ID @"ADAM_ID"
+#define ADAM_INTERS_ID @"ADAM_INTERSTITIAL_ID"
 
 @implementation SubAdlibAdViewAdam
 
@@ -162,6 +163,35 @@
     }
     
     ad.frame = CGRectMake(0, 0, w, 48);    
+}
+
+
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    AdamInterstitial *interstitial = [AdamInterstitial sharedInterstitial];
+    
+    interstitial.clientId = ADAM_INTERS_ID;
+    interstitial.superViewController = viewController;
+    interstitial.delegate = self;
+    [interstitial requestAndPresent];
+}
+
++ (void)didReceiveInterstitialAd:(AdamInterstitial *)interstitial
+{
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"adam"];
+}
+
++ (void)didFailToReceiveInterstitialAd: (AdamInterstitial *)interstitial error:(NSError *)error
+{
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"adam"];
+}
+
++ (void)didCloseInterstitialAd:(AdamInterstitial *)interstitial
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"adam"];
 }
 
 @end

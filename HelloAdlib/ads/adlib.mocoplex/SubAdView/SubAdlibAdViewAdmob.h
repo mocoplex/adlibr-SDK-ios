@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdViewCore.h"
 #import "GADBannerView.h"
+#import "GADInterstitial.h"
 
 @interface SubAdlibAdViewAdmob : SubAdlibAdViewCore<GADBannerViewDelegate>
 {

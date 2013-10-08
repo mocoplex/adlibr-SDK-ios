@@ -186,4 +186,34 @@
     [self failed];    
 }
 
+
+static UIViewController* vc;
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    GADInterstitial* interstitial_ = [[GADInterstitial alloc] init];
+    interstitial_.adUnitID = ADMOB_ID;
+    interstitial_.delegate = self;
+    vc = viewController;
+    [interstitial_ loadRequest:[GADRequest request]];
+}
+
++ (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
+{
+    [interstitial presentFromRootViewController:vc];
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"admob"];
+}
+
++ (void)interstitial:(GADInterstitial *)interstitial didFailToReceiveAdWithError:(GADRequestError *)error
+{
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"admob"];
+}
+
++ (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"admob"];
+}
+
 @end
