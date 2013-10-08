@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with MillennialMedia SDK 5.1.0
+ * confirmed compatible with MillennialMedia SDK 5.1.1
  */
 
 #import <UIKit/UIKit.h>
