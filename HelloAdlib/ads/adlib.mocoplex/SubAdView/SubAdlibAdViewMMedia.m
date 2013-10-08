@@ -23,7 +23,7 @@
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
- 
+    
     // Returns an autoreleased MMAdView object
     ad = [[MMAdView alloc] initWithFrame:MILLENNIAL_AD_VIEW_FRAME
                                     apid:MMEDIA_ID
@@ -69,9 +69,12 @@
 
 #pragma mark - Get Ad
 
-- (void)getAd {
+- (void)getAd
+{
+    MMRequest *request = [MMRequest request];
+    
     // Get a banner ad
-    [ad getAd:^(BOOL success, NSError *error) {
+    [ad getAdWithRequest:request onCompletion:^(BOOL success, NSError *error) {
         if (success) {
             // 화면에 광고를 보여줍니다.
             [self gotAd];
