@@ -33,22 +33,6 @@
     
     // 애드립에서 발급받은 키를 입력해주세요.
     adlibKey = @"ADLIBr - KEY";
-        
-    /*
-    NSLocale *locale = [NSLocale currentLocale];
-    NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
-
-    if ([countryCode isEqualToString:@"KR"]) {
-        // 다국어 스케줄을 설정하시려면 애드립에서 별도로 키를 생성하시고 해당 키를 적용해주세요.
-        adlibKey = @"대한민국 광고 스케줄링";
-    } 
-    else if ([countryCode isEqualToString:@"US"]) {
-        // 다국어 스케줄을 설정하시려면 애드립에서 별도로 키를 생성하시고 해당 키를 적용해주세요.
-        adlibKey = @"미국";
-    }
-    else
-        adlibKey = @"기타";
-    */
     
     [[AdlibManager sharedSingletonClass] initAdlib:adlibKey];
     
