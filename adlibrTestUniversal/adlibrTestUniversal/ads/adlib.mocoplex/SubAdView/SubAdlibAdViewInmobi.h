@@ -14,7 +14,7 @@
 #import "IMAdDelegate.h"
 #import "IMAdRequest.h"
 #import "IMAdError.h"
-#import "SubAdlibAdViewCore.h"
+#import <Adlib/Adlib.h>
 
 @interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMAdDelegate>
 {

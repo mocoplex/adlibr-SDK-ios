@@ -6,7 +6,7 @@
  */
 
 #import "ViewController.h"
-#import "AdlibManager.h"
+#import <Adlib/Adlib.h>
 
 @implementation ViewController
 
@@ -108,6 +108,12 @@
     // 또는 페이지 이름을 지정하여, 스케줄 설정에 이용할 수 있습니다.
     //[[AdlibManager sharedSingletonClass] attach:self withView:self.view withDelegate:self withPageName:@"pagename"] ;
     
+    
+    // 리워드링크 적용 예
+    // rewardLinkId는 애드립 홈페이지에서 발급받은 링크 ID로 대체하세요. 아래는 테스트키 입니다.
+    // addRewardLinkIcon을 추가하면 아이콘을 여러개 붙일 수 있습니다. 단 한 view에서 같은 키의 아이콘을 사용할 수 없습니다.
+    [[AdlibRewardLink sharedSingletonClass] attachRewardLink:self withView:self.view];
+    [[AdlibRewardLink sharedSingletonClass] addRewardLinkIcon:@"5279055ce4b0e87732589555" atPoint:CGPointMake(50, 50)];
 }
 
 - (void)viewDidUnload
@@ -156,6 +162,9 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [[AdlibManager sharedSingletonClass] detach:self];
+    
+    // 리워드링크
+    [[AdlibRewardLink sharedSingletonClass] detachRewardLink:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated

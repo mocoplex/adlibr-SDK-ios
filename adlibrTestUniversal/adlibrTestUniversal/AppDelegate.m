@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-#import "AdlibManager.h"
+#import <Adlib/Adlib.h>
 
 #import "SubAdlibAdViewAdam.h"
 #import "SubAdlibAdViewAdmob.h"

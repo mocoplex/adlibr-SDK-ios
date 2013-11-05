@@ -14,7 +14,7 @@
 // 응답을 받기까지 빈화면으로 표시될 수 있습니다.
 
 #import <UIKit/UIKit.h>
-#import "SubAdlibAdViewCore.h"
+#import <Adlib/Adlib.h>
 #import "AdamAdView.h"
 #import "AdamInterstitial.h"
 
