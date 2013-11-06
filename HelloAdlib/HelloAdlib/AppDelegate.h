@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AdlibManager.h"
+#import <Adlib/Adlib.h>
 
 @interface AppDelegate : NSObject <UIApplicationDelegate,AdlibManagerDelegate> {
 	UIWindow			*window;

@@ -9,7 +9,7 @@
  * confirmed compatible with cauly SDK 3.0.4
  */
 
-#import "SubAdlibAdViewCore.h"
+#import <Adlib/Adlib.h>
 #import "CaulyAdView.h"
 #import "CaulyInterstitialAd.h"
 

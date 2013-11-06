@@ -12,7 +12,7 @@
 #import "GameCenter.h"
 #import "HelloWorldLayer.h"
 
-#import "AdlibManager.h"
+#import <Adlib/Adlib.h>
 
 #import "SubAdlibAdViewAdam.h"
 #import "SubAdlibAdViewAdmob.h"
