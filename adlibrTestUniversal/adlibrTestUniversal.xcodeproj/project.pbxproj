@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		336A1A3C1835BDE800DBDCB9 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336A1A3B1835BDE800DBDCB9 /* Adlib.framework */; };
 		337C2E6B18293AD900D9103F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6A18293AD900D9103F /* QuartzCore.framework */; };
 		337C2E6D18293AE500D9103F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6C18293AE500D9103F /* AdSupport.framework */; };
 		337C2E6F18293AEE00D9103F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6E18293AEE00D9103F /* CoreTelephony.framework */; };
@@ -15,7 +16,6 @@
 		337C2E7518293B1B00D9103F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E7418293B1B00D9103F /* SystemConfiguration.framework */; };
 		337C2E7918293F4200D9103F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E7818293F4200D9103F /* iAd.framework */; };
 		3389824617994B9600EB4E7C /* SubAdlibAdViewMMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */; };
-		33DA345D182B3AB300FCCC25 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA345C182B3AB300FCCC25 /* Adlib.framework */; };
 		33EAC38517D480D5008CCD75 /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EAC38417D480D5008CCD75 /* SubAdlibAdViewDomob.m */; };
 		495E6DCF15AD396400B7BA4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DCE15AD396400B7BA4C /* UIKit.framework */; };
 		495E6DD115AD396400B7BA4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495E6DD015AD396400B7BA4C /* Foundation.framework */; };
@@ -38,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		336A1A3B1835BDE800DBDCB9 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = adlibrTestUniversal/ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
 		337C2E6818293A7100D9103F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		337C2E6A18293AD900D9103F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		337C2E6C18293AE500D9103F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -48,7 +49,6 @@
 		337C2E7818293F4200D9103F /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMMedia.h; sourceTree = "<group>"; };
 		3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMMedia.m; sourceTree = "<group>"; };
-		33DA345C182B3AB300FCCC25 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = adlibrTestUniversal/ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
 		33EAC38317D480D5008CCD75 /* SubAdlibAdViewDomob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewDomob.h; sourceTree = "<group>"; };
 		33EAC38417D480D5008CCD75 /* SubAdlibAdViewDomob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewDomob.m; sourceTree = "<group>"; };
 		495E6DCA15AD396400B7BA4C /* adlibrTestUniversal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adlibrTestUniversal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33DA345D182B3AB300FCCC25 /* Adlib.framework in Frameworks */,
+				336A1A3C1835BDE800DBDCB9 /* Adlib.framework in Frameworks */,
 				337C2E7918293F4200D9103F /* iAd.framework in Frameworks */,
 				337C2E7518293B1B00D9103F /* SystemConfiguration.framework in Frameworks */,
 				337C2E7318293B0B00D9103F /* libz.1.2.5.dylib in Frameworks */,
@@ -134,7 +134,7 @@
 		495E6DCD15AD396400B7BA4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				33DA345C182B3AB300FCCC25 /* Adlib.framework */,
+				336A1A3B1835BDE800DBDCB9 /* Adlib.framework */,
 				337C2E7818293F4200D9103F /* iAd.framework */,
 				337C2E7418293B1B00D9103F /* SystemConfiguration.framework */,
 				337C2E7218293B0B00D9103F /* libz.1.2.5.dylib */,
