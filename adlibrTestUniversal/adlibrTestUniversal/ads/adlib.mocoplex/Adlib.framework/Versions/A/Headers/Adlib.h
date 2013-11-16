@@ -2,7 +2,7 @@
 //  Adlib.h
 //  Adlib
 //
-//  Created by Hana Kim on 2013. 11. 2..
+//  Created by Hana Kim on 2013. 11. 16..
 //  Copyright (c) 2013년 Hana Kim. All rights reserved.
 //
 
