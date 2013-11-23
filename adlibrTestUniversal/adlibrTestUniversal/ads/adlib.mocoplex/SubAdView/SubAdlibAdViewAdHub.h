@@ -10,7 +10,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "SubAdlibAdViewCore.h"
+#import <Adlib/Adlib.h>
 #import "AdHubView.h"
 #import "AdHubInterstitial.h"
 #import "AdHubViewDelegate.h"
