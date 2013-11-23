@@ -31,6 +31,7 @@
 		3321BA60182A1DDC00236691 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA5F182A1DDC00236691 /* MapKit.framework */; };
 		3321BA62182A1DE700236691 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA61182A1DE700236691 /* MobileCoreServices.framework */; };
 		3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA63182A1DF400236691 /* MessageUI.framework */; };
+		332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
 		33E5EFC61837CB1C009C5010 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E5EFC51837CB1C009C5010 /* Adlib.framework */; };
 		33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */; };
@@ -184,6 +185,8 @@
 		3321BA5F182A1DDC00236691 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3321BA61182A1DE700236691 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3321BA63182A1DF400236691 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		332E6B451840AD6D0070E8A7 /* SubAdlibAdViewAdHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdHub.h; sourceTree = "<group>"; };
+		332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		3362695F1761E52C00F595A8 /* GameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenter.h; sourceTree = "<group>"; };
 		336269601761E52C00F595A8 /* GameCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCenter.mm; sourceTree = "<group>"; };
 		33E5EFC51837CB1C009C5010 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
@@ -873,6 +876,8 @@
 			children = (
 				3307804C179CF34B00BEFF26 /* SubAdlibAdViewAdam.h */,
 				3307804D179CF34B00BEFF26 /* SubAdlibAdViewAdam.m */,
+				332E6B451840AD6D0070E8A7 /* SubAdlibAdViewAdHub.h */,
+				332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */,
 				3307804E179CF34B00BEFF26 /* SubAdlibAdViewAdmob.h */,
 				3307804F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m */,
 				33078050179CF34B00BEFF26 /* SubAdlibAdViewCauly.h */,
@@ -984,6 +989,7 @@
 				49E88948155962990018C877 /* CCActionTiledGrid.m in Sources */,
 				49E8894B155962990018C877 /* CCActionTween.m in Sources */,
 				49E8894E155962990018C877 /* CCAnimation.m in Sources */,
+				332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */,
 				49E88951155962990018C877 /* CCAnimationCache.m in Sources */,
 				49E88954155962990018C877 /* CCAtlasNode.m in Sources */,
 				49E88957155962990018C877 /* CCBlockSupport.m in Sources */,
