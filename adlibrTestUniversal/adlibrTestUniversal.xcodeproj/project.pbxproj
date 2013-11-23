@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3323167C1837C22800FB2DEF /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3323167B1837C22800FB2DEF /* Adlib.framework */; };
+		3363D7EE1840A7B60008BB55 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */; };
 		337C2E6B18293AD900D9103F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6A18293AD900D9103F /* QuartzCore.framework */; };
 		337C2E6D18293AE500D9103F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6C18293AE500D9103F /* AdSupport.framework */; };
 		337C2E6F18293AEE00D9103F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6E18293AEE00D9103F /* CoreTelephony.framework */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		3323167B1837C22800FB2DEF /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = adlibrTestUniversal/ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
+		3363D7EC1840A7B60008BB55 /* SubAdlibAdViewAdHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdHub.h; sourceTree = "<group>"; };
+		3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		337C2E6818293A7100D9103F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		337C2E6A18293AD900D9103F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		337C2E6C18293AE500D9103F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -198,6 +201,8 @@
 			children = (
 				49A84BFF15E53DBE00ED4797 /* SubAdlibAdViewAdam.h */,
 				49A84C0015E53DBE00ED4797 /* SubAdlibAdViewAdam.m */,
+				3363D7EC1840A7B60008BB55 /* SubAdlibAdViewAdHub.h */,
+				3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */,
 				49A84C0315E53DBE00ED4797 /* SubAdlibAdViewAdmob.h */,
 				49A84C0415E53DBE00ED4797 /* SubAdlibAdViewAdmob.m */,
 				49A84C0515E53DBE00ED4797 /* SubAdlibAdViewCauly.h */,
@@ -292,6 +297,7 @@
 				FC43BDCD15F9ABAC00F3CD86 /* SubAdlibAdViewNaverAdPost.m in Sources */,
 				FC43BDCE15F9ABAC00F3CD86 /* SubAdlibAdViewShallWeAd.m in Sources */,
 				FC43BDCF15F9ABAC00F3CD86 /* SubAdlibAdViewTAD.m in Sources */,
+				3363D7EE1840A7B60008BB55 /* SubAdlibAdViewAdHub.m in Sources */,
 				495E6DDB15AD396400B7BA4C /* main.m in Sources */,
 				495E6DDF15AD396400B7BA4C /* AppDelegate.m in Sources */,
 				495E6DE215AD396400B7BA4C /* ViewController.m in Sources */,
