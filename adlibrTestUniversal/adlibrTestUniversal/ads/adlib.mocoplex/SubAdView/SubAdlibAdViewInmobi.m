@@ -147,6 +147,7 @@
 // Sent when an ad request was successful
 - (void)bannerDidReceiveAd:(IMBanner *)banner {
     
+    // 화면에 광고를 보여줍니다.
     [self gotAd];
 }
 
@@ -157,6 +158,7 @@
     //NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %d, message: %@", [error code], [error localizedDescription]];
     //NSLog(@"%@", errorMessage);
     
+    // 광고 수신에 실패하였습니다.
     [self failed];
 }
 
