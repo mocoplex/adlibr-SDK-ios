@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with SamsungAdHub SDK 1.0.4
+ * confirmed compatible with SamsungAdHub SDK 2.0.0
  */
 
 #import "SubAdlibAdViewAdHub.h"

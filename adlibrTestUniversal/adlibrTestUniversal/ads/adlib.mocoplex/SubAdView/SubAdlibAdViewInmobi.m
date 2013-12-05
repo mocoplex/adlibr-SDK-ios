@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 3.7.0
+ * confirmed compatible with Inmobi SDK 4.0.4
  */
 
 #import "SubAdlibAdViewInmobi.h"
@@ -42,22 +42,12 @@
     return (w-w2)/2;
 }
 
-- (void)releaseAdView
-{
-    if(ad != nil)
-    {
-        [ad removeFromSuperview];
-        ad.delegate = nil;
-        [ad release];
-        ad = nil;
-    }
-}
-
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
     
-    nSyncQueryFlag = 0;
+    // Inmobi Initialize
+    [InMobi initialize:INMOBI_ID];
     
     self.view.autoresizesSubviews = NO;
     
@@ -68,34 +58,29 @@
     
     // only iPhone size
     iPad = NO;
-    bShowed = false;
     
     if(iPad)
-        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) imAppId:INMOBI_ID imAdSize:IM_UNIT_728x90 rootViewController:parent];
+        ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90];
     else
-        ad = [[IMAdView alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) imAppId:INMOBI_ID imAdSize:IM_UNIT_320x50 rootViewController:parent];
+        ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50];
     
     ad.delegate = self;
     ad.refreshInterval = 20;
-    ad.rootViewController = parent;
-    
-    IMAdRequest *request = [IMAdRequest request];
-    
-    //
-    //request.testMode = YES;
-    
-    request.paramsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"c_adlib", @"tp", nil];
-    
-    ad.imAdRequest = request;
     
     [self.view addSubview:ad];
     
-    [ad loadIMAdRequest:request];
+    [ad loadBanner];
 }
 
 - (void)clearAdView
 {
-    [self releaseAdView];
+    if(ad != nil)
+    {
+        [ad removeFromSuperview];
+        ad.delegate = nil;
+        [ad release];
+        ad = nil;
+    }
     
     [super clearAdView];
 }
@@ -156,34 +141,23 @@
         ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
 }
 
-#pragma mark InMobiAdDelegate methods
 
-- (void)adViewDidFinishRequest:(IMAdView *)view {
-    if(++nSyncQueryFlag == 1)
-        [self gotAd];
-    bShowed = true;
-}
+#pragma mark - Banner Request Notifications
 
-- (void)adView:(IMAdView *)view didFailRequestWithError:(IMAdError *)error {
-    if(bShowed)
-        return;
+// Sent when an ad request was successful
+- (void)bannerDidReceiveAd:(IMBanner *)banner {
     
-    if([error code] == kIMADNoFillError || [error code] == kIMADInvalidRequestError || [error code] == kIMADInternalError)
-    {
-        [self failed];
-    }
+    [self gotAd];
 }
 
-- (void)adViewDidDismissScreen:(IMAdView *)adView {
-}
-
-- (void)adViewWillDismissScreen:(IMAdView *)adView {
-}
-
-- (void)adViewWillPresentScreen:(IMAdView *)adView {
-}
-
-- (void)adViewWillLeaveApplication:(IMAdView *)adView {
+// Sent when the ad request failed. Please check the error code and
+// localizedDescription for more information on wy this occured
+- (void)banner:(IMBanner *)banner didFailToReceiveAdWithError:(IMError *)error {
+    
+    //NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %d, message: %@", [error code], [error localizedDescription]];
+    //NSLog(@"%@", errorMessage);
+    
+    [self failed];
 }
 
 @end
