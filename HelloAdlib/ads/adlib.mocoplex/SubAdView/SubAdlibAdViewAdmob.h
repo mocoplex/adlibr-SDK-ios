@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.5.1
+ * confirmed compatible with admob SDK 6.6.1
  */
 
 #import <UIKit/UIKit.h>
@@ -16,7 +16,7 @@
 
 @interface SubAdlibAdViewAdmob : SubAdlibAdViewCore<GADBannerViewDelegate>
 {
-    BOOL iPad;    
+    BOOL iPad;
     GADBannerView *ad;
 }
 

@@ -6,22 +6,18 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 3.7.0
+ * confirmed compatible with Inmobi SDK 4.0.4
  */
 
 #import <UIKit/UIKit.h>
-#import "IMAdView.h"
-#import "IMAdDelegate.h"
-#import "IMAdRequest.h"
-#import "IMAdError.h"
+#import "IMBanner.h"
+#import "IMBannerDelegate.h"
 #import <Adlib/Adlib.h>
 
-@interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMAdDelegate>
+@interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMBannerDelegate>
 {
     BOOL    iPad;
-    BOOL    bShowed;
-    IMAdView *ad;
-    int nSyncQueryFlag;
+    IMBanner *ad;
 }
 
 @end
