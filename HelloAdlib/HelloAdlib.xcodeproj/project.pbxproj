@@ -16,7 +16,7 @@
 		33078064179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078059179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m */; };
 		33078065179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307805B179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m */; };
 		33078066179CF34B00BEFF26 /* SubAdlibAdViewTAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307805D179CF34B00BEFF26 /* SubAdlibAdViewTAD.m */; };
-		3321BA48182A1D4000236691 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA47182A1D4000236691 /* AdSupport.framework */; };
+		3321BA48182A1D4000236691 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA47182A1D4000236691 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3321BA4A182A1D4F00236691 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA49182A1D4F00236691 /* libz.1.2.5.dylib */; };
 		3321BA4C182A1D5B00236691 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA4B182A1D5B00236691 /* GameKit.framework */; };
 		3321BA4E182A1D7100236691 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA4D182A1D7100236691 /* CoreTelephony.framework */; };
@@ -32,7 +32,7 @@
 		3321BA62182A1DE700236691 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA61182A1DE700236691 /* MobileCoreServices.framework */; };
 		3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA63182A1DF400236691 /* MessageUI.framework */; };
 		332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */; };
-		3360DA761855962C00A9EB44 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3360DA751855962C00A9EB44 /* Adlib.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3360DA761855962C00A9EB44 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3360DA751855962C00A9EB44 /* Adlib.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
 		33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */; };
 		49E88902155962990018C877 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88901155962990018C877 /* QuartzCore.framework */; };
