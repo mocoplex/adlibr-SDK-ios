@@ -54,14 +54,6 @@
     return (w-w2)/2;
 }
 
-- (GADRequest*)createRequest
-{
-    GADRequest* req = [GADRequest request];
-    req.testDevices = [NSArray arrayWithObjects:GAD_SIMULATOR_ID, nil];
-    
-    return req;
-}
-
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
@@ -95,7 +87,7 @@
     [self.view addSubview:ad];
     
     // Initiate a generic request to load it with an ad.
-    [ad loadRequest:[self createRequest]];
+    [ad loadRequest:[GADRequest request]];
 }
 
 - (CGSize)size
