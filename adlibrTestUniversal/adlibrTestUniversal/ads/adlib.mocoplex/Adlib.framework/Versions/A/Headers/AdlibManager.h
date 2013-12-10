@@ -35,6 +35,7 @@
 
 -(NSString*)getCurrentVersion;
 
+// 초기 광고 구동전 하우스배너 기본적으로 노출 //
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name;
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel;
 
@@ -46,6 +47,21 @@
 
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align;
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align;
+//////////////////////////////
+
+// 초기 구동전 하우스배너 노출여부 설정 가능 - useHouseBanner : YES이면 하우스배너 사용, NO이면 하우스배너 사용안함 //
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name useHouseBanner:(BOOL)isHouse;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel useHouseBanner:(BOOL)isHouse;
+
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del  withPageName:(NSString*)name useHouseBanner:(BOOL)isHouse;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del useHouseBanner:(BOOL)isHouse;
+
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
+
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
+-(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
+//////////////////////////////
 
 -(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
 
