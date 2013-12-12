@@ -73,7 +73,7 @@
 
 -(void)didFailToReceiveAllInterstitialAd
 {
-    NSLog(@"%@", @"모든 Interstitial Ad 수신 실패");
+    NSLog(@"%@", @"설정된 모든 Interstitial Ad 수신 실패");
 }
 
 // 광고를 수신했다. 광고view 의 크기와 위치를 재설정한다.
