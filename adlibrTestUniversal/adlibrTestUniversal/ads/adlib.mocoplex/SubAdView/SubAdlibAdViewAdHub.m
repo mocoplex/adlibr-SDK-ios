@@ -54,13 +54,11 @@
     else
         iPad = YES;
     
-    // Create a view of the standard size at the bottom of the screen.
+    // 광고뷰를 생성합니다.
     if(iPad)
         ad = [[AdHubView alloc] initWithAdSize:kAdHubAdSize_B_728x90 origin:CGPointMake([self getCenterPos],0) inventoryID:ADHUB_ID];
     else
         ad = [[AdHubView alloc] initWithAdSize:kAdHubAdSize_B_320x48 origin:CGPointMake([self getCenterPos],0) inventoryID:ADHUB_ID];
-    
-    // 광고뷰를 생성합니다.
     
     ad.delegate = self;
     ad.rootViewController = parent;
@@ -110,41 +108,19 @@
 {
     [super orientationChanged];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
     int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
-    int w2;
+    int h;
     if (iPad) {
-        w2 = 728;
+        w = 728;
+        h = 90;
     }
     else
     {
-        w2 = 320;
+        w = 320;
+        h = 48;
     }
     
-    int h2 = 90;
-    if(!iPad)
-        h2 = 48;
-    
-    if([self isPortrait])
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
-    else
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
+    ad.frame = CGRectMake([self getCenterPos], 0, w, h);
 }
 
 #pragma AdHubViewDelegate

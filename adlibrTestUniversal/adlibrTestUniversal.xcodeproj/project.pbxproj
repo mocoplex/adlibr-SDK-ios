@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33026FF718599A7600530C5D /* SubAdlibAdViewUPlusAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33026FF618599A7600530C5D /* SubAdlibAdViewUPlusAD.m */; };
 		3363D7EE1840A7B60008BB55 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */; };
 		337C2E6B18293AD900D9103F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6A18293AD900D9103F /* QuartzCore.framework */; };
 		337C2E6D18293AE500D9103F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6C18293AE500D9103F /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33026FF518599A7600530C5D /* SubAdlibAdViewUPlusAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewUPlusAD.h; sourceTree = "<group>"; };
+		33026FF618599A7600530C5D /* SubAdlibAdViewUPlusAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewUPlusAD.m; sourceTree = "<group>"; };
 		3363D7EC1840A7B60008BB55 /* SubAdlibAdViewAdHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdHub.h; sourceTree = "<group>"; };
 		3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		337C2E6818293A7100D9103F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,8 @@
 				49A84C0E15E53DBE00ED4797 /* SubAdlibAdViewShallWeAd.m */,
 				49A84C0F15E53DBE00ED4797 /* SubAdlibAdViewTAD.h */,
 				49A84C1015E53DBE00ED4797 /* SubAdlibAdViewTAD.m */,
+				33026FF518599A7600530C5D /* SubAdlibAdViewUPlusAD.h */,
+				33026FF618599A7600530C5D /* SubAdlibAdViewUPlusAD.m */,
 			);
 			path = SubAdView;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				FC43BDCC15F9ABAC00F3CD86 /* SubAdlibAdViewInmobi.m in Sources */,
 				FC43BDCD15F9ABAC00F3CD86 /* SubAdlibAdViewNaverAdPost.m in Sources */,
 				FC43BDCE15F9ABAC00F3CD86 /* SubAdlibAdViewShallWeAd.m in Sources */,
+				33026FF718599A7600530C5D /* SubAdlibAdViewUPlusAD.m in Sources */,
 				FC43BDCF15F9ABAC00F3CD86 /* SubAdlibAdViewTAD.m in Sources */,
 				3363D7EE1840A7B60008BB55 /* SubAdlibAdViewAdHub.m in Sources */,
 				495E6DDB15AD396400B7BA4C /* main.m in Sources */,

@@ -116,41 +116,19 @@
 {
     [super orientationChanged];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
     int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
-    int w2;
+    int h;
     if (iPad) {
-        w2 = 728;
+        w = 728;
+        h = 90;
     }
     else
     {
-        w2 = 320;            
+        w = 320;
+        h = 50;
     }
     
-    int h2 = 90;
-    if(!iPad)
-        h2 = 50;
-    
-    if([self isPortrait])
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
-    else
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);        
-    }    
+    ad.frame = CGRectMake([self getCenterPos], 0, w, h);
 }
 
 - (void)clearAdView
