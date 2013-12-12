@@ -25,6 +25,7 @@
 #import "SubAdlibAdViewMMedia.h"
 #import "SubAdlibAdViewDomob.h"
 #import "SubAdlibAdViewAdHub.h"
+#import "SubAdlibAdViewUPlusAD.h"
 
 
 @implementation AppDelegate
@@ -91,6 +92,7 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD class]];
 }
 
 

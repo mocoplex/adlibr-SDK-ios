@@ -34,6 +34,7 @@
 		332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
 		337C50DE18582F8D00B30670 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C50DD18582F8D00B30670 /* Adlib.framework */; };
+		339DC4C918599C7F00416A88 /* SubAdlibAdViewUPlusAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */; };
 		33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */; };
 		49E88902155962990018C877 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88901155962990018C877 /* QuartzCore.framework */; };
 		49E88904155962990018C877 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88903155962990018C877 /* OpenGLES.framework */; };
@@ -190,6 +191,8 @@
 		3362695F1761E52C00F595A8 /* GameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenter.h; sourceTree = "<group>"; };
 		336269601761E52C00F595A8 /* GameCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCenter.mm; sourceTree = "<group>"; };
 		337C50DD18582F8D00B30670 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
+		339DC4C718599C7F00416A88 /* SubAdlibAdViewUPlusAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewUPlusAD.h; sourceTree = "<group>"; };
+		339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewUPlusAD.m; sourceTree = "<group>"; };
 		33E9DC0B17D4975300FC9CBB /* SubAdlibAdViewDomob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewDomob.h; sourceTree = "<group>"; };
 		33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewDomob.m; sourceTree = "<group>"; };
 		49E888FD155962990018C877 /* HelloAdlib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloAdlib.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -896,6 +899,8 @@
 				3307805B179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m */,
 				3307805C179CF34B00BEFF26 /* SubAdlibAdViewTAD.h */,
 				3307805D179CF34B00BEFF26 /* SubAdlibAdViewTAD.m */,
+				339DC4C718599C7F00416A88 /* SubAdlibAdViewUPlusAD.h */,
+				339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */,
 			);
 			path = SubAdView;
 			sourceTree = "<group>";
@@ -1028,6 +1033,7 @@
 				49E889BD1559629A0018C877 /* CCTileMapAtlas.m in Sources */,
 				49E889C01559629A0018C877 /* CCTMXLayer.m in Sources */,
 				49E889C31559629A0018C877 /* CCTMXObjectGroup.m in Sources */,
+				339DC4C918599C7F00416A88 /* SubAdlibAdViewUPlusAD.m in Sources */,
 				49E889C61559629A0018C877 /* CCTMXTiledMap.m in Sources */,
 				49E889C91559629A0018C877 /* CCTMXXMLParser.m in Sources */,
 				49E889CC1559629A0018C877 /* CCTransition.m in Sources */,
