@@ -21,6 +21,8 @@
 - (void)didFailToReceiveAdlibInterstitialAd:(NSString*)from;
 //전면광고 닫힌 직후 호출되는 메소드.
 - (void)didCloseAdlibInterstitialAd:(NSString*)from;
+//스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAllInterstitialAd;
 
 @end
 
