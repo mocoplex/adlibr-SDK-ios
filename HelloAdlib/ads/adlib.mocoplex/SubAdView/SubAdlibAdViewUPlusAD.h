@@ -10,7 +10,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "SubAdlibAdViewCore.h"
+#import <Adlib/Adlib.h>
 #import "UplusAd.h"
 
 @interface SubAdlibAdViewUPlusAD : SubAdlibAdViewCore
