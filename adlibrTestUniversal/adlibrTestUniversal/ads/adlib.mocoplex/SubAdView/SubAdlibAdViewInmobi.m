@@ -16,6 +16,8 @@
 
 @implementation SubAdlibAdViewInmobi
 
+@synthesize ad;
+
 - (int)getCenterPos
 {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -60,26 +62,25 @@
     iPad = NO;
     
     if(iPad)
-        ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90];
+        self.ad = [[[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90] autorelease];
     else
-        ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50];
+        self.ad = [[[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50] autorelease];
     
-    ad.delegate = self;
-    ad.refreshInterval = 20;
+    self.ad.delegate = self;
+    self.ad.refreshInterval = 20;
     
-    [self.view addSubview:ad];
+    [self.view addSubview:self.ad];
     
-    [ad loadBanner];
+    [self.ad loadBanner];
 }
 
 - (void)clearAdView
 {
-    if(ad != nil)
+    if(self.ad != nil)
     {
-        [ad removeFromSuperview];
-        ad.delegate = nil;
-        [ad release];
-        ad = nil;
+        [self.ad removeFromSuperview];
+        self.ad.delegate = nil;
+        self.ad = nil;
     }
     
     [super clearAdView];
