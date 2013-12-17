@@ -13,6 +13,7 @@
 
 // UPLUS의 APP 아이디를 설정합니다.
 #define UPLUS_ID @"UPLUS_ID"
+#define UPLUS_INTERSTITIAL_ID @"UPLUS_INTERSTITIAL_ID"
 
 @implementation SubAdlibAdViewUPlusAD
 
@@ -73,6 +74,28 @@
     [super orientationChanged];
     
     ad.frame = CGRectMake([self getCenterPos], 0, 320, 50);
+}
+
+// **주의 : U+AD 전면광고는 광고 수신 성공, 실패에 대한 delegate 메소드가 존재하지 않으므로 스케줄링이 정상적으로 동작하지 않을 수 있습니다.** //
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    UplusAd* interstitial_ = [[[UplusAd alloc] initWithFrame:CGRectMake(0,0,10,10)] autorelease];
+    [interstitial_ setSlotID:UPLUS_INTERSTITIAL_ID];
+    [interstitial_ setFullScreen:YES];
+    [interstitial_ setParent:viewController];
+    interstitial_.delegate = self;
+    [viewController.self.view addSubview:interstitial_];
+}
+
++ (void)didCloseUPlusAdView:(NSString*)slotID
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"uplus"];
+}
+
++ (void)isFreeUPlusAdView:(BOOL)bFree
+{
+    // 광고 과금 여부에 대한 정보
 }
 
 @end
