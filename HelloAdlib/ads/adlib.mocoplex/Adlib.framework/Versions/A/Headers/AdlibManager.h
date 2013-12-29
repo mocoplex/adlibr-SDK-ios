@@ -23,6 +23,10 @@
 - (void)didCloseAdlibInterstitialAd:(NSString*)from;
 //스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAllInterstitialAd;
+//full banner 수신 성공.
+- (void)didReceiveAdlibFullBanner:(UIView*)fullBanner;
+//full banner 수신 실패.
+- (void)didFailToReceiveAdlibFullBanner;
 
 @end
 
@@ -66,6 +70,8 @@
 //////////////////////////////
 
 -(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
+
+-(void)loadFullBanner:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
 
 -(void)detach:(UIViewController*)parent;
 -(void)moveAdContainer:(CGPoint)pt;
