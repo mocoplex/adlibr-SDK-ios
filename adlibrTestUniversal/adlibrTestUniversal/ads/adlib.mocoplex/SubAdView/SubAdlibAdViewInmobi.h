@@ -19,6 +19,5 @@
     BOOL    iPad;
     IMBanner *ad;
 }
-@property (nonatomic,retain) IMBanner *ad;
 
 @end
