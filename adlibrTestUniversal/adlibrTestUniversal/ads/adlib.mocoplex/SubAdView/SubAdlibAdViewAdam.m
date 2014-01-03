@@ -50,7 +50,6 @@
         
             ad.clientId = ADAM_ID;
             ad.delegate = self;
-            ad.superViewController = parent;
 
             [self.view addSubview:ad];
         
