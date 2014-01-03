@@ -43,13 +43,7 @@
         w = screenHeight;
     }
     
-    if (iPad) {
-        w2 = 728;            
-    }
-    else
-    {
-        w2 = 320;            
-    }
+    w2 = ad.frame.size.width;
     
     return (w-w2)/2;
 }
@@ -65,17 +59,11 @@
     
     // Create a view of the standard size at the bottom of the screen.
     if(iPad)
-        ad = [[GADBannerView alloc]
-                   initWithFrame:CGRectMake([self getCenterPos],
-                                            0,
-                                            GAD_SIZE_728x90.width,
-                                            GAD_SIZE_728x90.height)];
+        ad = [[GADBannerView alloc] initWithAdSize:kGADAdSizeLeaderboard];
     else
-        ad = [[GADBannerView alloc]
-              initWithFrame:CGRectMake([self getCenterPos],
-                                       0,
-                                       GAD_SIZE_320x50.width,
-                                       GAD_SIZE_320x50.height)];
+        ad = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+    
+    ad.frame = CGRectMake([self getCenterPos], 0, ad.frame.size.width, ad.frame.size.height);
     
     // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
     ad.adUnitID = ADMOB_ID;    
@@ -106,29 +94,14 @@
         w = screenHeight;
     }
     
-    if(iPad)    
-        return CGSizeMake(w, 90);
-    else
-        return CGSizeMake(w, 50);
+    return CGSizeMake(w, ad.frame.size.height);
 }
 
 - (void)orientationChanged
 {
     [super orientationChanged];
     
-    int w;
-    int h;
-    if (iPad) {
-        w = 728;
-        h = 90;
-    }
-    else
-    {
-        w = 320;
-        h = 50;
-    }
-    
-    ad.frame = CGRectMake([self getCenterPos], 0, w, h);
+    ad.frame = CGRectMake([self getCenterPos], 0, ad.frame.size.width, ad.frame.size.height);
 }
 
 - (void)clearAdView
