@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 4.0.4
+ * confirmed compatible with Inmobi SDK 4.1.0
  */
 
 #import "SubAdlibAdViewInmobi.h"
@@ -16,7 +16,11 @@
 
 @implementation SubAdlibAdViewInmobi
 
-@synthesize ad;
+// 객체를 전역적으로 하나만 생성합니다.
++ (BOOL)isStaticObject
+{
+    return YES;
+}
 
 - (int)getCenterPos
 {
@@ -48,39 +52,44 @@
 {
     [super query:parent];
     
-    // Inmobi Initialize
-    [InMobi initialize:INMOBI_ID];
+    static BOOL bIninintedObject = NO;
     
-    self.view.autoresizesSubviews = NO;
+    if(!bIninintedObject)
+    {
+        // Inmobi Initialize
+        [InMobi initialize:INMOBI_ID];
     
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        self.view.autoresizesSubviews = NO;
+    
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+            iPad = NO;
+        else
+            iPad = YES;
+        
+        // only iPhone size
         iPad = NO;
-    else
-        iPad = YES;
+        
+        if(iPad)
+            ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90];
+        else
+            ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50];
     
-    // only iPhone size
-    iPad = NO;
+        ad.delegate = self;
+        ad.refreshInterval = 20;
     
-    if(iPad)
-        self.ad = [[[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90] autorelease];
-    else
-        self.ad = [[[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50] autorelease];
+        [self.view addSubview:ad];
+        
+        bIninintedObject = YES;
+    }
     
-    self.ad.delegate = self;
-    self.ad.refreshInterval = 20;
-    
-    [self.view addSubview:self.ad];
-    
-    [self.ad loadBanner];
+    [ad loadBanner];
 }
 
 - (void)clearAdView
 {
-    if(self.ad != nil)
+    if(ad != nil)
     {
-        [self.ad removeFromSuperview];
-        self.ad.delegate = nil;
-        self.ad = nil;
+        [ad stopLoading];
     }
     
     [super clearAdView];

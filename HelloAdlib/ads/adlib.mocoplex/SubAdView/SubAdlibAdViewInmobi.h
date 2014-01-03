@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 4.0.4
+ * confirmed compatible with Inmobi SDK 4.1.0
  */
 
 #import <UIKit/UIKit.h>
@@ -19,6 +19,5 @@
     BOOL    iPad;
     IMBanner *ad;
 }
-@property (nonatomic,retain) IMBanner *ad;
 
 @end
