@@ -7,6 +7,7 @@
 //
 
 #import <Adlib/AdlibManager.h>
+#import <Adlib/AdlibPopBanner.h>
 #import <Adlib/AdlibRewardLink.h>
 #import <Adlib/SubAdlibAdsView.h>
 #import <Adlib/SubAdlibAdViewCore.h>
