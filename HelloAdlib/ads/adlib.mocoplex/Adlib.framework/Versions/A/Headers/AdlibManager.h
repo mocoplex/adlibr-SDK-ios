@@ -6,6 +6,7 @@
  */
 
 #import "SubAdlibAdViewCore.h"
+#import "AdlibPopBanner.h"
 
 #define ADLIB_ALIGN_LEFT	1
 #define ADLIB_ALIGN_CENTER	2
@@ -13,6 +14,7 @@
 
 @protocol AdlibManagerDelegate <NSObject>
 
+@optional
 //광고 수신 성공시 호출되는 메소드.
 - (void)gotAd;
 //전면광고 수신 성공시 호출되는 메소드.
@@ -27,6 +29,12 @@
 - (void)didReceiveAdlibFullBanner:(UIView*)fullBanner;
 //full banner 수신 실패.
 - (void)didFailToReceiveAdlibFullBanner;
+//팝배너 수신 성공시 호출되는 메소드.
+- (void)didReceiveAdlibPopAd;
+//팝배너 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAdlibPopAd;
+//팝배너 닫힌 직후 호출되는 메소드.
+- (void)didCloseAdlibPopAd;
 
 @end
 
@@ -69,9 +77,18 @@
 -(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
 //////////////////////////////
 
+-(void)forceRewardBanner:(BOOL)bForce;
+
 -(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
 
 -(void)loadFullBanner:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
+
+-(void)setAdlibPopFrameColor:(UIColor*)color;
+-(void)setAdlibPopCloseButtonStyle:(AdlibPopBtnStyle)btnStyle;
+-(void)setAdlibPopCloseButtonStyle:(AdlibPopBtnStyle)btnStyle position:(int)pos;
+-(void)setAdlibPopInAnimation:(AdlibPopAnimationType)inAnim outAnimation:(AdlibPopAnimationType)outAnim;
+-(void)showAdlibPopBanner:(AdlibPopAlign)align withPadding:(int)padding withDelegate:(id<AdlibManagerDelegate>)del;
+-(void)hideAdlibPopBanner;
 
 -(void)detach:(UIViewController*)parent;
 -(void)moveAdContainer:(CGPoint)pt;
