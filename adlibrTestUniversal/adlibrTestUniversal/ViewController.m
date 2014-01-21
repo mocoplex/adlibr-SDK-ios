@@ -29,6 +29,16 @@
     
     [self.view addSubview:button];
     
+    // pop banner 설정 및 호출
+    // 프레임 컬러 설정(생략가능) : 기본 blackColor
+    [[AdlibManager sharedSingletonClass] setAdlibPopFrameColor:[UIColor darkGrayColor]];
+    // 버튼 컬러 설정(생략가능) : 기본 AdlibPopBtnStyleWhite
+    [[AdlibManager sharedSingletonClass] setAdlibPopCloseButtonStyle:AdlibPopBtnStyleWhite];
+    // 인, 아웃 애니메이션 설정(생략가능) : 기본 AdlibPopAnimationTypeSlide
+    [[AdlibManager sharedSingletonClass] setAdlibPopInAnimation:AdlibPopAnimationTypeSlide outAnimation:AdlibPopAnimationTypeNone];
+    // pop banner 보이기
+    [[AdlibManager sharedSingletonClass] showAdlibPopBanner:AdlibPopAlignBottom withPadding:60 withDelegate:self];
+    
     // 서버에서 설정한 버전정보를 가져옵니다.
     // 기존 클라이언트 버전을 확인하여 적절한 작업을 수행하세요.
     NSString* ver = [[AdlibManager sharedSingletonClass] getCurrentVersion];
@@ -55,7 +65,23 @@
     [[AdlibManager sharedSingletonClass] loadInterstitialAd:self withDelegate:self];
 }
 
-//전면광고 관련 delegate
+//pop banner delegate:optional
+-(void)didReceiveAdlibPopAd
+{
+    NSLog(@"%@",@"Pop banner 수신 성공!!");
+}
+
+-(void)didFailToReceiveAdlibPopAd
+{
+    NSLog(@"%@",@"Pop banner 수신 실패..");
+}
+
+-(void)didCloseAdlibPopAd
+{
+    NSLog(@"%@",@"Pop banner 닫힘..");
+}
+
+//전면광고 관련 delegate:optional
 -(void)didReceiveAdlibInterstitialAd:(NSString*)from
 {
     NSLog(@"%@ Interstitial Ad 수신 성공!!",from);
