@@ -10,7 +10,7 @@
  */
 
 #import "SubAdlibAdViewiAd.h"
-#import "AdlibManager.h"
+#import <Adlib/Adlib.h>
 
 @implementation SubAdlibAdViewiAd
 
