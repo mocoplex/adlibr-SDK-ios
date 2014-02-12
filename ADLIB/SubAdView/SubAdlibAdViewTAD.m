@@ -1,0 +1,132 @@
+/*
+ * adlibr - Library for mobile AD mediation.
+ * http://adlibr.com
+ * Copyright (c) 2012-2013 Mocoplex, Inc.  All rights reserved.
+ * Licensed under the BSD open source license.
+ */
+
+/*
+ * confirmed compatible with t-ad SDK 3.1.0.6
+ */
+
+#import "SubAdlibAdViewTAD.h"
+
+// Tad를 사용할 경우 Tad의 library에 JSONKit이 포함되어 있으므로 애드립 lib 폴더의 JSONKit을 삭제하세요.
+
+// TAD의 APP 아이디를 설정합니다.
+#define TAD_ID @"T_AD"
+
+@implementation SubAdlibAdViewTAD
+
+- (int)getCenterPos
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    int w,w2=0;
+    if([self isPortrait])
+    {
+        w = screenWidth;
+    }
+    else
+    {
+        w = screenHeight;
+    }
+    
+    w2 = 320;
+    
+    return (w-w2)/2;
+}
+
+- (void)query:(UIViewController*)parent
+{
+    [super query:parent];
+
+    ad = [[TadCore alloc] initWithSeedView:self.view delegate:self];
+    //필수 사항
+    [ad setClientID:TAD_ID];       // 클라이언트 아이디
+    [ad setSlotNo:TadSlotInline];  // 슬롯 설정
+    
+    // 선택 셋팅 사항
+    [ad setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
+    [ad setOffset:CGPointMake([self getCenterPos], 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
+    [ad setRefershInterval:30.0f];                   // 리프레쉬 인터벌을 결정한다. 15~60초 사이만 가능 (Default : 60)
+    [ad setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
+    [ad getAdvertisement];
+    
+    if(bGotAd)
+        [self gotAd];
+}
+
+- (void)clearAdView
+{
+    [super clearAdView];
+    [ad removeAd];
+    [ad release];
+    ad = nil;
+}
+
+#pragma mark - TadDelegate
+
+- (void)tadOnAdWillReceive:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 전문 요청 시작");
+}
+
+- (void)tadOnAdReceived:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 전문 수신 완료");
+}
+
+- (void)tadOnAdWillLoad:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 로드 시작");
+}
+
+- (void)tadOnAdLoaded:(TadCore *)tadCore {
+    //광고 로드 완료
+    [self gotAd];
+    bGotAd = YES;
+}
+
+- (void)tadOnAdClicked:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 클릭");
+}
+
+- (void)tadOnAdColsed:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 전면 형 광고 닫힘");
+}
+
+- (void)tadOnAdExpanded:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 확장");
+}
+
+- (void)tadOnAdExpandClose:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 확장 닫기");
+}
+
+- (void)tadOnAdResized:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 리사이징");
+}
+
+- (void)tadOnAdResizeClosed:(TadCore *)tadCore {
+    //NSLog(@"<Tad> 광고 리사이징 닫기");
+}
+
+- (void)tadCore:(TadCore *)tadCore tadFailed:(TadErrorCode)errorCode {
+    
+    // 실패했다. 바로 다음 스케줄 광고를 보인다.
+    [self failed];
+    bGotAd = NO;
+}
+
+- (CGSize)size
+{
+    return CGSizeMake(320, 50);
+}
+
+- (void)orientationChanged
+{
+    [super orientationChanged];
+    
+    ad.frame = CGRectMake([self getCenterPos], 0, 320, 50);
+}
+
+@end
