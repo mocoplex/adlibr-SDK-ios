@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 3.1.0.6
+ * confirmed compatible with t-ad SDK 3.3.3.6
  */
 
 #import "SubAdlibAdViewTAD.h"
@@ -50,20 +50,20 @@
     // 선택 셋팅 사항
     [ad setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
     [ad setOffset:CGPointMake([self getCenterPos], 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
-    [ad setRefershInterval:30.0f];                   // 리프레쉬 인터벌을 결정한다. 15~60초 사이만 가능 (Default : 60)
+    [ad setRefershInterval:30.0f];                   // 광고 재요청 시간 간격을 설정한다. 15~60초 (Default : 20)
     [ad setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
     [ad getAdvertisement];
-    
-    if(bGotAd)
-        [self gotAd];
 }
 
 - (void)clearAdView
 {
     [super clearAdView];
-    [ad removeAd];
-    [ad release];
-    ad = nil;
+    if(ad != nil)
+    {
+        [ad destroyAd];
+        [ad release];
+        ad = nil;
+    }
 }
 
 #pragma mark - TadDelegate
@@ -110,7 +110,7 @@
     //NSLog(@"<Tad> 광고 리사이징 닫기");
 }
 
-- (void)tadCore:(TadCore *)tadCore tadFailed:(TadErrorCode)errorCode {
+- (void)tadCore:(TadCore *)tadCore tadOnAdFailed:(TadErrorCode)errorCode {
     
     // 실패했다. 바로 다음 스케줄 광고를 보인다.
     [self failed];
