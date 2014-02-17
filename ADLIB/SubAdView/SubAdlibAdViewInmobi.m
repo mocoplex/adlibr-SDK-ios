@@ -13,6 +13,7 @@
 
 // 여기에 인모비에서 발급받은 key 를 입력하세요.
 #define INMOBI_ID @"INMOBI"
+#define INMOBI_INTERSTITIAL_ID @"INMOBI_INTERSTITIAL"
 
 @implementation SubAdlibAdViewInmobi
 
@@ -109,6 +110,39 @@
     
     // 광고 수신에 실패하였습니다.
     [self failed];
+}
+
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    [InMobi initialize:INMOBI_INTERSTITIAL_ID];
+    
+    IMInterstitial *interstitial = [[IMInterstitial alloc] initWithAppId:INMOBI_INTERSTITIAL_ID];
+    interstitial.delegate = self;
+    [interstitial loadInterstitial];
+}
+
++ (void)interstitialDidReceiveAd:(IMInterstitial *)ad
+{
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"inmobi"];
+    
+    [ad presentInterstitialAnimated:YES];
+}
+
++ (void)interstitial:(IMInterstitial *)ad didFailToReceiveAdWithError:(IMError *)error
+{
+    
+    //NSString *errorMessage = [NSString stringWithFormat:@"Error code: %d, message: %@", [error code], [error localizedDescription]];
+    //NSLog(@"%@", errorMessage);
+    
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"inmobi"];
+}
+
++ (void)interstitialDidDismissScreen:(IMInterstitial *)ad
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"inmobi"];
 }
 
 @end
