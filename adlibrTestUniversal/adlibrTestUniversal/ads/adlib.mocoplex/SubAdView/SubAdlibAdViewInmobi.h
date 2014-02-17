@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import "IMBanner.h"
 #import "IMBannerDelegate.h"
+#import "IMInterstitial.h"
+#import "IMInterstitialDelegate.h"
 #import <Adlib/Adlib.h>
 
 @interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMBannerDelegate>

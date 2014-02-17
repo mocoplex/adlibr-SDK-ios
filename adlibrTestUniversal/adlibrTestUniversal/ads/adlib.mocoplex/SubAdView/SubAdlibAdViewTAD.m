@@ -15,6 +15,7 @@
 
 // TAD의 APP 아이디를 설정합니다.
 #define TAD_ID @"T_AD"
+#define TAD_INTERSTITIAL_ID @"T_AD_INTERSTITIAL"
 
 @implementation SubAdlibAdViewTAD
 
@@ -48,18 +49,6 @@
 
 #pragma mark - TadDelegate
 
-- (void)tadOnAdWillReceive:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 전문 요청 시작");
-}
-
-- (void)tadOnAdReceived:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 전문 수신 완료");
-}
-
-- (void)tadOnAdWillLoad:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 로드 시작");
-}
-
 - (void)tadOnAdLoaded:(TadCore *)tadCore {
     //광고 로드 완료
     [self gotAd];
@@ -68,26 +57,6 @@
 
 - (void)tadOnAdClicked:(TadCore *)tadCore {
     //NSLog(@"<Tad> 광고 클릭");
-}
-
-- (void)tadOnAdColsed:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 전면 형 광고 닫힘");
-}
-
-- (void)tadOnAdExpanded:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 확장");
-}
-
-- (void)tadOnAdExpandClose:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 확장 닫기");
-}
-
-- (void)tadOnAdResized:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 리사이징");
-}
-
-- (void)tadOnAdResizeClosed:(TadCore *)tadCore {
-    //NSLog(@"<Tad> 광고 리사이징 닫기");
 }
 
 - (void)tadCore:(TadCore *)tadCore tadOnAdFailed:(TadErrorCode)errorCode {
@@ -114,6 +83,41 @@
     }
     
     return CGSizeMake(w, 50);
+}
+
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    TadCore *interstitial = [[TadCore alloc] initWithSeedView:viewController.view delegate:self];
+    //필수 사항
+    [interstitial setClientID:TAD_INTERSTITIAL_ID];       // 클라이언트 아이디
+    [interstitial setSlotNo:TadSlotInterstitial];  // 슬롯 설정
+    
+    // 선택 셋팅 사항
+    [interstitial setIsTest:YES];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
+    [interstitial setOffset:CGPointMake(0.0f, 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
+    [interstitial setAutoCloseWhenNoInteraction:NO];           // 전면광고 5초 후 자동 닫힘.
+    [interstitial setAutoCloseAfterLeaveApplication:NO];       // 전면광고 랜딩 후 광고 닫힘.
+    [interstitial setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
+    [interstitial getAdvertisement];
+}
+
++ (void)tadOnAdLoaded:(TadCore *)interstitial
+{
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"tad"];
+    [interstitial showAd];
+}
+
++ (void)tadCore:(TadCore *)interstitial tadOnAdFailed:(TadErrorCode)errorCode
+{
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"tad"];
+}
+
++ (void)tadOnAdDidDismissModal:(TadCore *)interstitial
+{
+    // 전면광고 닫힘을 알린다.
+    [self interstitialClosed:@"tad"];
 }
 
 @end
