@@ -53,7 +53,7 @@
         // 광고뷰를 생성합니다.
         ad = [MobileAdView sharedMobileAdView];
         
-        CGRect rt = CGRectMake(0, 0, 320, 50);
+        CGRect rt = CGRectMake([self getCenterPos], 0, 320, 50);
         ad.frame = rt;
         
         [ad setSuperViewController:parent];
