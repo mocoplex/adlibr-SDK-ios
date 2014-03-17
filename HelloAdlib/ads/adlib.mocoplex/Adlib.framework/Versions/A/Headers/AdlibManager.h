@@ -35,6 +35,7 @@
 - (void)didFailToReceiveAdlibPopAd;
 //팝배너 닫힌 직후 호출되는 메소드.
 - (void)didCloseAdlibPopAd;
+- (void)failed;
 
 @end
 
