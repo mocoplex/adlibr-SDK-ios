@@ -6,6 +6,7 @@
 //  Copyright (c) 2013년 Hana Kim. All rights reserved.
 //
 
+#import <Adlib/AdlibAdView.h>
 #import <Adlib/AdlibManager.h>
 #import <Adlib/AdlibPopBanner.h>
 #import <Adlib/AdlibRewardLink.h>
