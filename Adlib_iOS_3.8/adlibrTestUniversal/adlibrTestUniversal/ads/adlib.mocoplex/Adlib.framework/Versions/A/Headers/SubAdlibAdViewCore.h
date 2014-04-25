@@ -28,7 +28,7 @@
 
 + (BOOL)isStaticObject;
 
-+ (void)loadInterstitial:(UIViewController*)viewController;
++ (void)loadInterstitail:(UIViewController*)viewController;
 + (void)interstitialReceived:(NSString*)from;
 + (void)interstitialFailed:(NSString*)from;
 + (void)interstitialClosed:(NSString*)from;
