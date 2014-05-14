@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 3.3.4.6
+ * confirmed compatible with t-ad SDK 3.3.5.6
  */
 
 #import <UIKit/UIKit.h>
