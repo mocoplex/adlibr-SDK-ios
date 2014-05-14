@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with t-ad SDK 3.3.4.6
+ * confirmed compatible with t-ad SDK 3.4.3.6
  */
 
 #import "SubAdlibAdViewTAD.h"
@@ -22,7 +22,7 @@
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
-
+    
     ad = [[TadCore alloc] initWithSeedView:self.view delegate:self];
     //필수 사항
     [ad setClientID:TAD_ID];       // 클라이언트 아이디
