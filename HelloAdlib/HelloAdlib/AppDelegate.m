@@ -22,10 +22,11 @@
 #import "SubAdlibAdViewNaverAdPost.h"
 #import "SubAdlibAdViewShallWeAd.h"
 #import "SubAdlibAdViewInmobi.h"
-#import "SubAdlibAdViewMMedia.h"
 #import "SubAdlibAdViewDomob.h"
 #import "SubAdlibAdViewAdHub.h"
 #import "SubAdlibAdViewUPlusAD.h"
+#import "SubAdlibAdViewMMedia.h"
+#import <MillennialMedia/MMSDK.h>
 
 
 @implementation AppDelegate
@@ -89,10 +90,11 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD class]];
+    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
+    [MMSDK initialize];  // MillennialMedia를 사용하시려면 반드시 초기화를 호출해 주세요.
 }
 
 

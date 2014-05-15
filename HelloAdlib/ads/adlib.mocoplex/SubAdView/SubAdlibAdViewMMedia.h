@@ -6,12 +6,12 @@
  */
 
 /*
- * confirmed compatible with MillennialMedia SDK 5.1.1
+ * confirmed compatible with MillennialMedia SDK 5.2.0
  */
 
 #import <UIKit/UIKit.h>
 #import <Adlib/Adlib.h>
-#import "MMAdView.h"
+#import <MillennialMedia/MMAdView.h>
 
 @interface SubAdlibAdViewMMedia : SubAdlibAdViewCore
 {

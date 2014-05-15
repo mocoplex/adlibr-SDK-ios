@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with MillennialMedia SDK 5.1.1
+ * confirmed compatible with MillennialMedia SDK 5.2.0
  */
 
 #import "SubAdlibAdViewMMedia.h"
