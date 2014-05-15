@@ -11,6 +11,13 @@
 
 #import "SubAdlibAdViewMMedia.h"
 
+/*
+ MillennialMedia v5.2.0 이상부터는
+ AppDelegate의 didFinishLaunchingWithOptions 메소드에서
+ [MMSDK initialize];
+ 를 반드시 호출해 주세요.
+ */
+
 // MILLENNIAL MEDIA의 APP 아이디를 설정합니다.
 #define MMEDIA_ID @"MILLENNIALMEDIA_ID"
 
