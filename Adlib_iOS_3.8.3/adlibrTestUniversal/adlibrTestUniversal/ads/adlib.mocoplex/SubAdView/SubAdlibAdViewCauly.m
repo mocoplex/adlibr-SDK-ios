@@ -151,6 +151,13 @@
 
 + (void)loadInterstitail:(UIViewController*)viewController
 {
+    // 아이패드는 전면배너를 지원하지 않는다는 메시지만 출력되며, fail함수가 호출되지 않아, 실패를 알리고 return 시킨다.
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        [self interstitialFailed:@"cauly"];
+        return;
+    }
+    
     CaulyAdSetting* ads = [CaulyAdSetting globalSetting];
     [CaulyAdSetting setLogLevel:CaulyLogLevelRelease];
     
