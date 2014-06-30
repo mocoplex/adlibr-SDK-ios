@@ -27,6 +27,7 @@
     //필수 사항
     [ad setClientID:TAD_ID];       // 클라이언트 아이디
     [ad setSlotNo:TadSlotInline];  // 슬롯 설정
+    [ad setSeedViewController:parent]; // 광고가 표시되는 ViewController를 전달
     
     // 선택 셋팅 사항
     [ad setIsTest:NO];                               // YES : 테스트 서버, NO : 상용 서버 (Default : YES)
