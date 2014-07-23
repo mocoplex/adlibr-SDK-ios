@@ -62,7 +62,7 @@
         if(![ad.superview isEqual:self.view])
         {
             CGRect rt;
-            rt = CGRectMake([self getCenterPos], 0, 320, 48);
+            rt = CGRectMake([self getCenterPos], 0, 320, 50);
             ad.frame = rt;
         
             self.view.frame = rt;
@@ -145,14 +145,14 @@
 
 - (CGSize)size
 {
-    return CGSizeMake(320, 48);
+    return CGSizeMake(320, 50);
 }
 
 - (void)orientationChanged
 {
     [super orientationChanged];
     
-    ad.frame = CGRectMake([self getCenterPos], 0, 320, 48);
+    ad.frame = CGRectMake([self getCenterPos], 0, 320, 50);
 }
 
 
