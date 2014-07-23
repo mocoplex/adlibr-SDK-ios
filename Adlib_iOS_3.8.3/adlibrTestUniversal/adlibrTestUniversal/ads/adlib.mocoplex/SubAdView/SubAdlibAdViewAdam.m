@@ -42,7 +42,7 @@
         if(![ad.superview isEqual:self.view])
         {
             CGRect rt;
-            rt = CGRectMake(0, 0, self.view.bounds.size.width, 48);
+            rt = CGRectMake(0, 0, self.view.bounds.size.width, 50);
         
             ad.frame = rt;
         
@@ -140,7 +140,7 @@
         w = screenHeight;
     }
     
-    return CGSizeMake(w, 48);    
+    return CGSizeMake(w, 50);
 }
 
 - (void)orientationChanged
@@ -161,7 +161,7 @@
         w = screenHeight;
     }
     
-    ad.frame = CGRectMake(0, 0, w, 48);    
+    ad.frame = CGRectMake(0, 0, w, 50);
 }
 
 
