@@ -16,6 +16,8 @@
 
 - (void)query:(UIViewController*)parent;
 - (void)clearAdView;
+- (void)startAdRequest;
+- (void)stopAdRequest;
 - (void)adsizeChanged;
 - (void)gotAd;
 - (void)failed;
