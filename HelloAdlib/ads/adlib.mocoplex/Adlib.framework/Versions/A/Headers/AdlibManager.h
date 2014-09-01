@@ -100,4 +100,7 @@
 -(void)setPlatform:(NSString*)name withClass:(Class)className;
 -(void)setLogging:(BOOL)logging;
 
+-(void)stopAdsRequest:(UIViewController*)parent;
+-(void)startAdsRequest:(UIViewController*)parent;
+
 @end
