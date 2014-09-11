@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		33026FF718599A7600530C5D /* SubAdlibAdViewUPlusAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 33026FF618599A7600530C5D /* SubAdlibAdViewUPlusAD.m */; };
+		3351F16619C1ADBF002D086B /* SubAdlibAdViewMedibaAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3351F16519C1ADBF002D086B /* SubAdlibAdViewMedibaAd.m */; };
 		3363D7EE1840A7B60008BB55 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */; };
 		337C2E6B18293AD900D9103F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6A18293AD900D9103F /* QuartzCore.framework */; };
 		337C2E6D18293AE500D9103F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C2E6C18293AE500D9103F /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		33026FF518599A7600530C5D /* SubAdlibAdViewUPlusAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewUPlusAD.h; sourceTree = "<group>"; };
 		33026FF618599A7600530C5D /* SubAdlibAdViewUPlusAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewUPlusAD.m; sourceTree = "<group>"; };
+		3351F16419C1ADBF002D086B /* SubAdlibAdViewMedibaAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMedibaAd.h; sourceTree = "<group>"; };
+		3351F16519C1ADBF002D086B /* SubAdlibAdViewMedibaAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMedibaAd.m; sourceTree = "<group>"; };
 		3363D7EC1840A7B60008BB55 /* SubAdlibAdViewAdHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdHub.h; sourceTree = "<group>"; };
 		3363D7ED1840A7B60008BB55 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		337C2E6818293A7100D9103F /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,8 @@
 				49A84C0815E53DBE00ED4797 /* SubAdlibAdViewiAd.m */,
 				49A84C0915E53DBE00ED4797 /* SubAdlibAdViewInmobi.h */,
 				49A84C0A15E53DBE00ED4797 /* SubAdlibAdViewInmobi.m */,
+				3351F16419C1ADBF002D086B /* SubAdlibAdViewMedibaAd.h */,
+				3351F16519C1ADBF002D086B /* SubAdlibAdViewMedibaAd.m */,
 				3389824417994B9600EB4E7C /* SubAdlibAdViewMMedia.h */,
 				3389824517994B9600EB4E7C /* SubAdlibAdViewMMedia.m */,
 				49A84C0B15E53DBE00ED4797 /* SubAdlibAdViewNaverAdPost.h */,
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3351F16619C1ADBF002D086B /* SubAdlibAdViewMedibaAd.m in Sources */,
 				FC43BDC715F9ABAC00F3CD86 /* SubAdlibAdViewAdam.m in Sources */,
 				FC43BDC915F9ABAC00F3CD86 /* SubAdlibAdViewAdmob.m in Sources */,
 				FC43BDCA15F9ABAC00F3CD86 /* SubAdlibAdViewCauly.m in Sources */,
