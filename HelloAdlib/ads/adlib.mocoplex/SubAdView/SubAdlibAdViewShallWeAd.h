@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Adlib/Adlib.h>
-#import "ShallWeAD.h"
+#import <ShallWeAD_IOSSDK/ShallWeAD.h>
 
 
 @interface SubAdlibAdViewShallWeAd : SubAdlibAdViewCore<ShallWeAdDelegate>
