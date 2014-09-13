@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with domob SDK 3.3.8
+ * confirmed compatible with domob SDK 4.3.3
  */
 
 
@@ -55,12 +55,14 @@
     
     if(iPad)
     {
-        ad = [[DMAdView alloc] initWithPublisherId:DOMOB_PUBLISHER_ID placementId:DOMOB_PLACEMENT_ID size:DOMOB_AD_SIZE_728x90];
+        ad = [[DMAdView alloc] initWithPublisherId:DOMOB_PUBLISHER_ID
+                                       placementId:DOMOB_PLACEMENT_ID];
         ad.frame = CGRectMake(0, 0, DOMOB_AD_SIZE_728x90.width, DOMOB_AD_SIZE_728x90.height);
     }
     else
     {
-        ad = [[DMAdView alloc] initWithPublisherId:DOMOB_PUBLISHER_ID placementId:DOMOB_PLACEMENT_ID size:DOMOB_AD_SIZE_320x50];
+        ad = [[DMAdView alloc] initWithPublisherId:DOMOB_PUBLISHER_ID
+                                       placementId:DOMOB_PLACEMENT_ID];
         ad.frame = CGRectMake(0, 0, DOMOB_AD_SIZE_320x50.width, DOMOB_AD_SIZE_320x50.height);
     }
     
