@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with domob SDK 3.3.8
+ * confirmed compatible with domob SDK 4.3.3
  */
 
 #import <UIKit/UIKit.h>

@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 4.3.0
+ * confirmed compatible with Inmobi SDK 4.4.1
  */
 
 #import <UIKit/UIKit.h>
