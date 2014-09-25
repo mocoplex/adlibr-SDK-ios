@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.11.1
+ * confirmed compatible with admob SDK 6.12.0
  */
 
 // 실제 프로젝트 적용시 위 주소를 참고하여
@@ -68,8 +68,17 @@
     
     [self queryAd];
     
+    GADRequest *request = [GADRequest request];
+    
+    // 테스트 광고를 요청합니다. 테스트 광고를 수신하려는
+    // 시뮬레이터 및 모든 기기에 대한 식별자를 삽입합니다.
+    //    request.testDevices = [NSArray arrayWithObjects:
+    //                           @"YOUR_SIMULATOR_IDENTIFIER",
+    //                           @"YOUR_DEVICE_IDENTIFIER",
+    //                           nil];
+    
     // Initiate a generic request to load it with an ad.
-    [ad loadRequest:[GADRequest request]];
+    [ad loadRequest:request];
 }
 
 - (CGSize)size
