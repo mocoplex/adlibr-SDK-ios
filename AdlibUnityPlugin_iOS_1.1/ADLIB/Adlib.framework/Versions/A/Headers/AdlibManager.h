@@ -17,6 +17,10 @@
 @optional
 //광고 수신 성공시 호출되는 메소드.
 - (void)gotAd;
+//광고 수신 성공시 호출되는 메소드. (2014.09.24 - yongsun)
+- (void)didReceiveAdlibAd:(NSString*)from;
+//광고 수신 실패시 호출되는 메소드. (2014.09.24 - yongsun)
+- (void)didFailToReceiveAdlibAd:(NSString*)from;
 //전면광고 수신 성공시 호출되는 메소드.
 - (void)didReceiveAdlibInterstitialAd:(NSString*)from;
 //전면광고 수신 실패시 호출되는 메소드.
