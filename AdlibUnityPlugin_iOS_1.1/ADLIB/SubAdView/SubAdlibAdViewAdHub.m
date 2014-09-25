@@ -51,6 +51,7 @@
         
     [self.view addSubview:ad];
     
+    [self queryAd];
     [ad startAd];
 }
 

@@ -70,6 +70,9 @@
     }
     
     [self.mas setPosition:kMasMVPosition_top];
+    
+    [self queryAd];
+    
     [self.mas loadRequest];
     
 }

@@ -65,9 +65,9 @@
         bIninintedObject = YES;
     }
     
-    [ad startBannerAdRequest];
+    [self queryAd];
     
-    [self gotAd];
+    [ad startBannerAdRequest];
 }
 
 - (void)clearAdView

@@ -50,7 +50,7 @@
     
     [self.view addSubview:ad];
     
-    [self gotAd];
+    [self queryAd];
 }
 
 - (void)clearAdView

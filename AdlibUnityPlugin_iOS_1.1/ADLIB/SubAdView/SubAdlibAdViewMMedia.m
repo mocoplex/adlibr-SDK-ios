@@ -11,15 +11,16 @@
 
 #import "SubAdlibAdViewMMedia.h"
 
-/* 
+/*
  MillennialMedia v5.2.0 이상부터는
  AppDelegate의 didFinishLaunchingWithOptions 메소드에서
- [MMSDK initialize]; 
+ [MMSDK initialize];
  를 반드시 호출해 주세요.
  */
 
 // MILLENNIAL MEDIA의 APP 아이디를 설정합니다.
 #define MMEDIA_ID @"MILLENNIALMEDIA_ID"
+#define MMEDIA_INTERSTITIAL_ID @"MILLENNIALMEDIA_INTERSTITIAL_ID"
 
 #define MILLENNIAL_IPHONE_AD_VIEW_FRAME CGRectMake(0, 0, 320, 50)
 
@@ -56,6 +57,9 @@
     
     // Ad banner to the view
     [self.view addSubview:ad];
+    
+    [self queryAd];
+    
     [self getAd];
 }
 
@@ -99,6 +103,48 @@
             [self failed];
         }
     }];
+}
+
++ (void)loadInterstitail:(UIViewController*)viewController
+{
+    //MMRequest Object
+    MMRequest *request = [MMRequest request];
+    
+    //Replace YOUR_APID with the APID provided to you by Millennial Media
+    [MMInterstitial fetchWithRequest:request
+                                apid:MMEDIA_INTERSTITIAL_ID
+                        onCompletion:^(BOOL success, NSError *error) {
+                            if (success) {
+                                [MMInterstitial displayForApid:MMEDIA_INTERSTITIAL_ID
+                                            fromViewController:viewController
+                                               withOrientation:MMOverlayOrientationTypeAll
+                                                  onCompletion:^(BOOL success, NSError *error) {
+                                                      if (success) {
+                                                          // Interstitial displayed successfully.
+                                                          [self didReceiveInterstitialAd];
+                                                      }
+                                                      else {
+                                                          // Error displaying interstitial
+                                                          [self didFailToReceiveInterstitialAd];
+                                                      }
+                                                  }];
+                            }else{
+                                // Error fetching ad
+                                [self didFailToReceiveInterstitialAd];
+                            }
+                        }];
+}
+
++ (void)didReceiveInterstitialAd
+{
+    // 전면광고 성공을 알린다.
+    [self interstitialReceived:@"mmedia"];
+}
+
++ (void)didFailToReceiveInterstitialAd
+{
+    // 전면광고 실패를 알린다.
+    [self interstitialFailed:@"mmedia"];
 }
 
 @end

@@ -58,6 +58,8 @@
     ad.delegate = self;
         
     [self.view addSubview:ad];
+    
+    [self queryAd];
 }
 
 - (void)clearAdView
@@ -142,6 +144,7 @@
 {
     if(ad.bannerLoaded) // 광고를 가져왔으면 화면에 보인다.   
     {
+        [self queryAd];
         [self gotAd];
     }
     else            // 광고를 가져오지 못했다. 다음광고를 로드한다.
