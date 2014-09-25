@@ -48,7 +48,7 @@
     [ad start];
     
     // 먼저 광고뷰를 화면에 보이고 수신여부를 확인합니다.
-    [self gotAd];
+    [self queryAd];
 }
 
 - (void)clearAdView
@@ -116,6 +116,8 @@
         if(!bGotAd)
             [self failed];
     }
+    
+    if(bGotAd) [self gotAd];
 }
 
 @end

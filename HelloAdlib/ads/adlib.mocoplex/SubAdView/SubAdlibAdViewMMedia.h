@@ -12,10 +12,11 @@
 #import <UIKit/UIKit.h>
 #import <Adlib/Adlib.h>
 #import <MillennialMedia/MMAdView.h>
+#import <MillennialMedia/MMInterstitial.h>
 
 @interface SubAdlibAdViewMMedia : SubAdlibAdViewCore
 {
-    BOOL iPad;    
+    BOOL iPad;
     MMAdView *ad;
 }
 

@@ -22,7 +22,7 @@
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
-
+    
     ad = [[TadCore alloc] initWithSeedView:self.view delegate:self];
     //필수 사항
     [ad setClientID:TAD_ID];       // 클라이언트 아이디
@@ -34,6 +34,9 @@
     [ad setOffset:CGPointMake(0.0f, 0.0f)];          // 광고의 오프셋을 결정한다. (Default 0.0)
     [ad setRefershInterval:30.0f];                   // 광고 재요청 시간 간격을 설정한다. 15~60초 (Default : 20)
     [ad setLogMode:NO];                              // 로그를 보여줄지 아닐지 결정 (Default : NO)
+    
+    [self queryAd];
+    
     [ad getAdvertisement];
 }
 

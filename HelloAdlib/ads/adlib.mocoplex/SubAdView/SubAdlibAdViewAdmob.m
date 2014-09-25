@@ -74,6 +74,8 @@
     ad.rootViewController = parent;
     [self.view addSubview:ad];
     
+    [self queryAd];
+    
     // Initiate a generic request to load it with an ad.
     [ad loadRequest:[GADRequest request]];
 }

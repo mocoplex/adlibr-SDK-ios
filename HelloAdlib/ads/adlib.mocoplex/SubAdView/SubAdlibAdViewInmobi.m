@@ -83,6 +83,8 @@
         bIninintedObject = YES;
     }
     
+    [self queryAd];
+    
     [ad loadBanner];
 }
 
@@ -159,6 +161,7 @@
 - (void)bannerDidReceiveAd:(IMBanner *)banner {
     
     // 화면에 광고를 보여줍니다.
+    [self queryAd];
     [self gotAd];
 }
 

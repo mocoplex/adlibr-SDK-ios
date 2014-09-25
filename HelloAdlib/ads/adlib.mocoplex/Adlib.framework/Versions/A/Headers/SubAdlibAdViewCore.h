@@ -31,9 +31,13 @@
 + (BOOL)isStaticObject;
 
 + (void)loadInterstitail:(UIViewController*)viewController;
++ (void)loadInterstitial:(UIViewController*)viewController;
 + (void)interstitialReceived:(NSString*)from;
 + (void)interstitialFailed:(NSString*)from;
 + (void)interstitialClosed:(NSString*)from;
+
+// 광고 화면 처리 (2014.09.24 - yongsun)
+- (void)queryAd;
 
 @property (nonatomic,retain) SubAdlibAdsView* view;
 @property (nonatomic,assign) UIViewController* parentController;

@@ -81,7 +81,7 @@
     
     //background request 를 지원하지 않는 플랫폼입니다.
     // 먼저 광고뷰를 화면에 보이고 수신여부를 확인합니다.
-    [self gotAd];
+    [self queryAd];
 }
 
 
@@ -100,6 +100,7 @@
 -(void) loadingSuccess
 {
     bGotAd = YES;
+    [self gotAd];
 }
 
 - (void)clearAdView
