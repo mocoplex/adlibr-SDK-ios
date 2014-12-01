@@ -33,7 +33,6 @@
 		3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA63182A1DF400236691 /* MessageUI.framework */; };
 		332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
-		337C50DE18582F8D00B30670 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337C50DD18582F8D00B30670 /* Adlib.framework */; };
 		339DC4C918599C7F00416A88 /* SubAdlibAdViewUPlusAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */; };
 		33E0CBB219C1B4520060B576 /* SubAdlibAdViewMedibaAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0CBB119C1B4520060B576 /* SubAdlibAdViewMedibaAd.m */; };
 		33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */; };
@@ -151,6 +150,7 @@
 		49E88A621559629B0018C877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A611559629B0018C877 /* main.m */; };
 		49E88A651559629B0018C877 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A641559629B0018C877 /* AppDelegate.m */; };
 		49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A6A1559629B0018C877 /* HelloWorldLayer.m */; };
+		7D377E841A2C5553004A7DA0 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D377E831A2C5553004A7DA0 /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,7 +191,6 @@
 		332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		3362695F1761E52C00F595A8 /* GameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenter.h; sourceTree = "<group>"; };
 		336269601761E52C00F595A8 /* GameCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCenter.mm; sourceTree = "<group>"; };
-		337C50DD18582F8D00B30670 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adlib.framework; path = ads/adlib.mocoplex/Adlib.framework; sourceTree = "<group>"; };
 		339DC4C718599C7F00416A88 /* SubAdlibAdViewUPlusAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewUPlusAD.h; sourceTree = "<group>"; };
 		339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewUPlusAD.m; sourceTree = "<group>"; };
 		33E0CBB019C1B4520060B576 /* SubAdlibAdViewMedibaAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMedibaAd.h; sourceTree = "<group>"; };
@@ -430,6 +429,7 @@
 		49E88A641559629B0018C877 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49E88A691559629B0018C877 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		49E88A6A1559629B0018C877 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		7D377E831A2C5553004A7DA0 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,7 +437,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337C50DE18582F8D00B30670 /* Adlib.framework in Frameworks */,
 				3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */,
 				3321BA62182A1DE700236691 /* MobileCoreServices.framework in Frameworks */,
 				3321BA60182A1DDC00236691 /* MapKit.framework in Frameworks */,
@@ -461,6 +460,7 @@
 				49E8890C155962990018C877 /* UIKit.framework in Frameworks */,
 				49E8890E155962990018C877 /* Foundation.framework in Frameworks */,
 				49E88910155962990018C877 /* CoreGraphics.framework in Frameworks */,
+				7D377E841A2C5553004A7DA0 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +488,7 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				337C50DD18582F8D00B30670 /* Adlib.framework */,
+				7D377E831A2C5553004A7DA0 /* Adlib.framework */,
 				3321BA63182A1DF400236691 /* MessageUI.framework */,
 				3321BA61182A1DE700236691 /* MobileCoreServices.framework */,
 				3321BA5F182A1DDC00236691 /* MapKit.framework */,
@@ -1147,6 +1147,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/ads/adlib.mocoplex",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1179,6 +1180,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/ads/adlib.mocoplex",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HelloAdlib/Prefix.pch;
