@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="adlibr-sdk-ios : adlibr integration library for iOS" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>adlibr-sdk-ios</title>
+  </head>
+
+  <body>
+
+<style>
+	#project_title
+	{
+			background:url('http://adlibr.com/images/apicon.png') no-repeat left center;
+			padding-left:50px;
+	}
+</style>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mocoplex/adlibr-SDK-ios">View on GitHub</a>
+
+          <h1 id="project_title">adlibr-sdk-ios</h1>
+          <h2 id="project_tagline">adlibr integration library for iOS</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mocoplex/adlibr-SDK-ios/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mocoplex/adlibr-SDK-ios/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>애드립 SDK 소개</h3>
+
+<p>애드립 SDK 는 특정 플랫폼에 의존적이지 않으며,<br>
+원하는대로 자신의 앱에 최적화하여 다양한 광고 플랫폼을 손쉽게 적용할 수 있도록 제작되었습니다.</p>
+<p>애드립을 이용한 테스트 프로젝트를 다운로드 하시려면 위의 링크를 클릭해주세요.</p>
+
+<h3>애드립 Unity Plugin</h3>
+
+<p>Unity에 애드립을 손쉽게 적용할 수 있는 플러그인 입니다.</p>
+<p><font color="red">(N) v1.2</font>&nbsp;(2014.12.01)&nbsp;&nbsp;<a href="https://codeload.github.com/mocoplex/adlibr-SDK-ios/zip/unity">Unity Plugin - download here</a></p>
+
+<h3>SDK 다운로드 링크</h3>
+<pre><code><a target="_blank" href="http://mobile.biz.daum.net/top/intro.do">download</a> | ad@m
+<a target="_blank" href="https://developers.google.com/mobile-ads-sdk/download">download</a> | admob
+<a target="_blank" href="http://www.cauly.net/w/guide_dev/labrary">download</a> | cauly
+<a target="_blank" href="http://www.t-ad.co.kr/publisher/guide_sdk">download</a> | t-ad
+<a target="_blank" href="http://adpost.naver.com/main.nhn">download</a> | naverAdPost
+<a target="_blank" href="http://www.shallwead.com/addev_intro">download</a> | shallWeAd
+<a target="_blank" href="http://www.inmobi.com/products/sdk/">download</a> | inmobi
+<a target="_blank" href="http://docs.millennialmedia.com/iOS-SDK/index.html">download</a> | millennialMedia
+<a target="_blank" href="http://www.domob.cn/developers/SDKdownload.htm">download</a> | domob
+<a target="_blank" href="http://www.samsungadhub.com/help/sdk.do">download</a> | SamsungAdHub
+<a target="_blank" href="http://www.uplusad.co.kr">download</a> | U+AD
+<a target="_blank" href="http://medibaad.com/developer/sdk/">download</a> | mediba ad
+</code></pre>
+
+<h3>cocos2d sample 다운로드</h3>
+<pre><code><a href="https://github.com/mocoplex/adlibr-SDK-ios/tarball/cocos2d">Download cocos2d project as a tar.gz file</a>
+일반 Navtive xcode 샘플 프로젝트는 위의 아이콘을 클릭하여 다운로드 해 주세요.
+</code></pre>
+
+
+<h3>최근 변경 내용</h3>
+
+<pre><code>v.3.8.6(2014.12.01)
+iOS 8 관련 오류 수정 - landscape일때 화면사이즈 관련 수정
+</code></pre>
+
+<script>
+function changeDisplay(){
+
+	var history = document.getElementById('history');
+	
+	if (history.style.display == "none") {
+		history.style.display="block";
+	} else {
+		history.style.display="none";
+	}
+}
+</script>
+
+<h3>과거 변경 내용</h3>
+<pre><code><a href="javascript:changeDisplay()">자세한 내역을 보고자 한다면 여기를 클릭하세요.</a></code></pre>
+
+<div id="history" style="display:none">
+<pre><code>v.3.8.5(2014.09.25)
+iOS 8 대응
+Millennial Media 전면광고를 지원합니다.
+
+(2014.09.11)
+SubView 추가 / Mediba Ad
+
+v.3.8.4(2014.09.01)
+Orientation이 변경되면 전면광고도 회전이 되도록 수정 하였습니다.
+
+(2014.06.30)
+T ad SubView 수정 - ad view생성시 필수로 호출하는 메소드가 추가 되었습니다.
+
+(2014.05.26)
+Cauly SubView 수정 - 아이패드에서는 전면배너를 지원하지 않으며 fail이 호출되지 않아,
+                    강제로 fail을 호출하도록 수정하였습니다.
+
+(2014.05.15)
+MillennialMedia SubView 수정 - v5.2.0 을 지원합니다.
+
+v.3.8.3(2014.04.27)
+리워드배너에서 발생하는 메모리릭 문제를 수정하였습니다.
+
+(2014.02.14)
+T ad SubView 수정 - v3.3.3.6 을 지원합니다.
+
+v.3.8.2(2014.02.10)
+전면광고 자동 닫힘으로 인해 발생하는 오류를 수정하였습니다.
+
+v.3.8.1(2014.02.01)
+애드립 팝 배너 관련 오류를 수정하였습니다.
+
+v3.8 (2014.01.21)
+애드립 팝 서비스를 지원합니다. (관련 서비스 내용은 공지 및 매뉴얼 참고)
+
+v3.7.4 (2014.01.20)
+애드립 전면광고 클릭 후 다시 앱으로 돌아왔을 때 발생하는 에러를 수정하였습니다.
+
+v3.7.3 (2013.12.12)
+SubView 추가 / U+AD (v3.7.3 부터 사용 가능합니다.)
+스케줄링 설정된 모든 전면광고 수신이 실패했을 때 호출되는 delegate 메소드가 추가되었습니다.
+
+v3.7.2 (2013.12.11)
+광고 초기 로딩전의 하우스배너 노출 여부를 설정할 수 있게 되었습니다.
+(자세한 설명은 애드립 매뉴얼 8번째, 10번째 슬라이드 참고)
+
+(2013.12.05)
+inmobi SubView Update - 최신 SDK(4.0.4)를 지원합니다.
+
+(2013.11.23)
+SubView 추가 / Samsung AdHub
+
+v3.7.1 (2013.11.16)
+애드립 광고뷰를 스크롤뷰에 붙였을 때, 뷰의 위치가 이동하던 문제를 수정하였습니다.
+
+v3.7 (2013.11.06)
+리워드 배너의 노출이 최적화 되었습니다.
+리워드 링크의 구현방법이 수정되었습니다. - 리워드 링크 정식 오픈!
+
+v3.6 (2013.10.07)
+전면광고 스케줄링 기능이 추가 되었습니다.
+(현재 adam, admob, cauly 지원 - 관련 subview update 필요)
+
+v3.5.2 (2013.09.02)
+다양한 글로벌 네트워크들이 추가 되었습니다.(SubView 업데이트 예정)
+SubView 추가 / domob (v3.5.2 부터 사용 가능합니다.)
+
+v3.5 (2013.07.17)
+애드립의 전면광고를 지원합니다.
+리워드 링크 서비스를 지원합니다. (관련 서비스 내용 공지 예정)
+일반 플랫폼 추가 / MillennialMedia
+
+v3.2.1 (2013.04.02)
+SMART* dialog의 노출횟수를 daily 단위로 설정할 수 있게 되었습니다.
+
+v3.2 (2013.02.11)
+리워드 배너 서비스를 지원합니다. (관련 서비스 내용 공지 예정)
+
+v3.0 (2012.12.04)
+SMART* dialog / SMART* AD 업데이트
+
+v2.5.0.a (2012.09.25)
+추가 리포트 기능을 지원합니다. (누적 사용자, 활성 사용자수, 일별 사용자수)
+Earning Maximizer 기능 지원
+제휴 플랫폼의 스케줄을 자동으로 최적화하여 수익을 극대화시킵니다.
+iOS6 / iPhone5 대응
+
+v2.3.5 (2012.08.23)
+광고효과 리포트 통계가 보다 정확해졌습니다.
+세션 및 설치 단말수 등 보다 자세한 리포트가 대쉬보드에서 제공될 예정입니다. (2.3.5 이상 지원)
+UIViewController 에서 발생하는 예외처리 관련 수정
+
+v2.3.1 (2012.08.17)
+광고 플랫폼 query 수신 응답이 늦는경우에 대한 최적화
+
+v2.3.0 (2012.08.15)
+여러개의 사용자 배너 스케줄링 지원
+ShallWeAd 추가
+
+v2.1.6 (2012.07.12)
+NaverAdPost 문제 관련 수정
+
+v2.1.5 (2012.07.11)
+샘플 프로젝트 universal 지원
+모든 광고 플랫폼 iPad 해상도 자동 지원
+
+v2.1 (2012.06.27)
+일반 플랫폼 추가 / NaverAdPost
+사용자배너 portrait / landscape 전환시 깨어지던 문제 해결
+
+v2.0
+제휴 플랫폼 추가 / INMOBI (<a href="http://korea.inmobi.com" target="_blank">http://korea.inmobi.com</a>)
+reward 프로그램 적용</code></pre>
+</div>
+
+<h3>현재 애드립에서 지원중인 광고 플랫폼 정보</h3>
+
+<p>애드립에서 사용가능한 플랫폼은 아래와 같습니다.</p>
+
+<div style="font-style:italic;padding-top:10px;">일반 플랫폼</div>
+<pre><code> * confirmed compatible with ad@m SDK 2.3.0
+ * confirmed compatible with admob SDK 6.12.0
+ * confirmed compatible with cauly SDK 3.0.4
+ * confirmed compatible with t-ad SDK 3.3.5.6
+ * confirmed compatible with naverAdPost SDK 1.3.0
+ * confirmed compatible with shallWeAd SDK 2.4.7
+ * confirmed compatible with inmobi SDK 4.4.1
+ * confirmed compatible with millennialMedia SDK 5.3.0
+ * confirmed compatible with domob SDK 4.3.3
+ * confirmed compatible with SamsungAdHub SDK 2.0.0
+ * confirmed compatible with U+AD SDK 3.0.4
+ * confirmed compatible with mediba ad 2.0.3</code></pre>
+
+<p>사용자의 편의에 의해 각 플랫폼 사이트에서 SDK 를 별도로 다운로드 받아 연동할 수 있으며, 정상적인 동작이 확인된 SDK 버전은 위와 같습니다.</p>
+<p>실제로 각 플랫폼의 마이너 버전 업데이트가 일어나더라도 애드립 구현부의 변경없이 업데이트 된 SDK 만 새롭게 적용하면 그대로 사용가능하며, 최소한의 구현부 수정으로 큰 수정없이 적용할 수 있도록 구성되었습니다.</p>
+
+<h3>애드립 적용에 대한 자세한 매뉴얼</h3>
+
+<p>샘플 프로젝트 설명 및 애드립 연동에 필요한 자세한 매뉴얼은 아래 링크에서 다운로드 할 수 있습니다.</p>
+
+<a href="https://sec.adlibr.com/download/adlibr-ios.pdf" class="user-mention">매뉴얼 다운로드</a>
+
+<h3>애드립을 발전시켜주세요</h3>
+
+<p>애드립은 열린 플랫폼으로 각 광고 플랫폼 구현부를 손쉽게 커스터마이징 할 수 있도록 제작되었습니다.<br>
+애드립 구현부는 github 를 통해 자유롭게 공유가 가능합니다. 애드립을 더 쓸모있는 플랫폼으로 만들기 위해 여러분의 참여를  기다립니다.</p>
+
+<h3>개발자 지원</h3>
+
+<p>애드립 적용에 어려움이 있으신가요?<br>
+  아래 개발자 지원메뉴를 통하여 실시간으로 개발지원을 받을 수 있습니다.</p>
+  <a href="https://groups.google.com/forum/?hl=ko&fromgroups#!forum/adlib-network" class="user-mention">개발자 지원 바로가기</a>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">adlibr-sdk-ios maintained by <a href="https://github.com/mocoplex">mocoplex</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
