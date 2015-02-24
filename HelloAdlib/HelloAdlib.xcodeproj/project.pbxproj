@@ -150,7 +150,7 @@
 		49E88A621559629B0018C877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A611559629B0018C877 /* main.m */; };
 		49E88A651559629B0018C877 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A641559629B0018C877 /* AppDelegate.m */; };
 		49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A6A1559629B0018C877 /* HelloWorldLayer.m */; };
-		7D2C3AA71A98E5F600196498 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C3AA61A98E5F600196498 /* Adlib.framework */; };
+		7D2C3AD21A9C57D600196498 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C3AD11A9C57D600196498 /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -429,7 +429,7 @@
 		49E88A641559629B0018C877 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49E88A691559629B0018C877 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		49E88A6A1559629B0018C877 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		7D2C3AA61A98E5F600196498 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		7D2C3AD11A9C57D600196498 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,7 +460,7 @@
 				49E8890C155962990018C877 /* UIKit.framework in Frameworks */,
 				49E8890E155962990018C877 /* Foundation.framework in Frameworks */,
 				49E88910155962990018C877 /* CoreGraphics.framework in Frameworks */,
-				7D2C3AA71A98E5F600196498 /* Adlib.framework in Frameworks */,
+				7D2C3AD21A9C57D600196498 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +488,7 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D2C3AA61A98E5F600196498 /* Adlib.framework */,
+				7D2C3AD11A9C57D600196498 /* Adlib.framework */,
 				3321BA63182A1DF400236691 /* MessageUI.framework */,
 				3321BA61182A1DE700236691 /* MobileCoreServices.framework */,
 				3321BA5F182A1DDC00236691 /* MapKit.framework */,
