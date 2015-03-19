@@ -1,112 +1,138 @@
 /*
  * adlibr - Library for mobile AD mediation.
  * http://adlibr.com
- * Copyright (c) 2012-2013 Mocoplex, Inc.  All rights reserved.
+ * Copyright (c) 2012-2015 Mocoplex, Inc.  All rights reserved.
  * Licensed under the BSD open source license.
  */
 
 #import "SubAdlibAdViewCore.h"
-#import "AdlibPopBanner.h"
 
-#define ADLIB_ALIGN_LEFT	1
-#define ADLIB_ALIGN_CENTER	2
-#define ADLIB_ALIGN_RIGHT	3
+#define kAdlibDefaultBannerSize CGSizeMake(320, 50)
 
+typedef NS_ENUM(NSInteger, ADLIB_BANNER_ALIGN) {
+    ADLIB_BANNER_ALIGN_LEFT   = 1,
+    ADLIB_BANNER_ALIGN_CENTER = 2, //DEFAULT
+    ADLIB_BANNER_ALIGN_RIGHT  = 3,
+};
+
+@class AdlibManager;
+
+/**
+ * 애드립 세션 연결 관련 델리게이트
+ */
+@protocol AdlibSessionDelegate <NSObject>
+
+@optional
+
+//애드립 세션 연결 성공 시 호출되는 메소드.
+- (void)adlibManager:(AdlibManager *)manager didLinkedSessionWithUserInfo:(NSDictionary *)userInfo;
+- (void)adlibManager:(AdlibManager *)manager didFailedSessionLinkWithError:(NSError *)error;
+
+@end
+
+
+/**
+ * 애드립 배너 델리게이트 (띠 배너/전면 배너)
+ */
 @protocol AdlibManagerDelegate <NSObject>
 
 @optional
+
 //광고 수신 성공시 호출되는 메소드.
 - (void)gotAd;
+
 //광고 수신 성공시 호출되는 메소드.
 - (void)didReceiveAdlibAd:(NSString*)from;
+
 //광고 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAdlibAd:(NSString*)from;
-//스케줄링 된 모든 띠배너광고 수신 실패시 호출되는 메소드
-- (void)didFailToReceiveAllAdlibAd;
-//전면광고 수신 성공시 호출되는 메소드.
+
+// 전면광고 수신 성공시 호출되는 메소드.
 - (void)didReceiveAdlibInterstitialAd:(NSString*)from;
-//전면광고 수신 실패시 호출되는 메소드.
+
+// 전면광고 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAdlibInterstitialAd:(NSString*)from;
-//전면광고 닫힌 직후 호출되는 메소드.
+
+// 전면광고 닫힌 직후 호출되는 메소드.
 - (void)didCloseAdlibInterstitialAd:(NSString*)from;
-//스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
+
+// 스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAllInterstitialAd;
-//full banner 수신 성공.
+
+// full banner 수신 성공.
 - (void)didReceiveAdlibFullBanner:(UIView*)fullBanner;
-//full banner 수신 실패.
+
+// full banner 수신 실패.
 - (void)didFailToReceiveAdlibFullBanner;
-//팝배너 수신 성공시 호출되는 메소드.
+
+// 팝배너 수신 성공시 호출되는 메소드.
 - (void)didReceiveAdlibPopAd;
-//팝배너 수신 실패시 호출되는 메소드.
+
+// 팝배너 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAdlibPopAd;
-//팝배너 닫힌 직후 호출되는 메소드.
+
+// 팝배너 닫힌 직후 호출되는 메소드.
 - (void)didCloseAdlibPopAd;
+
+// 실패 시 호출되는 메소드.
 - (void)failed;
 
 @end
 
-@class AdlibContainer;
-@interface AdlibManager : NSObject
 
+@interface AdlibManager : NSObject {
+    
+}
+
+@property (nonatomic, weak) id<AdlibManagerDelegate> delegate;
+@property (nonatomic, weak) id<AdlibSessionDelegate> sessionDelegate;
+
+/**
+ * AdlibManager 전역 객체
+ */
 + (AdlibManager *)sharedSingletonClass;
 
--(void)initAdlib:(NSString*)key;
--(void)setConfigWithAge:(NSString*)age withGender:(NSString*)gender;
--(void)setConfigWithLat:(NSString*)lat withLon:(NSString*)lon;
+/**
+ * 설정 메소드
+ */
+- (void)linkWithAdlibKey:(NSString *)key;
+- (void)testModeLinkWithAdlibKey:(NSString *)key;
 
--(NSString*)getCurrentVersion;
+- (void)setPlatform:(NSString*)name withClass:(Class)className;
 
-// 초기 광고 구동전 하우스배너 기본적으로 노출 //
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel;
+- (void)setLogging:(BOOL)logging;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del  withPageName:(NSString*)name;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
+- (NSString*)getCurrentVersion;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel defaultSize:(CGSize)size defaultAlign:(int)align;
+/**
+ * 띠 배너 관련 메소드
+ */
+- (void)attachWithViewController:(UIViewController *)controller
+                 atContainerView:(UIView *)adView;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align;
-//////////////////////////////
+- (void)detach:(UIViewController*)parent;
 
-// 초기 구동전 하우스배너 노출여부 설정 가능 - useHouseBanner : YES이면 하우스배너 사용, NO이면 하우스배너 사용안함 //
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name useHouseBanner:(BOOL)isHouse;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel useHouseBanner:(BOOL)isHouse;
+- (void)attach:(UIViewController*)parent
+      withView:(UIView*)view
+  withDelegate:(id<AdlibManagerDelegate>)del;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del  withPageName:(NSString*)name useHouseBanner:(BOOL)isHouse;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del useHouseBanner:(BOOL)isHouse;
+- (void)attach:(UIViewController*)parent
+      withView:(UIView*)view
+  withDelegate:(id<AdlibManagerDelegate>)del
+  defaultAlign:(ADLIB_BANNER_ALIGN)align;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withReceiver:(SEL)sel defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
+- (void)moveAdContainer:(CGPoint)pt;
 
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del withPageName:(NSString*)name defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
--(void)attach:(UIViewController*)parent withView:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del defaultSize:(CGSize)size defaultAlign:(int)align useHouseBanner:(BOOL)isHouse;
-//////////////////////////////
+- (CGSize)size;
 
--(void)forceRewardBanner:(BOOL)bForce;
+//  애드립 리워드배너만을 강제로 보여준다. 설정된 기타 플랫폼 광고 롤링 정보를 무시함.
+// attach 수행 이후에 호출해야 정상 적용됨.
+- (void)forceRewardBanner:(BOOL)bForce;
 
--(void)loadInterstitialAd:(UIViewController*)parent withDelegate:(id<AdlibManagerDelegate>)del;
-
--(void)loadFullBanner:(UIView*)view withDelegate:(id<AdlibManagerDelegate>)del;
-
--(void)setAdlibPopFrameColor:(UIColor*)color;
--(void)setAdlibPopCloseButtonStyle:(AdlibPopBtnStyle)btnStyle;
--(void)setAdlibPopCloseButtonStyle:(AdlibPopBtnStyle)btnStyle position:(int)pos;
--(void)setAdlibPopInAnimation:(AdlibPopAnimationType)inAnim outAnimation:(AdlibPopAnimationType)outAnim;
--(void)showAdlibPopBanner:(AdlibPopAlign)align withPadding:(int)padding withDelegate:(id<AdlibManagerDelegate>)del;
--(void)hideAdlibPopBanner;
-
--(void)detach:(UIViewController*)parent;
--(void)moveAdContainer:(CGPoint)pt;
--(CGSize)size;
-
--(void)setAutoresizingMask:(UIViewAutoresizing)mask;
-
--(void)setPlatform:(NSString*)name withClass:(Class)className;
--(void)setLogging:(BOOL)logging;
-
--(void)stopAdsRequest:(UIViewController*)parent;
--(void)startAdsRequest:(UIViewController*)parent;
+/**
+ *  전면 광고 호출 메소드
+ */
+- (void)loadInterstitialAd:(UIViewController*)parent
+              withDelegate:(id<AdlibManagerDelegate>)del;
 
 @end

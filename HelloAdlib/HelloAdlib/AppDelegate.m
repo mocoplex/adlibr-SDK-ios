@@ -29,6 +29,7 @@
 #import "SubAdlibAdViewMMedia.h"
 #import <MillennialMedia/MMSDK.h>
 
+#define ADLIB_APP_KEY @"550787410cf2833915d71f3b" // 애드립에서 발급받은 키를 입력해주세요.
 
 @implementation AppDelegate
 
@@ -49,7 +50,7 @@
     // 광고 view의 크기
     //CGSize sz = [[AdlibManager sharedSingletonClass] size];
     
-    [[AdlibManager sharedSingletonClass] moveAdContainer:CGPointMake(0, 0)];
+    [[AdlibManager sharedSingletonClass] moveAdContainer:CGPointMake(0, 20)];
 }
 /// ADLIBr ///
 
@@ -79,8 +80,14 @@
 - (void)initAdlib
 {
     
-    NSString* adlibKey = @"ADLIBr_KEY";
-    [[AdlibManager sharedSingletonClass] initAdlib:adlibKey];
+    NSString* adlibKey = ADLIB_APP_KEY;
+    
+    if (adlibKey.length < 1) {
+        adlibKey = nil;
+    }
+    
+    AdlibManager *sharedManager = [AdlibManager sharedSingletonClass];
+    sharedManager.sessionDelegate = self;
     
     // 실제 구현된 광고 뷰를 애드립 매니저에 연결합니다.
     [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
@@ -97,8 +104,36 @@
     [[AdlibManager sharedSingletonClass] setPlatform:@"MEDIBAAD" withClass:[SubAdlibAdViewMedibaAd class]];
     [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
     [MMSDK initialize];  // MillennialMedia v5.2.0 이상을 사용하시려면 반드시 초기화를 호출해 주세요.
+    
+    // SDK 로그 메시지를 출력하도록 설정
+    [sharedManager setLogging:NO];
+    
+#warning 배포이전에 하단 코드 확인하기.
+    BOOL isTestMode = YES;
+    
+    if (isTestMode)
+    {
+        //개발 버전에서 사용하는 세션 연결
+        [sharedManager testModeLinkWithAdlibKey:adlibKey];
+    }
+    else
+    {
+        //배포 버전에서 사용하는 세션 연결
+        [sharedManager linkWithAdlibKey:adlibKey];
+    }
 }
 
+//애드립 세션 연결 성공 시 호출되는 메소드.
+- (void)adlibManager:(AdlibManager *)manager didLinkedSessionWithUserInfo:(NSDictionary *)userInfo
+{
+    NSLog(@"adlib session linked");
+}
+
+//애드립 세션 연결 실패 시 호출되는 메소드.
+- (void)adlibManager:(AdlibManager *)manager didFailedSessionLinkWithError:(NSError *)error
+{
+    NSLog(@"adlib session link failed");
+}
 
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
