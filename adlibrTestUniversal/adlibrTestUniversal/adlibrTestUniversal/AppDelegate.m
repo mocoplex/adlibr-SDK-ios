@@ -24,7 +24,7 @@
 //#import "SubAdlibAdViewAdHub.h"
 //#import "SubAdlibAdAdmixer.h"
 
-#define ADLIB_APP_KEY @"" // 애드립에서 발급받은 키를 입력해주세요.
+#define ADLIB_APP_KEY @"550787410cf2833915d71f3b" // 애드립에서 발급받은 키를 입력해주세요.
 
 @interface AppDelegate () <AdlibSessionDelegate>
 
