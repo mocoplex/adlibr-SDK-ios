@@ -9,11 +9,11 @@
 #import "SubAdlibAdAdmixer.h"
 
 #define ADMIXER_ID @"ADMIXER_ID"
+#define kAdMixerBannerViewSize CGSizeMake(320, 50)
 
 @interface SubAdlibAdAdmixer () <AdMixerViewDelegate, AdMixerInterstitialDelegate>
 
 @property (nonatomic, strong) AdMixerInterstitial *adMixerInters;
-
 
 @end
 
@@ -22,6 +22,20 @@
 // 전면광고를 사용하기 위해 정적 객체로 사용합니다.
 + (BOOL)isStaticObject
 {
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADAM cls:[AdamAdapter class] appCode:@"adam_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB cls:[AdmobAdapter class] appCode:@"admob_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB_ECPM cls:[AdmobECpmAdapter class] appCode:@"admob_app_code"
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADPOST cls:[AdpostAdapter class] appCode:@"adpost_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_CAULY cls:[CaulyAdapter class] appCode:@"cauly_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_SHALLWE cls:[ShallWeAdapter class] appCode:@”shall_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_TAD cls:[TAdAdapter class] appCode:@"tad_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_INMOBI cls:[InmobiAdapter class] appCode:@”inmobi_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_IAD cls:[IAdAdapter class] appCode:@”iad_app_code"];
+    //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_FACEBOOK cls:[FacebookAdapter class] appCode:@”facebook_app_code"];
+    
+    
+    [AdMixer setLogLevel:AXLogLevelDebug]; // 로그 레벨 설정
+    
     return YES;
 }
 
@@ -36,30 +50,23 @@
     
     // Create a view of the standard size at the bottom of the screen.
     if (_adView) {
+        [_adView stop];
         [_adView removeFromSuperview];
         self.adView = nil;
-        
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADAM cls:[AdamAdapter class] appCode:@"adam_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB cls:[AdmobAdapter class] appCode:@"admob_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB_ECPM cls:[AdmobECpmAdapter class] appCode:@"admob_app_code"
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADPOST cls:[AdpostAdapter class] appCode:@"adpost_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_CAULY cls:[CaulyAdapter class] appCode:@"cauly_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_SHALLWE cls:[ShallWeAdapter class] appCode:@”shall_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_TAD cls:[TAdAdapter class] appCode:@"tad_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_INMOBI cls:[InmobiAdapter class] appCode:@”inmobi_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_IAD cls:[IAdAdapter class] appCode:@”iad_app_code"];
-//        [AdMixer registerUserAdAdapterNameWithAppCode:AMA_FACEBOOK cls:[FacebookAdapter class] appCode:@”facebook_app_code"];
-       
-        [AdMixer setLogLevel:AXLogLevelDebug]; // 로그 레벨 설정
-      
-        CGFloat ptx = [self getViewOriginX];
-        _adView = [[AdMixerView alloc] initWithFrame:CGRectMake(ptx, 0, 320, 50)];
-        _adView.delegate = self;
-        _adView.adSize = AXBannerSize_Default; // 배너 크기 요청 조절
-            
-        [self.view addSubview:_adView];
     }
-
+    
+    CGSize adViewSize = kAdMixerBannerViewSize;
+    CGPoint adViewOrigin = [self getAdMixerViewOrigin];
+    
+    _adView = [[AdMixerView alloc] initWithFrame:CGRectMake(adViewOrigin.x,
+                                                            adViewOrigin.y,
+                                                            adViewSize.width,
+                                                            adViewSize.height)];
+    _adView.delegate = self;
+    _adView.adSize = AXBannerSize_Default; // 배너 크기 요청 조절
+    
+    [self.view addSubview:_adView];
+    
     AdMixerInfo *adMixerInfo = [[AdMixerInfo alloc] init];
     adMixerInfo.axKey = ADMIXER_ID;
     adMixerInfo.rtbVerticalAlign = AdMixerRTBVAlignCenter; // 고수익 배너 상/하단 여백 처리 방식 지정(AdMixerRTBVAlignTop, AdMixerRTBVAlignCenter, AdMixerRTBVAlignBottom)
@@ -71,7 +78,7 @@
 // 플랫폼 광고 뷰의 크기를 반환합니다.
 - (CGSize)size
 {
-    return CGSizeMake(320, 50);
+    return kAdMixerBannerViewSize;
 }
 
 // 플랫폼 광고뷰의 회전에 대한 처리를 수행합니다.
@@ -80,10 +87,12 @@
 {
     [super orientationChanged];
     
-    CGFloat height = 50;
+    CGSize adViewSize = kAdMixerBannerViewSize;
     
-    CGFloat ptX = [self getViewOriginX];
-    _adView.frame = CGRectMake(ptX, 0, 320, height);
+    CGFloat ptX = [self getAdMixerViewOrigin].x;
+    CGFloat ptY = [self getAdMixerViewOrigin].y;
+    
+    _adView.frame = CGRectMake(ptX, ptY, adViewSize.width, adViewSize.height);
 }
 
 // 플랫폼 광고 뷰가 미디에이션 광고 컨테이너뷰에서 사라질 때의 처리를 구현합니다.
@@ -94,6 +103,7 @@
     if(_adView != nil)
     {
         [_adView stop];
+        [_adView removeFromSuperview];
         self.adView = nil;
     }
 }
@@ -112,17 +122,25 @@
     [interstitial startWithAdInfo:adInfo baseViewController:self.parentController];
 }
 
-- (CGFloat)getViewOriginX
+- (CGPoint)getAdMixerViewOrigin
 {
-    CGFloat w,w2=0;
+    CGSize adViewSize = kAdMixerBannerViewSize;
     
-    w = self.view.bounds.size.width;
-    w2 = 320;
+    CGFloat w = self.view.bounds.size.width;
+    CGFloat oringX = (w - adViewSize.width)/2;
+    if (oringX < 0 ) {
+        oringX = 0;
+    }
     
-    return (w-w2)/2;
+    CGFloat h = self.view.bounds.size.height;
+    CGFloat originY = (h - adViewSize.height);
+    if (originY < 0) {
+        originY = 0;
+    }
+    return CGPointMake(oringX, originY);
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (void)onSucceededToReceiveAd:(AdMixerView *)adView
 {
