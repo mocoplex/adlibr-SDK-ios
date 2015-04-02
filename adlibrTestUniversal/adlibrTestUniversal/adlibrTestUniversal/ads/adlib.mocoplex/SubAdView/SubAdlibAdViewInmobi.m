@@ -72,10 +72,9 @@ static BOOL bInmobiInitialized = NO;
         
         self.adView = bannerView;
         [self.view addSubview:_adView];
-        
-        _adView.refreshInterval = 20;
     }
     
+    _adView.refreshInterval = 20;
     _adView.delegate = self;
     [self queryAd];
     
