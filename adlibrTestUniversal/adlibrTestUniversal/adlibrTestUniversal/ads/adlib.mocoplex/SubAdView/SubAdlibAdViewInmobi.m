@@ -18,6 +18,8 @@
 #define kBannerSizePhone CGSizeMake(320, 50)
 #define kBannerSizePad   CGSizeMake(728, 90)
 
+static BOOL bInmobiInitialized = NO;
+
 @interface SubAdlibAdViewInmobi () <IMInterstitialDelegate>
 
 @property (nonatomic, strong) IMInterstitial *interstitial;
@@ -36,13 +38,15 @@
 {
     [super query:parent];
     
-    static BOOL bIninintedObject = NO;
-    
-    if(!bIninintedObject)
+    if(!bInmobiInitialized)
     {
         // Inmobi Initialize
         [InMobi initialize:INMOBI_ID];
-        [InMobi setLogLevel:IMLogLevelDebug];
+        [InMobi setLogLevel:IMLogLevelNone]; // IMLogLevelDebug (test mode)
+        bInmobiInitialized = YES;
+    }
+    
+    if (_adView == nil) {
         
         self.view.autoresizesSubviews = NO;
         
@@ -54,34 +58,25 @@
         // only iPhone size
         iPad = NO;
         
-        bIninintedObject = YES;
+        IMBanner *bannerView = nil;
+        CGPoint origin = [self getInmobiViewOrigin];
+        
+        if(iPad)
+            bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePad.width, kBannerSizePad.height)
+                                                   appId:INMOBI_ID
+                                                  adSize:IM_UNIT_728x90];
+        else
+            bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePhone.width, kBannerSizePhone.height)
+                                                   appId:INMOBI_ID
+                                                  adSize:IM_UNIT_320x50];
+        
+        self.adView = bannerView;
+        [self.view addSubview:_adView];
+        
+        _adView.refreshInterval = 20;
     }
     
-    if (_adView) {
-        [_adView stopLoading];
-        [_adView removeFromSuperview];
-        _adView.delegate = nil;
-        self.adView = nil;
-    }
-    
-    IMBanner *bannerView = nil;
-    
-    CGPoint origin = [self getInmobiViewOrigin];
-    
-    if(iPad)
-        bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePad.width, kBannerSizePad.height)
-                                               appId:INMOBI_ID
-                                              adSize:IM_UNIT_728x90];
-    else
-        bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePhone.width, kBannerSizePhone.height)
-                                               appId:INMOBI_ID
-                                              adSize:IM_UNIT_320x50];
-    
-    self.adView = bannerView;
     _adView.delegate = self;
-    _adView.refreshInterval = REFRESH_INTERVAL_OFF;
-    
-    [self.view addSubview:_adView];
     [self queryAd];
     
     [_adView loadBanner];
@@ -94,8 +89,6 @@
         _adView.refreshInterval = REFRESH_INTERVAL_OFF;
         _adView.delegate = nil;
         [_adView stopLoading];
-        [_adView removeFromSuperview];
-        self.adView = nil;
     }
     
     [super clearAdView];
@@ -171,7 +164,13 @@
 
 - (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController
 {
-    [InMobi initialize:INMOBI_INTERSTITIAL_ID];
+    if(!bInmobiInitialized)
+    {
+        // Inmobi Initialize
+        [InMobi initialize:INMOBI_ID];
+        [InMobi setLogLevel:IMLogLevelDebug];
+        bInmobiInitialized = YES;
+    }
     
     IMInterstitial *interstitial = [[IMInterstitial alloc] initWithAppId:INMOBI_INTERSTITIAL_ID];
     self.interstitial = interstitial;
@@ -201,6 +200,16 @@
     
     // 광고 수신에 실패하였습니다.
     [self failed];
+}
+
+- (void)bannerWillPresentScreen:(IMBanner *)banner
+{
+    ;
+}
+
+- (void)bannerDidDismissScreen:(IMBanner *)banner
+{
+    ;
 }
 
 - (void)interstitialDidReceiveAd:(IMInterstitial *)ad
