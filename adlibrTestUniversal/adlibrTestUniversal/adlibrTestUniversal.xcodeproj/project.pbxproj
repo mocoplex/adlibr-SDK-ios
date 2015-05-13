@@ -21,7 +21,7 @@
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
 		B002C0731AA5C58D003D1CD3 /* MediationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */; };
-		B0C730641ABA93E6009171F1 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C730631ABA93E6009171F1 /* Adlib.framework */; };
+		B0D5D2991B01F3C0002535CA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D5D2981B01F3C0002535CA /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
 		B002C06F1AA5C58D003D1CD3 /* MediationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationTableViewController.h; sourceTree = "<group>"; };
 		B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationTableViewController.m; sourceTree = "<group>"; };
-		B0C730631ABA93E6009171F1 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0D5D2981B01F3C0002535CA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
-				B0C730641ABA93E6009171F1 /* Adlib.framework in Frameworks */,
+				B0D5D2991B01F3C0002535CA /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +183,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0C730631ABA93E6009171F1 /* Adlib.framework */,
+				B0D5D2981B01F3C0002535CA /* Adlib.framework */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
 				B002C0641AA5C4BE003D1CD3 /* CoreTelephony.framework */,
