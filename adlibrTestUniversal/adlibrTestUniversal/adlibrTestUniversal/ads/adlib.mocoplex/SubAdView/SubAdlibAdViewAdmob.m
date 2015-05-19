@@ -1,4 +1,4 @@
- /*
+/*
  * adlibr - Library for mobile AD mediation.
  * http://adlibr.com
  * Copyright (c) 2012-2013 Mocoplex, Inc.  All rights reserved.
@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 6.12.0
+ * confirmed compatible with admob SDK 7.2.2
  */
 
 // 실제 프로젝트 적용시 위 주소를 참고하여
@@ -15,8 +15,8 @@
  You now need to add -all_load to the Other Linker Flags of your application target's build setting:
  In XCode's project navigator, press the blue top-level project icon.
  Click on your target, then the Build Settings tab.
- Under Other Linker Flags, add -all_load to both Debug and Release. 
-*/
+ Under Other Linker Flags, add -all_load to both Debug and Release.
+ */
 // flag 를 추가해야합니다.
 // https://developers.google.com/mobile-ads-sdk/images/linker-ios.png
 
@@ -24,6 +24,7 @@
 
 // ADMOB의 APP 아이디를 설정합니다.
 #define ADMOB_ID @"ADMOB_ID"
+#define ADMOB_INTERSTITIAL_ID @"ADMOB_INTERSTITIAL_ID"
 #define ADMOB_TEST_DEVICE_ID @"ADMOB_TEST_DEVICE_ID"
 
 @interface SubAdlibAdViewAdmob ()  <GADBannerViewDelegate, GADInterstitialDelegate>
@@ -81,9 +82,9 @@
     
     GADRequest *request = [GADRequest request];
     
-//  테스트 광고를 요청합니다. 테스트 광고를 수신하려는
-//  시뮬레이터 및 모든 기기에 대한 식별자를 삽입합니다.
-    request.testDevices = [NSArray arrayWithObjects:ADMOB_TEST_DEVICE_ID, nil];
+    //  테스트 광고를 요청합니다. 테스트 광고를 수신하려는
+    //  시뮬레이터 및 모든 기기에 대한 식별자를 삽입합니다.
+    request.testDevices = @[ ADMOB_TEST_DEVICE_ID ];
     
     // Initiate a generic request to load it with an ad.
     [_adView loadRequest:request];
@@ -138,10 +139,9 @@
 // 해당 플래폼 광고에 전면광고 요청을 처리합니다.
 - (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController
 {
-    GADInterstitial* interstitial_ = [[GADInterstitial alloc] init];
+    GADInterstitial* interstitial_ = [[GADInterstitial alloc] initWithAdUnitID:ADMOB_INTERSTITIAL_ID];
     self.interstitial = interstitial_;
     
-    interstitial_.adUnitID = ADMOB_ID;
     interstitial_.delegate = self;
     self.parentController = viewController;
     [interstitial_ loadRequest:[GADRequest request]];
@@ -150,7 +150,7 @@
 #pragma mark - GADBannerViewDelegate
 
 - (void)adViewDidReceiveAd:(GADBannerView *)view
-{    
+{
     NSLog(@"\n\n admob receive Ad");
     // 화면에 광고를 보여줍니다.
     [self gotAd];

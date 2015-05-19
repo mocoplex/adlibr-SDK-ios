@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 3.0.4
+ * confirmed compatible with cauly SDK 3.0.5
  */
 
 #import <Adlib/Adlib.h>

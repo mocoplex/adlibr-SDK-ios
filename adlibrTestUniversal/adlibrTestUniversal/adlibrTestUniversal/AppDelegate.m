@@ -19,7 +19,6 @@
 //#import "SubAdlibAdViewDomob.h"
 //#import "SubAdlibAdViewMedibaAd.h"
 //#import "SubAdlibAdViewMMedia.h"
-//#import "SubAdlibAdViewUPlusAD.h"
 //#import "SubAdlibAdViewShallWeAd.h"
 //#import "SubAdlibAdViewAdHub.h"
 //#import "SubAdlibAdAdmixer.h"
@@ -68,7 +67,6 @@
     //[sharedManager setPlatform:@"MEDIBAAD" withClass:[SubAdlibAdViewMedibaAd class]];
     //[sharedManager setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd Class]];
     //[sharedManager setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub Class]];
-    //[sharedManager setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD Class]];
     //[sharedManager setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
     //[sharedManager setPlatform:@"MM" withClass:[SubAdlibAdViewMMedia class]];
     //[MMSDK initialize];  // MillennialMedia v5.2.0 이상을 사용하시려면 반드시 초기화를 호출해 주세요.

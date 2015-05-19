@@ -6,6 +6,10 @@
 //  Copyright (c) 2015년 gskang. All rights reserved.
 //
 
+/*
+ * confirmed compatible with admixer SDK 1.3.1
+ */
+
 #import <Foundation/Foundation.h>
 #import <Adlib/Adlib.h>
 #import "AdMixerInfo.h"

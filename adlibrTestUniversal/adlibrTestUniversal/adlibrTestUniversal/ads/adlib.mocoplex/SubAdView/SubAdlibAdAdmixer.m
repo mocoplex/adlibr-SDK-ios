@@ -6,6 +6,10 @@
 //  Copyright (c) 2015년 gskang. All rights reserved.
 //
 
+/*
+ * confirmed compatible with admixer SDK 1.3.1
+ */
+
 #import "SubAdlibAdAdmixer.h"
 
 #define ADMIXER_ID @"ADMIXER_ID"
@@ -118,8 +122,9 @@
     self.adMixerInters = interstitial;
     
     interstitial.delegate = self;
+    self.parentController = viewController;
     
-    [interstitial startWithAdInfo:adInfo baseViewController:self.parentController];
+    [interstitial startWithAdInfo:adInfo baseViewController:viewController];
 }
 
 - (CGPoint)getAdMixerViewOrigin

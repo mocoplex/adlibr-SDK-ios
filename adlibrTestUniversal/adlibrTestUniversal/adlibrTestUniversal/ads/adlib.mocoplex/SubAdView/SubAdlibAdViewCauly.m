@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 3.0.4
+ * confirmed compatible with cauly SDK 3.0.5
  */
 
 #import "SubAdlibAdViewCauly.h"
@@ -127,7 +127,7 @@
     [self failed];
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd
 {
