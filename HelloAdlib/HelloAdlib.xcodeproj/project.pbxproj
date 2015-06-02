@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3307805E179CF34B00BEFF26 /* SubAdlibAdViewAdam.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307804D179CF34B00BEFF26 /* SubAdlibAdViewAdam.m */; };
-		3307805F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307804F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m */; };
-		33078060179CF34B00BEFF26 /* SubAdlibAdViewCauly.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078051179CF34B00BEFF26 /* SubAdlibAdViewCauly.m */; };
-		33078061179CF34B00BEFF26 /* SubAdlibAdViewiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078053179CF34B00BEFF26 /* SubAdlibAdViewiAd.m */; };
-		33078062179CF34B00BEFF26 /* SubAdlibAdViewInmobi.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078055179CF34B00BEFF26 /* SubAdlibAdViewInmobi.m */; };
-		33078063179CF34B00BEFF26 /* SubAdlibAdViewMMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078057179CF34B00BEFF26 /* SubAdlibAdViewMMedia.m */; };
-		33078064179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 33078059179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m */; };
-		33078065179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307805B179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m */; };
-		33078066179CF34B00BEFF26 /* SubAdlibAdViewTAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3307805D179CF34B00BEFF26 /* SubAdlibAdViewTAD.m */; };
 		3321BA48182A1D4000236691 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA47182A1D4000236691 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3321BA4A182A1D4F00236691 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA49182A1D4F00236691 /* libz.1.2.5.dylib */; };
 		3321BA4C182A1D5B00236691 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA4B182A1D5B00236691 /* GameKit.framework */; };
@@ -31,11 +22,7 @@
 		3321BA60182A1DDC00236691 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA5F182A1DDC00236691 /* MapKit.framework */; };
 		3321BA62182A1DE700236691 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA61182A1DE700236691 /* MobileCoreServices.framework */; };
 		3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321BA63182A1DF400236691 /* MessageUI.framework */; };
-		332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */; };
 		336269611761E52C00F595A8 /* GameCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 336269601761E52C00F595A8 /* GameCenter.mm */; };
-		339DC4C918599C7F00416A88 /* SubAdlibAdViewUPlusAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */; };
-		33E0CBB219C1B4520060B576 /* SubAdlibAdViewMedibaAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E0CBB119C1B4520060B576 /* SubAdlibAdViewMedibaAd.m */; };
-		33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */; };
 		49E88902155962990018C877 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88901155962990018C877 /* QuartzCore.framework */; };
 		49E88904155962990018C877 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88903155962990018C877 /* OpenGLES.framework */; };
 		49E88906155962990018C877 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E88905155962990018C877 /* OpenAL.framework */; };
@@ -150,30 +137,12 @@
 		49E88A621559629B0018C877 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A611559629B0018C877 /* main.m */; };
 		49E88A651559629B0018C877 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A641559629B0018C877 /* AppDelegate.m */; };
 		49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A6A1559629B0018C877 /* HelloWorldLayer.m */; };
-		7DCD2E791ABAD98E00C21634 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E781ABAD98E00C21634 /* Adlib.framework */; };
 		7DCD2E7B1ABAD9A200C21634 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */; };
 		7DCD2E7D1ABAD9AE00C21634 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */; };
+		B0EF7F561B1D3F3500D9023E /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EF7F551B1D3F3400D9023E /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3307804C179CF34B00BEFF26 /* SubAdlibAdViewAdam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdam.h; sourceTree = "<group>"; };
-		3307804D179CF34B00BEFF26 /* SubAdlibAdViewAdam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdam.m; sourceTree = "<group>"; };
-		3307804E179CF34B00BEFF26 /* SubAdlibAdViewAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdmob.h; sourceTree = "<group>"; };
-		3307804F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdmob.m; sourceTree = "<group>"; };
-		33078050179CF34B00BEFF26 /* SubAdlibAdViewCauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewCauly.h; sourceTree = "<group>"; };
-		33078051179CF34B00BEFF26 /* SubAdlibAdViewCauly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewCauly.m; sourceTree = "<group>"; };
-		33078052179CF34B00BEFF26 /* SubAdlibAdViewiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewiAd.h; sourceTree = "<group>"; };
-		33078053179CF34B00BEFF26 /* SubAdlibAdViewiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewiAd.m; sourceTree = "<group>"; };
-		33078054179CF34B00BEFF26 /* SubAdlibAdViewInmobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewInmobi.h; sourceTree = "<group>"; };
-		33078055179CF34B00BEFF26 /* SubAdlibAdViewInmobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewInmobi.m; sourceTree = "<group>"; };
-		33078056179CF34B00BEFF26 /* SubAdlibAdViewMMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMMedia.h; sourceTree = "<group>"; };
-		33078057179CF34B00BEFF26 /* SubAdlibAdViewMMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMMedia.m; sourceTree = "<group>"; };
-		33078058179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewNaverAdPost.h; sourceTree = "<group>"; };
-		33078059179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewNaverAdPost.m; sourceTree = "<group>"; };
-		3307805A179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewShallWeAd.h; sourceTree = "<group>"; };
-		3307805B179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewShallWeAd.m; sourceTree = "<group>"; };
-		3307805C179CF34B00BEFF26 /* SubAdlibAdViewTAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewTAD.h; sourceTree = "<group>"; };
-		3307805D179CF34B00BEFF26 /* SubAdlibAdViewTAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewTAD.m; sourceTree = "<group>"; };
 		3321BA47182A1D4000236691 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		3321BA49182A1D4F00236691 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		3321BA4B182A1D5B00236691 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -189,16 +158,8 @@
 		3321BA5F182A1DDC00236691 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3321BA61182A1DE700236691 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3321BA63182A1DF400236691 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		332E6B451840AD6D0070E8A7 /* SubAdlibAdViewAdHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewAdHub.h; sourceTree = "<group>"; };
-		332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewAdHub.m; sourceTree = "<group>"; };
 		3362695F1761E52C00F595A8 /* GameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenter.h; sourceTree = "<group>"; };
 		336269601761E52C00F595A8 /* GameCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameCenter.mm; sourceTree = "<group>"; };
-		339DC4C718599C7F00416A88 /* SubAdlibAdViewUPlusAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewUPlusAD.h; sourceTree = "<group>"; };
-		339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewUPlusAD.m; sourceTree = "<group>"; };
-		33E0CBB019C1B4520060B576 /* SubAdlibAdViewMedibaAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewMedibaAd.h; sourceTree = "<group>"; };
-		33E0CBB119C1B4520060B576 /* SubAdlibAdViewMedibaAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewMedibaAd.m; sourceTree = "<group>"; };
-		33E9DC0B17D4975300FC9CBB /* SubAdlibAdViewDomob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubAdlibAdViewDomob.h; sourceTree = "<group>"; };
-		33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubAdlibAdViewDomob.m; sourceTree = "<group>"; };
 		49E888FD155962990018C877 /* HelloAdlib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloAdlib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E88901155962990018C877 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49E88903155962990018C877 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -431,9 +392,9 @@
 		49E88A641559629B0018C877 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		49E88A691559629B0018C877 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		49E88A6A1559629B0018C877 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		7DCD2E781ABAD98E00C21634 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B0EF7F551B1D3F3400D9023E /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +415,7 @@
 				3321BA54182A1D9600236691 /* iAd.framework in Frameworks */,
 				3321BA52182A1D8600236691 /* SystemConfiguration.framework in Frameworks */,
 				3321BA50182A1D7900236691 /* CoreLocation.framework in Frameworks */,
+				B0EF7F561B1D3F3500D9023E /* Adlib.framework in Frameworks */,
 				3321BA4E182A1D7100236691 /* CoreTelephony.framework in Frameworks */,
 				3321BA4C182A1D5B00236691 /* GameKit.framework in Frameworks */,
 				3321BA4A182A1D4F00236691 /* libz.1.2.5.dylib in Frameworks */,
@@ -466,7 +428,6 @@
 				49E8890C155962990018C877 /* UIKit.framework in Frameworks */,
 				49E8890E155962990018C877 /* Foundation.framework in Frameworks */,
 				49E88910155962990018C877 /* CoreGraphics.framework in Frameworks */,
-				7DCD2E791ABAD98E00C21634 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,9 +455,9 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0EF7F551B1D3F3400D9023E /* Adlib.framework */,
 				7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */,
 				7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */,
-				7DCD2E781ABAD98E00C21634 /* Adlib.framework */,
 				3321BA63182A1DF400236691 /* MessageUI.framework */,
 				3321BA61182A1DE700236691 /* MobileCoreServices.framework */,
 				3321BA5F182A1DDC00236691 /* MapKit.framework */,
@@ -888,32 +849,6 @@
 		49E88A7B1559635E0018C877 /* SubAdView */ = {
 			isa = PBXGroup;
 			children = (
-				3307804C179CF34B00BEFF26 /* SubAdlibAdViewAdam.h */,
-				3307804D179CF34B00BEFF26 /* SubAdlibAdViewAdam.m */,
-				332E6B451840AD6D0070E8A7 /* SubAdlibAdViewAdHub.h */,
-				332E6B461840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m */,
-				3307804E179CF34B00BEFF26 /* SubAdlibAdViewAdmob.h */,
-				3307804F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m */,
-				33078050179CF34B00BEFF26 /* SubAdlibAdViewCauly.h */,
-				33078051179CF34B00BEFF26 /* SubAdlibAdViewCauly.m */,
-				33E9DC0B17D4975300FC9CBB /* SubAdlibAdViewDomob.h */,
-				33E9DC0C17D4975300FC9CBB /* SubAdlibAdViewDomob.m */,
-				33078052179CF34B00BEFF26 /* SubAdlibAdViewiAd.h */,
-				33078053179CF34B00BEFF26 /* SubAdlibAdViewiAd.m */,
-				33078054179CF34B00BEFF26 /* SubAdlibAdViewInmobi.h */,
-				33078055179CF34B00BEFF26 /* SubAdlibAdViewInmobi.m */,
-				33E0CBB019C1B4520060B576 /* SubAdlibAdViewMedibaAd.h */,
-				33E0CBB119C1B4520060B576 /* SubAdlibAdViewMedibaAd.m */,
-				33078056179CF34B00BEFF26 /* SubAdlibAdViewMMedia.h */,
-				33078057179CF34B00BEFF26 /* SubAdlibAdViewMMedia.m */,
-				33078058179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.h */,
-				33078059179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m */,
-				3307805A179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.h */,
-				3307805B179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m */,
-				3307805C179CF34B00BEFF26 /* SubAdlibAdViewTAD.h */,
-				3307805D179CF34B00BEFF26 /* SubAdlibAdViewTAD.m */,
-				339DC4C718599C7F00416A88 /* SubAdlibAdViewUPlusAD.h */,
-				339DC4C818599C7F00416A88 /* SubAdlibAdViewUPlusAD.m */,
 			);
 			path = SubAdView;
 			sourceTree = "<group>";
@@ -1012,7 +947,6 @@
 				49E88948155962990018C877 /* CCActionTiledGrid.m in Sources */,
 				49E8894B155962990018C877 /* CCActionTween.m in Sources */,
 				49E8894E155962990018C877 /* CCAnimation.m in Sources */,
-				332E6B471840AD6D0070E8A7 /* SubAdlibAdViewAdHub.m in Sources */,
 				49E88951155962990018C877 /* CCAnimationCache.m in Sources */,
 				49E88954155962990018C877 /* CCAtlasNode.m in Sources */,
 				49E88957155962990018C877 /* CCBlockSupport.m in Sources */,
@@ -1051,7 +985,6 @@
 				49E889BD1559629A0018C877 /* CCTileMapAtlas.m in Sources */,
 				49E889C01559629A0018C877 /* CCTMXLayer.m in Sources */,
 				49E889C31559629A0018C877 /* CCTMXObjectGroup.m in Sources */,
-				339DC4C918599C7F00416A88 /* SubAdlibAdViewUPlusAD.m in Sources */,
 				49E889C61559629A0018C877 /* CCTMXTiledMap.m in Sources */,
 				49E889C91559629A0018C877 /* CCTMXXMLParser.m in Sources */,
 				49E889CC1559629A0018C877 /* CCTransition.m in Sources */,
@@ -1079,7 +1012,6 @@
 				49E88A1B1559629A0018C877 /* ZipUtils.m in Sources */,
 				49E88A201559629A0018C877 /* CDAudioManager.m in Sources */,
 				49E88A241559629A0018C877 /* CDOpenALSupport.m in Sources */,
-				33E0CBB219C1B4520060B576 /* SubAdlibAdViewMedibaAd.m in Sources */,
 				49E88A271559629A0018C877 /* CocosDenshion.m in Sources */,
 				49E88A2A1559629A0018C877 /* SimpleAudioEngine.m in Sources */,
 				49E88A2F1559629B0018C877 /* CLScoreServerPost.m in Sources */,
@@ -1100,16 +1032,6 @@
 				49E88A651559629B0018C877 /* AppDelegate.m in Sources */,
 				49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */,
 				336269611761E52C00F595A8 /* GameCenter.mm in Sources */,
-				3307805E179CF34B00BEFF26 /* SubAdlibAdViewAdam.m in Sources */,
-				3307805F179CF34B00BEFF26 /* SubAdlibAdViewAdmob.m in Sources */,
-				33078060179CF34B00BEFF26 /* SubAdlibAdViewCauly.m in Sources */,
-				33078061179CF34B00BEFF26 /* SubAdlibAdViewiAd.m in Sources */,
-				33078062179CF34B00BEFF26 /* SubAdlibAdViewInmobi.m in Sources */,
-				33078063179CF34B00BEFF26 /* SubAdlibAdViewMMedia.m in Sources */,
-				33078064179CF34B00BEFF26 /* SubAdlibAdViewNaverAdPost.m in Sources */,
-				33078065179CF34B00BEFF26 /* SubAdlibAdViewShallWeAd.m in Sources */,
-				33078066179CF34B00BEFF26 /* SubAdlibAdViewTAD.m in Sources */,
-				33E9DC0D17D4975300FC9CBB /* SubAdlibAdViewDomob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,22 +14,26 @@
 
 #import <Adlib/Adlib.h>
 
-#import "SubAdlibAdViewAdam.h"
-#import "SubAdlibAdViewAdmob.h"
-#import "SubAdlibAdViewCauly.h"
-#import "SubAdlibAdViewTAD.h"
-#import "SubAdlibAdViewiAd.h"
-#import "SubAdlibAdViewNaverAdPost.h"
-#import "SubAdlibAdViewShallWeAd.h"
-#import "SubAdlibAdViewInmobi.h"
-#import "SubAdlibAdViewDomob.h"
-#import "SubAdlibAdViewAdHub.h"
-#import "SubAdlibAdViewUPlusAD.h"
-#import "SubAdlibAdViewMedibaAd.h"
-#import "SubAdlibAdViewMMedia.h"
-#import <MillennialMedia/MMSDK.h>
+//#import "SubAdlibAdViewAdam.h"
+//#import "SubAdlibAdViewAdmob.h"
+//#import "SubAdlibAdViewCauly.h"
+//#import "SubAdlibAdViewTAD.h"
+//#import "SubAdlibAdViewiAd.h"
+//#import "SubAdlibAdViewNaverAdPost.h"
+//#import "SubAdlibAdViewShallWeAd.h"
+//#import "SubAdlibAdViewInmobi.h"
+//#import "SubAdlibAdViewDomob.h"
+//#import "SubAdlibAdViewAdHub.h"
+//#import "SubAdlibAdViewUPlusAD.h"
+//#import "SubAdlibAdViewMedibaAd.h"
+//#import "SubAdlibAdViewMMedia.h"
+//#import <MillennialMedia/MMSDK.h>
 
 #define ADLIB_APP_KEY @"550787410cf2833915d71f3b" // 애드립에서 발급받은 키를 입력해주세요.
+
+@interface AppDelegate () <AdlibSessionDelegate>
+
+@end
 
 @implementation AppDelegate
 
@@ -45,15 +49,6 @@
 {
     [[AdlibManager sharedSingletonClass] detach:viewController];
 }
-- (void)gotAd
-{
-    // 광고 view의 크기
-    //CGSize sz = [[AdlibManager sharedSingletonClass] size];
-    
-    [[AdlibManager sharedSingletonClass] moveAdContainer:CGPointMake(0, 20)];
-}
-/// ADLIBr ///
-
 
 - (void) removeStartupFlicker
 {
@@ -90,20 +85,20 @@
     sharedManager.sessionDelegate = self;
     
     // 실제 구현된 광고 뷰를 애드립 매니저에 연결합니다.
-    [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"ADMOB" withClass:[SubAdlibAdViewAdmob class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"CAULY" withClass:[SubAdlibAdViewCauly class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"TAD" withClass:[SubAdlibAdViewTAD class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"MEDIBAAD" withClass:[SubAdlibAdViewMedibaAd class]];
-    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
-    [MMSDK initialize];  // MillennialMedia v5.2.0 이상을 사용하시려면 반드시 초기화를 호출해 주세요.
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADMOB" withClass:[SubAdlibAdViewAdmob class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"CAULY" withClass:[SubAdlibAdViewCauly class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"TAD" withClass:[SubAdlibAdViewTAD class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"MEDIBAAD" withClass:[SubAdlibAdViewMedibaAd class]];
+//    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
+//    [MMSDK initialize];  // MillennialMedia v5.2.0 이상을 사용하시려면 반드시 초기화를 호출해 주세요.
     
     // SDK 로그 메시지를 출력하도록 설정
     [sharedManager setLogging:NO];
