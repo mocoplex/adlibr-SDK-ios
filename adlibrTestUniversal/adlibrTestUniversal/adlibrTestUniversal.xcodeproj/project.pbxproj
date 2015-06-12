@@ -21,7 +21,13 @@
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
 		B002C0731AA5C58D003D1CD3 /* MediationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */; };
-		B0E1755A1B0ACB9A0050936F /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E175591B0ACB9A0050936F /* Adlib.framework */; };
+		B0E2017A1B2A7E4300A5A6C2 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201791B2A7E4300A5A6C2 /* Adlib.framework */; };
+		B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */; };
+		B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */; };
+		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
+		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
+		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
+		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +63,13 @@
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
 		B002C06F1AA5C58D003D1CD3 /* MediationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationTableViewController.h; sourceTree = "<group>"; };
 		B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationTableViewController.m; sourceTree = "<group>"; };
-		B0E175591B0ACB9A0050936F /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0E201791B2A7E4300A5A6C2 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
+		B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
+		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
+		B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		B0E2C76A1B297EF8006F9BC3 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
+		B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +77,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */,
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
+				B0E2017A1B2A7E4300A5A6C2 /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
-				B0E1755A1B0ACB9A0050936F /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,15 +118,16 @@
 		B002BFB31AA5C250003D1CD3 /* adlibrTestUniversal */ = {
 			isa = PBXGroup;
 			children = (
-				B002BFDB1AA5C344003D1CD3 /* ads */,
+				B0E2C7651B297EF8006F9BC3 /* AdlibResources */,
+				B002BFB81AA5C250003D1CD3 /* AppDelegate.h */,
+				B002BFB91AA5C250003D1CD3 /* AppDelegate.m */,
 				B002C06B1AA5C58D003D1CD3 /* BannerXibViewController.h */,
 				B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */,
 				B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */,
 				B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */,
 				B002C06F1AA5C58D003D1CD3 /* MediationTableViewController.h */,
 				B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */,
-				B002BFB81AA5C250003D1CD3 /* AppDelegate.h */,
-				B002BFB91AA5C250003D1CD3 /* AppDelegate.m */,
+				B002BFDB1AA5C344003D1CD3 /* ads */,
 				B002BFBE1AA5C250003D1CD3 /* Main.storyboard */,
 				B002BFC11AA5C250003D1CD3 /* Images.xcassets */,
 				B002BFC31AA5C250003D1CD3 /* LaunchScreen.xib */,
@@ -183,7 +197,8 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0E175591B0ACB9A0050936F /* Adlib.framework */,
+				B0E201791B2A7E4300A5A6C2 /* Adlib.framework */,
+				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
 				B002C0641AA5C4BE003D1CD3 /* CoreTelephony.framework */,
@@ -191,6 +206,18 @@
 				B002C0601AA5C4AC003D1CD3 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0E2C7651B297EF8006F9BC3 /* AdlibResources */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */,
+				B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */,
+				B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */,
+				B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */,
+				B0E2C76A1B297EF8006F9BC3 /* json.lua */,
+			);
+			path = AdlibResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +300,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B002BFC01AA5C250003D1CD3 /* Main.storyboard in Resources */,
-				B002BFC51AA5C250003D1CD3 /* LaunchScreen.xib in Resources */,
+				B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */,
+				B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */,
+				B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */,
+				B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */,
+				B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */,
 				B002BFC21AA5C250003D1CD3 /* Images.xcassets in Resources */,
+				B002BFC51AA5C250003D1CD3 /* LaunchScreen.xib in Resources */,
+				B002BFC01AA5C250003D1CD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
