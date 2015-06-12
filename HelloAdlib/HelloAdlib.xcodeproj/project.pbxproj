@@ -139,7 +139,13 @@
 		49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A6A1559629B0018C877 /* HelloWorldLayer.m */; };
 		7DCD2E7B1ABAD9A200C21634 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */; };
 		7DCD2E7D1ABAD9AE00C21634 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */; };
-		B0EF7F561B1D3F3500D9023E /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EF7F551B1D3F3400D9023E /* Adlib.framework */; };
+		B0E201811B2AB3DB00A5A6C2 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017C1B2AB3DB00A5A6C2 /* _TriDCommon.lua */; };
+		B0E201821B2AB3DB00A5A6C2 /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017D1B2AB3DB00A5A6C2 /* _TriDDynamicData.lua */; };
+		B0E201831B2AB3DB00A5A6C2 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017E1B2AB3DB00A5A6C2 /* _TriDStartup.lua */; };
+		B0E201841B2AB3DB00A5A6C2 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017F1B2AB3DB00A5A6C2 /* Adlib.bundle */; };
+		B0E201851B2AB3DB00A5A6C2 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E201801B2AB3DB00A5A6C2 /* json.lua */; };
+		B0E201871B2AB3FF00A5A6C2 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */; };
+		B0E201891B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,7 +400,13 @@
 		49E88A6A1559629B0018C877 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		B0EF7F551B1D3F3400D9023E /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0E2017C1B2AB3DB00A5A6C2 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
+		B0E2017D1B2AB3DB00A5A6C2 /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
+		B0E2017E1B2AB3DB00A5A6C2 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
+		B0E2017F1B2AB3DB00A5A6C2 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		B0E201801B2AB3DB00A5A6C2 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
+		B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +414,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E201891B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib in Frameworks */,
 				7DCD2E7D1ABAD9AE00C21634 /* libxml2.dylib in Frameworks */,
 				7DCD2E7B1ABAD9A200C21634 /* CoreMedia.framework in Frameworks */,
 				3321BA64182A1DF400236691 /* MessageUI.framework in Frameworks */,
@@ -415,7 +428,7 @@
 				3321BA54182A1D9600236691 /* iAd.framework in Frameworks */,
 				3321BA52182A1D8600236691 /* SystemConfiguration.framework in Frameworks */,
 				3321BA50182A1D7900236691 /* CoreLocation.framework in Frameworks */,
-				B0EF7F561B1D3F3500D9023E /* Adlib.framework in Frameworks */,
+				B0E201871B2AB3FF00A5A6C2 /* Adlib.framework in Frameworks */,
 				3321BA4E182A1D7100236691 /* CoreTelephony.framework in Frameworks */,
 				3321BA4C182A1D5B00236691 /* GameKit.framework in Frameworks */,
 				3321BA4A182A1D4F00236691 /* libz.1.2.5.dylib in Frameworks */,
@@ -455,7 +468,8 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0EF7F551B1D3F3400D9023E /* Adlib.framework */,
+				B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */,
+				B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */,
 				7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */,
 				7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */,
 				3321BA63182A1DF400236691 /* MessageUI.framework */,
@@ -488,6 +502,7 @@
 		49E88911155962990018C877 /* HelloAdlib */ = {
 			isa = PBXGroup;
 			children = (
+				B0E2017B1B2AB3DB00A5A6C2 /* AdlibResources */,
 				49E88A631559629B0018C877 /* AppDelegate.h */,
 				49E88A641559629B0018C877 /* AppDelegate.m */,
 				3362695F1761E52C00F595A8 /* GameCenter.h */,
@@ -860,6 +875,18 @@
 			path = ads_platform;
 			sourceTree = "<group>";
 		};
+		B0E2017B1B2AB3DB00A5A6C2 /* AdlibResources */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2017C1B2AB3DB00A5A6C2 /* _TriDCommon.lua */,
+				B0E2017D1B2AB3DB00A5A6C2 /* _TriDDynamicData.lua */,
+				B0E2017E1B2AB3DB00A5A6C2 /* _TriDStartup.lua */,
+				B0E2017F1B2AB3DB00A5A6C2 /* Adlib.bundle */,
+				B0E201801B2AB3DB00A5A6C2 /* json.lua */,
+			);
+			path = AdlibResources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -916,11 +943,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E88914155962990018C877 /* Default.png in Resources */,
+				B0E201831B2AB3DB00A5A6C2 /* _TriDStartup.lua in Resources */,
 				49E88916155962990018C877 /* fps_images.png in Resources */,
 				49E88918155962990018C877 /* Icon-72.png in Resources */,
 				49E8891A155962990018C877 /* Icon-Small-50.png in Resources */,
+				B0E201821B2AB3DB00A5A6C2 /* _TriDDynamicData.lua in Resources */,
+				B0E201841B2AB3DB00A5A6C2 /* Adlib.bundle in Resources */,
 				49E8891C155962990018C877 /* Icon-Small.png in Resources */,
 				49E8891E155962990018C877 /* Icon-Small@2x.png in Resources */,
+				B0E201811B2AB3DB00A5A6C2 /* _TriDCommon.lua in Resources */,
+				B0E201851B2AB3DB00A5A6C2 /* json.lua in Resources */,
 				49E88920155962990018C877 /* Icon.png in Resources */,
 				49E88922155962990018C877 /* Icon@2x.png in Resources */,
 				49E88925155962990018C877 /* iTunesArtwork in Resources */,
