@@ -2,8 +2,7 @@
 adlibr integration library for iOS
 
 SDK version 4.1.0.0 (2015.6.12)
-> 3D 광고 추가
-> 3D 광고 지원에 필요한 프로젝트 설정이 추가 되었습니다. 자세한 내용은 링크를 확인하세요.
+> 3D 광고 추가<br>3D 광고 지원에 필요한 프로젝트 설정이 추가 되었습니다. 자세한 내용은 링크를 확인하세요.
 <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
 
 SDK version 4.0.2 (2015.5.19)
