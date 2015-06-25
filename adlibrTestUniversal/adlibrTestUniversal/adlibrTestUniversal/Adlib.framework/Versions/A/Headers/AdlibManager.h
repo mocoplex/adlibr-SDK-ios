@@ -15,6 +15,12 @@ typedef NS_ENUM(NSInteger, ADLIB_BANNER_ALIGN) {
     ADLIB_BANNER_ALIGN_RIGHT  = 3,
 };
 
+typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
+
+    ADLIB_ADVIEW_VERTICAL_ALIGN_BOTTOM = 0, //DEFAULT
+    ADLIB_ADVIEW_VERTICAL_ALIGN_TOP    = 1,
+};
+
 @class AdlibManager;
 
 /**
@@ -120,6 +126,17 @@ typedef NS_ENUM(NSInteger, ADLIB_BANNER_ALIGN) {
       withView:(UIView*)view
   withDelegate:(id<AdlibManagerDelegate>)del
   defaultAlign:(ADLIB_BANNER_ALIGN)align;
+
+- (void)attachWithViewController:(UIViewController *)controller
+                 atContainerView:(UIView *)adView
+                     bannerAlign:(ADLIB_BANNER_ALIGN)hAligh
+                     adViewAlign:(ADLIB_ADVIEW_VERTICAL_ALIGN)vAlign;
+
+- (void)attachWithViewController:(UIViewController *)controller
+                 atContainerView:(UIView *)adView
+                    withDelegate:(id<AdlibManagerDelegate>)del
+                     bannerAlign:(ADLIB_BANNER_ALIGN)hAligh
+                     adViewAlign:(ADLIB_ADVIEW_VERTICAL_ALIGN)vAlign;
 
 - (void)moveAdContainer:(CGPoint)pt;
 

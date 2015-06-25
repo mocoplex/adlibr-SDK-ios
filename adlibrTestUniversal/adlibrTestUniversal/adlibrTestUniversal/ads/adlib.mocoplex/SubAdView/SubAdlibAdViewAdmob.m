@@ -31,6 +31,7 @@
 
 @property (nonatomic, strong) GADInterstitial* interstitial;
 @property (nonatomic, weak) UIViewController *parentViewController;
+@property (nonatomic) BOOL useGADSmartBannerMode;
 
 @end
 
@@ -43,27 +44,50 @@
     return YES;
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+            _iPad = NO;
+        else
+            _iPad = YES;
+        
+        _useGADSmartBannerMode = NO;
+    }
+    return self;
+}
+
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
- 
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-        _iPad = NO;
-    else
-        _iPad = YES;
     
     // Create a view of the standard size at the bottom of the screen.
     if (_adView) {
         [_adView removeFromSuperview];
         self.adView = nil;
     }
-
-    if (_iPad) {
-        _adView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeLargeBanner];
+    
+    GADAdSize gadSize = kGADAdSizeBanner;
+    
+    if (_useGADSmartBannerMode) {
+        if ([self isPortrait]) {
+            gadSize = kGADAdSizeSmartBannerPortrait;
+        } else {
+            gadSize = kGADAdSizeSmartBannerLandscape;
+        }
     } else {
-        _adView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+        if (_iPad) {
+            gadSize = kGADAdSizeLargeBanner;
+        } else {
+            gadSize = kGADAdSizeBanner;
+        }
+        
     }
     
+    GADBannerView *adView = [[GADBannerView alloc] initWithAdSize:gadSize];
+    self.adView = adView;
     _adView.frame = CGRectMake(0,
                                0,
                                self.view.frame.size.width,
@@ -72,7 +96,7 @@
     // Specify the ad's "unit identifier." This is your AdMob Publisher ID.
     _adView.adUnitID = ADMOB_ID;
     _adView.delegate = self;
-
+    
     // Let the runtime know which UIViewController to restore after taking
     // the user wherever the ad goes and add it to the view hierarchy.
     _adView.rootViewController = parent;
@@ -82,8 +106,7 @@
     
     GADRequest *request = [GADRequest request];
     
-    //  테스트 광고를 요청합니다. 테스트 광고를 수신하려는
-    //  시뮬레이터 및 모든 기기에 대한 식별자를 삽입합니다.
+    //  테스트 광고를 요청합니다. 테스트 광고를 수신하려는 시뮬레이터 및 모든 기기에 대한 식별자를 삽입합니다.
     request.testDevices = @[ ADMOB_TEST_DEVICE_ID ];
     
     // Initiate a generic request to load it with an ad.
@@ -110,6 +133,23 @@
 // admob ipad 광고 높이 크기 100으로 반환하여 사용합니다.
 - (CGSize)size
 {
+    if (_useGADSmartBannerMode) {
+        CGFloat viewHeight = 0;
+        CGSize  gadSize = _adView.frame.size;
+        
+        if (CGSizeEqualToSize(gadSize, CGSizeZero)) {
+            if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone) {
+                viewHeight = kGADAdSizeLargeBanner.size.height;
+            } else {
+                viewHeight = kGADAdSizeBanner.size.height;
+            }
+            return CGSizeMake(self.view.frame.size.width, viewHeight);
+        } else {
+            viewHeight = gadSize.height;
+            return CGSizeMake(self.view.frame.size.width, viewHeight);
+        }
+    }
+    
     CGSize gadSize = CGSizeZero;
     if (_iPad) {
         gadSize = kGADAdSizeLargeBanner.size;
@@ -118,6 +158,7 @@
     }
     
     return CGSizeMake(self.view.frame.size.width, gadSize.height);
+    
 }
 
 // 플랫폼 광고뷰의 회전에 대한 처리를 수행합니다.
@@ -197,7 +238,7 @@
 - (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
 {
     if (self.parentController) {
-
+        
         //전면광고를 화면에 표시합니다.
         [interstitial presentFromRootViewController:self.parentController];
         
@@ -211,6 +252,8 @@
 
 - (void)interstitial:(GADInterstitial *)interstitial didFailToReceiveAdWithError:(GADRequestError *)error
 {
+    NSLog(@"\n\n admob interstitial receive fail Ad : %@", error);
+    
     // 전면광고 실패를 알린다.
     [self subAdlibViewInterstitialFailed:@"admob"];
 }
