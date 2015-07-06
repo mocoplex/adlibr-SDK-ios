@@ -1,6 +1,9 @@
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
+SDK version 4.1.2.0 (2015.7.6)
+> 광고 관련 UIWebView 처리 수정
+
 SDK version 4.1.1.0 (2015.6.25)
 > 광고 컨테이너 뷰 내부에서 배너뷰의 위치 상/하단 정렬 옵션 추가
 
