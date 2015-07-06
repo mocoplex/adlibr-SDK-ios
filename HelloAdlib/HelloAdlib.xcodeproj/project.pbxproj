@@ -144,8 +144,8 @@
 		B0E201831B2AB3DB00A5A6C2 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017E1B2AB3DB00A5A6C2 /* _TriDStartup.lua */; };
 		B0E201841B2AB3DB00A5A6C2 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2017F1B2AB3DB00A5A6C2 /* Adlib.bundle */; };
 		B0E201851B2AB3DB00A5A6C2 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E201801B2AB3DB00A5A6C2 /* json.lua */; };
-		B0E201871B2AB3FF00A5A6C2 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */; };
 		B0E201891B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */; };
+		B0F8DFD41B4A7DD700AEB5B0 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8DFD31B4A7DD700AEB5B0 /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -405,8 +405,8 @@
 		B0E2017E1B2AB3DB00A5A6C2 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0E2017F1B2AB3DB00A5A6C2 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0E201801B2AB3DB00A5A6C2 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
-		B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		B0F8DFD31B4A7DD700AEB5B0 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,10 +425,10 @@
 				3321BA5A182A1DBA00236691 /* Security.framework in Frameworks */,
 				3321BA58182A1DAF00236691 /* PassKit.framework in Frameworks */,
 				3321BA56182A1DA200236691 /* CFNetwork.framework in Frameworks */,
+				B0F8DFD41B4A7DD700AEB5B0 /* Adlib.framework in Frameworks */,
 				3321BA54182A1D9600236691 /* iAd.framework in Frameworks */,
 				3321BA52182A1D8600236691 /* SystemConfiguration.framework in Frameworks */,
 				3321BA50182A1D7900236691 /* CoreLocation.framework in Frameworks */,
-				B0E201871B2AB3FF00A5A6C2 /* Adlib.framework in Frameworks */,
 				3321BA4E182A1D7100236691 /* CoreTelephony.framework in Frameworks */,
 				3321BA4C182A1D5B00236691 /* GameKit.framework in Frameworks */,
 				3321BA4A182A1D4F00236691 /* libz.1.2.5.dylib in Frameworks */,
@@ -468,8 +468,8 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0F8DFD31B4A7DD700AEB5B0 /* Adlib.framework */,
 				B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */,
-				B0E201861B2AB3FE00A5A6C2 /* Adlib.framework */,
 				7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */,
 				7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */,
 				3321BA63182A1DF400236691 /* MessageUI.framework */,
