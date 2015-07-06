@@ -26,7 +26,7 @@
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
 		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
 		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
-		B0F4D2331B3BE69B0031FA2A /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F4D2321B3BE69B0031FA2A /* Adlib.framework */; };
+		B0F8DFD21B4A686300AEB5B0 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */; };
 		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,7 @@
 		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0E2C76A1B297EF8006F9BC3 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
-		B0F4D2321B3BE69B0031FA2A /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B0F4D2331B3BE69B0031FA2A /* Adlib.framework in Frameworks */,
+				B0F8DFD21B4A686300AEB5B0 /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
 			);
@@ -197,7 +197,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0F4D2321B3BE69B0031FA2A /* Adlib.framework */,
+				B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
