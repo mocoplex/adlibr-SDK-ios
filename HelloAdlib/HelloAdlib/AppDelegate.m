@@ -31,7 +31,7 @@
 
 #define ADLIB_APP_KEY @"550787410cf2833915d71f3b" // 애드립에서 발급받은 키를 입력해주세요.
 
-@interface AppDelegate () <AdlibSessionDelegate>
+@interface AppDelegate () <AdlibSessionDelegate, AdlibManagerDelegate>
 
 @end
 
@@ -42,12 +42,34 @@
 /// ADLIBr ///
 - (void)showADLIBr
 {
-    [[AdlibManager sharedSingletonClass] attach:viewController withView:viewController.view withDelegate:self];
+    
+    BOOL bannerVerticalAlignTop = YES;
+
+    /*
+     * 하단 attach 메소드에 전달하는 containerView 상에서 상/하단 정렬 옵션을 
+     * 지정합니다.
+     */
+    ADLIB_ADVIEW_VERTICAL_ALIGN vAlign = ADLIB_ADVIEW_VERTICAL_ALIGN_BOTTOM;
+    if (bannerVerticalAlignTop) {
+        vAlign = ADLIB_ADVIEW_VERTICAL_ALIGN_TOP;
+    } else {
+        vAlign = ADLIB_ADVIEW_VERTICAL_ALIGN_BOTTOM;
+    }
+    
+    AdlibManager *manager = [AdlibManager sharedSingletonClass];
+    [manager attachWithViewController:viewController
+                      atContainerView:viewController.view
+                          bannerAlign:ADLIB_BANNER_ALIGN_CENTER
+                          adViewAlign:vAlign];
+    manager.delegate = self;
+    
 }
 
 - (void)hideADLIBr
 {
-    [[AdlibManager sharedSingletonClass] detach:viewController];
+    AdlibManager *manager = [AdlibManager sharedSingletonClass];
+    [manager detach:viewController];
+    manager.delegate = nil;
 }
 
 - (void) removeStartupFlicker
@@ -118,6 +140,8 @@
     }
 }
 
+#pragma  mark - AdlibSessionDelegate
+
 //애드립 세션 연결 성공 시 호출되는 메소드.
 - (void)adlibManager:(AdlibManager *)manager didLinkedSessionWithUserInfo:(NSDictionary *)userInfo
 {
@@ -129,6 +153,47 @@
 {
     NSLog(@"adlib session link failed");
 }
+
+
+#pragma  mark - AdlibMangerDelegate
+
+// 띠배너 광고 수신 성공시 호출되는 메소드.
+- (void)didReceiveAdlibAd:(NSString*)from
+{
+    NSLog(@"didReceiveAdlibAd : %@", from);
+}
+
+// 띠배너 광고 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAdlibAd:(NSString*)from
+{
+    NSLog(@"didFailToReceiveAdlibAd : %@", from);
+}
+
+// 전면광고 수신 성공시 호출되는 메소드.
+- (void)didReceiveAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"didReceiveAdlibInterstitialAd : %@", from);
+}
+
+// 전면광고 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"didFailToReceiveAdlibInterstitialAd : %@", from);
+}
+
+// 전면광고 닫힌 직후 호출되는 메소드.
+- (void)didCloseAdlibInterstitialAd:(NSString*)from
+{
+    NSLog(@"didFailToReceiveAdlibAd : %@", from);
+}
+
+// 스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
+- (void)didFailToReceiveAllInterstitialAd
+{
+    NSLog(@"didFailToReceiveAllInterstitialAd");
+}
+
+#pragma mark -
 
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
