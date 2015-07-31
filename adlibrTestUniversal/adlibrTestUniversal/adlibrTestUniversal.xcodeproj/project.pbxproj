@@ -20,13 +20,25 @@
 		B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */; };
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
-		B002C0731AA5C58D003D1CD3 /* MediationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */; };
+		B00772071B6B15D600939122 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00772061B6B15D600939122 /* Adlib.framework */; };
+		B0DB3F391B4E5FE700279CBC /* sample_list.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F231B4E5FE700279CBC /* sample_list.json */; };
+		B0DB3F3A1B4E5FE700279CBC /* sample_song.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F241B4E5FE700279CBC /* sample_song.json */; };
+		B0DB3F3B1B4E5FE700279CBC /* SampleFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F261B4E5FE700279CBC /* SampleFeedItem.m */; };
+		B0DB3F3C1B4E5FE700279CBC /* ALExampleMusicAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F291B4E5FE700279CBC /* ALExampleMusicAdCell.m */; };
+		B0DB3F3D1B4E5FE700279CBC /* ALExampleMusicAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F2A1B4E5FE700279CBC /* ALExampleMusicAdCell.xib */; };
+		B0DB3F3E1B4E5FE700279CBC /* SongListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F2C1B4E5FE700279CBC /* SongListTableViewCell.m */; };
+		B0DB3F3F1B4E5FE700279CBC /* SongListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F2E1B4E5FE700279CBC /* SongListTableViewController.m */; };
+		B0DB3F401B4E5FE700279CBC /* ALExampleFeedVideoAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F301B4E5FE700279CBC /* ALExampleFeedVideoAdCell.xib */; };
+		B0DB3F411B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F321B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.m */; };
+		B0DB3F421B4E5FE700279CBC /* ALExampleFeedImageAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F331B4E5FE700279CBC /* ALExampleFeedImageAdCell.xib */; };
+		B0DB3F431B4E5FE700279CBC /* SimpleFeedListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F351B4E5FE700279CBC /* SimpleFeedListTableViewCell.m */; };
+		B0DB3F441B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */; };
+		B0DB3F451B4E5FE700279CBC /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */; };
 		B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */; };
 		B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */; };
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
 		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
 		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
-		B0F8DFD21B4A686300AEB5B0 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */; };
 		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
@@ -61,14 +73,32 @@
 		B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerXibViewController.m; sourceTree = "<group>"; };
 		B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationBannerViewController.h; sourceTree = "<group>"; };
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
-		B002C06F1AA5C58D003D1CD3 /* MediationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationTableViewController.h; sourceTree = "<group>"; };
-		B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationTableViewController.m; sourceTree = "<group>"; };
+		B00772061B6B15D600939122 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0DB3F231B4E5FE700279CBC /* sample_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_list.json; sourceTree = "<group>"; };
+		B0DB3F241B4E5FE700279CBC /* sample_song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_song.json; sourceTree = "<group>"; };
+		B0DB3F251B4E5FE700279CBC /* SampleFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleFeedItem.h; sourceTree = "<group>"; };
+		B0DB3F261B4E5FE700279CBC /* SampleFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleFeedItem.m; sourceTree = "<group>"; };
+		B0DB3F281B4E5FE700279CBC /* ALExampleMusicAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALExampleMusicAdCell.h; sourceTree = "<group>"; };
+		B0DB3F291B4E5FE700279CBC /* ALExampleMusicAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALExampleMusicAdCell.m; sourceTree = "<group>"; };
+		B0DB3F2A1B4E5FE700279CBC /* ALExampleMusicAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALExampleMusicAdCell.xib; sourceTree = "<group>"; };
+		B0DB3F2B1B4E5FE700279CBC /* SongListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListTableViewCell.h; sourceTree = "<group>"; };
+		B0DB3F2C1B4E5FE700279CBC /* SongListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListTableViewCell.m; sourceTree = "<group>"; };
+		B0DB3F2D1B4E5FE700279CBC /* SongListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListTableViewController.h; sourceTree = "<group>"; };
+		B0DB3F2E1B4E5FE700279CBC /* SongListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListTableViewController.m; sourceTree = "<group>"; };
+		B0DB3F301B4E5FE700279CBC /* ALExampleFeedVideoAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALExampleFeedVideoAdCell.xib; sourceTree = "<group>"; };
+		B0DB3F311B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALExampleSimpleFeedAdCell.h; sourceTree = "<group>"; };
+		B0DB3F321B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALExampleSimpleFeedAdCell.m; sourceTree = "<group>"; };
+		B0DB3F331B4E5FE700279CBC /* ALExampleFeedImageAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALExampleFeedImageAdCell.xib; sourceTree = "<group>"; };
+		B0DB3F341B4E5FE700279CBC /* SimpleFeedListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFeedListTableViewCell.h; sourceTree = "<group>"; };
+		B0DB3F351B4E5FE700279CBC /* SimpleFeedListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFeedListTableViewCell.m; sourceTree = "<group>"; };
+		B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFeedListTableViewCell.xib; sourceTree = "<group>"; };
+		B0DB3F371B4E5FE700279CBC /* SimpleFeedListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFeedListTableViewController.h; sourceTree = "<group>"; };
+		B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFeedListTableViewController.m; sourceTree = "<group>"; };
 		B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
 		B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
 		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0E2C76A1B297EF8006F9BC3 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
-		B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -81,7 +111,7 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B0F8DFD21B4A686300AEB5B0 /* Adlib.framework in Frameworks */,
+				B00772071B6B15D600939122 /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
 			);
@@ -118,16 +148,15 @@
 		B002BFB31AA5C250003D1CD3 /* adlibrTestUniversal */ = {
 			isa = PBXGroup;
 			children = (
+				B002BFDB1AA5C344003D1CD3 /* ads */,
 				B0E2C7651B297EF8006F9BC3 /* AdlibResources */,
-				B002BFB81AA5C250003D1CD3 /* AppDelegate.h */,
-				B002BFB91AA5C250003D1CD3 /* AppDelegate.m */,
-				B002C06B1AA5C58D003D1CD3 /* BannerXibViewController.h */,
-				B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */,
+				B0EF52B31B4CE76500D8577E /* NativeAdSample */,
 				B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */,
 				B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */,
-				B002C06F1AA5C58D003D1CD3 /* MediationTableViewController.h */,
-				B002C0701AA5C58D003D1CD3 /* MediationTableViewController.m */,
-				B002BFDB1AA5C344003D1CD3 /* ads */,
+				B002C06B1AA5C58D003D1CD3 /* BannerXibViewController.h */,
+				B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */,
+				B002BFB81AA5C250003D1CD3 /* AppDelegate.h */,
+				B002BFB91AA5C250003D1CD3 /* AppDelegate.m */,
 				B002BFBE1AA5C250003D1CD3 /* Main.storyboard */,
 				B002BFC11AA5C250003D1CD3 /* Images.xcassets */,
 				B002BFC31AA5C250003D1CD3 /* LaunchScreen.xib */,
@@ -197,7 +226,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0F8DFD11B4A686300AEB5B0 /* Adlib.framework */,
+				B00772061B6B15D600939122 /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
@@ -206,6 +235,47 @@
 				B002C0601AA5C4AC003D1CD3 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0DB3F221B4E5FE700279CBC /* res */ = {
+			isa = PBXGroup;
+			children = (
+				B0DB3F231B4E5FE700279CBC /* sample_list.json */,
+				B0DB3F241B4E5FE700279CBC /* sample_song.json */,
+				B0DB3F251B4E5FE700279CBC /* SampleFeedItem.h */,
+				B0DB3F261B4E5FE700279CBC /* SampleFeedItem.m */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		B0DB3F271B4E5FE700279CBC /* sample1 */ = {
+			isa = PBXGroup;
+			children = (
+				B0DB3F281B4E5FE700279CBC /* ALExampleMusicAdCell.h */,
+				B0DB3F291B4E5FE700279CBC /* ALExampleMusicAdCell.m */,
+				B0DB3F2A1B4E5FE700279CBC /* ALExampleMusicAdCell.xib */,
+				B0DB3F2B1B4E5FE700279CBC /* SongListTableViewCell.h */,
+				B0DB3F2C1B4E5FE700279CBC /* SongListTableViewCell.m */,
+				B0DB3F2D1B4E5FE700279CBC /* SongListTableViewController.h */,
+				B0DB3F2E1B4E5FE700279CBC /* SongListTableViewController.m */,
+			);
+			path = sample1;
+			sourceTree = "<group>";
+		};
+		B0DB3F2F1B4E5FE700279CBC /* sample2 */ = {
+			isa = PBXGroup;
+			children = (
+				B0DB3F301B4E5FE700279CBC /* ALExampleFeedVideoAdCell.xib */,
+				B0DB3F331B4E5FE700279CBC /* ALExampleFeedImageAdCell.xib */,
+				B0DB3F311B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.h */,
+				B0DB3F321B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.m */,
+				B0DB3F341B4E5FE700279CBC /* SimpleFeedListTableViewCell.h */,
+				B0DB3F351B4E5FE700279CBC /* SimpleFeedListTableViewCell.m */,
+				B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */,
+				B0DB3F371B4E5FE700279CBC /* SimpleFeedListTableViewController.h */,
+				B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */,
+			);
+			path = sample2;
 			sourceTree = "<group>";
 		};
 		B0E2C7651B297EF8006F9BC3 /* AdlibResources */ = {
@@ -218,6 +288,16 @@
 				B0E2C76A1B297EF8006F9BC3 /* json.lua */,
 			);
 			path = AdlibResources;
+			sourceTree = "<group>";
+		};
+		B0EF52B31B4CE76500D8577E /* NativeAdSample */ = {
+			isa = PBXGroup;
+			children = (
+				B0DB3F221B4E5FE700279CBC /* res */,
+				B0DB3F271B4E5FE700279CBC /* sample1 */,
+				B0DB3F2F1B4E5FE700279CBC /* sample2 */,
+			);
+			path = NativeAdSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,11 +382,17 @@
 			files = (
 				B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */,
 				B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */,
+				B0DB3F421B4E5FE700279CBC /* ALExampleFeedImageAdCell.xib in Resources */,
 				B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */,
+				B0DB3F391B4E5FE700279CBC /* sample_list.json in Resources */,
+				B0DB3F3A1B4E5FE700279CBC /* sample_song.json in Resources */,
 				B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */,
+				B0DB3F441B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib in Resources */,
 				B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */,
+				B0DB3F3D1B4E5FE700279CBC /* ALExampleMusicAdCell.xib in Resources */,
 				B002BFC21AA5C250003D1CD3 /* Images.xcassets in Resources */,
 				B002BFC51AA5C250003D1CD3 /* LaunchScreen.xib in Resources */,
+				B0DB3F401B4E5FE700279CBC /* ALExampleFeedVideoAdCell.xib in Resources */,
 				B002BFC01AA5C250003D1CD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,11 +411,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B002C0731AA5C58D003D1CD3 /* MediationTableViewController.m in Sources */,
+				B0DB3F411B4E5FE700279CBC /* ALExampleSimpleFeedAdCell.m in Sources */,
+				B0DB3F3C1B4E5FE700279CBC /* ALExampleMusicAdCell.m in Sources */,
+				B0DB3F3B1B4E5FE700279CBC /* SampleFeedItem.m in Sources */,
+				B0DB3F3F1B4E5FE700279CBC /* SongListTableViewController.m in Sources */,
 				B002BFBA1AA5C250003D1CD3 /* AppDelegate.m in Sources */,
+				B0DB3F451B4E5FE700279CBC /* SimpleFeedListTableViewController.m in Sources */,
+				B0DB3F431B4E5FE700279CBC /* SimpleFeedListTableViewCell.m in Sources */,
 				B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */,
 				B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */,
 				B002BFB71AA5C250003D1CD3 /* main.m in Sources */,
+				B0DB3F3E1B4E5FE700279CBC /* SongListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

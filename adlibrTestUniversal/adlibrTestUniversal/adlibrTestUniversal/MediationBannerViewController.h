@@ -2,8 +2,8 @@
 //  MediationBannerViewController.h
 //  AdlibNativeADSample
 //
-//  Created by gskang on 2015. 1. 27..
-//  Copyright (c) 2015년 gskang. All rights reserved.
+//  Created by mocoplex on 2015. 1. 27..
+//  Copyright (c) 2015년 mocoplex. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
