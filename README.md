@@ -1,6 +1,9 @@
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
+SDK version 4.1.3.1 (2015.7.31)
+> 네이티브 지면 광고 지원 및 샘플 프로젝트 추가
+
 SDK version 4.1.2.0 (2015.7.6)
 > 광고 관련 UIWebView 처리 수정
 
