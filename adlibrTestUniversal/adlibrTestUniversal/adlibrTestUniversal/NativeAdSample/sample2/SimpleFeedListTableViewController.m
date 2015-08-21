@@ -155,6 +155,7 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
     return cell;
 }
 
+// 헬퍼 클래스를 통해 광고 셀을 랜더링하고 해당 셀을 테이블뷰에 반환합니다.
 - (UITableViewCell *)al_tableView:(UITableView *)tableView adCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
@@ -186,6 +187,8 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
     if (nativeAd) {
         [_nativeAdTableManager didSelectAdCellForAd:nativeAd tableViewController:self];
+    } else {
+        // 광고가 아닌 셀 클릭 이벤트 처리.
     }
 }
 
@@ -342,16 +345,23 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
 
 - (void)loadNativeAds
 {
+    // 네이티브 광고를 표시할 인덱스를 지정합니다.
+    // 테이블 Row, Section 등의 지정은 개발자에서 추가로 수정, 변경가능합니다.
     NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(3), @(5), @(8), @(13)]];
     self.adItemIndexList = indexList;
     
+    // 네이티브 광고 키 값을 지정하여 헬퍼 객체를 생성합니다.
     NSString *appKey = [ADLibSession adlibAppKey];
     ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithTableView:self.tableView
                                                                                       nativeAdKey:appKey
                                                                                          delegate:self];
     self.nativeAdTableManager = nativeAdTableHelper;
     
-    //async load native-AD list
+    // 헬퍼 객체를 통해 네이티브 광고를 요청합니다.
+    // @param adItemType : 네이티브 광고 요청 타입 (이미지 / 비디오 / 모두 포함)
+    // @param maximuCount : 최대 값, 기본 값 10개
+    // @param timeoutInterval : 최소 5초, 최대 60초, 기본 값 30초
+    //                          해당 시간 만료 이전까지 수신한 광고만을 반환
     [_nativeAdTableManager requestNativeAdItemType:ALAdRequestItemTypeAll
                                       maximumCount:10
                                    timeoutInterval:30.];
@@ -359,6 +369,11 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
 
 #pragma mark - ALNativeAdTableHelper delegate
 
+/**
+ *  네이티브 광고 수신 성공 시 마다 호출되는 델리게이트
+ *  해당 광고에 필요한 리소스까지 다운로드 완료된 시점에서 호출
+ *  @param nativeAd : 응답에 성공한 네이티브 광고 객체
+ */
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAd:(ALNativeAd *)nativeAd
 {
     if (_adItemIndexList.count > 0) {
@@ -384,6 +399,10 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
     }
 }
 
+/**
+ *  네이티브 광고를 수신 실패 시 호출되는 델리게이트
+ *  @param error : 응답 실패에 대한 에러 객체
+ */
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFailedRequestWithError:(NSError *)error
 {
     NSLog(@"nativeAdTableHelper Error : %@", error);
