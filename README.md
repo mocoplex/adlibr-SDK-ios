@@ -1,3 +1,9 @@
+프로젝트 설정 가이드 상세 페이지
+<http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
+> iOS 9 ATS(App Transport Security) 관련 가이드 업데이트
+
+SDK 업데이트 내역
+
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
