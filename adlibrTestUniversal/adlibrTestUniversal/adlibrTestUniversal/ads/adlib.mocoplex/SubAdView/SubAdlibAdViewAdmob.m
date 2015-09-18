@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 7.2.2
+ * confirmed compatible with admob SDK 7.4.1
  */
 
 // 실제 프로젝트 적용시 위 주소를 참고하여
@@ -18,7 +18,7 @@
  Under Other Linker Flags, add -all_load to both Debug and Release.
  */
 // flag 를 추가해야합니다.
-// https://developers.google.com/mobile-ads-sdk/images/linker-ios.png
+// https://developers.google.com/mobile-ads-sdk/images/linXker-ios.png
 
 #import "SubAdlibAdViewAdmob.h"
 

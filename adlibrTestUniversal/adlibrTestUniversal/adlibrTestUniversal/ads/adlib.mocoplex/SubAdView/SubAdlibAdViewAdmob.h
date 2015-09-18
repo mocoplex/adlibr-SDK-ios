@@ -6,7 +6,7 @@
  */
 
 /*
- * confirmed compatible with admob SDK 7.3.1
+ * confirmed compatible with admob SDK 7.4.1
  */
 
 #import <UIKit/UIKit.h>
