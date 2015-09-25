@@ -1,6 +1,7 @@
 프로젝트 설정 가이드 상세 페이지
 <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트
+
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)
 
 
