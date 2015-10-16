@@ -138,14 +138,12 @@
         // 전면광고 성공을 알린다.
         [self subAdlibViewInterstitialReceived:@"tad"];
         
-        UIViewController *ctr = self.interstitial.interstialViewController;
-        if (ctr && self.interstitial.canLoadInterstitial) {
-            [self.parentController presentViewController:ctr
-                                                animated:YES
-                                              completion:nil];
+        if (self.interstitial.canLoadInterstitial) {
+            [self.interstitial showAd];
         }
+        
     } else if (tadCore == self.tadCore) {
-       
+        
         //광고 로드 완료
         [self gotAd];
         bGotAd = YES;
