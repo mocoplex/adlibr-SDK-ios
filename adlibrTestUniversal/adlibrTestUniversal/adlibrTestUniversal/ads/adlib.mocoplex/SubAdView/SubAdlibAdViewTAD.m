@@ -135,11 +135,15 @@
 {
     if (tadCore == self.interstitial) {
         
-        // 전면광고 성공을 알린다.
-        [self subAdlibViewInterstitialReceived:@"tad"];
-        
         if (self.interstitial.canLoadInterstitial) {
+            
+            // 전면광고 성공을 알린다.
+            [self subAdlibViewInterstitialReceived:@"tad"];
             [self.interstitial showAd];
+            
+        } else {
+            // 전면광고 실패를 알린다.
+            [self subAdlibViewInterstitialFailed:@"tad"];
         }
         
     } else if (tadCore == self.tadCore) {
@@ -151,8 +155,6 @@
 }
 
 - (void)tadCore:(TadCore *)tadCore tadOnAdFailed:(TadErrorCode)errorCode {
-    
-    // 실패했다. 바로 다음 스케줄 광고를 보인다.
     
     if (tadCore == self.interstitial) {
         NSLog(@"tadCore interstitial adFailed:%zd", errorCode);
