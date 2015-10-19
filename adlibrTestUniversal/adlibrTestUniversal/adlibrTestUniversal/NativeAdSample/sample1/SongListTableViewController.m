@@ -142,7 +142,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
     if (nativeAd) {
-        [_nativeAdTableManager didSelectAdCellForAd:nativeAd tableViewController:self];
+        [_nativeAdTableManager didSelectAdCellForAd:nativeAd presentingViewController:self];
     }
 }
 
@@ -201,10 +201,16 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(3), @(5), @(15)]];
     self.adItemIndexList = indexList;
     
-    NSString *appKey = [ADLibSession adlibAppKey];
+    NSString *appKey = [ADLibMediator adlibAppKeyForIdentifier:@"adlibSampleKey"];
+    if (appKey == nil) {
+        return;
+    }
+    
+    ADLibSession *sharedSession = [AdlibManager sharedSingletonClass].adlibSharedSession;
     ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithTableView:self.tableView
-                                                                                      nativeAdKey:appKey
+                                                                                     adlibSession:sharedSession
                                                                                          delegate:self];
+    
     self.nativeAdTableManager = nativeAdTableHelper;
     
     //async load native-AD list

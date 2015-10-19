@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "SubAdlibAdsView.h"
 
+@class AdlibManager, ADLibMediator;
 
-
-@class AdlibManager;
-
-@interface SubAdlibAdViewCore : NSObject
+@interface SubAdlibAdViewCore : NSObject {
+    
+}
 
 + (BOOL)isStaticObject;
 
 - (SubAdlibAdViewCore*)initWithManager:(AdlibManager*)m;
+- (SubAdlibAdViewCore*)initWithMediator:(ADLibMediator*)mediator;
 
 - (void)query:(UIViewController*)parent;
 - (void)clearAdView;
@@ -43,6 +44,9 @@
  */
 - (CGSize)size;
 
+/**
+ * AdlibManager를 사용한 호출 메소드
+ */
 - (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController;
 - (void)subAdlibViewInterstitialReceived:(NSString*)from;
 - (void)subAdlibViewInterstitialFailed:(NSString*)from;

@@ -19,7 +19,6 @@
 		B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */; };
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
-		B00772071B6B15D600939122 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00772061B6B15D600939122 /* Adlib.framework */; };
 		B0DB3F391B4E5FE700279CBC /* sample_list.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F231B4E5FE700279CBC /* sample_list.json */; };
 		B0DB3F3A1B4E5FE700279CBC /* sample_song.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F241B4E5FE700279CBC /* sample_song.json */; };
 		B0DB3F3B1B4E5FE700279CBC /* SampleFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F261B4E5FE700279CBC /* SampleFeedItem.m */; };
@@ -33,6 +32,7 @@
 		B0DB3F431B4E5FE700279CBC /* SimpleFeedListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F351B4E5FE700279CBC /* SimpleFeedListTableViewCell.m */; };
 		B0DB3F441B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */; };
 		B0DB3F451B4E5FE700279CBC /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */; };
+		B0E295451BD4996D00F3A971 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E295441BD4996D00F3A971 /* Adlib.framework */; settings = {ASSET_TAGS = (); }; };
 		B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */; };
 		B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */; };
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
@@ -61,7 +61,6 @@
 		B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerXibViewController.m; sourceTree = "<group>"; };
 		B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationBannerViewController.h; sourceTree = "<group>"; };
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
-		B00772061B6B15D600939122 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0DB3F231B4E5FE700279CBC /* sample_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_list.json; sourceTree = "<group>"; };
 		B0DB3F241B4E5FE700279CBC /* sample_song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_song.json; sourceTree = "<group>"; };
 		B0DB3F251B4E5FE700279CBC /* SampleFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleFeedItem.h; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFeedListTableViewCell.xib; sourceTree = "<group>"; };
 		B0DB3F371B4E5FE700279CBC /* SimpleFeedListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFeedListTableViewController.h; sourceTree = "<group>"; };
 		B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFeedListTableViewController.m; sourceTree = "<group>"; };
+		B0E295441BD4996D00F3A971 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
 		B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
 		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B00772071B6B15D600939122 /* Adlib.framework in Frameworks */,
+				B0E295451BD4996D00F3A971 /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
 			);
@@ -199,7 +199,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B00772061B6B15D600939122 /* Adlib.framework */,
+				B0E295441BD4996D00F3A971 /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
@@ -416,6 +416,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -459,6 +460,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

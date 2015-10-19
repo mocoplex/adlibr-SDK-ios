@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @class ALAdlibBannerEvent;
-
 @class ALAdInterstitialViewController;
+@class ADLibSession;
 
 @protocol ALAdInterstitialControllerDelegate <NSObject>
 
@@ -21,8 +21,8 @@
 /**< 애드립 전면광고 뷰 컨트롤러 */
 @interface ALAdInterstitialViewController : UIViewController
 
-- (instancetype)initWithBannerEvent:(ALAdlibBannerEvent *)bannerEvent;
-- (instancetype)initWithWebUrl:(NSURL *)webUrl;
+- (instancetype)initWithBannerEvent:(ALAdlibBannerEvent *)bannerEvent
+                            session:(ADLibSession *)session;
 
 @property (nonatomic, weak) id <ALAdInterstitialControllerDelegate>delegate;
 @property (nonatomic, strong) UIColor *bgColor;

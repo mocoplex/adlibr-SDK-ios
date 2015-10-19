@@ -186,7 +186,7 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
     
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
     if (nativeAd) {
-        [_nativeAdTableManager didSelectAdCellForAd:nativeAd tableViewController:self];
+        [_nativeAdTableManager didSelectAdCellForAd:nativeAd presentingViewController:self];
     } else {
         // 광고가 아닌 셀 클릭 이벤트 처리.
     }
@@ -351,9 +351,14 @@ static NSString * const SimpleFeedListVideoAdCellIdentifier = @"ALExampleFeedVid
     self.adItemIndexList = indexList;
     
     // 네이티브 광고 키 값을 지정하여 헬퍼 객체를 생성합니다.
-    NSString *appKey = [ADLibSession adlibAppKey];
+    NSString *appKey = [ADLibMediator adlibAppKeyForIdentifier:@"adlibSampleKey"];
+    if (appKey == nil) {
+        return;
+    }
+    
+    ADLibSession *sharedSession = [AdlibManager sharedSingletonClass].adlibSharedSession;
     ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithTableView:self.tableView
-                                                                                      nativeAdKey:appKey
+                                                                                     adlibSession:sharedSession
                                                                                          delegate:self];
     self.nativeAdTableManager = nativeAdTableHelper;
     

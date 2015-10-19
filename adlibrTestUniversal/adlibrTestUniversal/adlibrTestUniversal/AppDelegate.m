@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <Adlib/Adlib.h>
+#import <Adlib/ADLibSDK.h>
 
 //#import "SubAdlibAdViewAdam.h"
 //#import "SubAdlibAdViewAdmob.h"
@@ -52,6 +52,8 @@
     if (adlibKey.length < 1) {
         adlibKey = nil;
     }
+    
+    [ADLibMediator setAdlibAppKey:ADLIB_APP_KEY forIdentifier:@"adlibSampleKey"];
     
     AdlibManager *sharedManager = [AdlibManager sharedSingletonClass];
     sharedManager.sessionDelegate = self;

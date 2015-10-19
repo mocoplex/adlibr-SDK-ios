@@ -22,6 +22,7 @@
  * @date 2014.12.15
  */
 - (void)layoutAdProperties:(ALNativeAd *)nativeAd loadContent:(BOOL)needToload;
+- (void)setMainImageViewContentMode:(UIViewContentMode)mode;
 
 @optional
 
