@@ -9,10 +9,10 @@
 adlibr integration library for iOS
 
 SDK version 4.1.4.0 (2015.10.19)
-> iOS 9 빌드 적용 
-> BitCode Compile 적용
-> ADLibSession 일부 클래스 메소드 제거
-> ALNativeAdTableHelper 관련 메소드 수정
+> iOS 9 빌드 적용 <br>
+> BitCode Compile 적용<br>
+> ADLibSession 일부 클래스 메소드 제거<br>
+> ALNativeAdTableHelper 관련 메소드 수정<br>
 
 SDK version 4.1.3.1 (2015.7.31)
 > 네이티브 지면 광고 지원 및 샘플 프로젝트 추가
