@@ -140,4 +140,10 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
 - (void)loadInterstitialAd:(UIViewController*)parent
               withDelegate:(id<AdlibManagerDelegate>)del;
 
+/**
+ *  전면 광고 뷰컨트롤러 종료 메소드
+ *  @return 요청 성공 여부 (서브뷰에서 정의 되지 않은 경우 NO 리턴)
+ */
+- (BOOL)closeInterstitialAd:(BOOL)animated;
+
 @end
