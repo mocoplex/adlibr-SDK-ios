@@ -13,10 +13,11 @@
 #import <Adlib/Adlib.h>
 #import "TadCore.h"
 
-@interface SubAdlibAdViewTAD : SubAdlibAdViewCore<TadDelegate>
+@interface SubAdlibAdViewTAD : SubAdlibAdViewCore <TadDelegate>
 {
     BOOL    bGotAd;
-    TadCore *ad;
 }
+
+@property (nonatomic, strong) TadCore *tadCore;
 
 @end

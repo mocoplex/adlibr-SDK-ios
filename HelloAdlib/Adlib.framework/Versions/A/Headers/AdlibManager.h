@@ -6,6 +6,7 @@
  */
 
 #import "SubAdlibAdViewCore.h"
+#import "ADLibSession.h"
 
 #define kAdlibDefaultBannerSize CGSizeMake(320, 50)
 
@@ -65,21 +66,6 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
 // 스케줄링 된 모든 전면광고 수신 실패시 호출되는 메소드.
 - (void)didFailToReceiveAllInterstitialAd;
 
-// full banner 수신 성공.
-- (void)didReceiveAdlibFullBanner:(UIView*)fullBanner;
-
-// full banner 수신 실패.
-- (void)didFailToReceiveAdlibFullBanner;
-
-// 팝배너 수신 성공시 호출되는 메소드.
-- (void)didReceiveAdlibPopAd;
-
-// 팝배너 수신 실패시 호출되는 메소드.
-- (void)didFailToReceiveAdlibPopAd;
-
-// 팝배너 닫힌 직후 호출되는 메소드.
-- (void)didCloseAdlibPopAd;
-
 // 실패 시 호출되는 메소드.
 - (void)failed;
 
@@ -93,6 +79,7 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
 @property (nonatomic, weak) id<AdlibManagerDelegate> delegate;
 @property (nonatomic, weak) id<AdlibSessionDelegate> sessionDelegate;
 
+
 /**
  * AdlibManager 전역 객체
  */
@@ -103,12 +90,13 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
  */
 - (void)linkWithAdlibKey:(NSString *)key;
 - (void)testModeLinkWithAdlibKey:(NSString *)key;
+- (void)unlink;
 
 - (void)setPlatform:(NSString*)name withClass:(Class)className;
-
 - (void)setLogging:(BOOL)logging;
 
 - (NSString*)getCurrentVersion;
+- (ADLibSession *)adlibSharedSession;
 
 /**
  * 띠 배너 관련 메소드

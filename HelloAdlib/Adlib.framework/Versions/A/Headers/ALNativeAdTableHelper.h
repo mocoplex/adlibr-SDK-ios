@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "ALNativeAd.h"
 #import "ALNativeAdRequest.h"
 
-@class ALNativeAdTableHelper;
+@class ALNativeAdTableHelper, ADLibSession;
 
 @protocol ALNativeAdTableHelperDelegate <NSObject>
 
@@ -37,10 +36,22 @@
  * @param delegate 광고 추가 / 실패 델리게이트
  * @date 2014.12.18
  */
-- (id)initWithTableView:(UITableView *)tableView
-            nativeAdKey:(NSString *)key
-               delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
+//- (id)initWithTableView:(UITableView *)tableView
+//            nativeAdKey:(NSString *)key
+//               delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
 
+
+/**
+ * 네이티브 광고 테이블 헬퍼 클래스 생성자
+ *
+ * @param tableView 테이블 뷰
+ * @param session 애드립세션 객체
+ * @param delegate 광고 추가 / 실패 델리게이트
+ * @date 2015.10.01
+ */
+- (id)initWithTableView:(UITableView *)tableView
+           adlibSession:(ADLibSession *)session
+               delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
 
 /**
  * 네이티브 광고 요청
@@ -124,10 +135,18 @@
  * 네이티브 광고 셀을 클릭 이벤트를 처리한다.
  *
  * @param adObject 해당 셀의 광고 객체
- * @param controller 요청한 UITableViewController
+ * @param controller 전면 비디오광고 뷰컨트롤러를 present하는데 사용되는 뷰컨트롤러
  * @date 2014.12.18
  */
 - (void)didSelectAdCellForAd:(ALNativeAd *)adObject
-         tableViewController:(UITableViewController *)controller;
+    presentingViewController:(UIViewController *)controller;
+
+/**
+ * 네이티브 광고 메인 컨텐츠 이미지 뷰의 리사이즈 모드를 설정
+ *
+ * @param mode 해당 셀의 광고 객체
+ * @date 2015.09.01
+ */
+- (void)setMainImageContentMode:(UIViewContentMode)mode;
 
 @end
