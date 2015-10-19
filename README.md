@@ -1,10 +1,9 @@
 프로젝트 설정 가이드 상세 페이지
 <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
-> iOS 9 ATS(App Transport Security) 관련 가이드 업데이트
-
-> XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)
-> XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요
-> 샘플 프로젝트 bitcode 설정은 기본 NO로 설정 (애드립 외 사용하는 플랫폼에서 모두 지원시 적용 가능)
+> iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
+> XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
+> XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
+> 샘플 프로젝트 bitcode 설정은 기본 NO로 설정 (애드립 외 사용하는 플랫폼에서 모두 지원시 적용 가능)<br>
 
 # adlibr-SDK-ios
 adlibr integration library for iOS
