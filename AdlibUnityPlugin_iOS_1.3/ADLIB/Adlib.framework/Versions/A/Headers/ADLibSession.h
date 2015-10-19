@@ -22,19 +22,16 @@ extern NSString * const ADLibSessionDidFailedLinkNotification;
 
 @end
 
+
 @interface ADLibSession : NSObject
 
 @property (nonatomic, weak) id<ADLibSessionDelegate> delegate;
+@property (nonatomic, copy, readonly) NSString *appKey;
 
 - (instancetype)initWithAdlibKey:(NSString *)appKey;
 - (instancetype)initTestSessionWithAdlibKey:(NSString *)appKey;
-
-+ (ADLibSession *)sharedSession;
-+ (void)setSharedSession:(ADLibSession *)session;
-
-+ (NSString *)adlibAppKey;
-+ (void)setDebugMode;
-
 - (void)linkSession;
+
++ (void)setDebugMode;
 
 @end
