@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import "ADLibSession.h"
+#import "SubAdlibAdViewCore.h"
 
 typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
 
@@ -40,9 +41,13 @@ typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
  */
 @protocol ADLibMediatorInterstitial <NSObject>
 
-- (void)ADLibMediatorInterstitialDidReceivedController:(UIViewController *)presentedViewController;
-- (void)ADLibMediatorInterstitialDidFailedWithError:(NSError *)error;
-- (void)ADLibMediatorInterstitialDismissScreen;
+- (void)ADLibMediatorInterstitial:(SubAdlibAdViewCore *)viewCore
+            didReceivedController:(UIViewController *)presentedViewController;
+
+- (void)ADLibMediatorInterstitial:(SubAdlibAdViewCore *)viewCore
+               didFailedWithError:(NSError *)error;
+
+- (void)ADLibMediatorInterstitialDismissScreen:(SubAdlibAdViewCore *)viewCore;
 
 @end
 

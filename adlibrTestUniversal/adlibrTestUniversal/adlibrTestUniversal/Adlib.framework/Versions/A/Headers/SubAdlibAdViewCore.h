@@ -61,13 +61,12 @@
 // 전면 광고 클릭 이벤트를 애드립 대시보드에 리포트
 - (void)reportInterstitialClickEvent;
 
-//
-+ (void)loadInterstitail:(UIViewController*)viewController;
-+ (void)loadInterstitial:(UIViewController*)viewController;
-+ (void)interstitialReceived:(NSString*)from;
-+ (void)interstitialFailed:(NSString*)from;
-+ (void)interstitialClosed:(NSString*)from;
-//
+/**
+ *  애드립 매니저에 의한 전면광고 강제 종료 요청 처리
+ *  @param animated 종료시 애니메이션 옵션
+ *  @return 해당 서브뷰에서 재정의 시 YES,
+ */
+- (BOOL)autoCloseInterstitialAd:(BOOL)animated;
 
 @property (nonatomic, strong) SubAdlibAdsView* view;
 @property (nonatomic, weak)   UIViewController* parentController;
