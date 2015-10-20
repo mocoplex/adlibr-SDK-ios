@@ -32,12 +32,12 @@
 		B0DB3F431B4E5FE700279CBC /* SimpleFeedListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F351B4E5FE700279CBC /* SimpleFeedListTableViewCell.m */; };
 		B0DB3F441B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */; };
 		B0DB3F451B4E5FE700279CBC /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */; };
-		B0E295A71BD4E70400F3A971 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E295A61BD4E70400F3A971 /* Adlib.framework */; settings = {ASSET_TAGS = (); }; };
 		B0E2C76B1B297EF8006F9BC3 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */; };
 		B0E2C76C1B297EF9006F9BC3 /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */; };
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
 		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
 		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
+		B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */; settings = {ASSET_TAGS = (); }; };
 		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
@@ -81,12 +81,12 @@
 		B0DB3F361B4E5FE700279CBC /* SimpleFeedListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFeedListTableViewCell.xib; sourceTree = "<group>"; };
 		B0DB3F371B4E5FE700279CBC /* SimpleFeedListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFeedListTableViewController.h; sourceTree = "<group>"; };
 		B0DB3F381B4E5FE700279CBC /* SimpleFeedListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFeedListTableViewController.m; sourceTree = "<group>"; };
-		B0E295A61BD4E70400F3A971 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0E2C7661B297EF8006F9BC3 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
 		B0E2C7671B297EF8006F9BC3 /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
 		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0E2C76A1B297EF8006F9BC3 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
+		B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -99,7 +99,7 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B0E295A71BD4E70400F3A971 /* Adlib.framework in Frameworks */,
+				B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
 			);
@@ -199,7 +199,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0E295A61BD4E70400F3A971 /* Adlib.framework */,
+				B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,

@@ -22,6 +22,24 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
     ADLIB_ADVIEW_VERTICAL_ALIGN_TOP    = 1,
 };
 
+typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
+    
+    ADLIB_MEDPLATFORM_ADMOB = 0,
+    ADLIB_MEDPLATFORM_ADAM,
+    ADLIB_MEDPLATFORM_ADMIXER,
+    ADLIB_MEDPLATFORM_CAULY,
+    ADLIB_MEDPLATFORM_INMOBI,
+    ADLIB_MEDPLATFORM_TAD,
+    ADLIB_MEDPLATFORM_SHALLWEAD,
+    ADLIB_MEDPLATFORM_IAD,
+    
+    ADLIB_MEDPLATFORM_ADHUB,
+    ADLIB_MEDPLATFORM_DOMOB,
+    ADLIB_MEDPLATFORM_MEDIBAAD,
+    ADLIB_MEDPLATFORM_MMEDIA,
+    ADLIB_MEDPLATFORM_NAVER,
+};
+
 @class AdlibManager;
 
 /**
@@ -92,7 +110,9 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
 - (void)testModeLinkWithAdlibKey:(NSString *)key;
 - (void)unlink;
 
+- (BOOL)registerPlatform:(ADLIB_MEDPLATFORM)ptype withClass:(Class)className;
 - (void)setPlatform:(NSString*)name withClass:(Class)className;
+
 - (void)setLogging:(BOOL)logging;
 
 - (NSString*)getCurrentVersion;

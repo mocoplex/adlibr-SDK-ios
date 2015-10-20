@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) AdMixerInterstitial *adMixerInters;
 
+
 @end
 
 @implementation SubAdlibAdAdmixer
@@ -26,6 +27,7 @@
 // 전면광고를 사용하기 위해 정적 객체로 사용합니다.
 + (BOOL)isStaticObject
 {
+    ///[AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADAM cls:[AdamAdapter class] appCode:@"DAN-1hux8dwpvj581"];
     //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADAM cls:[AdamAdapter class] appCode:@"adam_app_code"];
     //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB cls:[AdmobAdapter class] appCode:@"admob_app_code"];
     //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_ADMOB_ECPM cls:[AdmobECpmAdapter class] appCode:@"admob_app_code"
@@ -37,8 +39,7 @@
     //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_IAD cls:[IAdAdapter class] appCode:@”iad_app_code"];
     //    [AdMixer registerUserAdAdapterNameWithAppCode:AMA_FACEBOOK cls:[FacebookAdapter class] appCode:@”facebook_app_code"];
     
-    
-    [AdMixer setLogLevel:AXLogLevelDebug]; // 로그 레벨 설정
+    //[AdMixer setLogLevel:AXLogLevelDebug]; // 로그 레벨 설정
     
     return YES;
 }
@@ -62,10 +63,11 @@
     CGSize adViewSize = kAdMixerBannerViewSize;
     CGPoint adViewOrigin = [self getAdMixerViewOrigin];
     
-    _adView = [[AdMixerView alloc] initWithFrame:CGRectMake(adViewOrigin.x,
-                                                            adViewOrigin.y,
-                                                            adViewSize.width,
-                                                            adViewSize.height)];
+    AdMixerView *adView = [[AdMixerView alloc] initWithFrame:CGRectMake(adViewOrigin.x,
+                                                                        adViewOrigin.y,
+                                                                        adViewSize.width,
+                                                                        adViewSize.height)];
+    self.adView = adView;
     _adView.delegate = self;
     _adView.adSize = AXBannerSize_Default; // 배너 크기 요청 조절
     
@@ -112,6 +114,17 @@
     }
 }
 
+// 애드립 매니저에 의한 전면광고 강제 종료 요청 처리
+- (BOOL)autoCloseInterstitialAd:(BOOL)animated
+{
+    [self.adMixerInters close];
+    
+    self.adMixerInters.delegate = nil;
+    self.adMixerInters = nil;
+    
+    return YES;
+}
+
 // 해당 플래폼 광고에 전면광고 요청을 처리합니다.
 - (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController
 {
@@ -120,7 +133,7 @@
     
     AdMixerInterstitial * interstitial = [[AdMixerInterstitial alloc] init];
     self.adMixerInters = interstitial;
-    
+
     interstitial.delegate = self;
     self.parentController = viewController;
     
