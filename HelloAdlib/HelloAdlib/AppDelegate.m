@@ -27,7 +27,6 @@
 //#import "SubAdlibAdViewUPlusAD.h"
 //#import "SubAdlibAdViewMedibaAd.h"
 //#import "SubAdlibAdViewMMedia.h"
-//#import <MillennialMedia/MMSDK.h>
 
 #define ADLIB_APP_KEY @"550787410cf2833915d71f3b" // 애드립에서 발급받은 키를 입력해주세요.
 
@@ -106,21 +105,20 @@
     AdlibManager *sharedManager = [AdlibManager sharedSingletonClass];
     sharedManager.sessionDelegate = self;
     
-    // 실제 구현된 광고 뷰를 애드립 매니저에 연결합니다.
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADAM" withClass:[SubAdlibAdViewAdam class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADMOB" withClass:[SubAdlibAdViewAdmob class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"CAULY" withClass:[SubAdlibAdViewCauly class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"TAD" withClass:[SubAdlibAdViewTAD class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"IAD" withClass:[SubAdlibAdViewiAd class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"NAVER" withClass:[SubAdlibAdViewNaverAdPost class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"SHALLWEAD" withClass:[SubAdlibAdViewShallWeAd class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"INMOBI" withClass:[SubAdlibAdViewInmobi class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"DOMOB" withClass:[SubAdlibAdViewDomob class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"ADHUB" withClass:[SubAdlibAdViewAdHub class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"UPLUSAD" withClass:[SubAdlibAdViewUPlusAD class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"MEDIBAAD" withClass:[SubAdlibAdViewMedibaAd class]];
-//    [[AdlibManager sharedSingletonClass] setPlatform:@"MMEDIA" withClass:[SubAdlibAdViewMMedia class]];
-//    [MMSDK initialize];  // MillennialMedia v5.2.0 이상을 사용하시려면 반드시 초기화를 호출해 주세요.
+    // 사용할 플랫폼을 등록 후 쓰지 않을 광고 플랫폼은 삭제해주세요.
+    
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_ADMOB withClass:[SubAdlibAdViewAdmob class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_ADAM withClass:[SubAdlibAdViewAdam class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_ADMIXER withClass:[SubAdlibAdAdmixer class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_CAULY withClass:[SubAdlibAdViewCauly class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_INMOBI withClass:[SubAdlibAdViewInmobi class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_TAD withClass:[SubAdlibAdViewTAD class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_SHALLWEAD withClass:[SubAdlibAdViewShallWeAd Class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_IAD withClass:[SubAdlibAdViewiAd Class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_ADHUB withClass:[SubAdlibAdViewAdHub Class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_DOMOB withClass:[SubAdlibAdViewDomob Class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_MEDIBAAD withClass:[SubAdlibAdViewMedibaAd Class]];
+    //[sharedManager registerPlatform:ADLIB_MEDPLATFORM_NAVER withClass:[SubAdlibAdViewNaverAdPost Class]];
     
     // SDK 로그 메시지를 출력하도록 설정
     [sharedManager setLogging:NO];

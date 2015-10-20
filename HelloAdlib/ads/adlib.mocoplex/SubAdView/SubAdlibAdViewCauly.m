@@ -6,13 +6,19 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 3.0.4
+ * confirmed compatible with cauly SDK 3.0.6
  */
 
 #import "SubAdlibAdViewCauly.h"
 
 // CAULY의 APP 아이디를 설정합니다.
 #define CAULY_ID @"CAULY_ID"
+
+@interface SubAdlibAdViewCauly () <CaulyInterstitialAdDelegate>
+
+@property (nonatomic, strong) CaulyInterstitialAd *interstitialAd;
+
+@end
 
 @implementation SubAdlibAdViewCauly
 
@@ -22,61 +28,40 @@
     return YES;
 }
 
-- (int)getCenterPos
-{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    int w,w2=0;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
-    w2 = 320;
-    
-    return (w-w2)/2;
-}
-
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
-    
-    static BOOL bIninintedObject = NO;
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
         iPad = NO;
     else
         iPad = YES;
     
-    CaulyAdSetting* ads = [CaulyAdSetting globalSetting];
-    [CaulyAdSetting setLogLevel:CaulyLogLevelRelease];
-    
-    ads.appCode = CAULY_ID;
-    ads.animType = CaulyAnimNone;
-    
-    if(!bIninintedObject)
-    {
-        ad = [CaulyAdView caulyAdViewWithController:parent];
-        [self.view addSubview:ad];
+    if (_adView == nil) {
+        CaulyAdSetting* ads = [CaulyAdSetting globalSetting];
+        [CaulyAdSetting setLogLevel:CaulyLogLevelRelease];
+        
+        ads.appCode = CAULY_ID;
+        ads.animType = CaulyAnimNone;
+        ads.reloadTime = CaulyReloadTime_120;
+        ads.useDynamicReloadTime = NO;
+        
+        CaulyAdView *ad = [[CaulyAdView alloc] initWithParentViewController:parent];
+        self.adView = ad;
         ad.delegate = self;
         ad.localSetting = ads;
-        
-        bIninintedObject = YES;
+        [self.view addSubview:_adView];
     }
     
     [self queryAd];
-    
-    [ad startBannerAdRequest];
+    [_adView startBannerAdRequest];
 }
 
 - (void)clearAdView
 {
-    [ad stopAdRequest];
+    if (_adView) {
+        [_adView stopAdRequest];
+    }
     
     [super clearAdView];
 }
@@ -85,76 +70,42 @@
 {
     [super orientationChanged];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+    int w = 320;
+    int h = 48;
     
-    int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
+    CGFloat originX = 0;
+    originX = (self.view.bounds.size.width - w)/2;
+    
+    CGFloat originY = self.view.bounds.size.height - h;
+    if (originY < 0) {
+        originY = 0;
     }
     
-    int w2 = 320;
-    int h2 = 48;
-    
-    if([self isPortrait])
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
-    else
-    {
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
-    }
-}
-
-// Banner AD API
-#pragma mark - CaulyAdViewDelegate
-
-// 광고 정보 수신 성공
-- (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd {
-    
-    if(isChargeableAd)
-    {
-        [self gotAd];
-    }
-}
-
-// 광고 정보 수신 실패
-- (void)didFailToReceiveAd:(CaulyAdView *)adView errorCode:(int)errorCode errorMsg:(NSString*)errorMsg {
-    [self failed];
+    _adView.frame = CGRectMake(originX, originY, w, h);
 }
 
 - (CGSize)size
 {
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
-    int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
-    return CGSizeMake(w, 48);
+    return CGSizeMake(320, 48);
 }
 
+// 애드립 매니저에 의한 전면광고 강제 종료 요청 처리
+- (BOOL)autoCloseInterstitialAd:(BOOL)animated
+{
+    [self.interstitialAd close];
+    
+    self.interstitialAd.delegate =nil;
+    self.interstitialAd = nil;
+    
+    return YES;
+}
 
-+ (void)loadInterstitail:(UIViewController*)viewController
+- (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController
 {
     // 아이패드는 전면배너를 지원하지 않는다는 메시지만 출력되며, fail함수가 호출되지 않아, 실패를 알리고 return 시킨다.
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        [self interstitialFailed:@"cauly"];
+        [self subAdlibViewInterstitialFailed:@"cauly"];
         return;
     }
     
@@ -164,31 +115,58 @@
     ads.appCode = CAULY_ID;
     ads.animType = CaulyAnimNone;
     
-    CaulyInterstitialAd* _interstitialAd = [[[CaulyInterstitialAd alloc] initWithParentViewController:viewController] autorelease];
-    _interstitialAd.delegate = self;
-    [_interstitialAd startInterstitialAdRequest];
+    CaulyInterstitialAd *interstitialAd = [[CaulyInterstitialAd alloc] initWithParentViewController:viewController];
+    self.interstitialAd = interstitialAd;
+    self.interstitialAd.delegate = self;
+    
+    [self.interstitialAd startInterstitialAdRequest];
 }
 
-+ (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd
+
+// Banner AD API
+#pragma mark - CaulyAdViewDelegate
+
+// 광고 정보 수신 성공
+- (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd {
+    
+    NSLog(@"CaulyAdView didReceiveAd : %xd", isChargeableAd);
+    [self gotAd];
+}
+
+// 광고 정보 수신 실패
+- (void)didFailToReceiveAd:(CaulyAdView *)adView errorCode:(int)errorCode errorMsg:(NSString*)errorMsg {
+    
+    NSLog(@"CaulyAdView requestDidFailed : %@", errorMsg);
+    [self failed];
+}
+
+#pragma mark -
+
+- (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd
 {
-    [interstitialAd show]; // [_interstitialAd show];를 호출하지 않으면 Interstitial AD가 보여지지 않음
+    // [_interstitialAd show];를 호출하지 않으면 Interstitial AD가 보여지지 않음
+    [interstitialAd show];
+    
     // 전면광고 성공을 알린다.
-    [self interstitialReceived:@"cauly"];
-    interstitialAd = nil;
+    [self subAdlibViewInterstitialReceived:@"cauly"];
 }
 
-+ (void)didFailToReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd errorCode:(int)errorCode errorMsg:(NSString *)errorMsg
+- (void)didFailToReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd errorCode:(int)errorCode errorMsg:(NSString *)errorMsg
 {
     // 전면광고 실패를 알린다.
-    [self interstitialFailed:@"cauly"];
-    interstitialAd = nil;
+    [self subAdlibViewInterstitialFailed:@"cauly"];
+    
+    self.interstitialAd.delegate = nil;
+    self.interstitialAd = nil;
 }
 
-+ (void)didCloseInterstitialAd:(CaulyInterstitialAd *)interstitialAd
+- (void)didCloseInterstitialAd:(CaulyInterstitialAd *)interstitialAd
 {
     // 전면광고 닫힘을 알린다.
-    [self interstitialClosed:@"cauly"];
-    interstitialAd = nil;
+    [self subAdlibViewInterstitialClosed:@"cauly"];
+    
+    self.interstitialAd.delegate = nil;
+    self.interstitialAd = nil;
 }
 
 

@@ -6,17 +6,18 @@
  */
 
 /*
- * confirmed compatible with cauly SDK 3.0.4
+ * confirmed compatible with cauly SDK 3.0.6
  */
 
 #import <Adlib/Adlib.h>
 #import "CaulyAdView.h"
 #import "CaulyInterstitialAd.h"
 
-@interface SubAdlibAdViewCauly : SubAdlibAdViewCore<CaulyAdViewDelegate>
+@interface SubAdlibAdViewCauly : SubAdlibAdViewCore <CaulyAdViewDelegate>
 {
-    CaulyAdView *ad;
     BOOL iPad;
 }
+
+@property (nonatomic, strong) CaulyAdView *adView;
 
 @end
