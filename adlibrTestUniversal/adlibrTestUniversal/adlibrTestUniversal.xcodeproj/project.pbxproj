@@ -37,7 +37,7 @@
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
 		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
 		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
-		B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */; settings = {ASSET_TAGS = (); }; };
+		B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */; };
 		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
