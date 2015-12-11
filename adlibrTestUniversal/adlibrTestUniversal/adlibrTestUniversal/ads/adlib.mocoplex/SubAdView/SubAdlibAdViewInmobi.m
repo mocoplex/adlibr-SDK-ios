@@ -194,7 +194,7 @@ static BOOL bInmobiInitialized = NO;
 #pragma mark - Banner Request Notifications
 
 // Sent when an ad request was successful
-- (void)bannerDidReceiveAd:(IMBanner *)banner {
+-(void)bannerDidFinishLoading:(IMBanner*)banner {
     
     NSLog(@"banner receiveAd inmobi");
     
@@ -206,7 +206,7 @@ static BOOL bInmobiInitialized = NO;
 /**
  * The banner has failed to load with some error.
  */
-- (void)banner:(IMBanner*)banner didFailToLoadWithError:(IMRequestStatus*)error {
+-(void)banner:(IMBanner*)banner didFailToLoadWithError:(IMRequestStatus*)error {
     
     NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %zd, message: %@", [error code], [error localizedDescription]];
     NSLog(@"%@", errorMessage);
@@ -215,14 +215,55 @@ static BOOL bInmobiInitialized = NO;
     [self failed];
 }
 
-- (void)bannerWillPresentScreen:(IMBanner *)banner
-{
-    ;
+/**
+ * The banner was interacted with.
+ */
+-(void)banner:(IMBanner*)banner didInteractWithParams:(NSDictionary*)params {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"params : %@", params);
 }
 
-- (void)bannerDidDismissScreen:(IMBanner *)banner
-{
-    ;
+/**
+ * The user would be taken out of the application context.
+ */
+-(void)userWillLeaveApplicationFromBanner:(IMBanner*)banner {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ * The banner would be presenting a full screen content.
+ */
+-(void)bannerWillPresentScreen:(IMBanner*)banner {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ * The banner has finished presenting screen.
+ */
+-(void)bannerDidPresentScreen:(IMBanner*)banner {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ * The banner will start dismissing the presented screen.
+ */
+-(void)bannerWillDismissScreen:(IMBanner*)banner {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ * The banner has dismissed the presented screen.
+ */
+-(void)bannerDidDismissScreen:(IMBanner*)banner {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+/**
+ * The user has completed the action to be incentivised with.
+ */
+-(void)banner:(IMBanner*)banner rewardActionCompletedWithRewards:(NSDictionary*)rewards {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"rewards : %@", rewards);
 }
 
 #pragma mark Interstitial Interaction Notifications
