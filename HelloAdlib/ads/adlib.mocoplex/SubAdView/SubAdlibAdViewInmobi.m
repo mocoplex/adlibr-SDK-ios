@@ -6,62 +6,60 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 4.4.1
+ * confirmed compatible with Inmobi SDK 5.1.0
  */
 
 #import "SubAdlibAdViewInmobi.h"
 
+#import "IMSdk.h"
+#import "IMBanner.h"
+#import "IMBannerDelegate.h"
+#import "IMInterstitial.h"
+#import "IMInterstitialDelegate.h"
+#import "IMCommonConstants.h"
+
 // 여기에 인모비에서 발급받은 key 를 입력하세요.
-#define INMOBI_ID @"INMOBI"
-#define INMOBI_INTERSTITIAL_ID @"INMOBI_INTERSTITIAL"
+#define INMOBI_INITIALIZE   @"4028cb8b2c3a0b45012c406824e800ba"
+#define INMOBI_BANNER           1447912324502
+#define INMOBI_INTERSTITIAL     1446377525790
+
+#define kBannerSizePhone CGSizeMake(320, 50)
+#define kBannerSizePad   CGSizeMake(728, 90)
+
+static BOOL bInmobiInitialized = NO;
+
+@interface SubAdlibAdViewInmobi () <IMBannerDelegate, IMInterstitialDelegate>
+
+@property (nonatomic, strong) IMBanner *adView;
+@property (nonatomic, strong) IMInterstitial *interstitial;
+
+@end
+
 
 @implementation SubAdlibAdViewInmobi
 
 // 객체를 전역적으로 하나만 생성합니다.
 + (BOOL)isStaticObject
 {
+    if(!bInmobiInitialized)
+    {
+        // Inmobi Initialize
+        [IMSdk initWithAccountID:INMOBI_INITIALIZE];
+        [IMSdk setLogLevel:kIMSDKLogLevelDebug];
+        bInmobiInitialized = YES;
+    }
+    
     return YES;
-}
-
-- (int)getCenterPos
-{
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    int w,w2=0;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
-    if (iPad) {
-        w2 = 728;
-    }
-    else
-    {
-        w2 = 320;
-    }
-    
-    return (w-w2)/2;
 }
 
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
     
-    static BOOL bIninintedObject = NO;
-    
-    if(!bIninintedObject)
-    {
-        // Inmobi Initialize
-        [InMobi initialize:INMOBI_ID];
-    
+    if (_adView == nil) {
+        
         self.view.autoresizesSubviews = NO;
-    
+        
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
             iPad = NO;
         else
@@ -70,29 +68,38 @@
         // only iPhone size
         iPad = NO;
         
-        if(iPad)
-            ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 728, 90) appId:INMOBI_ID adSize:IM_UNIT_728x90];
-        else
-            ad = [[IMBanner alloc] initWithFrame:CGRectMake([self getCenterPos], 0, 320, 50) appId:INMOBI_ID adSize:IM_UNIT_320x50];
-    
-        ad.delegate = self;
-        ad.refreshInterval = 20;
-    
-        [self.view addSubview:ad];
+        IMBanner *bannerView = nil;
+        CGPoint origin = [self getInmobiViewOrigin];
         
-        bIninintedObject = YES;
+        if(iPad) {
+            bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePad.width, kBannerSizePad.height)
+                                             placementId:INMOBI_BANNER
+                                                delegate:self];
+            
+        } else {
+            
+            bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePhone.width, kBannerSizePhone.height)
+                                             placementId:INMOBI_BANNER
+                                                delegate:self];
+        }
+        self.adView = bannerView;
+        [self.view addSubview:_adView];
     }
+    
+    _adView.delegate = self;
+    //_adView.refreshInterval = 10.;
     
     [self queryAd];
     
-    [ad loadBanner];
+    [_adView load];
 }
 
 - (void)clearAdView
 {
-    if(ad != nil)
+    if(_adView != nil)
     {
-        [ad stopLoading];
+        _adView.delegate = nil;
+        self.adView = nil;
     }
     
     [super clearAdView];
@@ -100,113 +107,159 @@
 
 - (CGSize)size
 {
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    
-    int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
-    }
-    
     if(iPad)
-        return CGSizeMake(w, 90);
+        return kBannerSizePad;
     else
-        return CGSizeMake(w, 50);
+        return kBannerSizePhone;
 }
 
 - (void)orientationChanged
 {
     [super orientationChanged];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+    CGFloat width  = kBannerSizePad.width;
+    CGFloat height = kBannerSizePad.height;
     
-    int w;
-    if([self isPortrait])
-    {
-        w = screenWidth;
-    }
-    else
-    {
-        w = screenHeight;
+    if (!iPad) {
+        width = kBannerSizePhone.width;
+        height = kBannerSizePhone.height;
     }
     
-    int w2;
-    if (iPad)
-        w2 = 728;
-    else
-        w2 = 320;
+    CGPoint origin = [self getInmobiViewOrigin];
+    CGFloat ptX = origin.x;
     
-    int h2 = 90;
-    if(!iPad)
-        h2 = 50;
-    
-    if([self isPortrait])
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
+    if(iPad)
+        _adView.frame = CGRectMake(ptX, 0, width, height);
     else
-        ad.frame = CGRectMake([self getCenterPos], 0, w2, h2);
+        _adView.frame = CGRectMake(ptX, 0, width, height);
 }
 
+- (CGPoint)getInmobiViewOrigin
+{
+    CGFloat containerViewWidth, adViewWidth = 0;
+    
+    containerViewWidth = self.view.bounds.size.width;
+    
+    if (iPad) {
+        adViewWidth = kBannerSizePad.width;
+    }
+    else
+    {
+        adViewWidth = kBannerSizePhone.width;
+    }
+    
+    CGFloat originX = (containerViewWidth-adViewWidth)/2;
+    if (originX < 0) {
+        originX = 0;
+    }
+    
+    CGFloat containerViewHeight, adViewHeight = 0;
+    
+    containerViewHeight = self.view.bounds.size.height;
+    
+    if (iPad) {
+        adViewHeight = kBannerSizePad.height;
+    }
+    else
+    {
+        adViewHeight = kBannerSizePhone.height;
+    }
+    
+    CGFloat originY = (containerViewHeight-adViewHeight)/2;
+    if (originY < 0) {
+        originY = 0;
+    }
+    
+    return CGPointMake(originX, originY);
+}
+
+- (void)subAdlibViewLoadInterstitial:(UIViewController*)viewController
+{
+    if(!bInmobiInitialized)
+    {
+        // Inmobi Initialize
+        [IMSdk initWithAccountID:INMOBI_INITIALIZE];
+        [IMSdk setLogLevel:kIMSDKLogLevelDebug];
+        bInmobiInitialized = YES;
+    }
+    
+    IMInterstitial *interstitial = [[IMInterstitial alloc] initWithPlacementId:INMOBI_INTERSTITIAL
+                                                                      delegate:self];
+    self.interstitial = interstitial;
+    
+    interstitial.delegate = self;
+    [interstitial load];
+}
 
 #pragma mark - Banner Request Notifications
 
 // Sent when an ad request was successful
 - (void)bannerDidReceiveAd:(IMBanner *)banner {
     
+    NSLog(@"banner receiveAd inmobi");
+    
     // 화면에 광고를 보여줍니다.
     [self queryAd];
     [self gotAd];
 }
 
-// Sent when the ad request failed. Please check the error code and
-// localizedDescription for more information on wy this occured
-- (void)banner:(IMBanner *)banner didFailToReceiveAdWithError:(IMError *)error {
+/**
+ * The banner has failed to load with some error.
+ */
+- (void)banner:(IMBanner*)banner didFailToLoadWithError:(IMRequestStatus*)error {
     
-    //NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %d, message: %@", [error code], [error localizedDescription]];
-    //NSLog(@"%@", errorMessage);
+    NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %zd, message: %@", [error code], [error localizedDescription]];
+    NSLog(@"%@", errorMessage);
     
     // 광고 수신에 실패하였습니다.
     [self failed];
 }
 
-+ (void)loadInterstitail:(UIViewController*)viewController
+- (void)bannerWillPresentScreen:(IMBanner *)banner
 {
-    [InMobi initialize:INMOBI_INTERSTITIAL_ID];
-    
-    IMInterstitial *interstitial = [[IMInterstitial alloc] initWithAppId:INMOBI_INTERSTITIAL_ID];
-    interstitial.delegate = self;
-    [interstitial loadInterstitial];
+    ;
 }
 
-+ (void)interstitialDidReceiveAd:(IMInterstitial *)ad
+- (void)bannerDidDismissScreen:(IMBanner *)banner
 {
+    ;
+}
+
+#pragma mark Interstitial Interaction Notifications
+
+/**
+ * The interstitial has finished loading
+ */
+- (void)interstitialDidFinishLoading:(IMInterstitial*)interstitial {
+    
     // 전면광고 성공을 알린다.
-    [self interstitialReceived:@"inmobi"];
+    [self subAdlibViewInterstitialReceived:@"inmobi"];
     
-    [ad presentInterstitialAnimated:YES];
+    [interstitial showFromViewController:self.parentController
+                           withAnimation:kIMInterstitialAnimationTypeCoverVertical];
 }
 
-+ (void)interstitial:(IMInterstitial *)ad didFailToReceiveAdWithError:(IMError *)error
-{
-    
-    //NSString *errorMessage = [NSString stringWithFormat:@"Error code: %d, message: %@", [error code], [error localizedDescription]];
-    //NSLog(@"%@", errorMessage);
+/**
+ * The interstitial has failed to load with some error.
+ */
+- (void)interstitial:(IMInterstitial*)interstitial didFailToLoadWithError:(IMRequestStatus*)error {
     
     // 전면광고 실패를 알린다.
-    [self interstitialFailed:@"inmobi"];
+    [self subAdlibViewInterstitialFailed:@"inmobi"];
+    self.interstitial = nil;
 }
 
-+ (void)interstitialDidDismissScreen:(IMInterstitial *)ad
+- (void)interstitialDidDismissScreen:(IMInterstitial *)ad
 {
     // 전면광고 닫힘을 알린다.
-    [self interstitialClosed:@"inmobi"];
+    [self subAdlibViewInterstitialClosed:@"inmobi"];
+    self.interstitial = nil;
+}
+
+- (void)interstitialWillLeaveApplication:(IMInterstitial *)ad
+{
+    // 전면 광고 클릭 리포팅
+    [self reportInterstitialClickEvent];
 }
 
 @end

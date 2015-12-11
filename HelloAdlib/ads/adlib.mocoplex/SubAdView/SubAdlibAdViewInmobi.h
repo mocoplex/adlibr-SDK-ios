@@ -5,21 +5,17 @@
  * Licensed under the BSD open source license.
  */
 
+
 /*
- * confirmed compatible with Inmobi SDK 4.4.1
+ * confirmed compatible with Inmobi SDK 5.1.0
  */
 
 #import <UIKit/UIKit.h>
-#import "IMBanner.h"
-#import "IMBannerDelegate.h"
-#import "IMInterstitial.h"
-#import "IMInterstitialDelegate.h"
 #import <Adlib/Adlib.h>
 
-@interface SubAdlibAdViewInmobi : SubAdlibAdViewCore<IMBannerDelegate>
+@interface SubAdlibAdViewInmobi : SubAdlibAdViewCore
 {
     BOOL    iPad;
-    IMBanner *ad;
 }
 
 @end
