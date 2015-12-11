@@ -6,45 +6,55 @@
  */
 
 /*
- * confirmed compatible with Inmobi SDK 4.5.1
+ * confirmed compatible with Inmobi SDK 5.1.0
  */
 
 #import "SubAdlibAdViewInmobi.h"
 
+#import "IMSdk.h"
+#import "IMBanner.h"
+#import "IMBannerDelegate.h"
+#import "IMInterstitial.h"
+#import "IMInterstitialDelegate.h"
+#import "IMCommonConstants.h"
+
 // 여기에 인모비에서 발급받은 key 를 입력하세요.
-#define INMOBI_ID              @"INSERT_YOUR_INMOBI_ID"
-#define INMOBI_INTERSTITIAL_ID INMOBI_ID
+#define INMOBI_INITIALIZE   @"4028cb8b2c3a0b45012c406824e800ba"
+#define INMOBI_BANNER           1447912324502
+#define INMOBI_INTERSTITIAL     1446377525790
 
 #define kBannerSizePhone CGSizeMake(320, 50)
 #define kBannerSizePad   CGSizeMake(728, 90)
 
 static BOOL bInmobiInitialized = NO;
 
-@interface SubAdlibAdViewInmobi () <IMInterstitialDelegate>
+@interface SubAdlibAdViewInmobi () <IMBannerDelegate, IMInterstitialDelegate>
 
+@property (nonatomic, strong) IMBanner *adView;
 @property (nonatomic, strong) IMInterstitial *interstitial;
 
 @end
+
 
 @implementation SubAdlibAdViewInmobi
 
 // 객체를 전역적으로 하나만 생성합니다.
 + (BOOL)isStaticObject
 {
+    if(!bInmobiInitialized)
+    {
+        // Inmobi Initialize
+        [IMSdk initWithAccountID:INMOBI_INITIALIZE];
+        [IMSdk setLogLevel:kIMSDKLogLevelDebug];
+        bInmobiInitialized = YES;
+    }
+    
     return YES;
 }
 
 - (void)query:(UIViewController*)parent
 {
     [super query:parent];
-    
-    if(!bInmobiInitialized)
-    {
-        // Inmobi Initialize
-        [InMobi initialize:INMOBI_ID];
-        [InMobi setLogLevel:IMLogLevelNone]; // IMLogLevelDebug (test mode)
-        bInmobiInitialized = YES;
-    }
     
     if (_adView == nil) {
         
@@ -61,33 +71,35 @@ static BOOL bInmobiInitialized = NO;
         IMBanner *bannerView = nil;
         CGPoint origin = [self getInmobiViewOrigin];
         
-        if(iPad)
+        if(iPad) {
             bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePad.width, kBannerSizePad.height)
-                                                   appId:INMOBI_ID
-                                                  adSize:IM_UNIT_728x90];
-        else
+                                             placementId:INMOBI_BANNER
+                                                delegate:self];
+            
+        } else {
+            
             bannerView = [[IMBanner alloc] initWithFrame:CGRectMake(origin.x, origin.y, kBannerSizePhone.width, kBannerSizePhone.height)
-                                                   appId:INMOBI_ID
-                                                  adSize:IM_UNIT_320x50];
-        
+                                             placementId:INMOBI_BANNER
+                                                delegate:self];
+        }
         self.adView = bannerView;
         [self.view addSubview:_adView];
     }
     
-    _adView.refreshInterval = 20;
     _adView.delegate = self;
+    //_adView.refreshInterval = 10.;
+    
     [self queryAd];
     
-    [_adView loadBanner];
+    [_adView load];
 }
 
 - (void)clearAdView
 {
     if(_adView != nil)
     {
-        _adView.refreshInterval = REFRESH_INTERVAL_OFF;
         _adView.delegate = nil;
-        [_adView stopLoading];
+        self.adView = nil;
     }
     
     [super clearAdView];
@@ -166,16 +178,17 @@ static BOOL bInmobiInitialized = NO;
     if(!bInmobiInitialized)
     {
         // Inmobi Initialize
-        [InMobi initialize:INMOBI_ID];
-        [InMobi setLogLevel:IMLogLevelDebug];
+        [IMSdk initWithAccountID:INMOBI_INITIALIZE];
+        [IMSdk setLogLevel:kIMSDKLogLevelDebug];
         bInmobiInitialized = YES;
     }
     
-    IMInterstitial *interstitial = [[IMInterstitial alloc] initWithAppId:INMOBI_INTERSTITIAL_ID];
+    IMInterstitial *interstitial = [[IMInterstitial alloc] initWithPlacementId:INMOBI_INTERSTITIAL
+                                                                      delegate:self];
     self.interstitial = interstitial;
     
     interstitial.delegate = self;
-    [interstitial loadInterstitial];
+    [interstitial load];
 }
 
 #pragma mark - Banner Request Notifications
@@ -190,9 +203,10 @@ static BOOL bInmobiInitialized = NO;
     [self gotAd];
 }
 
-// Sent when the ad request failed. Please check the error code and
-// localizedDescription for more information on wy this occured
-- (void)banner:(IMBanner *)banner didFailToReceiveAdWithError:(IMError *)error {
+/**
+ * The banner has failed to load with some error.
+ */
+- (void)banner:(IMBanner*)banner didFailToLoadWithError:(IMRequestStatus*)error {
     
     NSString *errorMessage = [NSString stringWithFormat:@"Loading ad failed. Error code: %zd, message: %@", [error code], [error localizedDescription]];
     NSLog(@"%@", errorMessage);
@@ -211,22 +225,25 @@ static BOOL bInmobiInitialized = NO;
     ;
 }
 
-- (void)interstitialDidReceiveAd:(IMInterstitial *)ad
-{
-    if (ad.state == kIMInterstitialStateReady) {
-        
-        // 전면광고 성공을 알린다.
-        [self subAdlibViewInterstitialReceived:@"inmobi"];
-        [ad presentInterstitialAnimated:YES];
-        
-    } else {
-        [self subAdlibViewInterstitialFailed:@"inmobi"];
-        self.interstitial = nil;
-    }
+#pragma mark Interstitial Interaction Notifications
+
+/**
+ * The interstitial has finished loading
+ */
+- (void)interstitialDidFinishLoading:(IMInterstitial*)interstitial {
+    
+    // 전면광고 성공을 알린다.
+    [self subAdlibViewInterstitialReceived:@"inmobi"];
+    
+    [interstitial showFromViewController:self.parentController
+                           withAnimation:kIMInterstitialAnimationTypeCoverVertical];
 }
 
-- (void)interstitial:(IMInterstitial *)ad didFailToReceiveAdWithError:(IMError *)error
-{
+/**
+ * The interstitial has failed to load with some error.
+ */
+- (void)interstitial:(IMInterstitial*)interstitial didFailToLoadWithError:(IMRequestStatus*)error {
+    
     // 전면광고 실패를 알린다.
     [self subAdlibViewInterstitialFailed:@"inmobi"];
     self.interstitial = nil;
