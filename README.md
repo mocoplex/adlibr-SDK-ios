@@ -3,14 +3,14 @@
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
-> 샘플 프로젝트 bitcode 설정은 기본 NO로 설정 (애드립 외 사용하는 플랫폼에서 모두 지원시 적용 가능)<br>
+> 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
 SDK version 4.1.4.0 (2015.10.19)
 > iOS 9 빌드 적용 <br>
-> BitCode Compile 적용<br>
+> BitCode Compile 미적용 버전 (필요시 개별요청)<br>
 > ADLibSession 일부 클래스 메소드 제거<br>
 > ALNativeAdTableHelper 관련 메소드 수정<br>
 
