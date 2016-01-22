@@ -37,8 +37,8 @@
 /**
  *  애드립 미디에이션 광고 컨트롤 클래스
  *
- *  @notice 현재는 전면광고 미디에이션만 지원 (beta 버전 지원기능)
- *          
+ *  @notice 현재는 지원 기능 (beta 버전 지원기능)
+ *  - 애드립 전면광고 및 전면광고 미디에이션
  */
 @interface ADLibMediator : NSObject <ADLibMediatorInterstitial> {
     
@@ -58,6 +58,12 @@
  *  별도의 세션 정보를 가져오는 과정을 생략할 수 있다 (link method 호출 생략가능)
  */
 - (instancetype)initWithAdlibSession:(ADLibSession *)session;
+
+/**
+ *  애드립 키와 세션 설정 정보를 가지고 객체를 생성
+ *  추가로 link 메소드를 호출해 세션정보를 수신한 이후 사용할 수 있다.
+ */
+- (instancetype)initWithAdlibKey:(NSString *)key configSession:(ADLibSession *)session;
 
 
 /** 
@@ -81,6 +87,14 @@
 
 // 전면광고 요청 취소 메소드
 - (void)cancelInterstitialRequest;
+
+/**
+ *  전면 광고 뷰컨트롤러 종료 메소드
+ *
+ *  @param animated 종료 시 에니메이션 여부
+ *  @return 요청 성공 여부 (서브뷰에서 정의 되지 않은 경우 NO 리턴)
+ */
+- (BOOL)closeInterstitialAd:(BOOL)animated;
 
 
 // 애드립 세션 연결 성공 / 실패에 대한 블럭함수 설정

@@ -19,6 +19,8 @@
 		B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */; };
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
+		B0388EF41C51BFF900ACCF8C /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0388EF31C51BFF900ACCF8C /* Adlib.framework */; };
+		B0CAC1AB1C50AE1300B44787 /* ADIconAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CAC1AA1C50AE1300B44787 /* ADIconAdController.m */; };
 		B0DB3F391B4E5FE700279CBC /* sample_list.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F231B4E5FE700279CBC /* sample_list.json */; };
 		B0DB3F3A1B4E5FE700279CBC /* sample_song.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F241B4E5FE700279CBC /* sample_song.json */; };
 		B0DB3F3B1B4E5FE700279CBC /* SampleFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DB3F261B4E5FE700279CBC /* SampleFeedItem.m */; };
@@ -37,7 +39,6 @@
 		B0E2C76D1B297EF9006F9BC3 /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */; };
 		B0E2C76E1B297EF9006F9BC3 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */; };
 		B0E2C76F1B297EF9006F9BC3 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E2C76A1B297EF8006F9BC3 /* json.lua */; };
-		B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */; };
 		B0F90E161B27E35F00A757DD /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,9 @@
 		B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerXibViewController.m; sourceTree = "<group>"; };
 		B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationBannerViewController.h; sourceTree = "<group>"; };
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
+		B0388EF31C51BFF900ACCF8C /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0CAC1A91C50AE1300B44787 /* ADIconAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADIconAdController.h; sourceTree = "<group>"; };
+		B0CAC1AA1C50AE1300B44787 /* ADIconAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADIconAdController.m; sourceTree = "<group>"; };
 		B0DB3F231B4E5FE700279CBC /* sample_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_list.json; sourceTree = "<group>"; };
 		B0DB3F241B4E5FE700279CBC /* sample_song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_song.json; sourceTree = "<group>"; };
 		B0DB3F251B4E5FE700279CBC /* SampleFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleFeedItem.h; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 		B0E2C7681B297EF8006F9BC3 /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0E2C7691B297EF8006F9BC3 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0E2C76A1B297EF8006F9BC3 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
-		B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -99,7 +102,7 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B0EFFC8B1BD5F98B006C4D29 /* Adlib.framework in Frameworks */,
+				B0388EF41C51BFF900ACCF8C /* Adlib.framework in Frameworks */,
 				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
 			);
@@ -131,6 +134,7 @@
 				B002BFDB1AA5C344003D1CD3 /* ads */,
 				B0E2C7651B297EF8006F9BC3 /* AdlibResources */,
 				B0EF52B31B4CE76500D8577E /* NativeAdSample */,
+				B0CAC1A81C50AE1300B44787 /* IConAdSample */,
 				B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */,
 				B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */,
 				B002C06B1AA5C58D003D1CD3 /* BannerXibViewController.h */,
@@ -175,7 +179,7 @@
 		B002BFDB1AA5C344003D1CD3 /* ads */ = {
 			isa = PBXGroup;
 			children = (
-				B01F29811BABFDA90001BC59 /* ads_platform */,
+				B0CAC1A21C50AD5400B44787 /* ads_platform */,
 				B002BFDC1AA5C344003D1CD3 /* adlib.mocoplex */,
 			);
 			path = ads;
@@ -199,7 +203,7 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0EFFC8A1BD5F98B006C4D29 /* Adlib.framework */,
+				B0388EF31C51BFF900ACCF8C /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
@@ -210,11 +214,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B01F29811BABFDA90001BC59 /* ads_platform */ = {
+		B0CAC1A21C50AD5400B44787 /* ads_platform */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ads_platform;
+			sourceTree = "<group>";
+		};
+		B0CAC1A81C50AE1300B44787 /* IConAdSample */ = {
+			isa = PBXGroup;
+			children = (
+				B0CAC1A91C50AE1300B44787 /* ADIconAdController.h */,
+				B0CAC1AA1C50AE1300B44787 /* ADIconAdController.m */,
+			);
+			path = IConAdSample;
 			sourceTree = "<group>";
 		};
 		B0DB3F221B4E5FE700279CBC /* res */ = {
@@ -367,6 +380,7 @@
 				B0DB3F3F1B4E5FE700279CBC /* SongListTableViewController.m in Sources */,
 				B002BFBA1AA5C250003D1CD3 /* AppDelegate.m in Sources */,
 				B0DB3F451B4E5FE700279CBC /* SimpleFeedListTableViewController.m in Sources */,
+				B0CAC1AB1C50AE1300B44787 /* ADIconAdController.m in Sources */,
 				B0DB3F431B4E5FE700279CBC /* SimpleFeedListTableViewCell.m in Sources */,
 				B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */,
 				B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */,
@@ -486,15 +500,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/adlibrTestUniversal",
-					"$(PROJECT_DIR)/adlibrTestUniversal/ads/ads_platform/admob",
 				);
 				INFOPLIST_FILE = adlibrTestUniversal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/adlibrTestUniversal/ads/ads_platform/inmobi",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adlibr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,15 +519,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/adlibrTestUniversal",
-					"$(PROJECT_DIR)/adlibrTestUniversal/ads/ads_platform/admob",
 				);
 				INFOPLIST_FILE = adlibrTestUniversal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/adlibrTestUniversal/ads/ads_platform/inmobi",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adlibr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
