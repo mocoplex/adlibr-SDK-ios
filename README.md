@@ -8,6 +8,9 @@
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
+SDK version 4.1.5.2 (2016.01.22)
+> 3D ICon 광고 상품 추가 및 관련 샘플 추가 <br>
+
 SDK version 4.1.4.0 (2015.10.19)
 > iOS 9 빌드 적용 <br>
 > BitCode Compile 미적용 버전 (필요시 개별요청)<br>
