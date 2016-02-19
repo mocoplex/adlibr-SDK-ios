@@ -68,6 +68,12 @@
  */
 - (BOOL)autoCloseInterstitialAd:(BOOL)animated;
 
+/**
+ *  애드립 매니저에 의한 전면광고 네트워크 요청 중지 처리
+ *  @return 해당 서브뷰에서 재정의 시 YES,
+ */
+- (BOOL)stopInterstitialAdRequest;
+
 @property (nonatomic, strong) SubAdlibAdsView* view;
 @property (nonatomic, weak)   UIViewController* parentController;
 

@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
     ADLIB_MEDPLATFORM_MEDIBAAD,
     ADLIB_MEDPLATFORM_MMEDIA,
     ADLIB_MEDPLATFORM_NAVER,
+    
+    ADLIB_MEDPLATFORM_FACEBOOK,
 };
 
 @class AdlibManager;
@@ -165,5 +167,10 @@ typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
  *  @return 요청 성공 여부 (서브뷰에서 정의 되지 않은 경우 NO 리턴)
  */
 - (BOOL)closeInterstitialAd:(BOOL)animated;
+
+/**
+ *  전면 광고 모든 플랫폼에 대한 요청 중단 메소드
+ */
+- (void)stopInterstitialAdRequest;
 
 @end

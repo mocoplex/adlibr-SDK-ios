@@ -13,6 +13,9 @@
     
 }
 
+- (void)registerViewForInteraction:(UIView *)containerView
+                withViewController:(UIViewController *)controller;
+
 #pragma mark - getter
 
 - (CGFloat)contentWidth;

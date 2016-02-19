@@ -30,8 +30,15 @@ extern NSString * const ADLibSessionDidFailedLinkNotification;
 
 - (instancetype)initWithAdlibKey:(NSString *)appKey;
 - (instancetype)initTestSessionWithAdlibKey:(NSString *)appKey;
+
+- (instancetype)initWithAdlibKey:(NSString *)appKey configSession:(ADLibSession *)session;
+
 - (void)linkSession;
+- (NSDictionary *)appConfigurations;
 
 + (void)setDebugMode;
+
++ (ADLibSession *)sharedSessionForKey:(NSString *)key isTestMode:(BOOL)isTestMode;
++ (void)clearAllSharedSession;
 
 @end
