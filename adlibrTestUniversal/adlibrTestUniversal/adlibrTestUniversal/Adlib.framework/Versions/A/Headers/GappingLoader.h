@@ -5,8 +5,9 @@
 //  Created by Ryan on 2016. 01. 20..
 //  Copyright © 2016년 Gapping. All rights reserved.
 //
-//  Version 2.0
-//  Build 2016. 01. 20
+//  Version 2.1
+//  Build 2016. 02. 17
+//  Recently modified 2016.02.17
 
 #import <UIKit/UIKit.h>
 
@@ -14,6 +15,12 @@ typedef NS_ENUM(NSInteger, GappingIconADAlign){
     
     GappingIconAdAlignLEFT = 0, //default
     GappingIconAdAlignRIGHT,
+};
+typedef NS_ENUM(NSInteger, GappingBannerADAlign){
+    
+    GappingBannerADAlignTop = 0, //default
+    GappingBannerADAlignCenter,
+    GappingBannerADAlignBottom,
 };
 typedef NS_ENUM(NSInteger, GappingADType){
     GappingADType_NONE = 0,
@@ -39,6 +46,10 @@ typedef NS_ENUM(NSInteger, GappingDirectEvent){
 - (void)didReceivedFailed:(GappingLoader *)loader withError:(NSError *)error;
 @end
 
+@protocol DirectLoadGappingDelegate <NSObject>
+@optional
+- (void) onTrigger:(int) result message:(NSString *)message;
+@end
 
 @interface GappingLoader : NSObject {
     
@@ -59,6 +70,9 @@ typedef NS_ENUM(NSInteger, GappingDirectEvent){
 
 //3D 컨텐츠를 직접 사용하고자 하는 경우
 -(void)directLoadGapping:(NSString *)path;
+-(void)directLoadGapping:(NSString *)path withIconPosition:(GappingIconADAlign)align;
+-(void)directLoadGapping:(NSString *)path withBannerPosition:(GappingBannerADAlign)align;
+
 //광고 뷰 제거
 - (void)detachAdView;
 
@@ -76,5 +90,7 @@ typedef NS_ENUM(NSInteger, GappingDirectEvent){
 @property (nonatomic) BOOL isTestMode;
 //가상 광고 테스트 모드 사용 시, 이 값을 설정하면 20초 단위로 노출
 @property (nonatomic) BOOL isVRTestMode;
+
+@property (nonatomic, weak) id<DirectLoadGappingDelegate> directDelegate;
 
 @end
