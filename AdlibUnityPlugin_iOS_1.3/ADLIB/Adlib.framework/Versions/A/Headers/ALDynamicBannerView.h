@@ -31,14 +31,17 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     ALDynamicBannerStateNotFoundImageSource = -1006,
     
     ALDynamicBannerStateADLibSessionError = -1007,
+    ALDynamicBannerStateNotFoundAdmSource = -1008,
 };
 
 @interface ALDynamicBannerView : UIView {
     
 }
 
+@property (nonatomic, strong) UIColor *bannerBackgroundColor;
+
 //광고 이미지의 contentMode 설정
-//기본 값 : UIViewContentModeScaleToFill
+//기본 값 : UIViewContentModeScaleAspectFit
 @property (nonatomic) UIViewContentMode imageContentMode;
 
 //광고 소재 이미지 재사용 여부
@@ -49,6 +52,9 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
 //기본 값 : 0 (0으로 지정시 자동 갱신 없음)
 //최소 값 : 3 초
 @property (nonatomic) NSTimeInterval refreshTimeinterval;
+
+//네트워크 에러
+@property (nonatomic, strong, readonly) NSError *error;
 
 /**
  *  광고 요청 시작 메소드
@@ -64,5 +70,12 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
 - (void)stopAdRequest;
 
 - (void)setRequestAdStateHandler:(void (^)(ALDynamicBannerState state))handler;
+
++ (UIImage *)closeButtonImage;
+
+/**
+ *  Error Log 출력 설정
+ */
++ (void)setLogging:(BOOL)logging;
 
 @end

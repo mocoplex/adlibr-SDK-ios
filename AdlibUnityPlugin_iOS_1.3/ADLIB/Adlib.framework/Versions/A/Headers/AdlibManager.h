@@ -22,6 +22,26 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
     ADLIB_ADVIEW_VERTICAL_ALIGN_TOP    = 1,
 };
 
+typedef NS_ENUM(NSInteger, ADLIB_MEDPLATFORM) {
+    
+    ADLIB_MEDPLATFORM_ADMOB = 0,
+    ADLIB_MEDPLATFORM_ADAM,
+    ADLIB_MEDPLATFORM_ADMIXER,
+    ADLIB_MEDPLATFORM_CAULY,
+    ADLIB_MEDPLATFORM_INMOBI,
+    ADLIB_MEDPLATFORM_TAD,
+    ADLIB_MEDPLATFORM_SHALLWEAD,
+    ADLIB_MEDPLATFORM_IAD,
+    
+    ADLIB_MEDPLATFORM_ADHUB,
+    ADLIB_MEDPLATFORM_DOMOB,
+    ADLIB_MEDPLATFORM_MEDIBAAD,
+    ADLIB_MEDPLATFORM_MMEDIA,
+    ADLIB_MEDPLATFORM_NAVER,
+    
+    ADLIB_MEDPLATFORM_FACEBOOK,
+};
+
 @class AdlibManager;
 
 /**
@@ -92,7 +112,9 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
 - (void)testModeLinkWithAdlibKey:(NSString *)key;
 - (void)unlink;
 
+- (BOOL)registerPlatform:(ADLIB_MEDPLATFORM)ptype withClass:(Class)className;
 - (void)setPlatform:(NSString*)name withClass:(Class)className;
+
 - (void)setLogging:(BOOL)logging;
 
 - (NSString*)getCurrentVersion;
@@ -145,5 +167,10 @@ typedef NS_ENUM(NSInteger, ADLIB_ADVIEW_VERTICAL_ALIGN) {
  *  @return 요청 성공 여부 (서브뷰에서 정의 되지 않은 경우 NO 리턴)
  */
 - (BOOL)closeInterstitialAd:(BOOL)animated;
+
+/**
+ *  전면 광고 모든 플랫폼에 대한 요청 중단 메소드
+ */
+- (void)stopInterstitialAdRequest;
 
 @end
