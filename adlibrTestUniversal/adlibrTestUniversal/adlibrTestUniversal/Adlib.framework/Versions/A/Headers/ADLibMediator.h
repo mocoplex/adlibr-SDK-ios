@@ -79,6 +79,9 @@
 - (BOOL)linkAdlibSession;           // 상용모드 세션연결
 - (BOOL)testModeLinkAdlibSession;   // 테스트 모드 세션연결
 
+#pragma mark -
+#pragma mark - InterstitialAD Methods
+
 /**
  *  전면광고 요청 메소드
  *  @param viewController 전면광고를 띄울 뷰컨트롤러
@@ -108,6 +111,8 @@
 // 설정된 모든 미디에이션 플랫폼에대한 요청이 실패한경우의 처리
 - (void)setInterstitialAdRequestFailHandler:(void (^)(void))handler;
 
+#pragma mark -
+#pragma mark - Class Methods
 
 // 여러개의 앱키를 사용할경우 앱키에 해당하는 식별자를 설정하여 저장
 + (BOOL)setAdlibAppKey:(NSString *)appKey forIdentifier:(NSString *)ide;

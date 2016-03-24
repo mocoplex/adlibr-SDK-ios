@@ -5,12 +5,15 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.1.5.3
-//  Build (4.153) 2016.02.17. 10:30
+//  Adlib SDK version 4.1.5.4
+//  Build (4.154) 2016.03.10. 10:30
+
 
 // 애드립 미디에이션
-#import <Adlib/Adlib.h>
 #import <Adlib/ADLibSession.h>
+#import <Adlib/ADLibMediator.h>
+#import <Adlib/SubAdlibAdsView.h>
+#import <Adlib/SubAdlibAdViewCore.h>
 
 // 애드립 네이티브 광고
 #import <Adlib/ALNativeAdRequest.h>
@@ -20,8 +23,10 @@
 #import <Adlib/ALNativeAdTableHelper.h>
 #import <Adlib/ALImageDownloader.h>
 
-// 애드립 다이나믹 이미지배너
-#import <Adlib/ADLibMediator.h>
+// 애드립 이미지 띠배너 뷰
+#import <Adlib/ALAdlibBannerView.h>
+
+// 애드립 이미지 가변크기 배너 뷰
 #import <Adlib/ALDynamicBannerView.h>
 #import <Adlib/ALDynamicBannerController.h>
 

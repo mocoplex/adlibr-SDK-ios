@@ -5662,12 +5662,16 @@ TRID.GetSystemTime = function ()
 		TRID.DebugPrint("[TEST] TRID.GetSystemTime")
 	end
 end
-TRID.DoResourceGarbageCollection = function ()
-	if TRIDGLUE then
-		TRIDGLUE.DoResourceGarbageCollection()
-	else
-		TRID.DebugPrint("[TEST] TRID.DoResourceGarbageCollection")
-	end
+TRID.DoResourceGarbageCollection = function (instance, funcName)
+    if TRIDGLUE then
+        if instance and instance._baseID then
+            TRIDGLUE.DoResourceGarbageCollection(instance._baseID[1], instance._baseID[2], funcName)
+        else
+            TRIDGLUE.DoResourceGarbageCollection()
+        end
+    else
+        TRID.DebugPrint("[TEST] TRID.DoResourceGarbageCollection")
+end
 end
 TRID.ResetModal = function ()
 	if TRIDGLUE then
