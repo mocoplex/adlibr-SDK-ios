@@ -8,6 +8,10 @@
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
+SDK version 4.1.5.4 (2016.03.24)
+> 3D 엔진업데이트 <br>
+> 엔진업데이트에 따른 리소스파일 교체 (*.lua파일 최신으로 교체 필수) <br>
+
 SDK version 4.1.5.2 (2016.01.22)
 > 3D ICon 광고 상품 추가 및 관련 샘플 추가 <br>
 
