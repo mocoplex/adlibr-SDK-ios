@@ -88,6 +88,14 @@ typedef NS_ENUM(NSInteger, ALAdlibBannerState){
  */
 - (void)setRequestAdStateHandler:(void (^)(ALAdlibBannerState state))handler;
 
+
+/**
+ *  광고 클릭 이벤트 블록 지정 메소드
+ *
+ *  @param handler 블럭 함수
+ */
+- (void)setBannerClickEvent:(void (^)(NSError *error))handler;
+
 /**
  *  키 값에 해당하는 세션정보 값들을 모두 클리어한다.
  *  이후 startAdRequestWithKey: 메소드를 통해 키 설정값이 다시 로딩된다.

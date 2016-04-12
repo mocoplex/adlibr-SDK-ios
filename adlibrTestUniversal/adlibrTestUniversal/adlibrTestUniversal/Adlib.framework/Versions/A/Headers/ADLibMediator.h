@@ -19,7 +19,7 @@
  *  애드립 SubAdlibAdViewCore 클래스를 상속받는 각 플랫폼의 (ex. SubAdlibAdViewAdmob)
  *  구현클래스에서 전면광고 뷰컨트롤러를 수신시 해당 프로토콜을 호출하는 코드를 추가로 적용해 주어야
  *  해당 클래스의 block을 통해 전면광고를 띄우는 처리를 수행 할 수있다.
- *  (애드립 / 애드립하우스 광고는 SDK 내부적에서 적용 처리됨)
+ *  (애드립 / 애드립하우스 광고는 SDK 내부에서 적용 처리됨)
  */
 @protocol ADLibMediatorInterstitial <NSObject>
 

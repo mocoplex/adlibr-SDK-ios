@@ -5,9 +5,9 @@
 //  Created by Ryan on 2016. 01. 20..
 //  Copyright © 2016년 Gapping. All rights reserved.
 //
-//  Version 2.3.0
-//  Build 2016. 03. 03
-//  Recently modified 2016.02.24
+//  Version 2.4.0
+//  Build 2016. 04. 05
+//  Recently modified 2016.04.05
 
 #import <UIKit/UIKit.h>
 #import "GappingDefines.h"
@@ -15,7 +15,9 @@
 @class GappingLoader;
 
 @protocol GappingLoaderDelegate <NSObject>
-
+@optional
+// 매체 App 내에서 광고 컨텐츠에서 발생한 interaction을 수신 하고자 하는 경우 사용
+- (void) didReceiveInteraction:(NSString *)data;
 @required
 //광고 요청 성공 시
 - (void)didReceivedAd:(GappingLoader *)loader;
@@ -36,8 +38,9 @@
                   delegate:(id<GappingLoaderDelegate>)delegate;
 
 //VR 광고 시 광고 노출 영역을 설정하여 광고를 노출하는 경우 사용
+//enableTimer : 가상광고를 반복적으로 노출 설정 값
 -(void)loadVRAdWithAlign:(GappingVRADAlign)align withKey:(NSString *)key
-             delegate:(id<GappingLoaderDelegate>)delegate;
+                delegate:(id<GappingLoaderDelegate>)delegate enableTimer:(BOOL)enable;
 
 //Banner 광고 시 광고 노출 영역을 설정하여 광고를 노출하는 경우 사용
 -(void)loadBannerAdWithAlign:(GappingBannerADAlign)align withKey:(NSString *)key
@@ -54,10 +57,12 @@
 -(void)enableCloseButton:(BOOL)enable;
 
 //광고 뷰 제거
-- (void)detachAdView;
+-(void)detachAdView;
 
 //뷰컨트롤러 화면 회전 시 광고 컨텐츠 영역 조정 요청
-- (void)reloadContentForParentViewRotate;
+-(void)reloadContentForParentViewRotate;
+
+-(void)isHouseAD:(BOOL)isHouse;
 
 //Background 진입 시 사용
 + (void) onPause;

@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, ALIconAdAlign){
 @property (nonatomic) BOOL isTestMode;
 
 //광고 요청
-- (void)loadAdWithKey:(NSString *)key delegate:(id<ALIconAdLoaderDelegate>)delegate;
+- (BOOL)loadAdWithKey:(NSString *)key delegate:(id<ALIconAdLoaderDelegate>)delegate;
 
 //광고 뷰 적재
 - (BOOL)attachAdViewToMainWindow; // 권장
