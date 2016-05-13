@@ -5,9 +5,9 @@
 //  Created by Ryan on 2016. 01. 20..
 //  Copyright © 2016년 Gapping. All rights reserved.
 //
-//  Version 2.4.0
-//  Build 2016. 04. 05
-//  Recently modified 2016.04.05
+//  Version 2.5.0
+//  Build 2016. 04. 27
+//  Recently modified 2016.04.27
 
 #import <UIKit/UIKit.h>
 #import "GappingDefines.h"
@@ -18,6 +18,10 @@
 @optional
 // 매체 App 내에서 광고 컨텐츠에서 발생한 interaction을 수신 하고자 하는 경우 사용
 - (void) didReceiveInteraction:(NSString *)data;
+// 매체 App 내에서 광고 컨텐츠 시작, 종료, 뷰 삭제 상태를 수신하고자 하는 경우 사용
+- (void) didChangeStatus:(GAPPING_AD_STATUS)status;
+// 매체 App 내에서 광고 컨텐츠의 상태 시작, 종료, 클릭 또는 제거 이벤트를 수신하고자 하는 경우 사용
+- (void) didReceiveEvent:(GAPPING_AD_EVENT)event;
 @required
 //광고 요청 성공 시
 - (void)didReceivedAd:(GappingLoader *)loader;
@@ -42,6 +46,10 @@
 -(void)loadVRAdWithAlign:(GappingVRADAlign)align withKey:(NSString *)key
                 delegate:(id<GappingLoaderDelegate>)delegate enableTimer:(BOOL)enable;
 
+//아래 메소드를 사용하는 경우 가상광고는 자동적으로 반복호출 된다.
+-(void)loadVRAdWithAlign:(GappingVRADAlign)align withKey:(NSString *)key
+                delegate:(id<GappingLoaderDelegate>)delegate DEPRECATED_MSG_ATTRIBUTE("Use '-(void)loadVRAdWithAlign:(GappingVRADAlign)align withKey:(NSString *)key delegate:(id<GappingLoaderDelegate>)delegate enableTimer:(BOOL)enable' Method");
+
 //Banner 광고 시 광고 노출 영역을 설정하여 광고를 노출하는 경우 사용
 -(void)loadBannerAdWithAlign:(GappingBannerADAlign)align withKey:(NSString *)key
                 delegate:(id<GappingLoaderDelegate>)delegate;
@@ -51,7 +59,7 @@
 //화면 특정 영역에 광고를 넣고자 하는 경우 광고를 넣을 View를 지정해서 사용
 - (BOOL)attachAdViewToView:(UIView *)containerView; //옵션
 
-
+//버튼 컨트롤 Method
 -(void)enableSoundButton:(BOOL)enable;
 -(void)enableReplayButton:(BOOL)enable;
 -(void)enableCloseButton:(BOOL)enable;
