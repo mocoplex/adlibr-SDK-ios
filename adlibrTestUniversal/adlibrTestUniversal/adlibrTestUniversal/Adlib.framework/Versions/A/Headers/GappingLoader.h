@@ -5,7 +5,7 @@
 //  Created by Ryan on 2016. 01. 20..
 //  Copyright © 2016년 Gapping. All rights reserved.
 //
-//  Version 2.5.0
+//  Version 2.6.0
 //  Build 2016. 04. 27
 //  Recently modified 2016.04.27
 
@@ -64,6 +64,9 @@
 -(void)enableReplayButton:(BOOL)enable;
 -(void)enableCloseButton:(BOOL)enable;
 
+//TRUE로 설정 시 광고 소재를 다운로드 완료를 기다린 후 광고 노출
+- (void)isWaitingForDownload:(BOOL)isWaiting;
+
 //광고 뷰 제거
 -(void)detachAdView;
 
@@ -71,11 +74,15 @@
 -(void)reloadContentForParentViewRotate;
 
 -(void)isHouseAD:(BOOL)isHouse;
+//재생되는 컨텐츠를 일시 중지 할 때 사용
+-(void)onPauseContent;
+//일시 중지된 컨텐츠를 다시 시작할 때 사용
+-(void)onResumeContent;
 
 //Background 진입 시 사용
-+ (void) onPause;
++ (void) onPause DEPRECATED_MSG_ATTRIBUTE("This Method is deprecated since SDK v2.5.1");
 //Foreground 진입 시 사용
-+ (void) onResume;
++ (void) onResume DEPRECATED_MSG_ATTRIBUTE("This Method is deprecated since SDK v2.5.1");
 
 //광고 타입 설정
 @property (nonatomic) GappingADType adType;
