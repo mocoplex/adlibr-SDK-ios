@@ -5,9 +5,9 @@
 //  Created by Ryan on 2016. 01. 20..
 //  Copyright © 2016년 Gapping. All rights reserved.
 //
-//  Version 2.6.0
-//  Build 2016. 04. 27
-//  Recently modified 2016.04.27
+//  Version 2.6.1
+//  Build 2016. 07. 25
+//  Recently modified 2016.07.25
 
 #import <UIKit/UIKit.h>
 #import "GappingDefines.h"
@@ -63,6 +63,8 @@
 -(void)enableSoundButton:(BOOL)enable;
 -(void)enableReplayButton:(BOOL)enable;
 -(void)enableCloseButton:(BOOL)enable;
+
+-(void)muteSound:(BOOL)isMute;
 
 //TRUE로 설정 시 광고 소재를 다운로드 완료를 기다린 후 광고 노출
 - (void)isWaitingForDownload:(BOOL)isWaiting;

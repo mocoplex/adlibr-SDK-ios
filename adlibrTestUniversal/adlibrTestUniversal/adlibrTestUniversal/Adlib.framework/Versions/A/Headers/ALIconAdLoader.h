@@ -39,6 +39,8 @@ typedef NS_ENUM(NSInteger, ALIconAdAlign){
 //광고 뷰 적재
 - (BOOL)attachAdViewToMainWindow; // 권장
 - (BOOL)attachAdViewToView:(UIView *)containerView; //옵션
+//광고 소재를 다운로드 완료를 대기 후 보여줄지 결정, 해당 Method는 객체 생성 후 광고 호출 전 사용한다.
+- (void)isWaitingForDownload:(BOOL)isWaiting;
 
 //광고 뷰 제거
 - (void)detachAdView;

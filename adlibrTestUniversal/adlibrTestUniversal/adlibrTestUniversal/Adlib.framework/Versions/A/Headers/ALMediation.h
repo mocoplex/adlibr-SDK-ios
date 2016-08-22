@@ -36,7 +36,7 @@
 @property (nonatomic, weak) UIViewController *rootViewController;
 
 @property (nonatomic, weak) ALInterstitialAd *interstitialAd;
-@property (nonatomic, weak) ALAdBannerView *bannerContainerView;
+@property (nonatomic, weak) ALAdBannerView   *bannerContainerView;
 
 // Mediation subClass
 + (BOOL)registerPlatform:(ALMEDIATION_PLATFORM)ptype withClass:(Class)className;

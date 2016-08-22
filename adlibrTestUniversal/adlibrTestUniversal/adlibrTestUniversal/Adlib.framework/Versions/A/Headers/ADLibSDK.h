@@ -5,8 +5,8 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.1.6.2
-//  Build (4.162) 2016.07.12. 15:00
+//  Adlib SDK version 4.2.0.1
+//  Build (4.201) 2016.08.22. 10:00
 
 
 #import <Adlib/ADLibSession.h>
@@ -16,18 +16,21 @@
 ///////////////////////////////////////////////////////////////////////////
 
 
-// 애드립 미디에이션 (현재 버전) - !!! 하나의 키만 사용할경우 싱글톤클래스로 사용하는 방법을 제공
+// 애드립 미디에이션 - !!! 하나의 키만 사용할경우 싱글톤클래스로 사용하는 방법을 제공
 // 어플리케이션에서 광고 플랫폼의 구현 클래스를 추가해야한다. (Ex. SubAdlibAdViewAdmob)
 #import <Adlib/ADLibMediator.h>
 #import <Adlib/SubAdlibAdsView.h>
 #import <Adlib/SubAdlibAdViewCore.h>
 
 
-// 애드립 미디에이션 (신규버전 - Beta) - !!! 여러개의 키를 사용하는 경우 객체로 사용하는 방법을 제공
+// 애드립 미디에이션 (신규버전) - !!! 여러개의 키를 사용하는 경우 객체로 사용하는 방법을 제공
 // 어플리케이션에서 광고 플랫폼의 구현 클래스를 추가해야한다. (Ex. ALAdapterAdmob)
 #import <Adlib/ALMediationDefine.h>
 #import <Adlib/ALMediation.h>
+
+// 미디에이션 띠배너 요청 배너뷰
 #import <Adlib/ALAdBannerView.h>
+// 미디에이션 전면배너 요청 객체
 #import <Adlib/ALInterstitialAd.h>
 
 

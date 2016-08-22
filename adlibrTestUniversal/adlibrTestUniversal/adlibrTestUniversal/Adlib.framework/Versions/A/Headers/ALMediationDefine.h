@@ -47,6 +47,7 @@ typedef NS_ENUM(NSInteger, ALMEDIATION_PLATFORM) {
     ALMEDIATION_PLATFORM_FACEBOOK      = 33,
 };
 
+
 typedef NS_ENUM(NSInteger, ALMEDIAION_STATE) {
     
     ALMEDIAION_STATE_INVALID_SUPERVIEW = -9999,
@@ -80,11 +81,42 @@ typedef NS_ENUM(NSInteger, ALMEDIAION_STATE) {
 @protocol ALMediationBannerProtocol <NSObject>
 
 // 해당 플래폼 광고에 배너광고 요청을 처리합니다.
-- (BOOL)mediationBannerAdRequest:(UIViewController*)viewController withKey:(NSString *)key;
 
+/**
+ *  미디에이션 광고 플랫폼의 배너 뷰를 반환한다.
+ */
+- (UIView *)platformAdView;
+
+/**
+ *  배너뷰의 프레임이 변경되면 하위 광고 뷰들에게 해당 메소드를 통해
+ *  뷰사이즈 변경을 알린다.
+ *
+ *  @param adViewBounds 변경된 뷰의 크기
+ *  @return YES : 플랫폼 미디에이션 구현 코드에서 직접 프레임의 사이즈를 변경함을 알림
+ *           NO : 직접 변경하지 않고 NO 리턴 시 배너뷰의 크기와 동일하게 변경됨
+ */
+- (BOOL)resizedAdViewWithBounds:(CGRect)adViewBounds;
+
+/**
+ *  미디에이션 광고 플랫폼의 광고요청 처리를 구현한다.
+ *
+ *  @return 광고를 요청한 플랫폼 광고 뷰
+ */
+- (UIView *)mediationBannerAdRequest:(UIViewController*)viewController withKey:(NSString *)key;
+
+/**
+ *  미디에이션 광고 플랫폼의 광고 수신 성공 후 해당 광고 뷰를 반환한다.
+ */
 - (void)mediationBannerAdReceivedWithView:(UIView *)view;
+
+/**
+ *  미디에이션 광고 플랫폼의 광고 수신 실패를 반환한다.
+ */
 - (void)mediationBannerAdFailedAd;
 
+/**
+ *  미디에이션 광고 플랫폼의 광고 클릭 이벤트 발생을 반환한다.
+ */
 - (void)mediationBannerReportClickEvent;
 
 @end

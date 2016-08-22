@@ -14,14 +14,14 @@
 @protocol ALAdBannerViewDelegate <NSObject>
 
 //ALAdBannerView 광고요청 재개 상태에서 내부적인 상태 변화를 통지합니다.
-- (void)alAdBannerView:(ALAdBannerView *)interstitialAd didChangeState:(ALMEDIAION_STATE)state withExtraInfo:(id)info;
+- (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIAION_STATE)state withExtraInfo:(id)info;
 
 
 //플랫폼에 요청한 광고의 성공 상태를 반환합니다.
-- (void)alAdBannerView:(ALAdBannerView *)interstitialAd didReceivedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
+- (void)alAdBannerView:(ALAdBannerView *)bannerView didReceivedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 
 //플랫폼에 요청한 광고의 실패 상태를 반환합니다.
-- (void)alAdBannerView:(ALAdBannerView *)interstitialAd didFailedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
+- (void)alAdBannerView:(ALAdBannerView *)bannerView didFailedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 
 @end
 
@@ -36,6 +36,11 @@
 @end
 
 
+typedef NS_ENUM(NSInteger, AL_ADVIEW_VERTICAL_ALIGN) {
+    AL_ADVIEW_VERTICAL_ALIGN_BOTTOM = 0, //DEFAULT
+    AL_ADVIEW_VERTICAL_ALIGN_TOP,
+};
+
 /**
  *  해당 클래스를 사용하여 미디에이션 띠배너 기능을 사용할 수 있다. 
  *  Beta 버전
@@ -45,12 +50,18 @@
     
 }
 
+@property (nonatomic) AL_ADVIEW_VERTICAL_ALIGN verticalAlign;
+
 //테스트 모드 설정 값 (기본값 : NO)
 @property (nonatomic) BOOL isTestMode;
 
 // 설정된 배너 플랫폼의 요청이 한바퀴 완료된 후 처음부터 재시작할지 여부,
-// 기본값 : YES (값이 NO일 경우 마지막 수신한 광고 뷰가 유지된다.)
+// 기본값 : NO (값이 NO일 경우 마지막 수신한 광고 뷰가 유지된다.)
 @property (nonatomic) BOOL repeatLoop;
+
+// 모든 스케쥴 광고가 실패한 이후 다음 루프까지의 대기 시간
+// 기본 설정 값 20초 (설정 가능 범위 값 1~120초)
+@property (nonatomic) NSUInteger repeatLoopWaitTime;
 
 - (void)setKey:(NSString *)key forPlatform:(ALMEDIATION_PLATFORM)platform;
 
