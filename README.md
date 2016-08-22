@@ -1,5 +1,6 @@
-프로젝트 설정 가이드 상세 페이지
+프로젝트 설정 가이드 상세 페이지<br>
 <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
+<br>
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
@@ -10,7 +11,7 @@ adlibr integration library for iOS
 
 SDV version 4.2.0.1 (2016.08.22)
 > 애드립 및 미디에이션 광고 적용 신규 클래스 지원 <br>
-> [신규 클래스 샘플 및 가이드 페이지](https://github.com/mocoplex/adlibr-SDK-ios-N)
+> 신규 클래스 샘플 및 가이드 페이지 : <https://github.com/mocoplex/adlibr-SDK-ios-N>
 
 SDK version 4.1.5.4 (2016.03.24)
 > 3D 엔진업데이트 <br>
