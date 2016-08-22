@@ -8,6 +8,10 @@
 # adlibr-SDK-ios
 adlibr integration library for iOS
 
+SDV version 4.2.0.1 (2016.08.22)
+> 애드립 및 미디에이션 광고 적용 신규 클래스 지원 
+> [신규 클래스 샘플 및 가이드 페이지](https://github.com/mocoplex/adlibr-SDK-ios-N)
+
 SDK version 4.1.5.4 (2016.03.24)
 > 3D 엔진업데이트 <br>
 > 엔진업데이트에 따른 리소스파일 교체 (*.lua파일 최신으로 교체 필수) <br>
