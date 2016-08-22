@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0E2B7251D6AA00B00D07F9E /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E2B7241D6AA00B00D07F9E /* Adlib.framework */; };
+		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
+		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
+		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
+		B0ED41F41D6429D900D4774E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F31D6429D900D4774E /* Assets.xcassets */; };
+		B0ED41F71D6429D900D4774E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */; };
+		B0ED42171D64349D00D4774E /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0ED420D1D64349D00D4774E /* Adlib.bundle */; };
+		B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42101D64349D00D4774E /* _TriDCommon.lua */; };
+		B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */; };
+		B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42121D64349D00D4774E /* _TriDStartup.lua */; };
+		B0ED421C1D64349E00D4774E /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42131D64349D00D4774E /* json.lua */; };
+		B0ED42271D64386C00D4774E /* AdlibSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED42261D64386C00D4774E /* AdlibSampleController.m */; };
+		B0ED422A1D64388600D4774E /* MediationSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED42291D64388600D4774E /* MediationSampleController.m */; };
+		B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */; };
+		B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422D1D643E7400D4774E /* libxml2.2.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B0E2B7241D6AA00B00D07F9E /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0ED41EB1D6429D900D4774E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0ED41F11D6429D900D4774E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0ED41F31D6429D900D4774E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0ED41F61D6429D900D4774E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0ED41F81D6429D900D4774E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0ED420D1D64349D00D4774E /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		B0ED42101D64349D00D4774E /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
+		B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
+		B0ED42121D64349D00D4774E /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
+		B0ED42131D64349D00D4774E /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
+		B0ED42251D64386C00D4774E /* AdlibSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibSampleController.h; sourceTree = "<group>"; };
+		B0ED42261D64386C00D4774E /* AdlibSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdlibSampleController.m; sourceTree = "<group>"; };
+		B0ED42281D64388600D4774E /* MediationSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationSampleController.h; sourceTree = "<group>"; };
+		B0ED42291D64388600D4774E /* MediationSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationSampleController.m; sourceTree = "<group>"; };
+		B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		B0ED422D1D643E7400D4774E /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0ED41E11D6429D900D4774E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
+				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
+				B0E2B7251D6AA00B00D07F9E /* Adlib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0ED41DB1D6429D900D4774E = {
+			isa = PBXGroup;
+			children = (
+				B0ED41E61D6429D900D4774E /* ADLibSample */,
+				B0ED41E51D6429D900D4774E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0ED41E51D6429D900D4774E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0ED41E41D6429D900D4774E /* ADLibSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0ED41E61D6429D900D4774E /* ADLibSample */ = {
+			isa = PBXGroup;
+			children = (
+				B0ED422F1D643EA100D4774E /* frameworks */,
+				B0ED42051D64349D00D4774E /* ADLibAdapter */,
+				B0ED420C1D64349D00D4774E /* ADLibFramework */,
+				B0ED41EA1D6429D900D4774E /* AppDelegate.h */,
+				B0ED41EB1D6429D900D4774E /* AppDelegate.m */,
+				B0ED42251D64386C00D4774E /* AdlibSampleController.h */,
+				B0ED42261D64386C00D4774E /* AdlibSampleController.m */,
+				B0ED42281D64388600D4774E /* MediationSampleController.h */,
+				B0ED42291D64388600D4774E /* MediationSampleController.m */,
+				B0ED41F01D6429D900D4774E /* Main.storyboard */,
+				B0ED41F31D6429D900D4774E /* Assets.xcassets */,
+				B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */,
+				B0ED41F81D6429D900D4774E /* Info.plist */,
+				B0ED41E71D6429D900D4774E /* Supporting Files */,
+			);
+			path = ADLibSample;
+			sourceTree = "<group>";
+		};
+		B0ED41E71D6429D900D4774E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0ED41E81D6429D900D4774E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0ED42051D64349D00D4774E /* ADLibAdapter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ADLibAdapter;
+			sourceTree = "<group>";
+		};
+		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2B7241D6AA00B00D07F9E /* Adlib.framework */,
+				B0ED420D1D64349D00D4774E /* Adlib.bundle */,
+				B0ED420F1D64349D00D4774E /* Resources */,
+			);
+			path = ADLibFramework;
+			sourceTree = "<group>";
+		};
+		B0ED420F1D64349D00D4774E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0ED42101D64349D00D4774E /* _TriDCommon.lua */,
+				B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */,
+				B0ED42121D64349D00D4774E /* _TriDStartup.lua */,
+				B0ED42131D64349D00D4774E /* json.lua */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B0ED422F1D643EA100D4774E /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0ED422D1D643E7400D4774E /* libxml2.2.tbd */,
+				B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0ED41E31D6429D900D4774E /* ADLibSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0ED41FB1D6429D900D4774E /* Build configuration list for PBXNativeTarget "ADLibSample" */;
+			buildPhases = (
+				B0ED41E01D6429D900D4774E /* Sources */,
+				B0ED41E11D6429D900D4774E /* Frameworks */,
+				B0ED41E21D6429D900D4774E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADLibSample;
+			productName = ADLibSample;
+			productReference = B0ED41E41D6429D900D4774E /* ADLibSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0ED41DC1D6429D900D4774E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					B0ED41E31D6429D900D4774E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B0ED41DF1D6429D900D4774E /* Build configuration list for PBXProject "ADLibSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0ED41DB1D6429D900D4774E;
+			productRefGroup = B0ED41E51D6429D900D4774E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0ED41E31D6429D900D4774E /* ADLibSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0ED41E21D6429D900D4774E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0ED42171D64349D00D4774E /* Adlib.bundle in Resources */,
+				B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */,
+				B0ED421C1D64349E00D4774E /* json.lua in Resources */,
+				B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */,
+				B0ED41F71D6429D900D4774E /* LaunchScreen.storyboard in Resources */,
+				B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */,
+				B0ED41F41D6429D900D4774E /* Assets.xcassets in Resources */,
+				B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0ED41E01D6429D900D4774E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */,
+				B0ED41E91D6429D900D4774E /* main.m in Sources */,
+				B0ED42271D64386C00D4774E /* AdlibSampleController.m in Sources */,
+				B0ED422A1D64388600D4774E /* MediationSampleController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B0ED41F01D6429D900D4774E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0ED41F11D6429D900D4774E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0ED41F61D6429D900D4774E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0ED41F91D6429D900D4774E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0ED41FA1D6429D900D4774E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0ED41FC1D6429D900D4774E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ADLibSample/ADLibFramework",
+				);
+				INFOPLIST_FILE = ADLibSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adlibr.ADLibSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0ED41FD1D6429D900D4774E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ADLibSample/ADLibFramework",
+				);
+				INFOPLIST_FILE = ADLibSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adlibr.ADLibSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0ED41DF1D6429D900D4774E /* Build configuration list for PBXProject "ADLibSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0ED41F91D6429D900D4774E /* Debug */,
+				B0ED41FA1D6429D900D4774E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0ED41FB1D6429D900D4774E /* Build configuration list for PBXNativeTarget "ADLibSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0ED41FC1D6429D900D4774E /* Debug */,
+				B0ED41FD1D6429D900D4774E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0ED41DC1D6429D900D4774E /* Project object */;
+}
