@@ -62,6 +62,8 @@ typedef NS_ENUM(NSInteger, ALMEDIAION_STATE) {
     
     ALMEDIAION_STATE_RECEIVED_AD,
     ALMEDIAION_STATE_FAILED_AD,
+    
+    ALMEDIAION_STATE_BANNER_CLICKED,
 };
 
 @protocol ALMediationInterstitialProtocol <NSObject>

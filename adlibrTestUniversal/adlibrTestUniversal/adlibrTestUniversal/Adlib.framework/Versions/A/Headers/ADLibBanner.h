@@ -5,8 +5,9 @@
 //  Created by gskang on 2016. 8. 17..
 //  Copyright © 2016년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.2.0.1
-//  Build (4.201) 2016.08.22. 10:00
+//  Adlib SDK version 4.2.1.0
+//  Build (4.210) 2016.08.30. 10:00
+
 
 #ifndef ADLibBanner_h
 #define ADLibBanner_h

@@ -5,8 +5,8 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.2.0.1
-//  Build (4.201) 2016.08.22. 10:00
+//  Adlib SDK version 4.2.1.0
+//  Build (4.210) 2016.08.30. 10:00
 
 
 #import <Adlib/ADLibSession.h>

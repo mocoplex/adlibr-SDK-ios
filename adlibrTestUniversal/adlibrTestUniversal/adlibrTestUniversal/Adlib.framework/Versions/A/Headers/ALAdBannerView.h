@@ -16,7 +16,6 @@
 //ALAdBannerView 광고요청 재개 상태에서 내부적인 상태 변화를 통지합니다.
 - (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIAION_STATE)state withExtraInfo:(id)info;
 
-
 //플랫폼에 요청한 광고의 성공 상태를 반환합니다.
 - (void)alAdBannerView:(ALAdBannerView *)bannerView didReceivedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 

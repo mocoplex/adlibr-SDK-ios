@@ -35,6 +35,12 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     
     ALDynamicBannerStateInvalidKey = -1009,
     ALDynamicBannerStateSessionLinkError = -1010,
+    
+    //광고뷰 속성 hidden YES로 변경되는 상태를 알림
+    ALDynamicBannerStateSetViewHidden  = 9998,
+    
+    //광고뷰 속성 hidden NO로 변경되는 상태를 알림
+    ALDynamicBannerStateSetViewVisible = 9999,
 };
 
 @interface ALDynamicBannerView : UIView {

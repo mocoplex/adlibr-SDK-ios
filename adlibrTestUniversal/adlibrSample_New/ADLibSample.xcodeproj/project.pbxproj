@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B0E2B7251D6AA00B00D07F9E /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E2B7241D6AA00B00D07F9E /* Adlib.framework */; };
+		B00FF85B1D77FB7700498DE5 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FF85A1D77FB7700498DE5 /* Adlib.framework */; };
+		B00FF85D1D77FB7F00498DE5 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
 		B0ED41F41D6429D900D4774E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F31D6429D900D4774E /* Assets.xcassets */; };
 		B0ED41F71D6429D900D4774E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */; };
-		B0ED42171D64349D00D4774E /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0ED420D1D64349D00D4774E /* Adlib.bundle */; };
 		B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42101D64349D00D4774E /* _TriDCommon.lua */; };
 		B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */; };
 		B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42121D64349D00D4774E /* _TriDStartup.lua */; };
@@ -25,7 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B0E2B7241D6AA00B00D07F9E /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B00FF85A1D77FB7700498DE5 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		B0ED41F31D6429D900D4774E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0ED41F61D6429D900D4774E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0ED41F81D6429D900D4774E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0ED420D1D64349D00D4774E /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0ED42101D64349D00D4774E /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
 		B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
 		B0ED42121D64349D00D4774E /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			files = (
 				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
 				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
-				B0E2B7251D6AA00B00D07F9E /* Adlib.framework in Frameworks */,
+				B00FF85B1D77FB7700498DE5 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +116,8 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B0E2B7241D6AA00B00D07F9E /* Adlib.framework */,
-				B0ED420D1D64349D00D4774E /* Adlib.bundle */,
+				B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */,
+				B00FF85A1D77FB7700498DE5 /* Adlib.framework */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
 			path = ADLibFramework;
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0ED42171D64349D00D4774E /* Adlib.bundle in Resources */,
+				B00FF85D1D77FB7F00498DE5 /* Adlib.bundle in Resources */,
 				B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */,
 				B0ED421C1D64349E00D4774E /* json.lua in Resources */,
 				B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */,
