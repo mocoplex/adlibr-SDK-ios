@@ -13,7 +13,7 @@ SDV version 4.2.1.0 (2016.09.01)
 
 SDV version 4.2.0.1 (2016.08.22)
 > 애드립 및 미디에이션 광고 적용 신규 클래스 지원 <br>
-> 신규 클래스 샘플 및 가이드 페이지 : <https://github.com/mocoplex/adlibr-SDK-ios-N>
+> 신규 클래스 샘플 및 가이드 페이지 : <https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md>
 
 SDK version 4.1.5.4 (2016.03.24)
 > 3D 엔진업데이트 <br>
