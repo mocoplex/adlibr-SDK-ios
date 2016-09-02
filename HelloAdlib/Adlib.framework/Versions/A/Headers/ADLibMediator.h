@@ -19,7 +19,7 @@
  *  애드립 SubAdlibAdViewCore 클래스를 상속받는 각 플랫폼의 (ex. SubAdlibAdViewAdmob)
  *  구현클래스에서 전면광고 뷰컨트롤러를 수신시 해당 프로토콜을 호출하는 코드를 추가로 적용해 주어야
  *  해당 클래스의 block을 통해 전면광고를 띄우는 처리를 수행 할 수있다.
- *  (애드립 / 애드립하우스 광고는 SDK 내부적에서 적용 처리됨)
+ *  (애드립 / 애드립하우스 광고는 SDK 내부에서 적용 처리됨)
  */
 @protocol ADLibMediatorInterstitial <NSObject>
 
@@ -79,6 +79,9 @@
 - (BOOL)linkAdlibSession;           // 상용모드 세션연결
 - (BOOL)testModeLinkAdlibSession;   // 테스트 모드 세션연결
 
+#pragma mark -
+#pragma mark - InterstitialAD Methods
+
 /**
  *  전면광고 요청 메소드
  *  @param viewController 전면광고를 띄울 뷰컨트롤러
@@ -108,6 +111,8 @@
 // 설정된 모든 미디에이션 플랫폼에대한 요청이 실패한경우의 처리
 - (void)setInterstitialAdRequestFailHandler:(void (^)(void))handler;
 
+#pragma mark -
+#pragma mark - Class Methods
 
 // 여러개의 앱키를 사용할경우 앱키에 해당하는 식별자를 설정하여 저장
 + (BOOL)setAdlibAppKey:(NSString *)appKey forIdentifier:(NSString *)ide;

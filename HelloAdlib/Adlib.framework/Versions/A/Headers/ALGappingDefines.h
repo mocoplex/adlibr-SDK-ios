@@ -23,6 +23,9 @@ typedef NS_ENUM(NSInteger, ALGappingAdErrorCode){
     kGappingErrorInvalidRequestKey = 16,
     kGappingErrorInvalidResponse = 17,
     kGappingErrorInvalidRequest = 18,
+    kGappingErrorNotEnoughDiskSpace = 19,
+    
+    kGappingErrorUnSupportedDevice = 20,
 };
 
 

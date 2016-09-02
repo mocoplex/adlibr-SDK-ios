@@ -58,7 +58,6 @@
     AdlibManager *manager = [AdlibManager sharedSingletonClass];
     [manager attachWithViewController:viewController
                       atContainerView:viewController.view
-                          bannerAlign:ADLIB_BANNER_ALIGN_CENTER
                           adViewAlign:vAlign];
     manager.delegate = self;
     

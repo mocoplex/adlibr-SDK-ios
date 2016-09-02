@@ -32,19 +32,6 @@
  * 네이티브 광고 테이블 헬퍼 클래스 생성자
  *
  * @param tableView 테이블 뷰
- * @param key 네이티브 지면 광고 키
- * @param delegate 광고 추가 / 실패 델리게이트
- * @date 2014.12.18
- */
-//- (id)initWithTableView:(UITableView *)tableView
-//            nativeAdKey:(NSString *)key
-//               delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
-
-
-/**
- * 네이티브 광고 테이블 헬퍼 클래스 생성자
- *
- * @param tableView 테이블 뷰
  * @param session 애드립세션 객체
  * @param delegate 광고 추가 / 실패 델리게이트
  * @date 2015.10.01

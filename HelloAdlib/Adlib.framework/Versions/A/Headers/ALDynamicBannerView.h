@@ -32,6 +32,15 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     
     ALDynamicBannerStateADLibSessionError = -1007,
     ALDynamicBannerStateNotFoundAdmSource = -1008,
+    
+    ALDynamicBannerStateInvalidKey = -1009,
+    ALDynamicBannerStateSessionLinkError = -1010,
+    
+    //광고뷰 속성 hidden YES로 변경되는 상태를 알림
+    ALDynamicBannerStateSetViewHidden  = 9998,
+    
+    //광고뷰 속성 hidden NO로 변경되는 상태를 알림
+    ALDynamicBannerStateSetViewVisible = 9999,
 };
 
 @interface ALDynamicBannerView : UIView {
@@ -56,13 +65,24 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
 //네트워크 에러
 @property (nonatomic, strong, readonly) NSError *error;
 
+//테스트 모드 설정 값 (기본값 : NO)
+@property (nonatomic) BOOL isTestMode;
+
 /**
  *  광고 요청 시작 메소드
  *  @param session 애드립 설정정보가 연결된 세션 객체 (Weak Ref.)
  *  @param bannerSize 광고 이미지 크기 (내부적으로는 정수값으로 변환되어 호출함)
  */
-- (void)startAdRequestWithAdlibSession:(ADLibSession *)session
-                            bannerSize:(CGSize)bannerSize;
+
+// startAdRequestWithAdlibKey: 메소드로 대체한다.
+- (void)startAdRequestWithAdlibSession:(ADLibSession *)session bannerSize:(CGSize)bannerSize;
+
+/**
+ *  광고 요청 시작 메소드
+ *  @param key 애드립 키
+ *  @param bannerSize 광고 이미지 크기 (내부적으로는 정수값으로 변환되어 호출함)
+ */
+- (void)startAdRequestWithAdlibKey:(NSString *)key bannerSize:(CGSize)bannerSize;
 
 /**
  *  광고 요청 중지 메소드
