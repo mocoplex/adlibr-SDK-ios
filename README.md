@@ -1,8 +1,16 @@
 # ADLib iOS SDK 적용 샘플 프로젝트
 
-<br>샘플 워크스페이스 구성 <br>
+<br>
+애드립 광고 연동 및 애드립에서 제공하는 광고 플랫폼 미디에이션 연동을 적용하기위한 샘플 프로젝트를 포함합니다. <br>
+<br>
+샘플 워크스페이스는 아래와 같이 두 가지 프로젝트를 포함하고있으며, <br>
+구 버전은 기존 AdlibManager를 이용하여 연동하는 방법을 제공하는 샘플 프로젝트이며, <br>
+신규 버전은 새로 작성된 신규 클래스를 사용하여 연동하는 방법을 제공하는 샘플 프로젝트입니다. 
+<br>
+
 1. 신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
 2. 구버전 샘플 프로젝트 (adlibrTestUniversal/adlibrTestUniversal/) <br>
+<br>
 
 ## 프로젝트 설정 및 가이드 
 * 상세 페이지 링크 : <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
