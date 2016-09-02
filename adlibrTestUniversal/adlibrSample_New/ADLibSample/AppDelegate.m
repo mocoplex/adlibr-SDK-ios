@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <AVFoundation/AVAudioSession.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                           error:nil];
+
     return YES;
 }
 

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Adlib/ADLibSDK.h>
+#import <AVFoundation/AVAudioSession.h>
 
 //#import "SubAdlibAdViewAdam.h"
 //#import "SubAdlibAdViewAdmob.h"
@@ -35,6 +36,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                           error:nil];
+
     [self initializeAdlib];
     
     return YES;
