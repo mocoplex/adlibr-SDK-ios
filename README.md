@@ -1,19 +1,28 @@
-프로젝트 설정 가이드 상세 페이지 : <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
+# ADLib iOS SDK 적용 샘플 프로젝트
+
+<br>샘플 워크스페이스 구성 <br>
+1. 신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
+2. 구버전 샘플 프로젝트 (adlibrTestUniversal/adlibrTestUniversal/) <br>
+
+## 프로젝트 설정 및 가이드 
+* 상세 페이지 링크 : <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
+* 신규 버전 가이드 링크 : <https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md>
 <br>
+
+## ATS 설정
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
 > 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
-# adlibr-SDK-ios
-adlibr integration library for iOS
+## SDK Version History
 
 SDV version 4.2.1.0 (2016.09.01)
 > 전면광고 상품에 동영상 앱광고 상품 추가 <br>
 
 SDV version 4.2.0.1 (2016.08.22)
 > 애드립 및 미디에이션 광고 적용 신규 클래스 지원 <br>
-> 신규 클래스 샘플 및 가이드 페이지 : <https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md>
+
 
 SDK version 4.1.5.4 (2016.03.24)
 > 3D 엔진업데이트 <br>
