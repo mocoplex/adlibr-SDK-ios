@@ -13,8 +13,8 @@
 <br>
 
 ## 프로젝트 설정 및 가이드 
-* 상세 페이지 링크 : <http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html>
-* 신규 버전 가이드 링크 : <https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md>
+* [프로젝트 설정 및 구버전 이용 가이드 링크](http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html)
+* [신규버전 클래스 이용 가이드 링크]( https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md)
 <br>
 
 ## ATS 설정
