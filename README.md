@@ -25,10 +25,10 @@
 
 ## SDK Version History
 
-SDV version 4.2.1.0 (2016.09.01)
+SDK version 4.2.1.0 (2016.09.01)
 > 전면광고 상품에 동영상 앱광고 상품 추가 <br>
 
-SDV version 4.2.0.1 (2016.08.22)
+SDK version 4.2.0.1 (2016.08.22)
 > 애드립 및 미디에이션 광고 적용 신규 클래스 지원 <br>
 
 
