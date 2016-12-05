@@ -6,7 +6,7 @@
 //  Copyright © 2016년 mocoplex. All rights reserved.
 //
 //  Adlib SDK version 4.2.2.0
-//  Build (4.220) 2016.11.29. 16:00
+//  Build (4.220) 2016.12.05. 10:00
 
 
 #ifndef ADLibBanner_h

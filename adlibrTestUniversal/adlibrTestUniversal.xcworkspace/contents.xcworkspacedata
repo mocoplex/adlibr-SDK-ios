@@ -4,7 +4,4 @@
    <FileRef
       location = "group:adlibrSample_New/ADLibSample.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:adlibrTestUniversal/adlibrTestUniversal.xcodeproj">
-   </FileRef>
 </Workspace>

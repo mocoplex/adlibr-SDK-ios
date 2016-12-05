@@ -69,6 +69,9 @@ typedef NS_ENUM(NSInteger, ALAdRequestItemType){
 // 최대 값은 10개로 제한된다.
 - (BOOL)startAdRequestWithMaximumAdCount:(NSUInteger)count;
 
+- (BOOL)startAdRequestWithMaximumAdCount:(NSUInteger)count
+                                 timeout:(NSTimeInterval)timeout;
+
 // 수행중인 광고 요청을 취소한다.
 - (void)cancelAdRequest;
 

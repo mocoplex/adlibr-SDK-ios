@@ -15,6 +15,7 @@
 
 @protocol ALNativeAdTableHelperDelegate <NSObject>
 
+- (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFinishWithAdCount:(NSInteger)adCount;
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAd:(ALNativeAd *)nativeAd;
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFailedRequestWithError:(NSError *)error;
 
@@ -27,17 +28,18 @@
 
 // 테이블 뷰 스크롤 시 비디오 자동 재생 여부
 @property (nonatomic) BOOL autoPlayVideo;
+@property (nonatomic) BOOL isTestMode; //default : NO;
 
 /**
  * 네이티브 광고 테이블 헬퍼 클래스 생성자
  *
  * @param tableView 테이블 뷰
- * @param session 애드립세션 객체
+ * @param key 애드립 키
  * @param delegate 광고 추가 / 실패 델리게이트
  * @date 2015.10.01
  */
 - (id)initWithTableView:(UITableView *)tableView
-           adlibSession:(ADLibSession *)session
+               adlibKey:(NSString *)key
                delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
 
 /**
@@ -55,6 +57,10 @@
 - (void)requestNativeAdItemType:(ALAdRequestItemType)type
                    maximumCount:(NSUInteger)count
                 timeoutInterval:(NSTimeInterval)timeout;
+
+
+- (void)requestNativeAdItemType:(ALAdRequestItemType)type
+                   maximumCount:(NSUInteger)count;
 
 /**
  * 네이티브 광고 요청을 모두 취소
