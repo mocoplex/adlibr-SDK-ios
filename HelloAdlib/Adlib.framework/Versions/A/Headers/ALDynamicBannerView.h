@@ -43,9 +43,22 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     ALDynamicBannerStateSetViewVisible = 9999,
 };
 
+
+@class ALDynamicBannerView;
+
+@protocol ALDynamicBannerViewDelegate <NSObject>
+
+@optional
+- (void)alDynamicBannerView:(ALDynamicBannerView *)bannerView didChangeBannerState:(ALDynamicBannerState)state;
+
+@end
+
+
 @interface ALDynamicBannerView : UIView {
     
 }
+
+@property (nonatomic, weak) id <ALDynamicBannerViewDelegate> delegate;
 
 @property (nonatomic, strong) UIColor *bannerBackgroundColor;
 

@@ -14,10 +14,18 @@
 
 @protocol ALInterstitialAdDelegate <NSObject> 
 
+//해당 플랫폼 전면광고에 대한 수신성공
 - (void)alInterstitialAd:(ALInterstitialAd *)interstitialAd didReceivedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
+
+//해당 플랫폼 전면광고에 대한 수신실패
 - (void)alInterstitialAd:(ALInterstitialAd *)interstitialAd didFailedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 
+//스케쥴링에 설정된 모든 플랫폼 전면광고에 대한 수신 실패
 - (void)alInterstitialAdDidFailedAd:(ALInterstitialAd *)interstitialAd;
+
+@optional
+//해당 플랫폼 전면광고에 대한 클릭 이벤트 발생
+- (void)alInterstitialAd:(ALInterstitialAd *)interstitialAd didClickedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 
 @end
 

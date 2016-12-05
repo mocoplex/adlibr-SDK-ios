@@ -139,6 +139,7 @@
 		49E88A6B1559629B0018C877 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E88A6A1559629B0018C877 /* HelloWorldLayer.m */; };
 		7DCD2E7B1ABAD9A200C21634 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */; };
 		7DCD2E7D1ABAD9AE00C21634 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */; };
+		B00921B61DF5365B002C0B6C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00921B51DF5365B002C0B6C /* WebKit.framework */; };
 		B0C1E04A1D792F400051F124 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C1E0491D792F400051F124 /* Adlib.framework */; };
 		B0E201891B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */; };
 		B0E2954C1BD49F3C00F3A971 /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0E295471BD49F3C00F3A971 /* _TriDCommon.lua */; };
@@ -400,6 +401,7 @@
 		49E88A6A1559629B0018C877 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		7DCD2E7A1ABAD9A200C21634 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B00921B51DF5365B002C0B6C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B0C1E0491D792F400051F124 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		B0E295471BD49F3C00F3A971 /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00921B61DF5365B002C0B6C /* WebKit.framework in Frameworks */,
 				B0E201891B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib in Frameworks */,
 				7DCD2E7D1ABAD9AE00C21634 /* libxml2.dylib in Frameworks */,
 				7DCD2E7B1ABAD9A200C21634 /* CoreMedia.framework in Frameworks */,
@@ -468,6 +471,7 @@
 		49E88900155962990018C877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B00921B51DF5365B002C0B6C /* WebKit.framework */,
 				B0C1E0491D792F400051F124 /* Adlib.framework */,
 				B0E201881B2AB40B00A5A6C2 /* libstdc++.6.0.9.dylib */,
 				7DCD2E7C1ABAD9AE00C21634 /* libxml2.dylib */,
@@ -913,7 +917,7 @@
 		49E888F4155962990018C877 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					49E888FC155962990018C877 = {
 						DevelopmentTeam = J6H985GLJY;
@@ -1073,9 +1077,9 @@
 		49E88A6D1559629B0018C877 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1086,7 +1090,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1094,7 +1099,6 @@
 		49E88A6E1559629B0018C877 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1102,7 +1106,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -1141,6 +1145,7 @@
 					"-lz",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1179,6 +1184,7 @@
 					"-lz",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;

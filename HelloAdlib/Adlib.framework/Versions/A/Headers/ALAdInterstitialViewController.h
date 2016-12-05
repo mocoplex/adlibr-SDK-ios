@@ -15,6 +15,7 @@
 @protocol ALAdInterstitialControllerDelegate <NSObject>
 
 - (void)ALAdInterstitialControllerDismiss:(ALAdInterstitialViewController *)controller;
+- (void)ALAdInterstitialControllerDidClicked:(ALAdInterstitialViewController *)controller;
 
 @end
 
