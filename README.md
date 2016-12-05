@@ -8,8 +8,8 @@
 신규 버전은 새로 작성된 신규 클래스를 사용하여 연동하는 방법을 제공하는 샘플 프로젝트입니다. 
 <br>
 
-1. 신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
-2. 구버전 샘플 프로젝트 (adlibrTestUniversal/adlibrTestUniversal/) <br>
+1.(권장) 신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
+2.(deprecated) 구버전 샘플 프로젝트 (adlibrTestUniversal/adlibrTestUniversal/) <br>
 <br>
 
 ## 프로젝트 설정 및 가이드 
@@ -18,6 +18,7 @@
 <br>
 
 ## ATS 설정
+> !!! ATS 관련 HTTPS 지원 SDK 업데이트 예정입니다. (12월 중 예정)
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
@@ -25,12 +26,14 @@
 
 ## SDK Version History
 
+SDK version 4.2.2.0 (2016.12.05)
+> SDK 내부개선 <br>
+
 SDK version 4.2.1.0 (2016.09.01)
 > 전면광고 상품에 동영상 앱광고 상품 추가 <br>
 
 SDK version 4.2.0.1 (2016.08.22)
 > 애드립 및 미디에이션 광고 적용 신규 클래스 지원 <br>
-
 
 SDK version 4.1.5.4 (2016.03.24)
 > 3D 엔진업데이트 <br>
