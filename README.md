@@ -18,7 +18,7 @@
 <br>
 
 ## ATS 설정
-> !!! ATS 관련 HTTPS 지원 SDK 업데이트 예정입니다. (12월 중 예정)
+> !!! ATS 관련 HTTPS 지원 SDK 업데이트 예정입니다. (12월 중 예정) <br>
 > iOS 9 ATS(App Transport Security) 관련 가이드 업데이트 <br>
 > XCode 7 스토어 업로드시 에러 사항 수정 (Adlib.bundle 파일 교체 필요)<br>
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
