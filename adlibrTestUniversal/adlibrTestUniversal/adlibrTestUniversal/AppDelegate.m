@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Adlib/ADLibSDK.h>
-#import <AVFoundation/AVAudioSession.h>
+
+#import <AVFoundation/AVFAudio.h>
 
 //#import "SubAdlibAdViewAdam.h"
 //#import "SubAdlibAdViewAdmob.h"

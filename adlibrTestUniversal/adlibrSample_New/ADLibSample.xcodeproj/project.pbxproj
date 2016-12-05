@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00FF85B1D77FB7700498DE5 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FF85A1D77FB7700498DE5 /* Adlib.framework */; };
+		B00921701DF51590002C0B6C /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B009216F1DF51590002C0B6C /* Adlib.framework */; };
+		B00921761DF51648002C0B6C /* AdlibSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00921731DF51648002C0B6C /* AdlibSampleController.m */; };
+		B00921771DF51648002C0B6C /* MediationSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B00921751DF51648002C0B6C /* MediationSampleController.m */; };
 		B00FF85D1D77FB7F00498DE5 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
@@ -18,14 +20,16 @@
 		B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */; };
 		B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42121D64349D00D4774E /* _TriDStartup.lua */; };
 		B0ED421C1D64349E00D4774E /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42131D64349D00D4774E /* json.lua */; };
-		B0ED42271D64386C00D4774E /* AdlibSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED42261D64386C00D4774E /* AdlibSampleController.m */; };
-		B0ED422A1D64388600D4774E /* MediationSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED42291D64388600D4774E /* MediationSampleController.m */; };
 		B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */; };
 		B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422D1D643E7400D4774E /* libxml2.2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B00FF85A1D77FB7700498DE5 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B009216F1DF51590002C0B6C /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B00921721DF51648002C0B6C /* AdlibSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibSampleController.h; sourceTree = "<group>"; };
+		B00921731DF51648002C0B6C /* AdlibSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdlibSampleController.m; sourceTree = "<group>"; };
+		B00921741DF51648002C0B6C /* MediationSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationSampleController.h; sourceTree = "<group>"; };
+		B00921751DF51648002C0B6C /* MediationSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationSampleController.m; sourceTree = "<group>"; };
 		B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,10 +43,6 @@
 		B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
 		B0ED42121D64349D00D4774E /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
 		B0ED42131D64349D00D4774E /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
-		B0ED42251D64386C00D4774E /* AdlibSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdlibSampleController.h; sourceTree = "<group>"; };
-		B0ED42261D64386C00D4774E /* AdlibSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdlibSampleController.m; sourceTree = "<group>"; };
-		B0ED42281D64388600D4774E /* MediationSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationSampleController.h; sourceTree = "<group>"; };
-		B0ED42291D64388600D4774E /* MediationSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationSampleController.m; sourceTree = "<group>"; };
 		B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		B0ED422D1D643E7400D4774E /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -54,13 +54,24 @@
 			files = (
 				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
 				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
-				B00FF85B1D77FB7700498DE5 /* Adlib.framework in Frameworks */,
+				B00921701DF51590002C0B6C /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B00921711DF51648002C0B6C /* BannerSampleController */ = {
+			isa = PBXGroup;
+			children = (
+				B00921721DF51648002C0B6C /* AdlibSampleController.h */,
+				B00921731DF51648002C0B6C /* AdlibSampleController.m */,
+				B00921741DF51648002C0B6C /* MediationSampleController.h */,
+				B00921751DF51648002C0B6C /* MediationSampleController.m */,
+			);
+			path = BannerSampleController;
+			sourceTree = "<group>";
+		};
 		B0ED41DB1D6429D900D4774E = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +96,7 @@
 				B0ED420C1D64349D00D4774E /* ADLibFramework */,
 				B0ED41EA1D6429D900D4774E /* AppDelegate.h */,
 				B0ED41EB1D6429D900D4774E /* AppDelegate.m */,
-				B0ED42251D64386C00D4774E /* AdlibSampleController.h */,
-				B0ED42261D64386C00D4774E /* AdlibSampleController.m */,
-				B0ED42281D64388600D4774E /* MediationSampleController.h */,
-				B0ED42291D64388600D4774E /* MediationSampleController.m */,
+				B00921711DF51648002C0B6C /* BannerSampleController */,
 				B0ED41F01D6429D900D4774E /* Main.storyboard */,
 				B0ED41F31D6429D900D4774E /* Assets.xcassets */,
 				B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */,
@@ -116,8 +124,8 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
+				B009216F1DF51590002C0B6C /* Adlib.framework */,
 				B00FF85C1D77FB7F00498DE5 /* Adlib.bundle */,
-				B00FF85A1D77FB7700498DE5 /* Adlib.framework */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
 			path = ADLibFramework;
@@ -169,7 +177,7 @@
 		B0ED41DC1D6429D900D4774E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					B0ED41E31D6429D900D4774E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -219,8 +227,8 @@
 			files = (
 				B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */,
 				B0ED41E91D6429D900D4774E /* main.m in Sources */,
-				B0ED42271D64386C00D4774E /* AdlibSampleController.m in Sources */,
-				B0ED422A1D64388600D4774E /* MediationSampleController.m in Sources */,
+				B00921771DF51648002C0B6C /* MediationSampleController.m in Sources */,
+				B00921761DF51648002C0B6C /* AdlibSampleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +268,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -306,8 +316,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

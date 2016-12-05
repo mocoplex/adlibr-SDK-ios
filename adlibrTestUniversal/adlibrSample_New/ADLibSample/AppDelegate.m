@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <AVFoundation/AVAudioSession.h>
+#import <AVFoundation/AVFAudio.h>
 
 @interface AppDelegate ()
 

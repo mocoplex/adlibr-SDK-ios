@@ -19,7 +19,7 @@
 		B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */; };
 		B002C0711AA5C58D003D1CD3 /* BannerXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */; };
 		B002C0721AA5C58D003D1CD3 /* MediationBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */; };
-		B00FF8591D77FB6A00498DE5 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00FF8581D77FB6A00498DE5 /* Adlib.framework */; };
+		B009216E1DF5154C002C0B6C /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B009216D1DF5154C002C0B6C /* Adlib.framework */; };
 		B00FF85F1D77FB9300498DE5 /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B00FF85E1D77FB9300498DE5 /* Adlib.bundle */; };
 		B0CAC1AB1C50AE1300B44787 /* ADIconAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CAC1AA1C50AE1300B44787 /* ADIconAdController.m */; };
 		B0DB3F391B4E5FE700279CBC /* sample_list.json in Resources */ = {isa = PBXBuildFile; fileRef = B0DB3F231B4E5FE700279CBC /* sample_list.json */; };
@@ -62,7 +62,8 @@
 		B002C06C1AA5C58D003D1CD3 /* BannerXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerXibViewController.m; sourceTree = "<group>"; };
 		B002C06D1AA5C58D003D1CD3 /* MediationBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationBannerViewController.h; sourceTree = "<group>"; };
 		B002C06E1AA5C58D003D1CD3 /* MediationBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationBannerViewController.m; sourceTree = "<group>"; };
-		B00FF8581D77FB6A00498DE5 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B009216B1DF51449002C0B6C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		B009216D1DF5154C002C0B6C /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B00FF85E1D77FB9300498DE5 /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B0CAC1A91C50AE1300B44787 /* ADIconAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADIconAdController.h; sourceTree = "<group>"; };
 		B0CAC1AA1C50AE1300B44787 /* ADIconAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADIconAdController.m; sourceTree = "<group>"; };
@@ -102,9 +103,9 @@
 				B002C0691AA5C4C8003D1CD3 /* libxml2.dylib in Frameworks */,
 				B002C0671AA5C4C3003D1CD3 /* CoreMedia.framework in Frameworks */,
 				B002C0651AA5C4BE003D1CD3 /* CoreTelephony.framework in Frameworks */,
-				B00FF8591D77FB6A00498DE5 /* Adlib.framework in Frameworks */,
-				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
+				B009216E1DF5154C002C0B6C /* Adlib.framework in Frameworks */,
 				B002C0611AA5C4AC003D1CD3 /* AVFoundation.framework in Frameworks */,
+				B002C0631AA5C4B8003D1CD3 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +118,7 @@
 				B002BFB31AA5C250003D1CD3 /* adlibrTestUniversal */,
 				B002BFCD1AA5C250003D1CD3 /* adlibrTestUniversalTests */,
 				B002BFB21AA5C250003D1CD3 /* Products */,
+				B009216A1DF51449002C0B6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,13 +205,21 @@
 		B002C06A1AA5C4DA003D1CD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B00FF8581D77FB6A00498DE5 /* Adlib.framework */,
+				B009216D1DF5154C002C0B6C /* Adlib.framework */,
 				B0F90E151B27E35F00A757DD /* libstdc++.6.0.9.dylib */,
 				B002C0681AA5C4C8003D1CD3 /* libxml2.dylib */,
 				B002C0661AA5C4C3003D1CD3 /* CoreMedia.framework */,
 				B002C0641AA5C4BE003D1CD3 /* CoreTelephony.framework */,
 				B002C0621AA5C4B8003D1CD3 /* AdSupport.framework */,
 				B002C0601AA5C4AC003D1CD3 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B009216A1DF51449002C0B6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B009216B1DF51449002C0B6C /* AVKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,7 +329,7 @@
 		B002BFA91AA5C250003D1CD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = adlibr;
 				TargetAttributes = {
 					B002BFB01AA5C250003D1CD3 = {
@@ -424,8 +434,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -435,6 +447,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -468,8 +481,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -478,6 +493,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -502,7 +518,7 @@
 					"$(PROJECT_DIR)/adlibrTestUniversal",
 				);
 				INFOPLIST_FILE = adlibrTestUniversal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -521,7 +537,7 @@
 					"$(PROJECT_DIR)/adlibrTestUniversal",
 				);
 				INFOPLIST_FILE = adlibrTestUniversal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";

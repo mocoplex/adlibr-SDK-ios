@@ -11,6 +11,8 @@
 @implementation SongListTableViewCell
 
 - (void)awakeFromNib {
+    
+    [super awakeFromNib];
     // Initialization code
     //self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
 }
