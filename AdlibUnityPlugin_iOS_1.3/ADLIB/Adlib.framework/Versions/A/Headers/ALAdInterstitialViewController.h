@@ -15,6 +15,7 @@
 @protocol ALAdInterstitialControllerDelegate <NSObject>
 
 - (void)ALAdInterstitialControllerDismiss:(ALAdInterstitialViewController *)controller;
+- (void)ALAdInterstitialControllerDidClicked:(ALAdInterstitialViewController *)controller;
 
 @end
 
@@ -23,6 +24,8 @@
 
 - (instancetype)initWithBannerEvent:(ALAdlibBannerEvent *)bannerEvent
                             session:(ADLibSession *)session;
+
+- (instancetype)initWithWebUrl:(NSURL *)webUrl;
 
 @property (nonatomic, weak) id <ALAdInterstitialControllerDelegate>delegate;
 @property (nonatomic, strong) UIColor *bgColor;

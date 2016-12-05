@@ -5662,12 +5662,16 @@ TRID.GetSystemTime = function ()
 		TRID.DebugPrint("[TEST] TRID.GetSystemTime")
 	end
 end
-TRID.DoResourceGarbageCollection = function ()
-	if TRIDGLUE then
-		TRIDGLUE.DoResourceGarbageCollection()
-	else
-		TRID.DebugPrint("[TEST] TRID.DoResourceGarbageCollection")
-	end
+TRID.DoResourceGarbageCollection = function (instance, funcName)
+    if TRIDGLUE then
+        if instance and instance._baseID then
+            TRIDGLUE.DoResourceGarbageCollection(instance._baseID[1], instance._baseID[2], funcName)
+        else
+            TRIDGLUE.DoResourceGarbageCollection()
+        end
+    else
+        TRID.DebugPrint("[TEST] TRID.DoResourceGarbageCollection")
+end
 end
 TRID.ResetModal = function ()
 	if TRIDGLUE then
@@ -5700,9 +5704,9 @@ TRID.PickupData = function (getResourceName, getCollisionData)
 		TRID.DebugPrint("[TEST] TRID.PickupData")
 	end
 end
-TRID.PlaySound = function (filename, fileVolume, background, noLoop, noStream, playRate)
+TRID.PlaySound = function (filename, fileVolume, background, noLoop, noStream, noGarbage, playRate)
 	if TRIDGLUE then
-		TRIDGLUE.PlaySound(filename, background, fileVolume, noLoop, noStream, playRate or 1)
+		TRIDGLUE.PlaySound(filename, background, fileVolume, noLoop, noStream,noGarbage or false, playRate or 1)
 	else
 		TRID.DebugPrint("[TEST] TRID.PlaySound")
 	end
@@ -5720,6 +5724,20 @@ TRID.PauseSound = function (filename, pause)
 	else
 		TRID.DebugPrint("[TEST] TRID.PauseSound")
 	end
+end
+TRID.PlayEffectSound = function (filename, fileVolume, background, noLoop, noStream, playRate)
+    if TRIDGLUE then
+        TRIDGLUE.PlaySound(filename, background, fileVolume, noLoop, noStream, playRate or 1)
+    else
+        TRID.DebugPrint("[TEST] TRID.PlaySound")
+    end
+end
+TRID.StopEffectSound = function (filename)
+    if TRIDGLUE then
+        TRIDGLUE.StopSound(filename)
+    else
+        TRID.DebugPrint("[TEST] TRID.StopSound")
+    end
 end
 TRID.SetSoundVolume = function (volume, filename)
 	if TRIDGLUE then

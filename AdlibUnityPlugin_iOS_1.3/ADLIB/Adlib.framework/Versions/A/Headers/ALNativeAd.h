@@ -13,28 +13,47 @@
     
 }
 
-- (void)registerViewForInteraction:(UIView *)containerView
-                withViewController:(UIViewController *)controller;
+// 광고 노출 처리를 위해 등록합니다.
+// 해당 함수로 등록시 클릭 처리는 제공하는 clickURL을 통해 직접 구현합니다.
+- (void)registerViewForInteraction:(UIView *)containerView;
 
 #pragma mark - getter
 
-- (CGFloat)contentWidth;
-- (CGFloat)contentHeight;
+//클릭, 랜딩 주소 반환
+- (NSURL *)clickURL;
 
+//iconIamge Contents
+
+//아이콘 이미지 및 사이즈 반환
+- (UIImage *)iconImage;
+- (CGSize)iconImageSize;
+
+//메인 이미지 및 사이즈 반환
+- (UIImage *)mainContentImage;
+- (CGSize)mainContentSize;
+
+//배너 이미지 및 사이즈 반환
+- (UIImage *)bannerImage;
+- (CGSize)bannerImageSize;
+
+//Text Contents
 - (NSString *)contentTitle;
 - (NSString *)contentSubtitle;
 - (NSString *)adButtonTitle;
+
+//Video Contents
+- (BOOL)isVideoAd;
+- (BOOL)playAbleToVideoStreaming;
 
 - (NSURL *)thumbnailVideoURL;
 - (NSNumber *)thumbnailVideoLength;
 - (NSURL *)contentVideoURL;
 
-- (BOOL)isVideoAd;
-- (BOOL)playAbleToVideoStreaming;
+- (CGFloat)contentWidth;
+- (CGFloat)contentHeight;
 
-- (CGSize)iconImageSize;
-- (CGSize)mainContentSize;
 
+//하단 메소드들은 편의로 제공하는 메소드이다.
 #pragma mark - layout ALNativeAd assets
 
 /**
