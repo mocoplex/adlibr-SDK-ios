@@ -8,13 +8,13 @@
 신규 버전은 새로 작성된 신규 클래스를 사용하여 연동하는 방법을 제공하는 샘플 프로젝트입니다. 
 <br>
 
-1.(권장) 신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
-2.(deprecated) 구버전 샘플 프로젝트 (adlibrTestUniversal/adlibrTestUniversal/) <br>
+1.신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
+2.(deprecated) 구버전 샘플 프로젝트 지원중단 <br>
 <br>
 
 ## 프로젝트 설정 및 가이드 
-* [프로젝트 설정 및 구버전 이용 가이드 링크](http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html)
-* [신규버전 클래스 이용 가이드 링크]( https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md)
+* [프로젝트 설정 가이드 링크](http://mkt.adlibr.com/ssp/menual/ssp_sdk_ios.html)
+* [신규버전 배너 연동 가이드 링크]( https://github.com/mocoplex/adlibr-SDK-ios/blob/master/adlibrTestUniversal/adlibrSample_New/README.md)
 <br>
 
 ## ATS 설정
@@ -25,6 +25,8 @@
 > 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
 ## SDK Version History
+SDK version 4.2.3.0 (2017.01.18)
+> SDK 배너뷰 BackFill 지원기능 추가<br>
 
 SDK version 4.2.2.0 (2016.12.05)
 > SDK 내부개선 <br>
