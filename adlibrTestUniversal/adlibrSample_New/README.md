@@ -158,6 +158,23 @@ ALAdBannerViewDelegate 프로토콜을 구현한 delegate를 아래와 같이 �
     NSLog(@"bannerView failedAd : %@", [ALMediationDefine nameOfPlatform:platform]);
     
 }
+
+/**
+ *  플랫폼에 요청한 띠배너 광고의 실패 상태를 반환합니다.
+ *  반환값 BackFill 뷰 사용여부, 모든 플랫폼 광고요청이 실패한 경우 노출할 뷰를 지정하여 사용할 수 있습니다.
+ */
+- (BOOL)alAdBannerViewDidFailedAtAllPlatform:(ALAdBannerView *)bannerView
+{
+    NSLog(@"bannerView failed all-platform");
+    
+    //해당 델리게이트에서 애드립 플랫폼에 등록된 광고의 모두 실패 상태를 처리할 수 있습니다.
+    //등록된 플랫폼 스케쥴이 (애드립, 애드몹, 애드핏)인 경우 각 각 요청 후 모두 실패한 케이스의 상황
+    //해당 상황에 특별한 처리를 하지 않으면 광고 영역이 공백으로 노출될 수 있으며 뷰의 repeatLoop의 값에 따라
+    //일정 시간 (초)대기후 첫 플랫폼 부터 재호출 되거나 요청이 더이상 발생하지 않는 상태로 남아있다.
+
+    return YES;
+}
+
 ```
 
 <br><br>
