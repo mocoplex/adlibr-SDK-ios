@@ -113,7 +113,7 @@
 /**
  *  띠 배너 광고요청 재개 상태에서 내부적인 상태 변화를 통지합니다.
  */
-- (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIAION_STATE)state withExtraInfo:(id)info
+- (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIATION_STATE)state withExtraInfo:(id)info
 {
     NSLog(@"bannerView state : %@, info = %@", [ALMediationDefine descriptionOfState:state], info);
 }
@@ -133,6 +133,13 @@
 {
     NSLog(@"bannerView failedAd : %@", [ALMediationDefine nameOfPlatform:platform]);
     
+}
+
+
+//등록된 모든 플랫폼 광고의 실패 상태를 반환합니다.
+- (BOOL)alAdBannerViewDidFailedAtAllPlatform:(ALAdBannerView *)bannerView
+{
+    return YES;
 }
 
 @end

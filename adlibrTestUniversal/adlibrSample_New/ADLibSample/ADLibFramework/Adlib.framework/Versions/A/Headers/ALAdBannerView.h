@@ -14,13 +14,16 @@
 @protocol ALAdBannerViewDelegate <NSObject>
 
 //ALAdBannerView 광고요청 재개 상태에서 내부적인 상태 변화를 통지합니다.
-- (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIAION_STATE)state withExtraInfo:(id)info;
+- (void)alAdBannerView:(ALAdBannerView *)bannerView didChangeState:(ALMEDIATION_STATE)state withExtraInfo:(id)info;
 
 //플랫폼에 요청한 광고의 성공 상태를 반환합니다.
 - (void)alAdBannerView:(ALAdBannerView *)bannerView didReceivedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
 
 //플랫폼에 요청한 광고의 실패 상태를 반환합니다.
 - (void)alAdBannerView:(ALAdBannerView *)bannerView didFailedAdAtPlatform:(ALMEDIATION_PLATFORM)platform;
+
+//등록된 모든 플랫폼 광고의 실패 상태를 반환합니다.
+- (BOOL)alAdBannerViewDidFailedAtAllPlatform:(ALAdBannerView *)bannerView;
 
 @end
 
@@ -61,6 +64,10 @@ typedef NS_ENUM(NSInteger, AL_ADVIEW_VERTICAL_ALIGN) {
 // 모든 스케쥴 광고가 실패한 이후 다음 루프까지의 대기 시간
 // 기본 설정 값 20초 (설정 가능 범위 값 1~120초)
 @property (nonatomic) NSUInteger repeatLoopWaitTime;
+
+// 미디에이션 플랫폼 모두 실패한 경우에 대한 백필뷰
+@property (nonatomic, strong) UIView *backFillView;
+
 
 - (void)setKey:(NSString *)key forPlatform:(ALMEDIATION_PLATFORM)platform;
 

@@ -144,7 +144,9 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
     if (nativeAd) {
-        [_nativeAdTableManager didSelectAdCellForAd:nativeAd presentingViewController:self];
+        [_nativeAdTableManager didSelectAdCellForAd:nativeAd
+                                        atIndexPath:indexPath
+                           presentingViewController:self];
     }
 }
 
@@ -208,9 +210,9 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
         return;
     }
     
-    ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithTableView:self.tableView
-                                                                                         adlibKey:appKey
-                                                                                         delegate:self];
+    ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithTableViewController:self
+                                                                                                   adlibKey:appKey
+                                                                                                   delegate:self];
     
     self.nativeAdTableManager = nativeAdTableHelper;
     

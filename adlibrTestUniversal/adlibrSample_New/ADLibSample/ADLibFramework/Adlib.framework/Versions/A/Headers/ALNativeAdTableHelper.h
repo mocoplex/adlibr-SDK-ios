@@ -33,14 +33,13 @@
 /**
  * 네이티브 광고 테이블 헬퍼 클래스 생성자
  *
- * @param tableView 테이블 뷰
  * @param key 애드립 키
  * @param delegate 광고 추가 / 실패 델리게이트
  * @date 2015.10.01
  */
-- (id)initWithTableView:(UITableView *)tableView
-               adlibKey:(NSString *)key
-               delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
+- (id)initWithTableViewController:(UITableViewController *)tableViewController
+                         adlibKey:(NSString *)key
+                         delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
 
 /**
  * 네이티브 광고 요청
@@ -128,10 +127,12 @@
  * 네이티브 광고 셀을 클릭 이벤트를 처리한다.
  *
  * @param adObject 해당 셀의 광고 객체
+ * @param indexPath 선택된 셀의 indexPath
  * @param controller 전면 비디오광고 뷰컨트롤러를 present하는데 사용되는 뷰컨트롤러
  * @date 2014.12.18
  */
 - (void)didSelectAdCellForAd:(ALNativeAd *)adObject
+                 atIndexPath:(NSIndexPath *)path
     presentingViewController:(UIViewController *)controller;
 
 /**

@@ -24,6 +24,8 @@
 - (void)layoutAdProperties:(ALNativeAd *)nativeAd loadContent:(BOOL)needToload;
 - (void)setMainImageViewContentMode:(UIViewContentMode)mode;
 
+- (void)assignPresentingViewController:(UIViewController *)controller;
+
 @optional
 
 /**

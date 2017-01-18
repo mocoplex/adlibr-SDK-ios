@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ADLibSession.h"
 
-// 다이나믹 사이즈 하우스 광고 뷰 (이미지 광고만 지원)
+// 다이나믹 사이즈 광고 뷰 (이미지 광고만 지원)
 //
 // 업로드 가능 이미지 사이즈 500K
 // ex : 600x600 사이즈 이미지 업로드시
 // SDK 광고 이미지는 300x300 크기로 사용 (서버 이미지는 @2x 기준)
 //
-// 등록이 허가된 사이즈만을 등록/요청할 수 있음.
-// 해당내용에 대한 요청이 필요
 
 typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     
@@ -81,14 +79,6 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
 //테스트 모드 설정 값 (기본값 : NO)
 @property (nonatomic) BOOL isTestMode;
 
-/**
- *  광고 요청 시작 메소드
- *  @param session 애드립 설정정보가 연결된 세션 객체 (Weak Ref.)
- *  @param bannerSize 광고 이미지 크기 (내부적으로는 정수값으로 변환되어 호출함)
- */
-
-// startAdRequestWithAdlibKey: 메소드로 대체한다.
-- (void)startAdRequestWithAdlibSession:(ADLibSession *)session bannerSize:(CGSize)bannerSize;
 
 /**
  *  광고 요청 시작 메소드
@@ -102,13 +92,27 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
  */
 - (void)stopAdRequest;
 
+
+/**
+ *  광고 요청 상태 블록 함수 등록 메소드
+ */
+
 - (void)setRequestAdStateHandler:(void (^)(ALDynamicBannerState state))handler;
 
-+ (UIImage *)closeButtonImage;
 
 /**
  *  Error Log 출력 설정
  */
 + (void)setLogging:(BOOL)logging;
+
++ (UIImage *)closeButtonImage;
+
+/**
+ *  광고 요청 시작 메소드
+ *  @param session 애드립 설정정보가 연결된 세션 객체 (Weak Ref.)
+ *  @param bannerSize 광고 이미지 크기 (내부적으로는 정수값으로 변환되어 호출함)
+ */
+// startAdRequestWithAdlibKey: 메소드로 대체한다.
+- (void)startAdRequestWithAdlibSession:(ADLibSession *)session bannerSize:(CGSize)bannerSize;
 
 @end

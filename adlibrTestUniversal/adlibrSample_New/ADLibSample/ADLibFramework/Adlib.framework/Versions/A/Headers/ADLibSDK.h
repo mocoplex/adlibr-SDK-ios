@@ -5,8 +5,8 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.2.2.1
-//  Build (4.221) 2016.12.28. 13:00
+//  Adlib SDK version 4.2.3.0
+//  Build (4.230) 2017.01.10. 13:00
 
 
 #import <Adlib/ADLibSession.h>
@@ -33,6 +33,8 @@
 // 미디에이션 전면배너 요청 객체
 #import <Adlib/ALInterstitialAd.h>
 
+//띠배너 백필뷰 제공 탬플릿
+#import <Adlib/ALAdBackFillView.h>
 
 ///////////////////////////////////////////////////////////////////////////
 // 애드립 전용 이미지 광고 뷰                                                  //
