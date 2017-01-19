@@ -9,7 +9,7 @@
 <br>
 
 1.신규 샘플 프로젝트 (adlibrTestUniversal/adlibrSample_New/) <br>
-2.(deprecated) 구버전 샘플 프로젝트 지원중단 <br>
+2.구버전 샘플 프로젝트 지원중단 <br>
 <br>
 
 ## 프로젝트 설정 및 가이드 
