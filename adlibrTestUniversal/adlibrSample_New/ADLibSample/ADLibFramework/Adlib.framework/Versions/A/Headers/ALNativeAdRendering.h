@@ -26,8 +26,6 @@
 
 - (void)assignPresentingViewController:(UIViewController *)controller;
 
-@optional
-
 /**
  * ALNativeAd 섬네일 비디오 광고를 재생한다.
  * @date 2014.12.15
@@ -39,5 +37,17 @@
  * @date 2014.12.15
  */
 - (void)pauseVideo;
+
+/**
+ * ALNativeAd 섬네일 비디오 광고 재생 상태를 업데이트한다.
+ * @date 2014.12.15
+ */
+- (void)updateVideoState;
+
+/**
+ * ALNativeAd 섬네일 비디오 광고 재생 상태를 업데이트한다.
+ * @date 2017.01.15
+ */
+- (void)updateAutoPlayEnable:(BOOL)enable;
 
 @end

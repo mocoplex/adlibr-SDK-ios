@@ -11,7 +11,6 @@
 
 #define ADLIB_APP_KEY @"550787410cf2833915d71f3b" //adlib, adlib-house
 
-
 @interface AdlibSampleController () <ALInterstitialAdDelegate, ALAdBannerViewDelegate>
 
 @property (nonatomic) IBOutlet UIView *bannerContainerView;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="V4k-sq-h76" customClass="ALNativeAdView">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9F-wn-a9h">
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="192"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="c9F-wn-a9h" firstAttribute="top" secondItem="V4k-sq-h76" secondAttribute="top" id="15n-fg-1dV"/>
+                <constraint firstAttribute="bottom" secondItem="c9F-wn-a9h" secondAttribute="bottom" id="DV8-hS-Ce5"/>
+                <constraint firstItem="c9F-wn-a9h" firstAttribute="leading" secondItem="V4k-sq-h76" secondAttribute="leading" id="LTT-cV-JBc"/>
+                <constraint firstAttribute="trailing" secondItem="c9F-wn-a9h" secondAttribute="trailing" id="u2b-Ju-6o6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adMainContentView" destination="c9F-wn-a9h" id="wmW-BX-DAa"/>
+            </connections>
+            <point key="canvasLocation" x="-369" y="-753"/>
+        </view>
+    </objects>
+</document>

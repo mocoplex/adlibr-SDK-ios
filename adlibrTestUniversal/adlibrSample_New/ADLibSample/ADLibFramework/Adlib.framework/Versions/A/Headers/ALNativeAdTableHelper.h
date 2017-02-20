@@ -15,8 +15,7 @@
 
 @protocol ALNativeAdTableHelperDelegate <NSObject>
 
-- (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFinishWithAdCount:(NSInteger)adCount;
-- (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAd:(ALNativeAd *)nativeAd;
+- (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAds:(NSArray *)adList;
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFailedRequestWithError:(NSError *)error;
 
 @end
@@ -26,8 +25,6 @@
     
 }
 
-// 테이블 뷰 스크롤 시 비디오 자동 재생 여부
-@property (nonatomic) BOOL autoPlayVideo;
 @property (nonatomic) BOOL isTestMode; //default : NO;
 
 /**
@@ -37,29 +34,18 @@
  * @param delegate 광고 추가 / 실패 델리게이트
  * @date 2015.10.01
  */
-- (id)initWithTableViewController:(UITableViewController *)tableViewController
-                         adlibKey:(NSString *)key
-                         delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
+- (id)initWithViewController:(UIViewController *)viewController
+                   tableView:(UITableView *)tableView
+                    adlibKey:(NSString *)key
+                    delegate:(id<ALNativeAdTableHelperDelegate>)delegate;
 
 /**
  * 네이티브 광고 요청
  *
  * @param type 네이티브 광고 형식 (이미지 / 비디오 / 모든형식)
- * @param count 요청 광고 수 (최대 10개)
- * @param timeout 지정된 시간까지만의 광고 추가 알림을 받음
  * @date 2014.12.18
- *
- * @brief 
- * 네이티브 지면광고에 필요한 리소스까지 다운로드 완료된 상태에서 델리게이트를 
- * 호출함. (최대 10개 설정 시 10번까지 델리게이트가 호출될 수 있음)
  */
-- (void)requestNativeAdItemType:(ALAdRequestItemType)type
-                   maximumCount:(NSUInteger)count
-                timeoutInterval:(NSTimeInterval)timeout;
-
-
-- (void)requestNativeAdItemType:(ALAdRequestItemType)type
-                   maximumCount:(NSUInteger)count;
+- (void)requestNativeAdItemType:(ALAdRequestItemType)type;;
 
 /**
  * 네이티브 광고 요청을 모두 취소
@@ -92,6 +78,64 @@
 
 
 /**
+ * 네이티브 광고 셀이 화면에 노출되는 상황의 처리를 내부적으로 수행합니다.
+ * Ex. 비디오 광고 셀인 경우 자동 재생 처리.
+ *
+ * @param cell 화면에 노출되는 셀
+ * @param indexPath 셀의 indexPath 값
+ * @date 2017.1.19
+ */
+- (void)willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+
+
+/**
+ * 네이티브 광고 셀이 화면에 노출되는 상황의 처리를 내부적으로 수행합니다.
+ * Ex. 비디오 광고 셀인 경우 자동 정지 처리.
+ *
+ * @param cell 화면에서 사라지는 셀
+ * @param indexPath 셀의 indexPath 값
+ * @date 2017.1.19
+ */
+- (void)didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath;
+
+
+/**
+ * 네이티브 광고 셀을 클릭 이벤트를 처리한다.
+ *
+ * @param adObject 해당 셀의 광고 객체
+ * @param indexPath 선택된 셀의 indexPath
+ * @param controller 전면 비디오광고 뷰컨트롤러를 present하는데 사용되는 뷰컨트롤러
+ * @date 2014.12.18
+ */
+- (void)didSelectAdCellForAd:(ALNativeAd *)adObject
+                 atIndexPath:(NSIndexPath *)path
+    presentingViewController:(UIViewController *)controller;
+
+
+- (void)updateVideoAutoPlayPauseEnable:(BOOL)enable
+                               forCell:(UITableViewCell *)cell;
+
+
+#pragma mark - Optional 
+
+/**
+ * 네이티브 광고 메인 컨텐츠 이미지 뷰의 리사이즈 모드를 설정
+ *
+ * @date 2015.09.01
+ */
+- (void)setMainImageContentMode:(UIViewContentMode)mode;
+
+
+/**
+ * 가변 높이의 셀의 경우 높이를 계산하는데 필요한 광고 정보를 광고 뷰에 지정한다.
+ * @param cell 광고 셀
+ * @param adObject nativeAd 광고 객체
+ * @date 2014.12.19
+ * @brief 이미지 등 다운로드 완료가 필요한 요소의 값들은 해당하지 않는다.
+ */
+- (void)preconfigureCell:(UITableViewCell *)cell forAd:(ALNativeAd *)adObject;
+
+/**
  * 가변 높이의 셀에 해당하는 높이 값을 반환 (사전 계산으로 캐싱된 저장 값을 찾아 반환됨)
  *
  * @param width 캐싱된 값을 찾기 위한 키 값. (가로 넓이 기준으로 계산되어진 값을 찾음)
@@ -111,36 +155,5 @@
  * @date 2014.12.18
  */
 - (void)setExpectedAdCellHeight:(CGFloat)height forWidth:(CGFloat)width atRowAtIndexPath:(NSIndexPath *)indexPath;
-
-
-/**
- * 가변 높이의 셀의 경우 높이를 계산하는데 필요한 광고 정보를 광고 뷰에 지정한다.
- * @param cell 광고 셀
- * @param adObject nativeAd 광고 객체
- * @date 2014.12.19
- * @brief 이미지 등 다운로드 완료가 필요한 요소의 값들은 해당하지 않는다.
- */
-- (void)preconfigureCell:(UITableViewCell *)cell forAd:(ALNativeAd *)adObject;
-
-
-/**
- * 네이티브 광고 셀을 클릭 이벤트를 처리한다.
- *
- * @param adObject 해당 셀의 광고 객체
- * @param indexPath 선택된 셀의 indexPath
- * @param controller 전면 비디오광고 뷰컨트롤러를 present하는데 사용되는 뷰컨트롤러
- * @date 2014.12.18
- */
-- (void)didSelectAdCellForAd:(ALNativeAd *)adObject
-                 atIndexPath:(NSIndexPath *)path
-    presentingViewController:(UIViewController *)controller;
-
-/**
- * 네이티브 광고 메인 컨텐츠 이미지 뷰의 리사이즈 모드를 설정
- *
- * @param mode 해당 셀의 광고 객체
- * @date 2015.09.01
- */
-- (void)setMainImageContentMode:(UIViewContentMode)mode;
 
 @end

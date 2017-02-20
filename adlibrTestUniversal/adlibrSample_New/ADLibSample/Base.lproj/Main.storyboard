@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2yc-ej-Bni">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2yc-ej-Bni">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="826"/>
+            <point key="canvasLocation" x="1577" y="380"/>
         </scene>
         <!--Mediation Sample Controller-->
         <scene sceneID="fFZ-Vo-k92">
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohy-zM-ghL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="826"/>
+            <point key="canvasLocation" x="2345" y="379"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="o2w-LZ-toh">
@@ -162,7 +162,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="이미지 광고 샘플" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ind-U5-OCf">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="이미지 광고 샘플 - TableView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ind-U5-OCf">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -175,14 +175,34 @@
                                             <segue destination="Xeb-A5-aUs" kind="show" id="wxo-tA-gXR"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="GNB-1f-f7t" style="IBUITableViewCellStyleDefault" id="1sS-dU-cJW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5lh-OP-kHj" style="IBUITableViewCellStyleDefault" id="AQk-10-sM5">
                                         <rect key="frame" x="0.0" y="245" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQk-10-sM5" id="pfr-o7-fuc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="이미지 광고 샘플 - CollectionView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5lh-OP-kHj">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NYW-US-Tru" kind="show" id="PQ6-4M-S7r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="GNB-1f-f7t" style="IBUITableViewCellStyleDefault" id="1sS-dU-cJW">
+                                        <rect key="frame" x="0.0" y="289" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1sS-dU-cJW" id="xi1-ne-UDt">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="비디오 광고 샘플" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GNB-1f-f7t">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="비디오 광고 샘플 - TableView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GNB-1f-f7t">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -195,12 +215,32 @@
                                             <segue destination="naA-E2-J3G" kind="show" id="PQQ-qf-bcQ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="DZO-7x-Krk" style="IBUITableViewCellStyleDefault" id="cIK-3o-rGu">
+                                        <rect key="frame" x="0.0" y="333" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cIK-3o-rGu" id="aU7-hp-CbP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="비디오 광고 샘플 - View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DZO-7x-Krk">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="eUG-Fu-gq7" kind="show" id="Y5b-hX-gLf"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="3D 배너 샘플" id="ATv-Zl-OMU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="orM-cv-xEw" style="IBUITableViewCellStyleDefault" id="Kpy-5i-miv">
-                                        <rect key="frame" x="0.0" y="346" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="434" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kpy-5i-miv" id="vZv-Pl-tyL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -336,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dUy-DN-f5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="1541"/>
+            <point key="canvasLocation" x="1606" y="1137"/>
         </scene>
         <!--Simple Feed List Table View Controller-->
         <scene sceneID="HFM-P9-Rg5">
@@ -365,7 +405,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1A-mf-u68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="1547"/>
+            <point key="canvasLocation" x="3124" y="1137"/>
         </scene>
         <!--Icon Ad Controller-->
         <scene sceneID="HU1-pG-tlO">
@@ -399,7 +439,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVU-uz-q1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="1631"/>
+            <point key="canvasLocation" x="1606" y="1904"/>
+        </scene>
+        <!--View Type Controller-->
+        <scene sceneID="Dt4-xC-2Z1">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eUG-Fu-gq7" customClass="ViewTypeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QAz-io-4mc"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRo-56-7bG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRE-Fw-irw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNy-1g-Src">
+                                <rect key="frame" x="0.0" y="72" width="375" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="0FX-hL-Lb6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88674067249999999" green="0.88674067249999999" blue="0.88674067249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vNy-1g-Src" firstAttribute="top" secondItem="QAz-io-4mc" secondAttribute="bottom" constant="8" id="Ft0-hb-0ES"/>
+                            <constraint firstAttribute="trailing" secondItem="vNy-1g-Src" secondAttribute="trailing" id="mqQ-jG-ZfI"/>
+                            <constraint firstItem="vNy-1g-Src" firstAttribute="leading" secondItem="JRE-Fw-irw" secondAttribute="leading" id="pqM-Qv-LlB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zHS-HS-PSQ"/>
+                    <connections>
+                        <outlet property="scrollView" destination="vNy-1g-Src" id="bbQ-NX-BY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixx-yF-dug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="1137"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="Zdz-Rm-7Xr">
+            <objects>
+                <collectionViewController id="NYW-US-Tru" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3QX-1J-bBd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tdr-Xv-lkS">
+                            <size key="itemSize" width="170" height="170"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sampleCell" id="DXQ-23-oyH" customClass="SampleCollectionViewCell">
+                                <rect key="frame" x="10" y="10" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kao-nX-wqp">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.84186771370000002" green="0.84186771370000002" blue="0.84186771370000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Kao-nX-wqp" secondAttribute="bottom" id="A8h-Un-RNJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kao-nX-wqp" secondAttribute="trailing" id="dKf-g9-FDU"/>
+                                    <constraint firstItem="Kao-nX-wqp" firstAttribute="leading" secondItem="DXQ-23-oyH" secondAttribute="leading" id="im7-Ms-Rke"/>
+                                    <constraint firstItem="Kao-nX-wqp" firstAttribute="top" secondItem="DXQ-23-oyH" secondAttribute="top" id="peA-dy-aYs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Kao-nX-wqp" id="qfS-QJ-OuU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="NYW-US-Tru" id="rZh-2b-cm0"/>
+                            <outlet property="delegate" destination="NYW-US-Tru" id="J3C-nu-pbr"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="v5d-fc-1al"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHd-Iu-8I6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="1137"/>
         </scene>
     </scenes>
 </document>

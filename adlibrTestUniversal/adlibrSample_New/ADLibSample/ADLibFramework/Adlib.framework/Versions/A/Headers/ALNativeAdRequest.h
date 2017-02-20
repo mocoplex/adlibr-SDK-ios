@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, ALAdRequestErrCode){
     ALAdRequestErrCodeResponseError,    //광고 응답 오류
     ALAdRequestErrCodeResCodeError,     //광고 서버 응답코드 오류
     ALAdRequestErrCodeNetworkError,     //광고 요청 네트워크 에러
-    ALAdRequestErrCodeResourceDownload, //광고 소재 다운로드 에러
+    ALAdRequestErrCodeReadyForResource, //광고 소재 준비 단계
 };
 
 typedef NS_ENUM(NSInteger, ALAdRequestItemType){
@@ -31,12 +31,11 @@ typedef NS_ENUM(NSInteger, ALAdRequestItemType){
 
 @protocol ALNativeAdRequestDelegate <NSObject>
 
-- (void)nativeAdRequest:(ALNativeAdRequest *)request didFinishWithAdCount:(NSInteger)adCount;
+- (void)nativeAdRequest:(ALNativeAdRequest *)request didReceivedNativeAds:(NSArray *)nativeAdList;
 - (void)nativeAdRequest:(ALNativeAdRequest *)request didFailWithErrorCode:(ALAdRequestErrCode)code;
 
-- (void)nativeAdRequest:(ALNativeAdRequest *)request didReceivedAd:(ALNativeAd *)nativeAd;
-
 @end
+
 
 @interface ALNativeAdRequest : NSObject {
     
@@ -61,18 +60,12 @@ typedef NS_ENUM(NSInteger, ALAdRequestItemType){
 // 생성자 : 광고 키값을 지정하여 생성해야 광고를 수신할 수 있다.
 - (id)initAdRequestWithKey:(NSString *)key;
 
-
-// 네이티브 광고를 요청하는 함수 (기본값으로 1개의 광고를 요청한다.)
+// 네이티브 광고를 요청하는 함수
 - (BOOL)startAdRequest;
-
-// 네이티브 광고를 요청하는 함수, 한번에 n개 까지 광고를 묶음으로 요청할 수 있다.
-// 최대 값은 10개로 제한된다.
-- (BOOL)startAdRequestWithMaximumAdCount:(NSUInteger)count;
-
-- (BOOL)startAdRequestWithMaximumAdCount:(NSUInteger)count
-                                 timeout:(NSTimeInterval)timeout;
 
 // 수행중인 광고 요청을 취소한다.
 - (void)cancelAdRequest;
+
++ (NSString *)msgForErrorCode:(ALAdRequestErrCode)code;
 
 @end
