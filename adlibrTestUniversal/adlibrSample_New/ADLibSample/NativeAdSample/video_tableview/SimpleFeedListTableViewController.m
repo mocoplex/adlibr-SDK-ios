@@ -127,14 +127,37 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     return cell;
 }
 
+// 광고뷰가 화면 노출되는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 광고뷰가 화면에서 사라지는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 테이블 뷰 셀 선택 처리
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
+    if (nativeAd) {
+        [_nativeAdTableManager didSelectAdCellForAd:nativeAd
+                                        atIndexPath:indexPath
+                           presentingViewController:self];
+    }
+}
+
 - (UITableViewCell *)al_tableView:(UITableView *)tableView adCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
     
     UITableViewCell *cell = nil;
-    NSString *cellIdentifier = nil;
-    
-    cellIdentifier = ALSimpleFeedListAdCellIdentifier;
+    NSString *cellIdentifier = ALSimpleFeedListAdCellIdentifier;
     
     // 헬퍼클래스에 해당 네이티브광고를 랜더링한 셀을 요청합니다.
     cell = (id)[_nativeAdTableManager adCellForAd:nativeAd
@@ -148,21 +171,6 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
 {
     cell.feedTitleLabel.text = item.name;
     cell.feedSubitleLabel.text = [item timeStampDescription];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
-}
-
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
 }
 
 - (ALNativeAd *)pv_nativeAdObjectAtRow:(NSUInteger)row

@@ -113,8 +113,7 @@ shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if (isAd) {
         ALNativeAd *item = [listItem objectForKey:kMapKeyItem];
-        NSURL *clkURL = item.clickURL;
-        [[UIApplication sharedApplication] openURL:clkURL];
+        [self.nativeAdHelper didSelectAdCellForAd:item atIndexPath:indexPath presentingViewController:self];
     } else {
         SampleFeedItem *item = [listItem objectForKey:kMapKeyItem];
         NSURL *url = [NSURL URLWithString:item.urlString];
