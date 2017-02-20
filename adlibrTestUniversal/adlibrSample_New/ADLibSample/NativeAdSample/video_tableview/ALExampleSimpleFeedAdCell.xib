@@ -19,23 +19,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5k-mB-y8Y" userLabel="CardView">
-                        <rect key="frame" x="4" y="4" width="312" height="211.5"/>
+                        <rect key="frame" x="0.0" y="4" width="320" height="211.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-px-KSI" userLabel="ContentView">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="211.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="211.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-In-Od3">
-                                        <rect key="frame" x="0.0" y="0.0" width="312" height="160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="9g7-Ew-b5H"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7C-9Z-tZ1" userLabel="DescView">
-                                        <rect key="frame" x="0.0" y="160" width="312" height="51.5"/>
+                                        <rect key="frame" x="0.0" y="160" width="320" height="51.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgz-IC-gEC">
-                                                <rect key="frame" x="8" y="8" width="243" height="21"/>
+                                                <rect key="frame" x="8" y="8" width="251" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Ce9-dU-c4j"/>
                                                 </constraints>
@@ -44,7 +44,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-Tj-mVw">
-                                                <rect key="frame" x="259" y="11" width="45" height="34"/>
+                                                <rect key="frame" x="267" y="11" width="45" height="34"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.55686274509803924" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="mHP-ug-3cZ"/>
@@ -57,7 +57,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bym-lm-eMW">
-                                                <rect key="frame" x="8" y="28" width="248" height="17"/>
+                                                <rect key="frame" x="8" y="28" width="256" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="XJp-7M-xtT"/>
                                                 </constraints>
@@ -101,12 +101,12 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.89129459089999996" green="0.89129459089999996" blue="0.89129459089999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Z5k-mB-y8Y" secondAttribute="bottom" constant="4" id="OMf-1v-O0u"/>
-                    <constraint firstAttribute="trailing" secondItem="Z5k-mB-y8Y" secondAttribute="trailing" constant="4" id="ZAi-UJ-h3C"/>
+                    <constraint firstAttribute="trailing" secondItem="Z5k-mB-y8Y" secondAttribute="trailing" id="ZAi-UJ-h3C"/>
                     <constraint firstItem="Z5k-mB-y8Y" firstAttribute="top" secondItem="bWo-Bs-NdH" secondAttribute="top" constant="4" id="ohT-kO-fGn"/>
-                    <constraint firstItem="Z5k-mB-y8Y" firstAttribute="leading" secondItem="bWo-Bs-NdH" secondAttribute="leading" constant="4" id="yeM-gp-gu0"/>
+                    <constraint firstItem="Z5k-mB-y8Y" firstAttribute="leading" secondItem="bWo-Bs-NdH" secondAttribute="leading" id="yeM-gp-gu0"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

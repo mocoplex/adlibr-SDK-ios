@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx5-WC-Wx5" userLabel="CardView">
-                        <rect key="frame" x="4" y="4" width="312" height="241.5"/>
+                        <rect key="frame" x="0.0" y="4" width="320" height="241.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2W-ve-I8l" userLabel="DecriptionView">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0pm-sQ-D1b" userLabel="IconImageView">
                                         <rect key="frame" x="10" y="10" width="50" height="50"/>
@@ -32,7 +32,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-ex-gao" userLabel="TitleLabel">
-                                        <rect key="frame" x="70" y="10" width="232" height="21"/>
+                                        <rect key="frame" x="70" y="10" width="240" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="GSF-Kr-aYI"/>
                                         </constraints>
@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-Uw-JgD" userLabel="SubtitleLabel">
-                                        <rect key="frame" x="70" y="31" width="232" height="17"/>
+                                        <rect key="frame" x="70" y="31" width="240" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="dnp-6d-YGn"/>
                                         </constraints>
@@ -64,10 +64,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mc8-bE-kjW" userLabel="ContentImageView">
-                                <rect key="frame" x="0.0" y="70" width="312" height="171.5"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="171.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EpS-5b-EIh" userLabel="MainImageView">
-                                        <rect key="frame" x="0.0" y="10" width="312" height="151.5"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="151.5"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -91,10 +91,10 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.89129459085859786" green="0.89129459085859786" blue="0.89129459085859786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="xx5-WC-Wx5" secondAttribute="trailing" constant="4" id="6bw-vY-SoY"/>
-                    <constraint firstItem="xx5-WC-Wx5" firstAttribute="leading" secondItem="USQ-Eu-B4R" secondAttribute="leading" constant="4" id="KD1-XO-A7c"/>
+                    <constraint firstAttribute="trailing" secondItem="xx5-WC-Wx5" secondAttribute="trailing" id="6bw-vY-SoY"/>
+                    <constraint firstItem="xx5-WC-Wx5" firstAttribute="leading" secondItem="USQ-Eu-B4R" secondAttribute="leading" id="KD1-XO-A7c"/>
                     <constraint firstItem="xx5-WC-Wx5" firstAttribute="top" secondItem="USQ-Eu-B4R" secondAttribute="top" constant="4" id="cUa-Fz-ftF"/>
                     <constraint firstAttribute="bottom" secondItem="xx5-WC-Wx5" secondAttribute="bottom" constant="4" id="xEt-ch-hGX"/>
                 </constraints>

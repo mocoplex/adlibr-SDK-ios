@@ -22,10 +22,6 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
 
 @interface SimpleFeedListTableViewController () <ALNativeAdTableHelperDelegate>
 
-@property (nonatomic, strong) SimpleFeedListTableViewCell *tableViewCell;
-@property (nonatomic, strong) ALExampleSimpleFeedAdCell   *imageAdCell;
-@property (nonatomic, strong) ALNativeAdTableViewCell     *videoAdCell;
-
 @property (nonatomic, strong) NSMutableArray *tableItemList;
 
 // 어플리케이션에서 이미지 URL 캐시 다운로드를 사용할 수 있도록 제공하는 클래스
@@ -69,7 +65,7 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
 
 - (void)dealloc
 {
-    
+    [_nativeAdTableManager cancelReqeust];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,13 +136,10 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     
     cellIdentifier = ALSimpleFeedListAdCellIdentifier;
     
-    [_nativeAdTableManager setMainImageContentMode:UIViewContentModeScaleAspectFill];
-    
     // 헬퍼클래스에 해당 네이티브광고를 랜더링한 셀을 요청합니다.
     cell = (id)[_nativeAdTableManager adCellForAd:nativeAd
                                    cellIdentifier:cellIdentifier
                                      forIndexPath:indexPath];
-    
     
     return cell;
 }
@@ -234,18 +227,15 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
 
 - (void)loadNativeAds
 {
-    NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(3), @(11)]];
-    //NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(1)]];
+    NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(3)]];
     self.adItemIndexList = indexList;
-    
-    BOOL isTestMode = YES;
     
     ALNativeAdTableHelper *nativeAdTableHelper = [[ALNativeAdTableHelper alloc] initWithViewController:self
                                                                                              tableView:self.tableView
                                                                                               adlibKey:ADLIB_APP_KEY
                                                                                               delegate:self];
     self.nativeAdTableManager = nativeAdTableHelper;
-    self.nativeAdTableManager.isTestMode = isTestMode;
+    self.nativeAdTableManager.isTestMode = YES;
     
     //async load native-AD list
     [_nativeAdTableManager requestNativeAdItemType:ALAdRequestItemTypeVideoAd];

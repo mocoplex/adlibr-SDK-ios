@@ -72,7 +72,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
 
 - (void)dealloc
 {
-    
+    [_nativeAdTableManager cancelReqeust];
 }
 
 - (void)didReceiveMemoryWarning
