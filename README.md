@@ -26,8 +26,8 @@
 
 ## SDK Version History
 
-SDK version 4.2.3.4 (2017.02.20)
-> SDK 네이티브 동영상 광고 개선<br>
+SDK version 4.3.0.0 (2017.02.21)
+> SDK 네이티브 동영상광고 상품추가<br>
 
 SDK version 4.2.3.0 (2017.01.18)
 > SDK 배너뷰 BackFill 지원기능 추가<br>

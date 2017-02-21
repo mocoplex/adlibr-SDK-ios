@@ -55,7 +55,7 @@
     //[_bannerView setKey:CAULY_ID forPlatform:ALMEDIATION_PLATFORM_CAULY];
     
     _bannerView.isTestMode = YES;
-    _bannerView.repeatLoop = NO;
+    _bannerView.repeatLoop = YES;
     
     [_bannerView startAdViewWithKey:ADLIB_APP_KEY
                  rootViewController:self

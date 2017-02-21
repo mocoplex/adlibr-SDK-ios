@@ -48,7 +48,6 @@ static NSString * const adSampleCellReuseIdentifier = @"ALSampleAdCollectionView
     [self.collectionView registerNib:[UINib nibWithNibName:adSampleCellReuseIdentifier bundle:nil]
           forCellWithReuseIdentifier:adSampleCellReuseIdentifier];
     
-    
     [self pv_loadTableItemList];
 }
 
@@ -68,6 +67,7 @@ static NSString * const adSampleCellReuseIdentifier = @"ALSampleAdCollectionView
     return _tableItemList.count;
 }
 
+// 광고 셀 및 샘플 데이터 셀을 생성하고 소재 요소를 설정합니다.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
    
@@ -104,9 +104,22 @@ static NSString * const adSampleCellReuseIdentifier = @"ALSampleAdCollectionView
 
 #pragma mark <UICollectionViewDelegate>
 
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView
-shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+// 광고뷰가 화면 노출되는 상황의 처리를 위해 필요
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.nativeAdHelper willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 광고뷰가 화면에서 사라지는 상황의 처리를 위해 필요
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.nativeAdHelper didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+}
+
+
+// 셀 선택 액션을 처리합니다.
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSMutableDictionary *listItem = [_tableItemList objectAtIndex:indexPath.row];
     BOOL isAd = [[listItem objectForKey:kMapKeyIsAd] boolValue];
@@ -123,18 +136,10 @@ shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.nativeAdHelper willDisplayCell:cell forRowAtIndexPath:indexPath];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.nativeAdHelper didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
-}
 
 #pragma mark -
 
+// 샘플 테이블 데이터를 요청합니다.
 - (void)pv_loadTableItemList
 {
     if (_tableItemList) {
@@ -162,6 +167,7 @@ shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self pv_loadNativeAd];
 }
 
+// 네이티브 광고를 요청합니다.
 - (void)pv_loadNativeAd
 {
     NSMutableArray *indexList = [[NSMutableArray alloc] initWithArray:@[@(3)]];
@@ -180,8 +186,9 @@ shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [_nativeAdHelper requestNativeAdItemType:ALAdRequestItemTypeImageAd];
 }
 
-#pragma mark -
+#pragma mark - ALNativeAdCollectionHelperDelegate
 
+// 광고 수신 성공 델리게이트
 - (void)ALNativeAdCollectionHelper:(ALNativeAdCollectionHelper *)helper didReceivedNativeAds:(NSArray *)adList
 {
     if (adList.count > 0 && _adItemIndexList.count > 0) {
@@ -214,9 +221,10 @@ shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
+// 광고 수신 실패 델리게이트
 - (void)ALNativeAdCollectionHelper:(ALNativeAdCollectionHelper *)helper didFailedRequestWithError:(NSError *)error
 {
-    
+    NSLog(@"ALNativeAdCollectionHelper Error : %@", error);
 }
 
 @end

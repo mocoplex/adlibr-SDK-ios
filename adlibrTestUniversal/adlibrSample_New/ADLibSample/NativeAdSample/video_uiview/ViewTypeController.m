@@ -35,11 +35,16 @@
 @property (nonatomic, strong) ALNativeAdRequest *request;
 @property (nonatomic, strong) ALNativeAd *nativeAd;
 
+@property (nonatomic, strong) ALNativeAdView *adView;
+
 @end
 
 
 @implementation ViewTypeController
 
+/*
+ *  네이티브 광고를 뷰 형태로 사용할 경우 적용 샘플 코드입니다.
+ */
 
 - (void)viewDidLoad
 {
@@ -51,9 +56,19 @@
         [self setAutomaticallyAdjustsScrollViewInsets:NO];
     }
     
+    // AppDelegate에서 이미 설정 (동영상 광고를 포함해서 App 외부 출력과 Mix 설정의 코드로 필요 시 설정합니다.
+    //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+    //                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+    //                                           error:nil];
+    
     [self initializeScrollView];
     
     [self loadFeedList];
+}
+
+- (void)dealloc
+{
+    [self destroyNativeAdView];
 }
 
 - (void)viewWillLayoutSubviews
@@ -63,16 +78,6 @@
     NSInteger countOfItem = kCountOfContents;
     _scrollView.contentSize = CGSizeMake(kWidthOfContentView * countOfItem,
                                          kHeightOfContentView);
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
 }
 
 - (void)initializeScrollView
@@ -130,11 +135,7 @@
 
 - (void)loadVideoAd
 {
-    if (_request) {
-        _request.delegate = nil;
-        [_request cancelAdRequest];
-        self.request = nil;
-    }
+    [self destroyNativeAdView];
     
     _request = [[ALNativeAdRequest alloc] initAdRequestWithKey:ADLIB_NATIVEAD_KEY];
     _request.delegate = self;
@@ -145,17 +146,43 @@
     [_request startAdRequest];
 }
 
+- (void)destroyNativeAdView
+{
+    if (_request) {
+        _request.delegate = nil;
+        [_request cancelAdRequest];
+        self.request = nil;
+    }
+    
+    if (_adView) {
+        [_adView updateAutoPlayEnable:NO];
+        [_adView removeFromSuperview];
+        self.adView = nil;
+    }
+}
+
+#pragma mark - ALNativeAdRequestDelegate
+
+//광고 수신 성공 델리게이트
 - (void)nativeAdRequest:(ALNativeAdRequest *)request didReceivedNativeAds:(NSArray *)nativeAdList
 {
     if (nativeAdList.count > 0) {
         
         self.nativeAd = [nativeAdList firstObject];
         
+        if (_adView) {
+            [_adView updateAutoPlayEnable:NO];
+            [_adView removeFromSuperview];
+            self.adView = nil;
+        }
+        
         ALNativeAdView *adView = [[[NSBundle mainBundle] loadNibNamed:@"ALNativeViewSample" owner:self options:nil] lastObject];
         adView.frame = CGRectMake(kIndexOfAd * kWidthOfContentView,
                                   0,
                                   kWidthOfContentView,
                                   kHeightOfContentView);
+        
+        self.adView = adView;
         
         [_scrollView addSubview:adView];
         
@@ -166,10 +193,12 @@
         [adView layoutAdProperties:_nativeAd loadContent:YES];
         
         //화면상에서 인/아웃 시 재생 자동 처리
+        //* 동영상광고를 뷰타입에 사용할 경우 필수로 설정합니다.
         [adView updateAutoPlayEnable:YES];
     }
 }
 
+//광고 수신 실패 델리게이트
 - (void)nativeAdRequest:(ALNativeAdRequest *)request didFailWithErrorCode:(ALAdRequestErrCode)code
 {
     NSLog(@"error : %@", [ALNativeAdRequest msgForErrorCode:code]);

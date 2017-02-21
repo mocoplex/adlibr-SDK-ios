@@ -10,7 +10,7 @@
 #import "SimpleFeedListTableViewCell.h"
 #import "SampleFeedItem.h"
 #import "ALExampleSimpleFeedAdCell.h"
-#import <Adlib/ADLibSDK.h>
+#import <Adlib/ADLibNative.h>
 
 #define kMapKeyIsAd @"isAd"
 #define kMapKeyItem @"item"
@@ -39,9 +39,16 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
 @implementation SimpleFeedListTableViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.title = @"FeedList Type";
+    
+
+// AppDelegate에서 이미 설정 (동영상 광고를 포함해서 App 외부 출력과 Mix 설정의 코드로 필요 시 설정합니다.
+//    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
+//                                     withOptions:AVAudioSessionCategoryOptionMixWithOthers
+//                                           error:nil];
     
     _tableItemList = [[NSMutableArray alloc] init];
     
@@ -56,10 +63,10 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     [self.tableView registerNib:[UINib nibWithNibName:ALSimpleFeedListAdCellIdentifier bundle:nil]
          forCellReuseIdentifier:ALSimpleFeedListAdCellIdentifier];
     
-    //load application feed list
+    //샘플 테이블의 피드리스트를 불러옵니다.
     [self loadFeedList];
     
-    //setup table manager
+    //샘플 테이블의 네이티브 광고를 요청합니다.
     [self loadNativeAds];
 }
 
@@ -68,12 +75,7 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     [_nativeAdTableManager cancelReqeust];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,6 +104,39 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     }
 }
 
+#pragma mark - <UITableViewDelegate>
+
+// 광고뷰가 화면 노출되는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 광고뷰가 화면에서 사라지는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 테이블 뷰 셀 선택 처리
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+// 기본적인 뷰 액션은 네이티브 광고뷰 컴포넌트에 처리되있습니다.
+// 추가로 테이블뷰 셀 선택 액션에 처리가 필요할 경우에만 사용합니다.
+//
+//    ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
+//    if (nativeAd) {
+//        [_nativeAdTableManager didSelectAdCellForAd:nativeAd
+//                                        atIndexPath:indexPath
+//                           presentingViewController:self];
+//    }
+}
+
+#pragma mark -
+
+// 샘플 테이블의 피드셀을 반환합니다.
 - (UITableViewCell *)al_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //샘플 피드리스트 셀 반환
@@ -127,31 +162,7 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     return cell;
 }
 
-// 광고뷰가 화면 노출되는 상황의 처리를 위해 필요
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
-}
-
-// 광고뷰가 화면에서 사라지는 상황의 처리를 위해 필요
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
-}
-
-// 테이블 뷰 셀 선택 처리
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
-    if (nativeAd) {
-        [_nativeAdTableManager didSelectAdCellForAd:nativeAd
-                                        atIndexPath:indexPath
-                           presentingViewController:self];
-    }
-}
-
+// 샘플 테이블의 광고셀을 반환합니다.
 - (UITableViewCell *)al_tableView:(UITableView *)tableView adCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
@@ -243,15 +254,18 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
                                                                                               adlibKey:ADLIB_APP_KEY
                                                                                               delegate:self];
     self.nativeAdTableManager = nativeAdTableHelper;
+    
+    //테스트 모드, 상용 모드를 설정합니다.
     self.nativeAdTableManager.isTestMode = YES;
     
-    //async load native-AD list
+    //네이티브 동영상 광고를 요청합니다.
     [_nativeAdTableManager requestNativeAdItemType:ALAdRequestItemTypeVideoAd];
 }
 
 
-#pragma mark -
+#pragma mark - ALNativeAdRequestDelegate
 
+//광고 수신 성공 델리게이트
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAds:(NSArray *)adList
 {
     if (_adItemIndexList.count > 0) {
@@ -279,6 +293,7 @@ static NSString * const SimpleFeedListItemCellIdentifier = @"SimpleFeedListTable
     }
 }
 
+//광고 수신 실패 델리게이트
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFailedRequestWithError:(NSError *)error
 {
     NSLog(@"nativeAdTableHelper Error : %@", error);

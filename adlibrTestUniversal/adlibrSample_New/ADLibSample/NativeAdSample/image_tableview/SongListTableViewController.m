@@ -93,7 +93,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     }
 }
 
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -115,6 +115,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     return _tableItemList.count;
 }
 
+// 광고 뷰 셀 생성 및 소재 랜더링을 구현합니다.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
@@ -138,6 +139,21 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     return cell;
 }
 
+#pragma mark - <UITableViewDelegate>
+
+// 광고 뷰 셀이 화면에 노출되는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 광고 뷰 셀이 화면에서 사라지는 상황의 처리를 위해 필요
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
+}
+
+// 광고뷰 셀 선택 시 처리를 구현합니다.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -150,18 +166,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     }
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [_nativeAdTableManager willDisplayCell:cell forRowAtIndexPath:indexPath];
-}
-
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
-{
-    [_nativeAdTableManager didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
-}
-
-
-#pragma mark - song data
+#pragma mark - 
 
 - (void)pv_loadTableItemList
 {
@@ -276,6 +281,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
 
 #pragma mark - ALNativeAdTableHelper delegate
 
+//광고 수신 성공 델리게이트
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didReceivedNativeAds:(NSArray *)adList
 {
     if (_adItemIndexList.count > 0) {
@@ -303,6 +309,7 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
     }
 }
 
+//광고 수신 실패 델리게이트
 - (void)ALNativeAdTableHelper:(ALNativeAdTableHelper *)helper didFailedRequestWithError:(NSError *)error
 {
     NSLog(@"nativeAdTableHelper Error : %@", error);

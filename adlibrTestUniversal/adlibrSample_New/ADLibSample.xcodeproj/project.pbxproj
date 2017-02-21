@@ -29,7 +29,7 @@
 		B075DD841E5AEFA00097971A /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD731E5AEFA00097971A /* SimpleFeedListTableViewController.m */; };
 		B075DD851E5AEFA00097971A /* ALNativeViewSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */; };
 		B075DD861E5AEFA00097971A /* ViewTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD771E5AEFA00097971A /* ViewTypeController.m */; };
-		B075DD881E5AF9A70097971A /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B075DD871E5AF9A70097971A /* Adlib.framework */; };
+		B09DF7121E5C08E500EA0BAA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09DF7111E5C08E500EA0BAA /* Adlib.framework */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
@@ -80,7 +80,7 @@
 		B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALNativeViewSample.xib; sourceTree = "<group>"; };
 		B075DD761E5AEFA00097971A /* ViewTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTypeController.h; sourceTree = "<group>"; };
 		B075DD771E5AEFA00097971A /* ViewTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTypeController.m; sourceTree = "<group>"; };
-		B075DD871E5AF9A70097971A /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B09DF7111E5C08E500EA0BAA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			files = (
 				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
 				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
-				B075DD881E5AF9A70097971A /* Adlib.framework in Frameworks */,
+				B09DF7121E5C08E500EA0BAA /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,13 +157,13 @@
 		B075DD5B1E5AEFA00097971A /* image_collectionview */ = {
 			isa = PBXGroup;
 			children = (
+				B075DD611E5AEFA00097971A /* SampleCollectionViewCell.h */,
+				B075DD621E5AEFA00097971A /* SampleCollectionViewCell.m */,
 				B075DD5C1E5AEFA00097971A /* ALSampleAdCollectionViewCell.h */,
 				B075DD5D1E5AEFA00097971A /* ALSampleAdCollectionViewCell.m */,
 				B075DD5E1E5AEFA00097971A /* ALSampleAdCollectionViewCell.xib */,
 				B075DD5F1E5AEFA00097971A /* CollectionViewController.h */,
 				B075DD601E5AEFA00097971A /* CollectionViewController.m */,
-				B075DD611E5AEFA00097971A /* SampleCollectionViewCell.h */,
-				B075DD621E5AEFA00097971A /* SampleCollectionViewCell.m */,
 			);
 			path = image_collectionview;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B075DD871E5AF9A70097971A /* Adlib.framework */,
+				B09DF7111E5C08E500EA0BAA /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
