@@ -29,7 +29,6 @@
 		B075DD841E5AEFA00097971A /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD731E5AEFA00097971A /* SimpleFeedListTableViewController.m */; };
 		B075DD851E5AEFA00097971A /* ALNativeViewSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */; };
 		B075DD861E5AEFA00097971A /* ViewTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD771E5AEFA00097971A /* ViewTypeController.m */; };
-		B09DF7121E5C08E500EA0BAA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09DF7111E5C08E500EA0BAA /* Adlib.framework */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
@@ -41,6 +40,7 @@
 		B0ED421C1D64349E00D4774E /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42131D64349D00D4774E /* json.lua */; };
 		B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */; };
 		B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ED422D1D643E7400D4774E /* libxml2.2.tbd */; };
+		B0EE79B01E5C4913007285F1 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EE79AF1E5C4913007285F1 /* Adlib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +80,6 @@
 		B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALNativeViewSample.xib; sourceTree = "<group>"; };
 		B075DD761E5AEFA00097971A /* ViewTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTypeController.h; sourceTree = "<group>"; };
 		B075DD771E5AEFA00097971A /* ViewTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTypeController.m; sourceTree = "<group>"; };
-		B09DF7111E5C08E500EA0BAA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		B0ED42131D64349D00D4774E /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
 		B0ED422B1D643E5E00D4774E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		B0ED422D1D643E7400D4774E /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		B0EE79AF1E5C4913007285F1 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			files = (
 				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
 				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
-				B09DF7121E5C08E500EA0BAA /* Adlib.framework in Frameworks */,
+				B0EE79B01E5C4913007285F1 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B09DF7111E5C08E500EA0BAA /* Adlib.framework */,
+				B0EE79AF1E5C4913007285F1 /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
