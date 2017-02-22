@@ -112,10 +112,6 @@
     presentingViewController:(UIViewController *)controller;
 
 
-- (void)updateVideoAutoPlayPauseEnable:(BOOL)enable
-                               forCell:(UITableViewCell *)cell;
-
-
 #pragma mark - Optional 
 
 /**

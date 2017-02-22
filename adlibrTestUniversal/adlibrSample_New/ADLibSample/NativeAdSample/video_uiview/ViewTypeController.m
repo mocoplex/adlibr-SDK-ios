@@ -192,9 +192,6 @@
         //내부 컨텐츠 그리기 시도
         [adView layoutAdProperties:_nativeAd loadContent:YES];
         
-        //화면상에서 인/아웃 시 재생 자동 처리
-        //* 동영상광고를 뷰타입에 사용할 경우 필수로 설정합니다.
-        [adView updateAutoPlayEnable:YES];
     }
 }
 
