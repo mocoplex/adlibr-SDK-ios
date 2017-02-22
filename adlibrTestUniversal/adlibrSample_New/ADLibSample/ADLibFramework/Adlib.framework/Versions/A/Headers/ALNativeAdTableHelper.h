@@ -25,6 +25,7 @@
     
 }
 
+//테스트광고 설정 여부
 @property (nonatomic) BOOL isTestMode; //default : NO;
 
 /**

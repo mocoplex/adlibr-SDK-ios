@@ -53,9 +53,9 @@ typedef NS_ENUM(NSInteger, ALAdRequestItemType){
 // 노출 테스트를 할 수 있다.
 @property (nonatomic) BOOL isTestMode; //default : NO
 
+
 // 내부에서 발생된 에러 객체를 확인 할 수있다.
 @property (nonatomic, readonly) NSError *error;
-
 
 // 생성자 : 광고 키값을 지정하여 생성해야 광고를 수신할 수 있다.
 - (id)initAdRequestWithKey:(NSString *)key;
