@@ -12,7 +12,7 @@
 
 
 /*
- * confirmed compatible with Admob SDK
+ * confirmed compatible with Admob SDK 7.16.0
  */
 
 @interface ALAdapterAdmob () <GADInterstitialDelegate, GADBannerViewDelegate>
@@ -54,7 +54,7 @@
 /**
  *  띠배너 미디에이션 관련 구현 코드
  */
- 
+
 #pragma mark - mediation Banner protocol
 
 - (BOOL)resizedAdViewWithBounds:(CGRect)adViewBounds
@@ -88,6 +88,7 @@
     self.adView.rootViewController = viewController;
     
     GADRequest *request = [GADRequest request];
+    request.testDevices = @[kGADSimulatorID];
     
     self.adView.autoloadEnabled = NO;
     [self.adView loadRequest:request];
@@ -116,7 +117,10 @@
     interstitial.delegate = self;
     self.rootViewController = viewController;
     
-    [interstitial loadRequest:[GADRequest request]];
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[kGADSimulatorID];
+    
+    [interstitial loadRequest:request];
     
     return YES;
 }
@@ -161,7 +165,7 @@
         
         // 전면광고 성공을 알린다.
         [self mediationInterstitialAdReceived];
-    
+        
     } else {
         
         // 전면광고 실패를 알린다.
