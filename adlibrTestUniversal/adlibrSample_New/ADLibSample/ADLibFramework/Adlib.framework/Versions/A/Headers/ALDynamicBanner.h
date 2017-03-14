@@ -24,7 +24,10 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     ALDynamicBannerStateInvalidKey          = -1009,        //광고 요청 실패 - 유효하지 않은 요청 키
     ALDynamicBannerStateSessionLinkError    = -1010,        //광고 요청 실패 - 세션 연결 실패
     ALDynamicBannerStateWebLoadFailed       = -1011,        //광고 요청 실패 - 웹 로딩 실패
-
+    
+    ALDynamicBannerStateEmptySchedule       = -1012,        //광고 요청 실패 - 애드립 스케쥴 사용시 스케쥴 미포함
+    ALDynamicBannerStateInvalidSchedule     = -1013,        //광고 요청 실패 - 애드립 스케쥴 사용시 스케쥴 설정 오류
+    
     ALDynamicBannerStateSetViewHidden       = 9998,         //광고뷰 속성 hidden YES로 변경되는 상태를 알림
     ALDynamicBannerStateSetViewVisible      = 9999,         //광고뷰 속성 hidden NO로 변경되는 상태를 알림
 };
@@ -47,6 +50,11 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
 @property (nonatomic) BOOL isTestMode; //default : NO
 @property (nonatomic, strong, readonly) NSError *internalError;
 
+
+// 애드립 대시보드에서 사용하는 띠배너, 전면배너 스케쥴을 사용하여 광고 요청 우선순위를 지정합니다.
+// 스케쥴상에 애드립과 애드립 하우스만을 지원합니다.
+// 모두 포함되지 않은 경우 요청을 수행하지 않습니다.
+@property (nonatomic) BOOL useAdlibSchedule; //default : NO
 
 /**
  *  애드립 키값으로 초기화합니다.

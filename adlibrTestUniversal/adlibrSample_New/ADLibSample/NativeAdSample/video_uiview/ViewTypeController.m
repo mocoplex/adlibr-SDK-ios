@@ -22,8 +22,8 @@
 #define kWidthOfContentView 300
 #define kHeightOfContentView 172
 
-#define kCountOfContents 8
-#define kIndexOfAd 2
+#define kCountOfContents 4
+#define kIndexOfAd 3
 
 @interface ViewTypeController () <ALNativeAdRequestDelegate>
 
@@ -199,6 +199,31 @@
 - (void)nativeAdRequest:(ALNativeAdRequest *)request didFailWithErrorCode:(ALAdRequestErrCode)code
 {
     NSLog(@"error : %@", [ALNativeAdRequest msgForErrorCode:code]);
+    
+    //네이티브 광고가 없는 경우 샘플 피드 이미지 노출
+    if (_contentsList.count > kIndexOfAd) {
+        
+        SampleFeedItem *item = [_contentsList objectAtIndex:kIndexOfAd];
+        
+        if (item) {
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0 + kIndexOfAd*kWidthOfContentView,
+                                                                                 0,
+                                                                                 kWidthOfContentView,
+                                                                                 kHeightOfContentView)];
+            imgView.clipsToBounds = YES;
+            
+            [_scrollView addSubview:imgView];
+            
+            
+            
+            NSString *imageUrlStr = item.imageUrlString;
+            
+            if (imageUrlStr) {
+                NSURL *imageUrl = [NSURL URLWithString:imageUrlStr];
+                [_imageLoader downloadImageForURL:imageUrl intoImageView:imgView];
+            }
+        }
+    }
 }
 
 @end

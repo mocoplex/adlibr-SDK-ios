@@ -14,7 +14,7 @@
 
 
 //애드립의 키값을 설정합니다.
-#define ADLIB_APP_KEY @"54caefb80cf28de2af4e7001" //adlib, admob, cauly
+#define ADLIB_APP_KEY @"5508e1c70cf2833915d7268a" //adlib, admob
 
 // ADMOB의 APP 아이디를 설정합니다.
 #define ADMOB_ID @"애드몹 띠배너 아이디 설정"
