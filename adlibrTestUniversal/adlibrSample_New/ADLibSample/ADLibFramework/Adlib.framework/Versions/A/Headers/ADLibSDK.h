@@ -1,3 +1,4 @@
+
 //
 //  ADLibSDK.h
 //  ADLibSDK
@@ -5,12 +6,9 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.3.0.4
-//  Build (4.304) 2017.03.14. 12:00
+//  Adlib SDK version 4.3.0.6
+//  Build (4.306) 2017.03.20. 12:00
 
-
-#ifndef ADLibSDK_h
-#define ADLibSDK_h
 
 ///////////////////////////////////////////////////////////////////////////
 // 애드립 광고 띠/전면 광고 - 미디에이션 클래스                                     //
@@ -36,5 +34,10 @@
 
 #import <Adlib/ADLibGapping.h>
 
-#endif
+#import <Foundation/Foundation.h>
 
+@interface ADLibSDK : NSObject
+
++ (NSString *)sdkVersion;
+
+@end

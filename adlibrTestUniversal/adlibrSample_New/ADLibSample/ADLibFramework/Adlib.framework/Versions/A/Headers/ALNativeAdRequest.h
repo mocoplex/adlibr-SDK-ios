@@ -53,6 +53,9 @@ typedef NS_ENUM(NSInteger, ALAdRequestItemType){
 // 노출 테스트를 할 수 있다.
 @property (nonatomic) BOOL isTestMode; //default : NO
 
+// 애드립 하우스광고를 사용할경우 YES로 세팅
+@property (nonatomic) BOOL isHouseMode; //default : NO
+
 // 내부에서 발생된 에러 객체를 확인 할 수있다.
 @property (nonatomic, readonly) NSError *error;
 

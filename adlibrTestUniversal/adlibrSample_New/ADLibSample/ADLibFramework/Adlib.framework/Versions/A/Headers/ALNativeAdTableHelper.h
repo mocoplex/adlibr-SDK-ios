@@ -28,6 +28,8 @@
 //테스트광고 설정 여부
 @property (nonatomic) BOOL isTestMode; //default : NO;
 
+//하우스광고 설정 여부
+@property (nonatomic) BOOL isHouseMode; //default : NO;
 
 /**
  * 네이티브 광고 테이블 헬퍼 클래스 생성자

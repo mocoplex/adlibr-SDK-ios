@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import <AVFoundation/AVFAudio.h>
+#import <Adlib/ADLibSDK.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
                                      withOptions:AVAudioSessionCategoryOptionMixWithOthers
                                            error:nil];
+    
+    NSLog(@"ADLIB SDK Version = %@", [ADLibSDK sdkVersion]);
 
     return YES;
 }
