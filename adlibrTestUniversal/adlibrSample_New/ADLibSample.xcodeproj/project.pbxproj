@@ -17,7 +17,6 @@
 		B0593EAA1E8B46DD0003028D /* CS001.m in Sources */ = {isa = PBXBuildFile; fileRef = B0593EA41E8B46DD0003028D /* CS001.m */; };
 		B0593EAC1E8B46DD0003028D /* CS002.m in Sources */ = {isa = PBXBuildFile; fileRef = B0593EA81E8B46DD0003028D /* CS002.m */; };
 		B0593EB21E8B50000003028D /* CSStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0593EB11E8B50000003028D /* CSStoryboard.storyboard */; };
-		B0593EB71E8B57480003028D /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0593EB61E8B57480003028D /* Adlib.framework */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
 		B075DD781E5AEFA00097971A /* ALSampleAdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD5D1E5AEFA00097971A /* ALSampleAdCollectionViewCell.m */; };
 		B075DD791E5AEFA00097971A /* ALSampleAdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B075DD5E1E5AEFA00097971A /* ALSampleAdCollectionViewCell.xib */; };
@@ -34,6 +33,8 @@
 		B075DD841E5AEFA00097971A /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD731E5AEFA00097971A /* SimpleFeedListTableViewController.m */; };
 		B075DD851E5AEFA00097971A /* ALNativeViewSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */; };
 		B075DD861E5AEFA00097971A /* ViewTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B075DD771E5AEFA00097971A /* ViewTypeController.m */; };
+		B0CCFB041E8E08AC0039E30F /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CCFB031E8E08AC0039E30F /* Adlib.framework */; };
+		B0CCFB081E8E0A1F0039E30F /* CS003.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CCFB071E8E0A1F0039E30F /* CS003.m */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
@@ -66,7 +67,6 @@
 		B0593EA81E8B46DD0003028D /* CS002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS002.m; sourceTree = "<group>"; };
 		B0593EB11E8B50000003028D /* CSStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CSStoryboard.storyboard; sourceTree = "<group>"; };
 		B0593EB31E8B515D0003028D /* SampleKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleKey.h; sourceTree = "<group>"; };
-		B0593EB61E8B57480003028D /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B075DD4C1E5ACB1F0097971A /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
 		B075DD5C1E5AEFA00097971A /* ALSampleAdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSampleAdCollectionViewCell.h; sourceTree = "<group>"; };
 		B075DD5D1E5AEFA00097971A /* ALSampleAdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSampleAdCollectionViewCell.m; sourceTree = "<group>"; };
@@ -93,6 +93,9 @@
 		B075DD751E5AEFA00097971A /* ALNativeViewSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALNativeViewSample.xib; sourceTree = "<group>"; };
 		B075DD761E5AEFA00097971A /* ViewTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTypeController.h; sourceTree = "<group>"; };
 		B075DD771E5AEFA00097971A /* ViewTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTypeController.m; sourceTree = "<group>"; };
+		B0CCFB031E8E08AC0039E30F /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B0CCFB061E8E0A1F0039E30F /* CS003.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS003.h; sourceTree = "<group>"; };
+		B0CCFB071E8E0A1F0039E30F /* CS003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS003.m; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,7 +119,7 @@
 			files = (
 				B0ED422E1D643E7400D4774E /* libxml2.2.tbd in Frameworks */,
 				B0ED422C1D643E5E00D4774E /* libstdc++.6.0.9.tbd in Frameworks */,
-				B0593EB71E8B57480003028D /* Adlib.framework in Frameworks */,
+				B0CCFB041E8E08AC0039E30F /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,7 @@
 			children = (
 				B0593EA21E8B46DD0003028D /* CS001 */,
 				B0593EA61E8B46DD0003028D /* CS002 */,
+				B0CCFB051E8E0A050039E30F /* CS003 */,
 				B0593E931E8B43350003028D /* CSIndexTableViewController.h */,
 				B0593E941E8B43350003028D /* CSIndexTableViewController.m */,
 				B0593EB11E8B50000003028D /* CSStoryboard.storyboard */,
@@ -248,6 +252,15 @@
 				B075DD771E5AEFA00097971A /* ViewTypeController.m */,
 			);
 			path = video_uiview;
+			sourceTree = "<group>";
+		};
+		B0CCFB051E8E0A050039E30F /* CS003 */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCFB061E8E0A1F0039E30F /* CS003.h */,
+				B0CCFB071E8E0A1F0039E30F /* CS003.m */,
+			);
+			path = CS003;
 			sourceTree = "<group>";
 		};
 		B0D29F3B1E482C3B008E9B0B /* ADPlatformLibs */ = {
@@ -369,7 +382,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B0593EB61E8B57480003028D /* Adlib.framework */,
+				B0CCFB031E8E08AC0039E30F /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
@@ -498,6 +511,7 @@
 				B075DD7A1E5AEFA00097971A /* CollectionViewController.m in Sources */,
 				B075DD801E5AEFA00097971A /* ALExampleSimpleFeedAdCell.m in Sources */,
 				B075DD7F1E5AEFA00097971A /* SongListTableViewController.m in Sources */,
+				B0CCFB081E8E0A1F0039E30F /* CS003.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

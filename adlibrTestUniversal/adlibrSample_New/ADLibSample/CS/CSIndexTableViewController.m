@@ -8,7 +8,7 @@
 
 #import "CSIndexTableViewController.h"
 
-#define kLastIdx 2
+#define kLastIdx 3
 
 @interface CSIndexTableViewController ()
 

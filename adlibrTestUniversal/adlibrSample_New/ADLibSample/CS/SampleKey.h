@@ -14,4 +14,6 @@
 #define kTEST_KEY_ADLIBHOUSE    @"58c624570cf21d7f6ab5ba68"
 #define kTEST_KEY_HOUSEADLIB    @"58c62c580cf21d7f6ab5bbf0"
 
+#define kADLIB_TEST_MEZZO       @"58dc9ab00cf238756bc0d875"
+
 #endif /* SampleKey_h */

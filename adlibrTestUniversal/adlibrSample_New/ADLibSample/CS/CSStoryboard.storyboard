@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -78,6 +78,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiT-Wx-emq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-538" y="-160"/>
+        </scene>
+        <!--CS003-->
+        <scene sceneID="yX8-Kj-BV8">
+            <objects>
+                <viewController storyboardIdentifier="CS003" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZQQ-7g-Sfg" customClass="CS003" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rX0-c8-x3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="8tT-2M-hbd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DZ1-ue-5Uz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thb-KD-h0E" customClass="ALAdBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YW5-aF-aPR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8tT-2M-hbd" firstAttribute="top" secondItem="thb-KD-h0E" secondAttribute="bottom" id="Ecb-7N-83N"/>
+                            <constraint firstAttribute="trailing" secondItem="thb-KD-h0E" secondAttribute="trailing" id="QQA-aq-vWz"/>
+                            <constraint firstItem="thb-KD-h0E" firstAttribute="leading" secondItem="DZ1-ue-5Uz" secondAttribute="leading" id="Wn5-ZR-vbt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="thb-KD-h0E" id="gYF-ww-r9S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMD-FQ-05x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="-149.77511244377811"/>
         </scene>
     </scenes>
 </document>
