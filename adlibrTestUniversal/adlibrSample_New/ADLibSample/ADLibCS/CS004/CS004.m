@@ -43,7 +43,12 @@
 
 - (IBAction)loadAd:(id)sender
 {
+    [self destroyInterstitialBannerView];
+    
     bool isPort = YES;
+    
+    //디바이회전 상태를 확인하여 상황에 맞는 메소드 호출하도록 변경하여 사용.
+    
     if (isPort) {
         
         [self loadPortAd];
@@ -51,6 +56,15 @@
     } else {
         
         [self loadLandAd];
+    }
+}
+
+- (void)destroyInterstitialBannerView
+{
+    if (_intersBannerView) {
+        [_intersBannerView setRequestAdStateHandler:nil];
+        [_intersBannerView stopAdRequest];
+        self.intersBannerView = nil;
     }
 }
 
