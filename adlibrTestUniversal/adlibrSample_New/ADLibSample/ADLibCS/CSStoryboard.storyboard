@@ -44,6 +44,42 @@
             </objects>
             <point key="canvasLocation" x="-1242" y="-159"/>
         </scene>
+        <!--CS004-->
+        <scene sceneID="Kdh-gp-o8g">
+            <objects>
+                <viewController storyboardIdentifier="CS004" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IVs-xm-Ukd" customClass="CS004" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0cj-oo-cWZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oS2-zB-G4c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Gl-Rp-RH0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-Nq-ZYq">
+                                <rect key="frame" x="87" y="308" width="200" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.58022031209538949" blue="0.73344280657347216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CKk-vd-Lvg"/>
+                                    <constraint firstAttribute="height" constant="50" id="dhL-YG-Ugn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loadAd:" destination="IVs-xm-Ukd" eventType="touchUpInside" id="6Je-kw-1fn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ae7-Nq-ZYq" firstAttribute="centerY" secondItem="1Gl-Rp-RH0" secondAttribute="centerY" id="DFF-8L-ucU"/>
+                            <constraint firstItem="Ae7-Nq-ZYq" firstAttribute="centerX" secondItem="1Gl-Rp-RH0" secondAttribute="centerX" id="aUO-VU-LAu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfb-Bb-2BZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1214" y="520"/>
+        </scene>
         <!--CS002-->
         <scene sceneID="IlA-AH-9By">
             <objects>
@@ -57,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Pv-TA9">
-                                <rect key="frame" x="27" y="93" width="320" height="480"/>
+                                <rect key="frame" x="27.5" y="93.5" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="GFT-Rw-HcE"/>

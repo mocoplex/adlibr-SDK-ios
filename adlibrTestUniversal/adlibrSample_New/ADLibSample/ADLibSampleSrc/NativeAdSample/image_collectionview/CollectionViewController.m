@@ -7,7 +7,7 @@
 //
 
 #import "CollectionViewController.h"
-#import <Adlib/ADLibSDK.h>
+#import <Adlib/ADLibNative.h>
 #import "SampleKey.h"
 
 #import "SampleFeedItem.h"

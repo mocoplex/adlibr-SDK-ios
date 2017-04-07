@@ -9,7 +9,7 @@
 #import "ViewTypeController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-#import <Adlib/ADLibSDK.h>
+#import <Adlib/ADLibNative.h>
 #import "SampleKey.h"
 
 #import "SampleFeedItem.h"

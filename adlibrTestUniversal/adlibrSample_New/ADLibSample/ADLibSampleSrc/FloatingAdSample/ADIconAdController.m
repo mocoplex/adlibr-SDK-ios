@@ -7,7 +7,7 @@
 //
 
 #import "ADIconAdController.h"
-#import <Adlib/ADLibSDK.h>
+#import <Adlib/ADLibGapping.h>
 
 #import "SampleKey.h"
 

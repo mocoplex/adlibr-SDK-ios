@@ -11,7 +11,7 @@
 #import "SampleFeedItem.h"
 #import "ALExampleMusicAdCell.h"
 
-#import <Adlib/ADLibSDK.h>
+#import <Adlib/ADLibNative.h>
 #import "SampleKey.h"
 
 
