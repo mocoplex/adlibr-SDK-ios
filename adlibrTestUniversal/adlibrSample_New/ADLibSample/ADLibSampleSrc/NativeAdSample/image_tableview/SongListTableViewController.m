@@ -158,13 +158,6 @@ static NSString * const AdCellNibIdentifier    = @"ALExampleMusicAdCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ALNativeAd *nativeAd = [self pv_nativeAdObjectAtRow:indexPath.row];
-    if (nativeAd) {
-        [_nativeAdTableManager didSelectAdCellForAd:nativeAd
-                                        atIndexPath:indexPath
-                           presentingViewController:self];
-    }
 }
 
 #pragma mark - 

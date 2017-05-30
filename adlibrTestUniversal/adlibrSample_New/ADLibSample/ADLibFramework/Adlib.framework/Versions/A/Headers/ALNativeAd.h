@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef void (^ALNativeAdClickBlock)(NSURL *landingUrl);
+
 @interface ALNativeAd : NSObject {
     
 }
@@ -16,6 +18,11 @@
 // 광고 노출 처리를 위해 등록합니다.
 // 해당 함수로 등록시 클릭 처리는 제공하는 clickURL을 통해 직접 구현합니다.
 - (void)registerViewForInteraction:(UIView *)containerView;
+
+// 클릭 이벤트 처리 등록 (옵션 - 등록하지 않은 경우 내부에서 처리)
+- (void)registerClickEventBlock:(void (^)(NSURL *landingUrl))block;
+
+@property (nonatomic, copy, readonly) ALNativeAdClickBlock clickBlock;
 
 #pragma mark - getter
 

@@ -58,7 +58,7 @@
  *
  *  @param rootViewController 전면광고 뷰컨트롤러를 노출한 루트뷰 컨트롤러
  */
-- (instancetype)initWithRootViewController:(__weak UIViewController *)rootViewController;
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController;
 
 
 /**

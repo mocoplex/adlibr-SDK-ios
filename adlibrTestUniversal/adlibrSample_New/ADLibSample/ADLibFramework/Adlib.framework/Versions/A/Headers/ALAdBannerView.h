@@ -84,7 +84,7 @@ typedef NS_ENUM(NSInteger, AL_ADVIEW_VERTICAL_ALIGN) {
  *  @param delegate 광고 요청 및 수신 상태에 대한 델리게이트
  */
 - (BOOL)startAdViewWithKey:(NSString *)mediationKey
-        rootViewController:(__weak UIViewController *)rootViewController
+        rootViewController:(UIViewController *)rootViewController
                 adDelegate:(id<ALAdBannerViewDelegate>)delegate;
 
 /**

@@ -44,6 +44,10 @@
 //기본 값 : YES
 @property (nonatomic) BOOL useImageCache;
 
+
+@property (nonatomic, weak) ALDynamicBanner *dynamicBanner;
+
+
 //자동 갱신 시간
 //기본 값 : 0 (0으로 지정시 자동 갱신 없음)
 //최소 값 : 3 초

@@ -125,8 +125,7 @@ static NSString * const adSampleCellReuseIdentifier = @"ALSampleAdCollectionView
     BOOL isAd = [[listItem objectForKey:kMapKeyIsAd] boolValue];
     
     if (isAd) {
-        ALNativeAd *item = [listItem objectForKey:kMapKeyItem];
-        [self.nativeAdHelper didSelectAdCellForAd:item atIndexPath:indexPath presentingViewController:self];
+        ;
     } else {
         SampleFeedItem *item = [listItem objectForKey:kMapKeyItem];
         NSURL *url = [NSURL URLWithString:item.urlString];
