@@ -26,6 +26,9 @@
 
 ## SDK Version History
 
+SDK version 4.3.4.2 (2017.05.30)
+> 네이티브 동영상 광고 기본 UI 변경<br>
+
 SDK version 4.3.0.7 (2017.03.31)
 > SDK 미디에이션 기능 업데이트<br>
 
