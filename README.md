@@ -24,6 +24,13 @@
 > XCode 7 이상 사용시 최신 SDK 및 Adlib.bundle 파일 교체 필요<br>
 > 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
+## Bitcode 지원
+비트코드를 지원하기 위해서는 현재 샘플프로젝트에서 사용하고 있는 Adlib.framework 외의 별도의 비트코드
+지원 버전 SDK를 추가하시고 사용하셔야합니다.<br>
+해당 리소스들은 샘플 프로젝트 내부의 아래 경로에 포함되어있습니다.<br>
+https://github.com/mocoplex/adlibr-SDK-ios/tree/master/adlibrTestUniversal/adlibrSample_New/ADLibSample/ADLibFramework_bitcode
+<br>
+
 ## SDK Version History
 
 SDK version 4.3.4.2 (2017.05.30)
