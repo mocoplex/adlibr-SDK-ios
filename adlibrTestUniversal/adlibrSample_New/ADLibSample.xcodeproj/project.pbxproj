@@ -10,6 +10,7 @@
 		B049BA7B1E97219700271114 /* CS004.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7A1E97219700271114 /* CS004.m */; };
 		B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
+		B08BF5E21F29E2AF00EAD281 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08BF5E11F29E2AF00EAD281 /* Adlib.framework */; };
 		B08C826D1E94884100BB4085 /* CS001.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82301E94884100BB4085 /* CS001.m */; };
 		B08C826F1E94884100BB4085 /* CS002.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82341E94884100BB4085 /* CS002.m */; };
 		B08C82711E94884100BB4085 /* CS003.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82381E94884100BB4085 /* CS003.m */; };
@@ -37,7 +38,6 @@
 		B08C82D11E9489B800BB4085 /* SimpleFeedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82B81E9489B800BB4085 /* SimpleFeedListTableViewController.m */; };
 		B08C82D21E9489B800BB4085 /* ALNativeViewSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C82BA1E9489B800BB4085 /* ALNativeViewSample.xib */; };
 		B08C82D31E9489B800BB4085 /* ViewTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82BC1E9489B800BB4085 /* ViewTypeController.m */; };
-		B0C689F01EDD18D700022D90 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C689EF1EDD18D700022D90 /* Adlib.framework */; };
 		B0ED41E91D6429D900D4774E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41E81D6429D900D4774E /* main.m */; };
 		B0ED41EC1D6429D900D4774E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ED41EB1D6429D900D4774E /* AppDelegate.m */; };
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
@@ -55,6 +55,7 @@
 		B049BA7D1E97262600271114 /* SampleDynamicBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDynamicBannerController.h; sourceTree = "<group>"; };
 		B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDynamicBannerController.m; sourceTree = "<group>"; };
 		B075DD4C1E5ACB1F0097971A /* Adlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Adlib.bundle; sourceTree = "<group>"; };
+		B08BF5E11F29E2AF00EAD281 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B08C822F1E94884100BB4085 /* CS001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS001.h; sourceTree = "<group>"; };
 		B08C82301E94884100BB4085 /* CS001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS001.m; sourceTree = "<group>"; };
 		B08C82331E94884100BB4085 /* CS002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS002.h; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		B08C82BB1E9489B800BB4085 /* ViewTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTypeController.h; sourceTree = "<group>"; };
 		B08C82BC1E9489B800BB4085 /* ViewTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTypeController.m; sourceTree = "<group>"; };
 		B08C82D41E948A2C00BB4085 /* SampleKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleKey.h; sourceTree = "<group>"; };
-		B0C689EF1EDD18D700022D90 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B0ED41E41D6429D900D4774E /* ADLibSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADLibSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ED41E81D6429D900D4774E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0ED41EA1D6429D900D4774E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08C828F1E94887000BB4085 /* libstdc++.6.0.9.tbd in Frameworks */,
-				B0C689F01EDD18D700022D90 /* Adlib.framework in Frameworks */,
+				B08BF5E21F29E2AF00EAD281 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +413,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B0C689EF1EDD18D700022D90 /* Adlib.framework */,
+				B08BF5E11F29E2AF00EAD281 /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);

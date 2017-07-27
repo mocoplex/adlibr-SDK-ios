@@ -35,7 +35,7 @@
         
         CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
         [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
-    
+        
         adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
         adSetting.useGPSInfo            = NO;                       //  GPS 수집 허용여부
         adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기 (320, 50)
@@ -57,6 +57,10 @@
     return _adView;
 }
 
+- (void)dealloc
+{
+    
+}
 
 /**
  *  띠배너 미디에이션 관련 구현 코드
@@ -112,11 +116,12 @@
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
     adSetting.appCode = key;
     
-    if(_caulyInterstitialAd)
+    if(_caulyInterstitialAd != nil)
         self.caulyInterstitialAd = nil;
     
     _caulyInterstitialAd = [[CaulyInterstitialAd alloc]
                             initWithParentViewController:self.rootViewController];  //  전면광고 객체 생성
+    
     _caulyInterstitialAd.delegate = self;                                           //  전면 delegate 설정
     [_caulyInterstitialAd startInterstitialAdRequest];
     
@@ -127,7 +132,7 @@
 #pragma - CaulyAdViewDelegate
 
 // 광고 정보 수신 성공
-- (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd{
+- (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd {
     
     NSLog(@"didReceiveAd");
     
@@ -135,6 +140,8 @@
     
     // 화면에 광고를 보여줍니다.
     [self mediationBannerAdReceivedWithView:adView];
+    
+    self.adView = nil;
 }
 
 // 광고 정보 수신 실패
@@ -146,6 +153,8 @@
     
     // 광고 수신에 실패 처리를 요청합니다.
     [self mediationBannerAdFailedAd];
+    
+    self.adView = nil;
 }
 
 // 랜딩 화면 표시
@@ -170,6 +179,8 @@
     [self mediationInterstitialAdReceived];
     
     [_caulyInterstitialAd show];
+    
+    self.caulyInterstitialAd = nil;
     
 }
 

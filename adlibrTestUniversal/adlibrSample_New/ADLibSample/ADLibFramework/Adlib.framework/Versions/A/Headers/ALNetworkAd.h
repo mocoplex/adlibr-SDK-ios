@@ -69,6 +69,9 @@ typedef NS_ENUM(NSInteger, ALNetworkAdResCode) {
 // 광고 컨텐츠 로딩 중지
 - (void)stopLoadingContents;
 
+// 인앱 브라우저를 사용할경우 클릭 이벤트 처리 등록 (옵션 - 등록하지 않은 경우 내부에서 사파리 랜딩 처리)
+- (void)registerClickEventBlock:(void (^)(NSURL *landingUrl))block;
+
 + (NSString *)logForResultCode:(ALNetworkAdResCode)state;
 
 @end
