@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B03ABEF01F441D7F0039DAF5 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03ABEEF1F441D7F0039DAF5 /* Adlib.framework */; };
+		B023EE961F4E9DCF00ACF0AA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B023EE951F4E9DCF00ACF0AA /* Adlib.framework */; };
 		B049BA7B1E97219700271114 /* CS004.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7A1E97219700271114 /* CS004.m */; };
 		B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B03ABEEF1F441D7F0039DAF5 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		B023EE951F4E9DCF00ACF0AA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B049BA791E97219700271114 /* CS004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS004.h; sourceTree = "<group>"; };
 		B049BA7A1E97219700271114 /* CS004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS004.m; sourceTree = "<group>"; };
 		B049BA7D1E97262600271114 /* SampleDynamicBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDynamicBannerController.h; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08C828F1E94887000BB4085 /* libstdc++.6.0.9.tbd in Frameworks */,
-				B03ABEF01F441D7F0039DAF5 /* Adlib.framework in Frameworks */,
+				B023EE961F4E9DCF00ACF0AA /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +413,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B03ABEEF1F441D7F0039DAF5 /* Adlib.framework */,
+				B023EE951F4E9DCF00ACF0AA /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);

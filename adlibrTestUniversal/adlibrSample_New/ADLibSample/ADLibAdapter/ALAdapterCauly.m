@@ -59,7 +59,15 @@
 
 - (void)dealloc
 {
-    
+    [self releaseAdView];
+}
+
+- (void)releaseAdView
+{
+    [self.adView stopAdRequest];
+    [self.adView removeFromSuperview];
+    self.adView.delegate = nil;
+    self.adView = nil;
 }
 
 /**
@@ -67,6 +75,11 @@
  */
 
 #pragma mark - mediation Banner protocol
+
+- (void)removeBannerViewFromSuperview
+{
+    [self releaseAdView];
+}
 
 - (BOOL)resizedAdViewWithBounds:(CGRect)adViewBounds
 {
@@ -92,10 +105,11 @@
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
     adSetting.appCode = key;
     
-    self.adView.delegate = self;
-    [self.adView startBannerAdRequest];
+    CaulyAdView *adView = [self adView];
+    adView.delegate = self;
+    [adView startBannerAdRequest];
     
-    return self.adView;
+    return adView;
 }
 
 /**
@@ -136,12 +150,8 @@
     
     NSLog(@"didReceiveAd");
     
-    [_adView stopAdRequest];
-    
     // 화면에 광고를 보여줍니다.
     [self mediationBannerAdReceivedWithView:adView];
-    
-    self.adView = nil;
 }
 
 // 광고 정보 수신 실패
@@ -149,12 +159,8 @@
     
     NSLog(@"didFailToReceiveAd : %d(%@)", errorCode, errorMsg);
     
-    [_adView stopAdRequest];
-    
     // 광고 수신에 실패 처리를 요청합니다.
     [self mediationBannerAdFailedAd];
-    
-    self.adView = nil;
 }
 
 // 랜딩 화면 표시

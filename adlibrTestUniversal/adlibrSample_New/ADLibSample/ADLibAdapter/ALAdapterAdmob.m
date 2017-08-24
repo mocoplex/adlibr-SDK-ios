@@ -57,6 +57,11 @@
 
 #pragma mark - mediation Banner protocol
 
+- (void)removeBannerViewFromSuperview
+{
+    
+}
+
 - (BOOL)resizedAdViewWithBounds:(CGRect)adViewBounds
 {
     //해당 광고뷰를 담는 부모뷰의 bounds내에서 프레임을 설정할 수 있다.

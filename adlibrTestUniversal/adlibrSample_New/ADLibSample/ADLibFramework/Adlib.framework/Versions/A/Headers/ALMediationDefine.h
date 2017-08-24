@@ -122,6 +122,11 @@ typedef NS_ENUM(NSInteger, ALMEDIATION_STATE) {
  */
 - (void)mediationBannerReportClickEvent;
 
+/**
+ *  광고 뷰 정지 이벤트를 처리한다.
+ */
+- (void)removeBannerViewFromSuperview;
+
 @end
 
 
