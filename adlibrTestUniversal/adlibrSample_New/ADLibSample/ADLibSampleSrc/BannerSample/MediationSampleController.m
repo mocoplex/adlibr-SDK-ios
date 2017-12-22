@@ -42,7 +42,7 @@
     // 미디에이션 플랫폼 등록
     //[ALMediation registerPlatform:ALMEDIATION_PLATFORM_ADMOB withClass:[ALAdapterAdmob class]];
     //[ALMediation registerPlatform:ALMEDIATION_PLATFORM_CAULY withClass:[ALAdapterCauly class]];
-    
+    //[ALMediation registerPlatform:ALMEDIATION_PLATFORM_ADAM withClass:[ALAdapterAdfit class]];
 }
 
 - (void)viewDidAppear:(BOOL)animated
