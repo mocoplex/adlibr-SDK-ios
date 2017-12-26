@@ -32,11 +32,15 @@ https://github.com/mocoplex/adlibr-SDK-ios/tree/master/adlibrTestUniversal/adlib
 <br>
 
 ## 미디에이션 플랫폼 SDK 지원 
-> Adfit 3.0.1 <br>
-> Admob 7.27.0 <br>
-> Facebook 4.27.0 <br>
-> Cauly 3.1 <br>
+> Adfit - v3.0.1 <br>
+> Admob - v7.27.0 <br>
+> Facebook - v4.27.0 <br>
+> Cauly - v3.1 <br>
+> tad - v.3.3.5.6 <br>
+> inmobi - v.5.1.0 <br>
+> admixer = v.1.3.1 <br>
 <br>
+
 
 ## SDK Version History
 
