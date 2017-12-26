@@ -29,7 +29,14 @@
 지원 버전 SDK를 추가하시고 사용하셔야합니다.<br>
 해당 리소스들은 샘플 프로젝트 내부의 아래 경로에 포함되어있습니다.<br>
 https://github.com/mocoplex/adlibr-SDK-ios/tree/master/adlibrTestUniversal/adlibrSample_New/ADLibSample/ADLibFramework_bitcode
-<br>
+<br><br>
+
+## 미디에이션 플랫폼 SDK 지원 
+> Adfit 3.0.1 <br>
+> Admob 7.27.0 <br>
+> Facebook 4.27.0 <br>
+> Cauly 3.1 <br>
+<br><br>
 
 ## SDK Version History
 
