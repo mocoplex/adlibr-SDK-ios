@@ -31,6 +31,13 @@
 https://github.com/mocoplex/adlibr-SDK-ios/tree/master/adlibrTestUniversal/adlibrSample_New/ADLibSample/ADLibFramework_bitcode
 <br>
 
+## 미디에이션 플랫폼 SDK 지원 
+> Adfit 3.0.1 <br>
+> Admob 7.27.0 <br>
+> Facebook 4.27.0 <br>
+> Cauly 3.1 <br>
+<br>
+
 ## SDK Version History
 
 SDK version 4.3.4.2 (2017.05.30)
