@@ -2,8 +2,8 @@
 //  ALAdapterAdfit.m
 //  AdlibNativeADSample
 //
-//  Created by mocoplex on 2017. 11. 20..
-//  Copyright © 2017년 mocoplex. All rights reserved.
+//  Created by gskang on 2017. 11. 20..
+//  Copyright © 2017년 gskang. All rights reserved.
 //
 
 #import "ALAdapterAdfit.h"
@@ -14,11 +14,12 @@
 #define ADAM_INTERS_TEST_ID  @"DAN-"
 
 /*
- * confirmed compatible with Adfit SDK 3.0
+ * confirmed compatible with Adfit SDK 3.0.1
  *
  * Adfit 3.0 이상에서만 지원되는 어뎁터 파일입니다.
  * 3.0 이전버전 사용의 경우 ALAdapterAdam 클래스를 참고하세요.
  *
+ * 현재 Beta 버전으로 개발사에서 직접 수정 가능하시며, 테스트중에 있는 구현 파일입니다.
  * Adfit 3.0 버전에서 전면광고를 지원하고 있지 않기 때문에 구현에서 제외됩니다.
  */
 
@@ -70,13 +71,14 @@
     if (_adView == nil) {
         AdFitBannerAdView *adView = [[AdFitBannerAdView alloc] initWithClientId:key adUnitSize:@"320*50"];
         self.adView = adView;
-        _adView.refreshInterval = 0.f;
-        _adView.delegate = self;
     }
     
-    self.adView.frame = self.bannerContainerView.bounds;
-    self.adView.rootViewController = viewController;
-    [self.adView loadAd];
+    _adView.refreshInterval = 0.f;
+    _adView.delegate = self;
+    _adView.frame = self.bannerContainerView.bounds;
+    _adView.rootViewController = viewController;
+    
+    [_adView loadAd];
     
     return _adView;
 }
@@ -120,6 +122,7 @@
 - (void)adViewDidFailToReceiveAd:(AdFitBannerAdView *)bannerAdView error:(NSError *)error {
     NSLog(@"didFailToReceiveAd - error = %@", [error localizedDescription]);
     
+    self.adView.delegate = nil;
     [self mediationBannerAdFailedAd];
 }
 
