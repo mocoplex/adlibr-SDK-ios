@@ -9,18 +9,13 @@
 #import "ALAdapterAdfit.h"
 #import <AdFitSDK/AdFitSDK-Swift.h>
 
-// ADAM의 TEST APP ID
-#define ADAM_BANNER_TEST_ID  @"DAN-"
-#define ADAM_INTERS_TEST_ID  @"DAN-"
-
 /*
  * confirmed compatible with Adfit SDK 3.0.1
  *
  * Adfit 3.0 이상에서만 지원되는 어뎁터 파일입니다.
  * 3.0 이전버전 사용의 경우 ALAdapterAdam 클래스를 참고하세요.
  *
- * 현재 Beta 버전으로 개발사에서 직접 수정 가능하시며, 테스트중에 있는 구현 파일입니다.
- * Adfit 3.0 버전에서 전면광고를 지원하고 있지 않기 때문에 구현에서 제외됩니다.
+ * Adfit 3.0 이상 버전에서 전면광고를 지원하고 있지 않기 때문에 요청부분은 구현에서 제외됩니다.
  */
 
 @interface ALAdapterAdfit () <AdFitBannerAdViewDelegate>
@@ -39,6 +34,26 @@
         self.mediationPlatform = ALMEDIATION_PLATFORM_ADAM;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [self releaseAdView];
+}
+
+- (void)releaseAdView
+{
+    if (_adView != nil) {
+        [self.adView removeFromSuperview];
+        self.adView.delegate = nil;
+        self.adView = nil;
+    }
+}
+
+//미디에이션 뷰 제거시 플랫폼 광고뷰 해제 처리
+- (void)removeBannerViewFromSuperview
+{
+    [self releaseAdView];
 }
 
 /**
@@ -131,4 +146,3 @@
 }
 
 @end
-
