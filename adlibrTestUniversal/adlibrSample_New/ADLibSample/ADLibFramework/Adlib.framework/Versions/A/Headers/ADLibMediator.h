@@ -86,7 +86,7 @@
  *  전면광고 요청 메소드
  *  @param viewController 전면광고를 띄울 뷰컨트롤러
  */
-- (void)loadInterstitialAdWithParentViewController:(UIViewController *)viewContoller;
+- (void)loadInterstitialAdWithParentViewController:(UIViewController *)viewController;
 
 // 전면광고 요청 취소 메소드
 - (void)cancelInterstitialRequest;

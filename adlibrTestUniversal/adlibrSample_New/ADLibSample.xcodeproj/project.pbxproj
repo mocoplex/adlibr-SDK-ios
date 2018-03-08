@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B023EE961F4E9DCF00ACF0AA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B023EE951F4E9DCF00ACF0AA /* Adlib.framework */; };
+		9DB65C932051233F0074F377 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB65C922051233F0074F377 /* Adlib.framework */; };
 		B049BA7B1E97219700271114 /* CS004.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7A1E97219700271114 /* CS004.m */; };
 		B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B023EE951F4E9DCF00ACF0AA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		9DB65C922051233F0074F377 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B049BA791E97219700271114 /* CS004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS004.h; sourceTree = "<group>"; };
 		B049BA7A1E97219700271114 /* CS004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS004.m; sourceTree = "<group>"; };
 		B049BA7D1E97262600271114 /* SampleDynamicBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDynamicBannerController.h; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08C828F1E94887000BB4085 /* libstdc++.6.0.9.tbd in Frameworks */,
-				B023EE961F4E9DCF00ACF0AA /* Adlib.framework in Frameworks */,
+				9DB65C932051233F0074F377 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,64 +298,8 @@
 		B0D29F3B1E482C3B008E9B0B /* ADPlatformLibs */ = {
 			isa = PBXGroup;
 			children = (
-				B0D29F3C1E482C3B008E9B0B /* adfit */,
-				B0D29F3D1E482C3B008E9B0B /* admixer */,
-				B0D29F3E1E482C3B008E9B0B /* admob */,
-				B0D29F3F1E482C3B008E9B0B /* cauly */,
-				B0D29F401E482C3B008E9B0B /* facebook */,
-				B0D29F411E482C3B008E9B0B /* inmobi */,
-				B0D29F421E482C3B008E9B0B /* tad */,
 			);
 			path = ADPlatformLibs;
-			sourceTree = "<group>";
-		};
-		B0D29F3C1E482C3B008E9B0B /* adfit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = adfit;
-			sourceTree = "<group>";
-		};
-		B0D29F3D1E482C3B008E9B0B /* admixer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = admixer;
-			sourceTree = "<group>";
-		};
-		B0D29F3E1E482C3B008E9B0B /* admob */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = admob;
-			sourceTree = "<group>";
-		};
-		B0D29F3F1E482C3B008E9B0B /* cauly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = cauly;
-			sourceTree = "<group>";
-		};
-		B0D29F401E482C3B008E9B0B /* facebook */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = facebook;
-			sourceTree = "<group>";
-		};
-		B0D29F411E482C3B008E9B0B /* inmobi */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = inmobi;
-			sourceTree = "<group>";
-		};
-		B0D29F421E482C3B008E9B0B /* tad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tad;
 			sourceTree = "<group>";
 		};
 		B0ED41DB1D6429D900D4774E = {
@@ -413,7 +357,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				B023EE951F4E9DCF00ACF0AA /* Adlib.framework */,
+				9DB65C922051233F0074F377 /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 				B0ED420F1D64349D00D4774E /* Resources */,
 			);
@@ -457,7 +401,7 @@
 		B0ED41DC1D6429D900D4774E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					B0ED41E31D6429D900D4774E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -570,14 +514,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -618,14 +568,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

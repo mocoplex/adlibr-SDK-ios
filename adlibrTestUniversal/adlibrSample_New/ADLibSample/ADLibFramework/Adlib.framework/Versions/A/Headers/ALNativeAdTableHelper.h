@@ -138,7 +138,6 @@
  *
  * @param width 캐싱된 값을 찾기 위한 키 값. (가로 넓이 기준으로 계산되어진 값을 찾음)
  * @param indexPath 특정 위치의 광고를 찾기위해 위치 값을 전달
- * @return 해당 위치의 광고에 대한 요청 가로 대비 세로 높이 값을 반환
  * @date 2014.12.18
  */
 - (void)setExpectedAdCellHeight:(CGFloat)height forWidth:(CGFloat)width atRowAtIndexPath:(NSIndexPath *)indexPath;

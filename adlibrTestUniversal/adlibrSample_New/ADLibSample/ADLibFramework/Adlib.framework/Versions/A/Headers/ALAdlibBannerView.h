@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, ALAdlibBannerState){
 
 /**
  *  광고 요청 시작 메소드
- *  @param key 애드립 키
+ *  @param adlibKey 애드립 키
  */
 - (void)startAdRequestWithKey:(NSString *)adlibKey;
 
