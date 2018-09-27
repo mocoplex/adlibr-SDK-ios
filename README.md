@@ -25,7 +25,7 @@
 > 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
 ## Bitcode 지원
-4.400 이후 버전 비트코드 지원 
+v4.400 이후 버전 비트코드 지원 
 <br>
 
 ## 미디에이션 플랫폼 SDK 지원 
@@ -44,6 +44,7 @@
 ## SDK Version History
 
 SDK version 4.4.0.0 (2018.10.27)
+> iOS 12 빌드대응<br>
 > bitcode 지원<br>
 > 3D 광고 상품 제거 <br>
 
