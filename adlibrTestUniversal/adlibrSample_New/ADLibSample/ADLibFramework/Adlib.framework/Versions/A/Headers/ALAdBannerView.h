@@ -45,7 +45,6 @@ typedef NS_ENUM(NSInteger, AL_ADVIEW_VERTICAL_ALIGN) {
 
 /**
  *  해당 클래스를 사용하여 미디에이션 띠배너 기능을 사용할 수 있다. 
- *  Beta 버전
  */
 
 @interface ALAdBannerView : UIView  <ALAdBannerViewReportProtocol> {

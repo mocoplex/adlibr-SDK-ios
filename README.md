@@ -25,24 +25,27 @@
 > 샘플 프로젝트 bitcode 설정은 기본 NO로 설정<br>
 
 ## Bitcode 지원
-비트코드를 지원하기 위해서는 현재 샘플프로젝트에서 사용하고 있는 Adlib.framework 외의 별도의 비트코드
-지원 버전 SDK를 추가하시고 사용하셔야합니다.<br>
-해당 리소스들은 샘플 프로젝트 내부의 아래 경로에 포함되어있습니다.<br>
-https://github.com/mocoplex/adlibr-SDK-ios/tree/master/adlibrTestUniversal/adlibrSample_New/ADLibSample/ADLibFramework_bitcode
+4.400 이후 버전 비트코드 지원 
 <br>
 
 ## 미디에이션 플랫폼 SDK 지원 
+> adlib / adlib-house <br>
+> admixer - v.1.4.2 <br>
+> Adam - v2.0.1 <br>
 > Adfit - v3.0.1 <br>
-> Admob - v7.27.0 <br>
-> Facebook - v4.27.0 <br>
+> Admob - v7.31.0 <br>
 > Cauly - v3.1 <br>
-> tad - v.3.3.5.6 <br>
+> Facebook - v4.33.0 <br>
 > inmobi - v.5.1.0 <br>
-> admixer = v.1.3.1 <br>
+
 <br>
 
 
 ## SDK Version History
+
+SDK version 4.4.0.0 (2018.10.27)
+> bitcode 지원<br>
+> 3D 광고 상품 제거 <br>
 
 SDK version 4.3.4.2 (2017.05.30)
 > 네이티브 동영상 광고 기본 UI 변경<br>

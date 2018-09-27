@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DB65C9520512B190074F377 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB65C9420512B190074F377 /* Adlib.framework */; };
+		9D71A023215CD67E00EDBFED /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D71A022215CD67E00EDBFED /* Adlib.framework */; };
 		B049BA7B1E97219700271114 /* CS004.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7A1E97219700271114 /* CS004.m */; };
 		B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
@@ -16,10 +16,8 @@
 		B08C82711E94884100BB4085 /* CS003.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82381E94884100BB4085 /* CS003.m */; };
 		B08C82731E94884100BB4085 /* CSIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C823B1E94884100BB4085 /* CSIndexTableViewController.m */; };
 		B08C82741E94884100BB4085 /* CSStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08C823C1E94884100BB4085 /* CSStoryboard.storyboard */; };
-		B08C828F1E94887000BB4085 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B08C828E1E94887000BB4085 /* libstdc++.6.0.9.tbd */; };
 		B08C82BD1E9489B800BB4085 /* AdlibSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82921E9489B800BB4085 /* AdlibSampleController.m */; };
 		B08C82BE1E9489B800BB4085 /* MediationSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82941E9489B800BB4085 /* MediationSampleController.m */; };
-		B08C82BF1E9489B800BB4085 /* ADIconAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C82971E9489B800BB4085 /* ADIconAdController.m */; };
 		B08C82C11E9489B800BB4085 /* ALSampleAdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C829C1E9489B800BB4085 /* ALSampleAdCollectionViewCell.m */; };
 		B08C82C21E9489B800BB4085 /* ALSampleAdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08C829D1E9489B800BB4085 /* ALSampleAdCollectionViewCell.xib */; };
 		B08C82C31E9489B800BB4085 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B08C829F1E9489B800BB4085 /* CollectionViewController.m */; };
@@ -43,14 +41,10 @@
 		B0ED41F21D6429D900D4774E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F01D6429D900D4774E /* Main.storyboard */; };
 		B0ED41F41D6429D900D4774E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F31D6429D900D4774E /* Assets.xcassets */; };
 		B0ED41F71D6429D900D4774E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0ED41F51D6429D900D4774E /* LaunchScreen.storyboard */; };
-		B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42101D64349D00D4774E /* _TriDCommon.lua */; };
-		B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */; };
-		B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42121D64349D00D4774E /* _TriDStartup.lua */; };
-		B0ED421C1D64349E00D4774E /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = B0ED42131D64349D00D4774E /* json.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9DB65C9420512B190074F377 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		9D71A022215CD67E00EDBFED /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
 		B049BA791E97219700271114 /* CS004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS004.h; sourceTree = "<group>"; };
 		B049BA7A1E97219700271114 /* CS004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS004.m; sourceTree = "<group>"; };
 		B049BA7D1E97262600271114 /* SampleDynamicBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDynamicBannerController.h; sourceTree = "<group>"; };
@@ -70,8 +64,6 @@
 		B08C82921E9489B800BB4085 /* AdlibSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdlibSampleController.m; sourceTree = "<group>"; };
 		B08C82931E9489B800BB4085 /* MediationSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediationSampleController.h; sourceTree = "<group>"; };
 		B08C82941E9489B800BB4085 /* MediationSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediationSampleController.m; sourceTree = "<group>"; };
-		B08C82961E9489B800BB4085 /* ADIconAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADIconAdController.h; sourceTree = "<group>"; };
-		B08C82971E9489B800BB4085 /* ADIconAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADIconAdController.m; sourceTree = "<group>"; };
 		B08C829B1E9489B800BB4085 /* ALSampleAdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSampleAdCollectionViewCell.h; sourceTree = "<group>"; };
 		B08C829C1E9489B800BB4085 /* ALSampleAdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSampleAdCollectionViewCell.m; sourceTree = "<group>"; };
 		B08C829D1E9489B800BB4085 /* ALSampleAdCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALSampleAdCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -110,10 +102,6 @@
 		B0ED41F31D6429D900D4774E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0ED41F61D6429D900D4774E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0ED41F81D6429D900D4774E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0ED42101D64349D00D4774E /* _TriDCommon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDCommon.lua; sourceTree = "<group>"; };
-		B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDDynamicData.lua; sourceTree = "<group>"; };
-		B0ED42121D64349D00D4774E /* _TriDStartup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _TriDStartup.lua; sourceTree = "<group>"; };
-		B0ED42131D64349D00D4774E /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B08C828F1E94887000BB4085 /* libstdc++.6.0.9.tbd in Frameworks */,
-				9DB65C9520512B190074F377 /* Adlib.framework in Frameworks */,
+				9D71A023215CD67E00EDBFED /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				B08C82901E9489B800BB4085 /* BannerSample */,
-				B08C82951E9489B800BB4085 /* FloatingAdSample */,
 				B08C82991E9489B800BB4085 /* NativeAdSample */,
 			);
 			path = ADLibSampleSrc;
@@ -208,15 +194,6 @@
 				B08C82941E9489B800BB4085 /* MediationSampleController.m */,
 			);
 			path = BannerSample;
-			sourceTree = "<group>";
-		};
-		B08C82951E9489B800BB4085 /* FloatingAdSample */ = {
-			isa = PBXGroup;
-			children = (
-				B08C82961E9489B800BB4085 /* ADIconAdController.h */,
-				B08C82971E9489B800BB4085 /* ADIconAdController.m */,
-			);
-			path = FloatingAdSample;
 			sourceTree = "<group>";
 		};
 		B08C82991E9489B800BB4085 /* NativeAdSample */ = {
@@ -357,22 +334,10 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				9DB65C9420512B190074F377 /* Adlib.framework */,
+				9D71A022215CD67E00EDBFED /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
-				B0ED420F1D64349D00D4774E /* Resources */,
 			);
 			path = ADLibFramework;
-			sourceTree = "<group>";
-		};
-		B0ED420F1D64349D00D4774E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B0ED42101D64349D00D4774E /* _TriDCommon.lua */,
-				B0ED42111D64349D00D4774E /* _TriDDynamicData.lua */,
-				B0ED42121D64349D00D4774E /* _TriDStartup.lua */,
-				B0ED42131D64349D00D4774E /* json.lua */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +366,7 @@
 		B0ED41DC1D6429D900D4774E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					B0ED41E31D6429D900D4774E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -432,16 +397,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0ED421A1D64349E00D4774E /* _TriDDynamicData.lua in Resources */,
-				B0ED421C1D64349E00D4774E /* json.lua in Resources */,
-				B0ED42191D64349E00D4774E /* _TriDCommon.lua in Resources */,
 				B08C82CB1E9489B800BB4085 /* sample_song.json in Resources */,
 				B08C82CE1E9489B800BB4085 /* ALExampleSimpleFeedAdCell.xib in Resources */,
 				B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */,
 				B08C82C21E9489B800BB4085 /* ALSampleAdCollectionViewCell.xib in Resources */,
 				B0ED41F71D6429D900D4774E /* LaunchScreen.storyboard in Resources */,
 				B08C82D21E9489B800BB4085 /* ALNativeViewSample.xib in Resources */,
-				B0ED421B1D64349E00D4774E /* _TriDStartup.lua in Resources */,
 				B08C82C61E9489B800BB4085 /* ALExampleMusicAdCell.xib in Resources */,
 				B0ED41F41D6429D900D4774E /* Assets.xcassets in Resources */,
 				B08C82D01E9489B800BB4085 /* SimpleFeedListTableViewCell.xib in Resources */,
@@ -460,7 +421,6 @@
 			files = (
 				B08C82C31E9489B800BB4085 /* CollectionViewController.m in Sources */,
 				B08C82C41E9489B800BB4085 /* SampleCollectionViewCell.m in Sources */,
-				B08C82BF1E9489B800BB4085 /* ADIconAdController.m in Sources */,
 				B08C82C11E9489B800BB4085 /* ALSampleAdCollectionViewCell.m in Sources */,
 				B08C826D1E94884100BB4085 /* CS001.m in Sources */,
 				B049BA7B1E97219700271114 /* CS004.m in Sources */,
@@ -518,12 +478,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -572,12 +534,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -615,7 +579,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ADLibSample/ADLibFramework",
-					"$(PROJECT_DIR)/ADLibSample/ADPlatformLibs/admob",
 				);
 				INFOPLIST_FILE = ADLibSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -632,7 +595,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ADLibSample/ADLibFramework",
-					"$(PROJECT_DIR)/ADLibSample/ADPlatformLibs/admob",
 				);
 				INFOPLIST_FILE = ADLibSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

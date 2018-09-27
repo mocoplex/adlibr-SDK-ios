@@ -6,8 +6,8 @@
 //  Created by mocoplex on 2014. 12. 30..
 //  Copyright (c) 2014년 mocoplex. All rights reserved.
 //
-//  Adlib SDK version 4.3.7.2
-//  Build (4.372) 2018.01.16. 12:00
+//  Adlib SDK version 4.4.0.0
+//  Build (4.400) 2018.10.27. 18:00
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -27,12 +27,6 @@
 
 #import <Adlib/ADLibNative.h>
 
-
-///////////////////////////////////////////////////////////////////////////
-// 애드립 3D 광고 - 갭핑 상품                                                 //
-///////////////////////////////////////////////////////////////////////////
-
-#import <Adlib/ADLibGapping.h>
 
 #import <Foundation/Foundation.h>
 

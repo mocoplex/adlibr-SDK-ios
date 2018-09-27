@@ -14,9 +14,9 @@
 #import "ALAdBannerView.h"
 
 /**
- *  이 클래스는 구버전 AdlibManager 클래스를 대체하기 위한 클래스이다.
- *  AdlibManager는 싱글톤 객체로 설계되어 단일 객체로 사용 시 발생할 수 있는 문제가 있으며,
- *  따라서 AdlibRenew 폴더 내부의 클래스들로 대체하여 사용하는 방법을 제공한다.
+ *  이 클래스는 애드립 배너 미디에이션을 구현하는 어뎁터 클래스들의 기본 구현 부모 클래스이다.
+ *  띠배너와 전면 배너 미디에이션 구현에 필요한 프로토콜을 상속받고 있으며, 서브 클래스들 또한 해당
+ *  프로토콜을 상속해야한다.
  */
 
 @interface ALMediation : NSObject <ALMediationInterstitialProtocol, ALMediationBannerProtocol> {

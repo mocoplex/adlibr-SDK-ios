@@ -48,5 +48,6 @@
 
 //애드립 네트워크 배너
 #import <Adlib/ALNetworkAd.h>
+#import <Adlib/ALNetworkBanner.h>
 
 #endif /* ADLibBanner_h */
