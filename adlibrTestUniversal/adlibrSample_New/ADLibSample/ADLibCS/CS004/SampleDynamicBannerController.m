@@ -178,8 +178,8 @@
                                              self.view.layer.bounds.size.height - topMargin*2);
     
     CGFloat originX = self.view.bounds.size.width - self.closeButton.bounds.size.width - topMargin;
-    self.closeButton.frame = CGRectMake(originX,
-                                        topMargin,
+    self.closeButton.frame = CGRectMake(originX-20,
+                                        topMargin+40,
                                         self.closeButton.bounds.size.width,
                                         self.closeButton.bounds.size.height);
 }

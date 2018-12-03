@@ -103,7 +103,7 @@
     //이미지 외의 영역의 백그라운드 색상 지정
     //해당 함수를 호출하지 않으면 해당 광고 집행시 설정된 색상값으로 채워진다.
     //[_intersBannerView setBannerBackgroundColor:[UIColor blackColor]];
-    
+    _intersBannerView.isHouseMode = YES;
     [_intersBannerView startBannerRequestWithAdlibKey:ADLIB_INTERSTITIAL_320x480_KEY
                                            bannerSize:kInterSize320x480];
 }
@@ -142,7 +142,7 @@
     //이미지 외의 영역의 백그라운드 색상 지정
     //해당 함수를 호출하지 않으면 해당 광고에 설정된 색상값으로 채워진다.
     //[_intersBannerView setBannerBackgroundColor:[UIColor blackColor]];
-    
+    _intersBannerView.isHouseMode = YES;
     [_intersBannerView startBannerRequestWithAdlibKey:ADLIB_INTERSTITIAL_384x502_KEY
                                            bannerSize:kInterSize384x502];
 }
