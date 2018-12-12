@@ -78,7 +78,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfb-Bb-2BZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1214" y="520"/>
+            <point key="canvasLocation" x="-1242" y="519"/>
+        </scene>
+        <!--CS005-->
+        <scene sceneID="SUZ-Lh-EBy">
+            <objects>
+                <viewController storyboardIdentifier="CS005" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dde-LY-OtX" customClass="CS005" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ec4-bg-9M2"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Aa-5r-jJL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ha0-oY-EJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-Zw-Wsx">
+                                <rect key="frame" x="27.5" y="60" width="320" height="480"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="sfB-1q-v9v"/>
+                                    <constraint firstAttribute="height" constant="480" id="xcP-Wu-Yk1"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dui-bG-ekl">
+                                <rect key="frame" x="27" y="594" width="320" height="43"/>
+                                <color key="backgroundColor" red="0.74988531865604191" green="0.62880987160680479" blue="0.10105316919546738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Uht-lX-xHi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="al_adImpressionAction:" destination="dde-LY-OtX" eventType="touchUpInside" id="qfZ-8h-5s5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Aa-5r-jJL" firstAttribute="top" secondItem="dui-bG-ekl" secondAttribute="bottom" constant="30" id="Dgy-qn-Ur8"/>
+                            <constraint firstItem="dui-bG-ekl" firstAttribute="leading" secondItem="Ha0-oY-EJ5" secondAttribute="leadingMargin" constant="11" id="W3c-Q7-Ya7"/>
+                            <constraint firstItem="cdm-Zw-Wsx" firstAttribute="centerX" secondItem="Ha0-oY-EJ5" secondAttribute="centerX" id="bbq-fd-8Wp"/>
+                            <constraint firstItem="cdm-Zw-Wsx" firstAttribute="top" secondItem="ec4-bg-9M2" secondAttribute="bottom" constant="40" id="m41-2H-isF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dui-bG-ekl" secondAttribute="trailing" constant="12" id="s9M-7k-Qzc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adContainerView" destination="cdm-Zw-Wsx" id="qt6-M3-vDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lNI-YT-XnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="519"/>
         </scene>
         <!--CS002-->
         <scene sceneID="IlA-AH-9By">
@@ -148,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMD-FQ-05x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.80000000000001" y="-149.77511244377811"/>
+            <point key="canvasLocation" x="169" y="-161"/>
         </scene>
     </scenes>
 </document>

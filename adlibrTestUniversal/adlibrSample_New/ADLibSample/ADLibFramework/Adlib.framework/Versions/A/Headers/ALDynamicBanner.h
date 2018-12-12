@@ -11,8 +11,12 @@
 
 typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     
-    ALDynamicBannerStateRequestStart        = -1000,        //요청 시작
-    ALDynamicBannerStateReceivedAd          = -1001,        //광고 응답 성공
+    ALDynamicBannerStateRequestStart        = 1000,        //요청 시작
+    ALDynamicBannerStateReceivedAd          = 1001,        //광고 응답 성공
+    
+    ALDynamicBannerStateSetViewHidden       = 9998,         //광고뷰 속성 hidden YES로 변경되는 상태를 알림
+    ALDynamicBannerStateSetViewVisible      = 9999,         //광고뷰 속성 hidden NO로 변경되는 상태를 알림
+    
     ALDynamicBannerStateResponseEmptyAd     = -1002,        //광고 응답 실패 - 광고 없음
     
     ALDynamicBannerStateNetworkError        = -1003,        //요청 네트워크 에러
@@ -28,8 +32,7 @@ typedef NS_ENUM(NSInteger, ALDynamicBannerState){
     ALDynamicBannerStateEmptySchedule       = -1012,        //광고 요청 실패 - 애드립 스케쥴 사용시 스케쥴 미포함
     ALDynamicBannerStateInvalidSchedule     = -1013,        //광고 요청 실패 - 애드립 스케쥴 사용시 스케쥴 설정 오류
     
-    ALDynamicBannerStateSetViewHidden       = 9998,         //광고뷰 속성 hidden YES로 변경되는 상태를 알림
-    ALDynamicBannerStateSetViewVisible      = 9999,         //광고뷰 속성 hidden NO로 변경되는 상태를 알림
+    ALDynamicBannerStateServerInternalError = -4444,        //광고 요청 실패 - 게이트웨이서버 내부에러코드 발생.
 };
 
 

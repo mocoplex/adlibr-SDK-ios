@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D42213921B52AB8006A22EA /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D42213821B52AB8006A22EA /* Adlib.framework */; };
+		9D9782F321C1177500B607B3 /* Adlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9782F221C1177500B607B3 /* Adlib.framework */; };
+		9D9782F721C1182500B607B3 /* CS005.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9782F621C1182500B607B3 /* CS005.m */; };
 		B049BA7B1E97219700271114 /* CS004.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7A1E97219700271114 /* CS004.m */; };
 		B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B049BA7E1E97262600271114 /* SampleDynamicBannerController.m */; };
 		B075DD4D1E5ACB1F0097971A /* Adlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B075DD4C1E5ACB1F0097971A /* Adlib.bundle */; };
@@ -44,7 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D42213821B52AB8006A22EA /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		9D9782F221C1177500B607B3 /* Adlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adlib.framework; sourceTree = "<group>"; };
+		9D9782F521C1182500B607B3 /* CS005.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CS005.h; sourceTree = "<group>"; };
+		9D9782F621C1182500B607B3 /* CS005.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CS005.m; sourceTree = "<group>"; };
 		B049BA791E97219700271114 /* CS004.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CS004.h; sourceTree = "<group>"; };
 		B049BA7A1E97219700271114 /* CS004.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CS004.m; sourceTree = "<group>"; };
 		B049BA7D1E97262600271114 /* SampleDynamicBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDynamicBannerController.h; sourceTree = "<group>"; };
@@ -109,13 +112,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D42213921B52AB8006A22EA /* Adlib.framework in Frameworks */,
+				9D9782F321C1177500B607B3 /* Adlib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D9782F421C1180F00B607B3 /* CS005 */ = {
+			isa = PBXGroup;
+			children = (
+				9D9782F521C1182500B607B3 /* CS005.h */,
+				9D9782F621C1182500B607B3 /* CS005.m */,
+			);
+			path = CS005;
+			sourceTree = "<group>";
+		};
 		B049BA761E97217800271114 /* CS004 */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 		B08C822D1E94884100BB4085 /* ADLibCS */ = {
 			isa = PBXGroup;
 			children = (
+				9D9782F421C1180F00B607B3 /* CS005 */,
 				B049BA761E97217800271114 /* CS004 */,
 				B08C82361E94884100BB4085 /* CS003 */,
 				B08C82321E94884100BB4085 /* CS002 */,
@@ -334,7 +347,7 @@
 		B0ED420C1D64349D00D4774E /* ADLibFramework */ = {
 			isa = PBXGroup;
 			children = (
-				9D42213821B52AB8006A22EA /* Adlib.framework */,
+				9D9782F221C1177500B607B3 /* Adlib.framework */,
 				B075DD4C1E5ACB1F0097971A /* Adlib.bundle */,
 			);
 			path = ADLibFramework;
@@ -432,6 +445,7 @@
 				B08C82CF1E9489B800BB4085 /* SimpleFeedListTableViewCell.m in Sources */,
 				B08C826F1E94884100BB4085 /* CS002.m in Sources */,
 				B08C82D31E9489B800BB4085 /* ViewTypeController.m in Sources */,
+				9D9782F721C1182500B607B3 /* CS005.m in Sources */,
 				B049BA7F1E97262600271114 /* SampleDynamicBannerController.m in Sources */,
 				B08C82711E94884100BB4085 /* CS003.m in Sources */,
 				B08C82BD1E9489B800BB4085 /* AdlibSampleController.m in Sources */,
